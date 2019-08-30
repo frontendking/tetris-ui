@@ -45,6 +45,13 @@ export default {
     /*
     ** You can extend webpack config here
     */
+    postcss: {
+      preset: {
+        autoprefixer: {
+          grid: 'autoplace'
+        }
+      }
+    },
     extend(config, ctx) {
     }
   }
