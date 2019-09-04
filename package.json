@@ -17,6 +17,7 @@
   "dependencies": {
     "core-js": "^2.6.5",
     "destyle.css": "^1.0.10",
+    "faker": "^4.1.0",
     "fxjs2": "^0.12.5",
     "nuxt": "^2.0.0"
   },

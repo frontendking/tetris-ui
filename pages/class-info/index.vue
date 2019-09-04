@@ -6,7 +6,7 @@
       <section>
         <h3 hidden>선생님 정보 요약</h3>
         <figure id="teacher-picture">
-          <img src="./teacher.png"/>
+          <img src="assets/img/pic.png"/>
           <figcaption>teacherName</figcaption>
         </figure>
         <hr/>
@@ -39,15 +39,18 @@
     </section>
   </article>
 </template>
-
 <script>
 export default {
-  name: 'class-info'
+  name: 'class-info',
+  data () {
+    return {}
+  }
 }
 </script>
 
 <style scoped lang=scss>
 @import 'destyle.css';
+
 .class-info {
   font-size: 2rem;
 }
