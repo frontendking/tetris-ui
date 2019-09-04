@@ -1,0 +1,131 @@
+
+// common css
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+table,
+th,
+td,
+form,
+fieldset,
+legend,
+input,
+textarea,
+button,
+select {
+  margin: 0;
+  padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+button,
+table,
+select,
+textarea {
+  font-family: 'Noto Sans KR', 'Malgun Gothic', '맑은고딕', '돋움', 'Dotum', 'Helvetica', 'Apple SD Gothic Neo', Sans-serif;
+  letter-spacing: -0.05em;
+  word-spacing: normal;
+}
+
+caption,
+hr,
+legend {
+  display: none;
+}
+
+li {
+  list-style: none;
+}
+
+.hidden-text,
+.a11y-hidden {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: -1000em;
+  width: 0;
+  height: 0;
+  font-size: 0;
+  line-height: 9;
+}
+
+.a11y-hidden {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: -1000em;
+  width: 0;
+  height: 0;
+  font-size: 0;
+  line-height: 9;
+}
+@font-face {
+  font-family: 'NanumSR';
+  src: url(asset-path('font/NanumSquareR.eot'));
+  src: url(asset-path('font/NanumSquareR.eot?#iefix')) format('embedded-opentype'),
+    url(asset-path('font/NanumSquareR.woff')) format('woff'),
+    url(asset-path('font/NanumSquareR.ttf')) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NanumSR';
+  src: url(asset-path('font/NanumSquareRoundEB.eot'));
+  src: url(asset-path('font/NanumSquareRoundEB.eot?#iefix')) format('embedded-opentype'),
+    url(asset-path('font/NanumSquareRoundEB.woff')) format('woff'),
+    url(asset-path('font/NanumSquareRoundEB.ttf')) format('truetype');
+  font-weight: bold;
+  font-style: bold;
+}
+
+#quick-event {
+  position: absolute;
+  top: 130px;
+  left: 50%;
+  width: 110px;
+  margin-left: 550px;
+  z-index: 10;
+
+  a {
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+#quick_top{
+  display: block;
+  width:110px;
+  height:30px;
+  background:#fff;
+  border:1px solid #999;
+  border-radius: 10px;
+  font-size:12px;
+  text-align: center;
+  color:#999;
+  line-height: 30px;
+  &:after{
+    content:"▶︎";
+    display: inline-block;
+    transform: rotate(-90deg);
+    font-size:10px;
+  }
+}

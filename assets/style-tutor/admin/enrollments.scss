@@ -1,0 +1,209 @@
+// Place all the styles related to the admin/academies controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.enrollment-table-area{
+  & table td{
+    vertical-align: middle !important;
+  }
+}
+
+.enrollments-title-area{
+  padding-bottom: 40px;
+  & h3{
+    float: left;
+  }
+  & a{
+    float: left;
+    margin: 0 0 0 20px;
+  }
+}
+
+.custom-button-area{
+  width: 100%;
+  text-align: center;
+  & .btn{
+    font-size: 24px !important;
+    margin: 40px 15px 15px 15px;
+    border: 1px solid $gotcolor1;
+    padding: 5px;
+    width: 80px;
+    font-weight: 400;
+    &.cancle-btn{
+      color: $gotcolor1;
+      &:hover{
+        color: $gotcolor1;
+      }
+    }
+    &.save-btn{
+      color: #fff;
+      background-color: $gotcolor1;
+      &:hover{
+        color: #fff;
+        background-color: $gotcolor1;
+      }
+    }
+  }
+}
+
+.enrollment-rv-delete-btn{
+  position: absolute;
+  border: 1px solid $red;
+  float: left;
+  color: #fff;
+  background-color: $red;
+  font-size: 20px !important;
+  margin: 44px 15px 15px 15px;
+  padding: 5px;
+  width: 60px;
+  font-weight: 400;
+  &:hover{
+    color: #fff;
+    background-color: $red;
+  }
+}
+
+.custom-label-area{
+  & label {
+    margin-right: 30px;
+  }
+}
+
+.enrollments-check{
+  border-top: 1px solid #e5e5e5;
+  margin-top: 10px;
+  padding-top: 30px;
+  h4 {
+    margin: 0 0 10px 0;
+  }
+  .enrollments-check-list {
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 90px;
+  }
+}
+.enrollments-check-list{
+  & table tr {
+    margin-bottom: 5px;
+    & td {
+      text-align: left;
+      &.td-child-1 {
+        width: 150px;
+        padding-right: 20px;
+      }
+      &.td-child-2 {
+        width: 100px;
+        padding-right: 30px;
+      }
+      &.td-child-3 {
+        word-break: break-all;
+      }
+    }
+  }
+}
+
+
+#apply-modal-form .modal-content {
+  .modal-body {
+    padding: 0;
+  }
+
+  .profile-img {
+    float: left;
+  }
+
+  .user-info {
+    float: left;
+    width: calc(100% - 70px);
+    height: 60px;
+    margin-left: 10px;
+    padding: 5px 0;
+
+    .user-name {
+      display: block;
+      color: $gotcolor1;
+      font-size: 20px;
+    }
+
+    .user-nick {
+      color: $gotcolor3;
+      font-size: 12px;
+    }
+
+    .attend-state {
+      position: absolute;
+      top: 0;
+      right: 20px;
+    }
+  }
+
+  .class-detail {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #dadada;
+
+    li {
+      position: relative;
+      margin-bottom: 5px;
+      padding: 0 140px 0 84px;
+      color: $gotcolor1;
+
+      strong.detail-title {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 74px;
+      }
+
+      span.detail-item {
+        margin-left: 5px;
+      }
+    }
+  }
+
+  .form-group {
+    margin-top: 24px;
+
+    .form-title {
+      margin-bottom: 10px;
+      color: #999;
+      font-weight: normal;
+    }
+
+    #report-material-container {
+      margin-bottom: 10px;
+    }
+
+    .file-wrapper {
+      padding: 5px 10px;
+      background: #f5f5f5;
+      border: 1px solid #dadada;
+      border-width: 0 1px 1px;
+      font-size: 12px;
+
+      &:first-child {
+        border-top: 1px solid #dadada;
+      }
+    }
+
+    &.info {
+      clear: both;
+      overflow: visible;
+      position: relative;
+      height: 60px;
+    }
+
+    p {
+      font-size: 14px;
+    }
+  }
+
+  .control-label.col-sm-12 {
+    margin-bottom: 10px;
+  }
+}
+
+.modal-content.report .user-info .attend-state {
+  right: 0;
+}
+

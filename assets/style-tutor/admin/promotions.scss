@@ -1,0 +1,228 @@
+// Place all the styles related to the admin/asks controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.promotion-member-insert-btn {
+  margin-left: 30px;
+  color:#fff;
+  background: $gotcolor1;
+  border: 1px solid $gotcolor1;
+  &:hover {
+    color: #fff;
+  }
+}
+
+.promotion-member-insert-modal {
+  background-color: #fff;
+  display: block;
+  width: 360px;
+  height: 200px;
+  top: calc(50% - 100px) !important;
+  left: calc(50% - 180px) !important;
+  position: absolute;
+  text-align: center;
+  border: 1px solid $gotcolor1;
+  padding: 40px;
+  font-size: 18px;
+  & .modal-msg {
+    color: $gotcolor1;
+    display: block;
+  }
+  & a {
+    padding: 10px;
+    margin: 20px 5px 0;
+    width: 100px;
+    border: 1px solid $gotcolor1;
+    &.move-to-btn {
+      color:#fff;
+      background: $gotcolor1;
+      &>a{
+        color: #fff;
+      }
+    }
+    &.exit-btn {
+      color: $gotcolor1;
+      background: #fff;
+    }
+  }
+}
+
+.form-horizontal {
+  .search-title {
+    width: 6% !important;
+  }
+}
+
+.join-form {
+  .join-title {
+    width: 6% !important;
+    margin-left: 10px;
+  }
+  .join-text-field {
+    margin-right: 30px;
+  }
+}
+
+.edit_user {
+  & .form-group {
+    &::before {
+      content: " ";
+      display: table;
+    }
+    &::after {
+      clear: both;
+      content: " ";
+      display: table;
+    }
+    & .search-addr-btn {
+      padding-top: 2px;
+    }
+  }
+
+  .user-form-btn {
+    border: 1px solid $gotcolor1;
+    font-size: 150%;
+    padding: 2%;
+    margin: 5% 5% 0 0;
+    &.user-cancel-btn {
+      background-color: #fff;
+      color: $gotcolor1;
+      &:hover {
+        color: $gotcolor1;
+      }
+    }
+    &.user-save-btn {
+      background-color: $gotcolor1;
+      color: #fff;
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+}
+.admin-order-form {
+  margin-top: 20px;
+}
+
+.admin-order-area {
+  position: relative;
+  margin-top: 23px;
+  .admin-order-class {
+    &::after {
+      content: "\f29c";
+      display: inline-block;
+      font: normal normal normal 14px/1 FontAwesome;
+      font-size: inherit;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+  }
+  .admin-order-class-info {
+    position: absolute;
+    border: 1px solid $gotcolor1;
+    background-color: #fff;
+    width: 249px;
+    padding: 6px;
+    top: -60px;
+    line-height: 20px;
+    color: $gotcolor1;
+    display: none;
+  }
+  &:hover .admin-order-class-info{
+    display: block;
+  }
+  .text-color-red {
+    color: $red;
+    font-weight: bold;
+  }
+}
+
+#course_provide {
+  .ibox-content {
+    display: inline-block;
+    width: 100%;
+    .enrollment-title {
+      margin-top: 30px;
+    }
+    .enrollment-content {
+      margin-top: 30px;
+      .enrollment-section {
+        width: 110%;
+        margin-bottom: 40px;
+      }
+    }
+  }
+  .enrollment-detail {
+    width: 100%;
+    padding-top: 10px;
+  }
+  .cancel-enrollment {
+    background-color: #fff;
+    color: #333;
+    padding: 5px;
+    margin-left: 10px;
+    width: 100px;
+    border: 1px solid $gotcolor1;
+    &:hover {
+      color: $gotcolor1;
+    }
+  }
+
+  #course_provide_area {
+    width: 100%;
+    #course_provide_check_form {
+      clear:both;
+      .group1 {
+        width: 40%;
+        float: left;
+        margin-right: 3%;
+        position: relative;
+        &>i#cancel_search_btn {
+          position: absolute;
+          right: 0;
+          font-size: 20px;
+          margin: 6px;
+          cursor: pointer;
+          display: none;
+        }
+      }
+      .group2 {
+        width: 30%;
+        float: left;
+        margin-right: 3%;
+        min-width: 100px;
+        & .btn {
+          width: 100%;
+        }
+      }
+    }
+    #course_provide_form {
+      width: 40%;
+      float: left;
+      text-align: left;
+      position: relative;
+      padding-left: 30px;
+      .custom-submit-btn {
+        background-color: $gotcolor;
+        color: #fff;
+        padding: 5px;
+        width: 20%;
+        min-width: 38px;
+        border: 1px solid $gotcolor;
+        &:hover {
+          color: #fff;
+        }
+      }
+    }
+    #display {
+      clear: both;
+      .disable_span {
+        color: $red;
+      }
+      .available_span {
+        color: $navy;
+      }
+    }
+  }
+}

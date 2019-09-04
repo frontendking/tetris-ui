@@ -1,0 +1,103 @@
+#junior_event_may {
+  width:1080px;
+  margin:0 auto;
+  $IMG_SRC : "/image/elementary/ip/junior_event_may";
+  .content-box{
+    position: relative;
+    margin: 0 auto;
+    width: 1080px;
+    line-height: 1.4;
+    text-align: center;
+    a{
+      display: block;
+    }
+    .btn-notice{
+      margin-bottom: 1em;
+    }
+  }
+  .visual-area{
+    background: #99ddf8 url('#{$IMG_SRC}/visual_bg.jpg') no-repeat 100% 100%;
+    .content-box{
+      padding:4em 0;
+    }
+  }
+  .visual-btn-area,.section04{
+    background: #cb1e3d url('#{$IMG_SRC}/section04_bg.jpg') repeat 0 0;
+    color:#8e0129;
+    .content-box{
+      padding:2em 0;
+    }
+    a.btn-link{
+      margin-top:1.4em;
+    }
+  }
+  .section01{
+    .content-box{
+      position: relative;
+      z-index:2;
+      margin-bottom:-2em;
+      padding-top:2em;
+    }
+  }
+  .section02{
+    background: #ffde00;
+    .content-box{
+      padding-bottom:4em;
+      color:#7f6f00;
+    }
+  }
+  .section03{
+    background: #ffe84a;
+    .content-box{
+      padding-bottom:4em;
+    }
+  }
+  .section05{
+    background: #42b9e6 url('#{$IMG_SRC}/section05_bg.jpg') repeat 0 0;
+    .content-box{
+      padding:2em 0;
+    }
+    a.btn-link{
+      margin-top:1.4em;
+    }
+  }
+  .notice-area {
+    border-top:3px solid #000;
+    .content-box{
+      padding:20px;
+      text-align: left;
+      .title{
+        display: block;
+        font-size: 25px;
+        margin-bottom: 20px;
+      }
+      p{
+        margin-bottom: 50px;
+      }
+      ol{
+        margin: 0 0 20px 20px;
+        li{
+          margin-bottom:10px;
+          list-style: decimal;
+        }
+      }
+    }
+  }
+  &.phone{
+    width:100%;
+    font-size: 14px;
+    .content-box{
+      width:100%;
+      padding:1em 0;
+      img{
+        width:96%;
+      }
+    }
+    .visual-area{
+      background-size:cover;
+    }
+    #notice-area{
+      padding:1em;
+    }
+  }
+}

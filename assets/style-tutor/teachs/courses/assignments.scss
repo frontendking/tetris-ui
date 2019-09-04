@@ -1,0 +1,226 @@
+// Place all the styles related to the teachs/courses/assignments controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.btn.bg-black {
+  min-width: 65px;
+  border-color: black;
+  background-color: black;
+  color: white;
+  &hover {
+    min-width: 65px;
+    border-color: black;
+    background-color: black;
+    color: white;
+  }
+}
+
+.btn.bg-white {
+  min-width: 65px;
+  border-color: #8D8D8D;
+  background-color: white;
+  color:  #8D8D8D;
+  &hover {
+    min-width: 65px;
+    border-color: #8D8D8D;
+    background-color: white;
+    color: #8D8D8D;
+  }
+}
+
+.btn.bg-gray {
+  min-width: 65px;
+  border-color: #989898;
+  background-color: #989898;
+  color:  white;
+  &hover {
+    min-width: 65px;
+    border-color: #989898;
+    background-color: #989898;
+    color: white;
+  }
+}
+
+.btn.bg-green {
+  min-width: 65px;
+  border-color: green;
+  background-color: green;
+  color: white;
+  &hover {
+    min-width: 65px;
+    border-color: green;
+    background-color: green;
+    color: white;
+  }
+}
+
+.btn.bg-yellow {
+  min-width: 65px;
+  border-color: #ffbf02;
+  background-color: #ffbf02;
+  color: white;
+  &hover {
+    min-width: 65px;
+    border-color: #ffbf02;
+    background-color: #ffbf02;
+    color: white;
+  }
+}
+
+.assignment-modal-header {
+  .title {
+    margin-left: 15px;
+    font-size: 25px;
+    font-weight: 400;
+  }
+  .close {
+    margin-right: 18px;
+  }
+}
+
+.assignment-modal-content {
+  padding-top: 0;
+  .title {
+    font-size: 25px;
+    font-weight: 400;
+  }
+  .control-label {
+    color: #999999;
+    font-weight: 200;
+  }
+  .time-label {
+    color: #333;
+    font-size: 15px;
+    padding: 12px 0 0 0;
+    width: 12%;
+  }
+  .padding-top-less {
+    padding-top: 0;
+  }
+  .padding-left-less {
+    padding-left: 0;
+  }
+  .padding-bottom-less {
+    padding-bottom: 0;
+  }
+  .margin-bottom-less {
+    margin-bottom: 0;
+  }
+  .assignment-datepicker {
+    float: left;
+    padding: 6px 7px 0 0 ;
+  }
+  .assignment-clockpicker {
+    float: left;
+    padding: 6px 0 0 0 ;
+  }
+  .assignment-description {
+    color: #999999;
+    font-weight: 300;
+    font-size: 13px;
+    width: 92%;
+  }
+  .hr {
+    border: 0.5px solid #dddddd;
+    height: 1px;
+    width: 100%;
+    margin: 25px 0;
+  }
+
+  .tutor-info {
+    margin-bottom: 10px;
+  }
+}
+
+.as-button-width {
+  min-width: 120px;
+}
+
+.padding-zero {
+  padding: 0;
+}
+
+.assignment-list-header {
+  .title {
+    margin: 0 0 20px 0;
+    font-size: 25px;
+    font-weight: 400;
+  }
+}
+
+.assignment-list-content {
+  .no-users {
+    font-weight: lighter;
+    color: #bbbbbb;
+    font-size: 12px;
+  }
+  table {
+    background-color: #f2f2f2 !important;
+    padding: 10px 20px;
+    max-height: 200px;
+    overflow: auto;
+    thead {
+      background-color: #f2f2f2 !important;
+      color: #999999;
+      font-size: 12px;
+    }
+    tbody {
+      background-color: #f2f2f2 !important;
+      color: #999999;
+      font-size: 12px;
+      button {
+        min-width: 65px;
+        border-color: #989898;
+        background-color: white;
+        color:  #989898;
+        &hover {
+          min-width: 65px;
+          border-color: #989898;
+          background-color: white;
+          color: #989898;
+        }
+      }
+    }
+  }
+}
+
+.small-noti {
+  font-weight: lighter;
+  color: #707070;
+  font-size: 12px;
+}
+
+.box {
+  border: 1px solid #dddddd;
+  margin: 5px 0;
+  padding: 5px;
+  color: #525252;
+  font-size: 12px;
+}
+
+.no-link a {
+  color: black;
+  font-size: 12px;
+  &:link {
+    color: black;
+  }
+  &:visited {
+    color: black;
+  }
+  &:hover {
+    color: black;
+  }
+  &:active {
+    color: black;
+  }
+}
+
+textarea.assign-content,
+textarea.assign-content:hover,
+textarea.assign-content:active,
+textarea.assign-content:focus {
+  border: 0;
+  outline:0 !important;
+  -webkit-appearance:none;
+}
+

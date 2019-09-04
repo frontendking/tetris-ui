@@ -1,0 +1,31 @@
+// Place all the styles related to the admin/orders controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.pull-right {
+  text-align: right;
+  p {
+    font-size: 10px;
+  }
+}
+
+.admin.new_orders {
+  .label {
+    color: white;
+    font-size: 12px;
+    font-weight: 600;
+    background: $light-gray;
+    &.label-tutor {
+      background: $gotcolor;
+    }
+    &.label-jn {
+      background: $yellow;
+    }
+    &.label-lc {
+      background: $navy;
+    }
+    &.label-kids {
+      background: $red;
+    }
+  }
+}

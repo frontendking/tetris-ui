@@ -1,0 +1,395 @@
+#daechi_appendix_landing {
+  .section {
+      width: 100%;
+      min-height: 900px;
+      &#title-box {
+          background: url(asset-path('/image/elementary/ip/daechi_appendix/title-box-background.jpg')) no-repeat 50% 50%;
+          background-size: cover;
+          .logo {
+              display: block;
+              margin: 0 auto;
+              padding: 100px;
+          }
+      }
+      &#child-promotion {
+          padding: 100px;
+          background: url(/image/elementary/ip/daechi_appendix/child-promotion-image.png) no-repeat center center #f76d15;
+      }
+      &#program-description {
+          background-color: #4248f3;
+          padding: 100px;
+          .promotion-img {
+              display: block;
+              margin: 0 auto;
+              padding: 50px;
+          }
+      }
+      &#download-section {
+          background-color: #0ea3e0;
+          padding: 100px;
+          .promotion-img {
+              display: block;
+              margin: 0 auto;
+              padding: 50px;
+          }
+
+            .download-items-container {
+                .download-title {
+                    .title-left {
+                        margin: 0 auto;
+                        display: block;
+                    }
+                }
+                .download-items {
+                    ul.download-container {
+                        width: 950px;
+                        margin: 0 auto;
+                        background-color: #ffffff;
+                        li {
+                            height: 140px;
+                            border: 1px solid #0ea3e0;
+                            vertical-align: middle;
+                            div {
+                                text-align: center;
+                                &.date {
+                                    width: 190px;
+                                    height: 138px;
+                                    float: left;
+                                    font-size: 26px;
+                                    font-weight: 700;
+                                    line-height: 138px;
+                                    color: #0ea3e0;
+                                }
+                                &.downlaods {
+                                    width: calc(950px - 194px);
+                                    height: 138px;
+                                    float: left;
+                                    div:last-child:after {
+                                        content: '';
+                                        clear: both;
+                                    }
+                                    a {
+                                        display: block;
+                                        position: relative;
+                                        width: 188px;
+                                        height: 100%;
+                                        float: left;
+                                        a:last-child:after {
+                                            content: '';
+                                            clear: both;
+                                        }
+                                        .download-button-container {
+                                            margin-top: 40px;
+                                            .subject {
+                                                display: block;
+                                                color: #000000;
+                                                font-size: 18px;
+                                                font-weight: 700;
+                                                margin-bottom: 10px;
+                                            }
+                                            .subject-state {
+                                                display: block;
+                                                color: #000000;
+                                                font-size: 26px;
+                                                font-weight: 800;
+                                            }
+                                        }
+                                    }
+
+                              }
+                          }
+                          &.expired {
+                              .date {
+                                  color: #cdcdcd;
+                              }
+                              .downlaods {
+                                  a {
+                                      .download-button-container {
+                                          .subject {
+                                              color: #cdcdcd;
+                                          }
+                                          .subject-state {
+                                              color: #cdcdcd;
+                                              .text {
+                                                  display: none;
+                                              }
+                                          }
+                                          .subject-state:after {
+                                              content: '마감';
+                                              display: block;
+                                              color: #cdcdcd;
+                                              font-size: 26px;
+                                              font-weight: 800;
+                                          }
+                                      }
+                                  }
+                              }
+
+                          }
+                          &.active {
+                              background-color: #ffe11a;
+                              .downlaods {
+                                  a {
+                                      .download-button-container {
+                                          .subject {
+                                              color: #ff1d62;
+                                          }
+                                          .subject-state {
+                                              color: #ff1d62;
+                                          }
+                                      }
+                                      &:after {
+                                          display: block;
+                                          position: absolute;
+                                          content: '';
+                                          top: 73px;
+                                          right: 7px;
+                                          width: 55px;
+                                          height: 55px;
+                                          background: url(/image/elementary/ip/daechi_appendix/click-pointer.png) no-repeat 0 0 transparent;
+                                      }
+                                  }
+                              }
+
+                          }
+                      }
+                  }
+              }
+          }
+
+
+          .user-sign-offer-container {
+              text-align: center;
+              .offer-container {
+                  display: inline-block;
+                  float: center;
+                  margin: 15px;
+                  .offer-img-title {
+                      display: block;
+                      margin: 10px auto;
+                  }
+                  a {
+                      display: block;
+                      margin: 0 auto;
+                      img {
+                          display: block;
+                          margin: 0 auto;
+                      }
+                  }
+                  &:last-child:after {
+                      content: '';
+                      clear: both;
+                  }
+              }
+          }
+      }
+      &#purchase-section {
+          background-color: #ffe11a;
+          padding: 100px;
+          .promotion-img {
+              display: block;
+              margin: 0 auto;
+              padding: 50px 50px 20px 50px;
+          }
+          .purchase-order-button {
+              display: block;
+              margin: 0 auto;
+          }
+      }
+
+}
+
+#notice-section {
+    .body {
+        width: 950px;
+        margin: 20px auto;
+        line-height: 32px;
+        color: gray;
+        h1 {
+            margin-bottom: 10px;
+        }
+    }
+}
+
+#distribution-move{
+  height:1032px;
+  padding-top:168px;
+  background: url(/image/elementary/ip/daechi_appendix/distribution_bg.jpg) repeat-x center center;
+  text-align: center;
+  .btn-move{
+    position: relative;
+    top:-70px;
+    left:50%;
+    z-index: 2;
+    display: block;
+    width:960px;
+    height:98px;
+    margin-left:-480px;
+  }
+}
+
+
+  #pop_download_item.pop-download-item .modal-content {
+    width: 600px;
+    text-align: left;
+    .modal-header{
+      font-size: 14px;
+      letter-spacing: 0;
+      .modal-title{
+        margin-bottom: 10px;
+      }
+    }
+    .download-item-list {
+      overflow:hidden;
+      position: relative;
+      top: 0;
+      left: 0;
+      height: 364px;
+      margin-bottom:10px;
+      border: 1px solid #000;
+      border-width: 1px 0;
+      .empty{
+        height: 364px;
+        line-height: 364px;
+        font-size: 20px;
+        text-align: center;
+        color:#666;
+      }
+      ul {
+        overflow: hidden;
+        overflow-y: scroll;
+        height: 364px;
+      }
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: 20px;
+        background: -moz-linear-gradient(
+          top,
+          rgba(255, 255, 255, 0) 0%,
+          rgba(255, 255, 255, 1) 100%
+        );
+        background: -webkit-linear-gradient(
+          top,
+          rgba(255, 255, 255, 0) 0%,
+          rgba(255, 255, 255, 1) 100%
+        );
+        background: linear-gradient(
+          to bottom,
+          rgba(255, 255, 255, 0) 0%,
+          rgba(255, 255, 255, 1) 100%
+        );
+      }
+      li {
+        position: relative;
+        padding: 10px;
+        border-bottom: 1px solid #999;
+        input[type='radio'] {
+          position: absolute;
+          left: 10px;
+          top: 50%;
+          margin-top: -6px;
+          &:disabled + label {
+            opacity: 0.4;
+          }
+        }
+        label {
+          width: 500px;
+          padding: 10px 10px 10px 40px;
+          font-weight: normal;
+          strong {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 18px;
+            font-weight: bold;
+          }
+          p {
+            color: #333;
+            font-size: 12px;
+            font-weight: normal;
+            > .item {
+              display: inline-block;
+              &:nth-child(1):after {
+                content: '|';
+                display: inline-block;
+                padding: 0 4px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+}
+
+#popup-privacy-check {
+    #privacy-pdf-download-container {
+        position: relative;
+        font-size: 22px;
+        vertical-align: -2px;
+        float: right;
+        &:after {
+            display: block;
+            clear: both;
+        }
+        input {
+            display: block;
+            position: absolute;
+            top: 99999999px;
+            &+label {
+                .checked {
+                    display: none;
+                }
+                .unchecked {
+                    display: inline-block;
+                }
+            }
+            &:checked {
+                &+label {
+                    .checked {
+                        display: inline-block;
+                    }
+                    .unchecked {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+    .privacy-sign-box {
+        border: 1px solid #dadada;
+        padding: 10px 20px;
+        margin-bottom: -1px;
+        .title {
+            font-weight: 800
+        }
+    }
+    .term-context {
+        height: 150px;
+        overflow: auto;
+        font-size: 12px;
+        color: gray;
+        background-color: #f7f7f7;
+        border: 1px solid #dadada;
+        padding: 20px;
+    }
+    .controll-area {
+        text-align: center;
+        padding-top: 10px;
+        button {
+            width: 49%;
+            &:first-child {
+                margin-right: 3px;
+            }
+            &:last-child {
+                margin-left: 3px;
+            }
+        }
+    }
+}

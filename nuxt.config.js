@@ -1,10 +1,5 @@
-
 export default {
   mode: 'universal',
-  server: {
-    host: '0.0.0.0',
-    port: 5000,
-  },
   /*
   ** Headers of the page
   */
@@ -26,25 +21,34 @@ export default {
   /*
   ** Global CSS
   */
-  css: [
-  ],
+  css: [],
   /*
   ** Plugins to load before mounting the App
   */
-  plugins: [
-  ],
+  plugins: [],
   /*
   ** Nuxt.js modules
   */
-  modules: [
-  ],
+  modules: [],
   /*
   ** Build configuration
   */
+  globals : {
+    id: 'b2c-wrap',
+  },
   build: {
     /*
     ** You can extend webpack config here
     */
+    extractCSS: true,
+    filenames: {
+      app: '[name].js',
+      chunk: '[name].js',
+      css: '[name].css',
+      img: '[path][name].[ext]' ,
+      font: '[path][name].[ext]',
+      video: '[path][name].[ext]'
+    },
     postcss: {
       preset: {
         autoprefixer: {
@@ -52,7 +56,7 @@ export default {
         }
       }
     },
-    extend(config, ctx) {
+    extend (config, ctx) {
     }
   }
 }

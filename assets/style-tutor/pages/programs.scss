@@ -1,0 +1,435 @@
+// Place all the styles related to the programs controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.program-wrapper {
+
+  .tabs-container,
+  .tab-content {
+    .nav-tabs {
+      border-bottom-color: $gotcolor1;
+
+      li {
+        a {
+          border: 0;
+          border-bottom: 4px solid transparent;
+          font-size: 20px;
+          color: $gotcolor2;
+        }
+
+        &.active,
+        &:focus,
+        &:hover {
+
+          a,
+          a:hover,
+          a:focus {
+            background: transparent;
+            border: 0;
+            border-bottom: 4px solid $gotcolor1;
+            color: $gotcolor1;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+
+    &.courses-detail {
+      position: relative;
+
+      .btn-kakao-help {
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+    }
+  }
+
+  .program-new-card {
+    margin-bottom: 25px;
+  }
+
+  .panel-body {
+    background: transparent;
+  }
+
+  .sort-wrap {
+    padding: 12px 0;
+    vertical-align: middle;
+    border-bottom: 1px solid #dadada;
+
+    .title {
+      display: inline-block;
+      width: 80px;
+      margin-right: 12px;
+      font-weight: normal;
+    }
+
+    select {
+      height: 22px;
+      margin-right: 12px;
+      font-size: 12px;
+    }
+  }
+
+  .sort-result {
+    padding: 24px 0;
+    color: $gotcolor;
+    font-weight: normal;
+  }
+
+  .bubble-box {
+    display: none;
+    position: absolute;
+    bottom: 45px;
+    padding: 15px;
+    background: $gotcolor;
+    font-size: 13px;
+    color: #fff;
+    text-align: left;
+    letter-spacing: -0.5px;
+    border-radius: 3px;
+    z-index: 10;
+
+    &.bubble-l {
+      left: 15px;
+    }
+
+    &.bubble-r {
+      right: 15px;
+    }
+
+    &:after {
+      display: block;
+      position: absolute;
+      bottom: -18px;
+      right: 25px;
+      border-width: 12px;
+      border-style: solid;
+      border-color: $gotcolor transparent transparent transparent;
+      content: "";
+    }
+
+    dl {
+      dt {
+        font-weight: 400;
+        line-height: 20px;
+      }
+
+      dd {
+        line-height: 20px;
+      }
+    }
+  }
+
+  .btn-mini-popup:hover,
+  .btn-mini-popup:focus {
+    +.bubble-box {
+      display: block;
+    }
+  }
+
+  .notification_link {
+    padding: 24px 0;
+    margin-right: 5px;
+    display: block;
+    font-size: 14px;
+    color: black;
+
+    &:link {
+      color: black;
+    }
+
+    &:visited {
+      color: black;
+    }
+
+    &:hover {
+      color: black;
+    }
+
+    &:active {
+      color: black;
+    }
+  }
+
+  .enrollment-table {
+    // width:1080px;
+    // margin:0 auto;
+    border-bottom: 1px solid #dadada;
+
+    >table {
+      width: 100%;
+
+      >thead>tr>th {
+        padding: 12px;
+        color: #999;
+        font-size: 12px;
+      }
+
+      >tbody>tr {
+        cursor: pointer;
+
+        >td {
+          cursor: pointer;
+          padding: 12px;
+          background: #fff;
+          border-top: 1px solid #dadada;
+          font-size: 14px;
+          vertical-align: top;
+
+          .subject {
+            overflow: hidden;
+            display: inline-block;
+            width: 100%;
+            max-width: 1000px;
+            height: 20px;
+            margin-left: 20px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            word-wrap: normal;
+          }
+
+          &:last-child {
+            position: relative;
+
+            .state {
+              margin-right: 3px;
+              font-size: 8px;
+              vertical-align: middle;
+
+              &.fix {
+                color: #26b372;
+              }
+
+              &.wait {
+                color: #ffb400;
+              }
+
+              &.cancel {
+                color: #f00;
+              }
+
+              &:before {
+                content: "";
+                display: none;
+              }
+
+              // teachers .state css collision
+            }
+
+            .detail-wrap {
+              display: none;
+              position: absolute;
+              right: 0;
+              top: 48px;
+              width: 100%;
+              height: 160px;
+              border: 1px solid #dadada;
+              border-width: 1px 0;
+              background: #fff;
+
+              .detail-align {
+                display: table-cell;
+                vertical-align: middle;
+
+                >table {
+                  width: 80%;
+                  margin: 0 auto;
+
+                  th {
+                    width: 100px;
+                    padding: 5px 20px;
+                    color: $gotcolor3;
+                    font-weight: normal;
+                    vertical-align: top;
+                  }
+
+                  td {
+                    color: $gotcolor1;
+                    vertical-align: middle;
+                  }
+                }
+              }
+            }
+
+            &:after {
+              content: "";
+              position: absolute;
+              right: 12px;
+              top: 18px;
+              display: block;
+              width: 13px;
+              height: 7px;
+              background: url(asset-path("common/btn-open.png")) no-repeat 0 0;
+            }
+          }
+        }
+
+        &:nth-child(odd)>td {
+          border-top: 1px solid #dadada;
+          background: #f2f2f2;
+        }
+
+        &.active {
+          >td {
+            height: 208px;
+
+            .detail-wrap {
+              display: table;
+            }
+
+            &:last-child:after {
+              content: "";
+              background: url(asset-path("common/btn-close.png")) no-repeat 0 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #modal-player-info-popup,
+  #modal-study-info-popup {
+    .modal-dialog {
+      width: 760px;
+
+      h4 {
+        font-size: 32px;
+      }
+
+      .player-info {
+        width: 681px;
+        height: 366px;
+        background: url(asset-path("popup/player-info-popup.png")) no-repeat 0 0;
+      }
+
+      .study-info {
+        width: 681px;
+        height: 366px;
+        background: url(asset-path("popup/study-info-popup.png")) no-repeat 0 0;
+      }
+
+      .btn-area {
+        margin-top: 20px;
+        text-align: center;
+
+        button.btn-submit {
+          display: inline-block;
+          min-width: 90px;
+          padding: 5px 10px;
+          font-size: 14px;
+          box-sizing: border-box;
+          border-radius: 5px;
+        }
+      }
+    }
+  }
+
+  .pop-kakao-help {
+    .modal-header {
+      text-align: center;
+
+      .modal-title {
+        float: none;
+        font-weight: 700;
+        font-size: 30px;
+
+        &:before {
+          display: block;
+          width: 50px;
+          padding: 0 5px;
+          margin: 0 auto 5px;
+          font-weight: 700;
+          font-size: 18px;
+          color: #fff;
+          text-align: center;
+          line-height: 24px;
+          letter-spacing: 0;
+          border-radius: 3px;
+          background: #ff4046;
+          content: "SOS";
+        }
+      }
+
+      p {
+        margin-top: 5px;
+        font-size: 16px;
+        color: #999;
+      }
+
+      .icon-bx-flat {
+        &.btn-close.close {
+          position: absolute;
+          top: 0;
+          right: 0;
+          color: #000;
+        }
+      }
+    }
+
+    .modal-body {
+      .info {
+        h6 {
+          margin-top: 35px;
+          font-weight: 700;
+          font-size: 20px;
+          line-height: 30px;
+          padding-bottom: 5px;
+          border-bottom: 1px solid #000;
+
+          &:first-child {
+            margin-top: 0;
+          }
+        }
+
+        table {
+          margin: 0;
+          width: 100%;
+
+          tr {
+            &:last-child {
+              border-bottom: 0;
+            }
+
+            th {
+              padding: 5px;
+              font-weight: 700;
+              font-size: 16px;
+              line-height: 2;
+              color: #000;
+              vertical-align: top;
+            }
+
+            td {
+              padding: 5px;
+              text-align: left;
+
+              .txt-color-red {
+                display: inline-block;
+                font-weight: 700;
+                color: #ff4046;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .modal-footer {
+      .btn-kakao-help {
+        display: block;
+        max-width: 100%;
+        width: 380px;
+        height: 64px;
+        margin: 0 auto;
+        background: url(asset-path("common/btn-kakao-help.jpg")) no-repeat 0 0;
+      }
+    }
+  }
+
+  #videoModal {
+    .modal-content {
+      width: 710px;
+    }
+  }
+}
