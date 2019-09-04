@@ -1,0 +1,32 @@
+// Place all the styles related to the imports controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.article_link-group {
+  background: #f2f2f2;
+  .content-box {
+    height: 68px;
+    padding: 110px 0 140px;
+    a {
+      overflow: hidden;
+      display: inline-block;
+      width: 260px;
+      height: 68px;
+      margin-left: 8px;
+      background: url('/image/elementary/main/elementary_main_cont.jpg') no-repeat 0 0;
+      text-indent: -1000em;
+      &:nth-child(1) {
+        margin-left: 0;
+      }
+      &:nth-child(2) {
+        background-position: -272px 0;
+      }
+      &:nth-child(3) {
+        background-position: -546px 0;
+      }
+      &:nth-child(4) {
+        background-position: -820px 0;
+      }
+    }
+  }
+}

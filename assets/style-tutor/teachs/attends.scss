@@ -1,0 +1,26 @@
+// Place all the styles related to the teachs/orders controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.label {
+  // font-weight: 400;
+  font-size: 16px;
+  color: $gotcolor1;
+  background: transparent;
+
+  &.label-attend {
+    color: #26b372
+  }
+
+  &.label-tardy {
+    color: #ffb400
+  }
+
+  &.label-absent {
+    color: #d44242
+  }
+
+  &.label-early-leave {
+    color: #ff7200;
+  }
+}

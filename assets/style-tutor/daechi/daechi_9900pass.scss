@@ -1,0 +1,787 @@
+.navbar-header{
+  position: relative;
+
+  h1{
+    margin:0;
+    #daechi-logo img{
+      width:100%;
+    }
+  }
+  #user-menu{
+    position: absolute;
+    top: 18px;
+    right: 14px;
+    font-size: 14px;
+    .dropdown{
+      a{display: block}
+      .dropdown-menu{
+        left:-130px;
+      }
+    }
+  }
+}
+
+#daechi_9900pass{
+  $IMG_SRC: '/image/daechi/ip/9900pass';
+  font-family: 'NanumSR', sans-serif;
+  h1,h2,h3,h4,select{
+    font-family: 'NanumSR', sans-serif;
+  }
+  .content-box {
+    clear:both;
+    position: relative;
+    margin: 0 auto;
+    padding: 60px 0;
+    width: 1080px;
+    line-height: 1.4;
+  }
+  #day-timer{
+    padding:20px 0px;
+    background: #171a1c;
+    color:#fff;
+    text-align: center;
+    font-size:20px;
+    .inner-wrap{
+      position: relative;
+      display: inline-block;
+      .left-floting,.right-floting{
+        position: absolute;
+        top:50%;
+      }
+    }
+    strong {
+      display:block;
+      margin-bottom:3px;
+      color: #FFCE00;
+      font-weight: bold;
+      font-size: 1.2em;
+    }
+    .timer{
+      display:inline-block;
+      span{
+        display:inline-block;
+        width:38px;
+        height:48px;
+        margin:0 3px;
+        background:#100f0f;
+        border-radius: 5px;
+        padding:10px;
+      }
+    }
+  }
+  .section-visual{
+    height:800px;
+    background: #fff url('#{$IMG_SRC}/visual_bg.jpg') no-repeat 50% 50%;
+    background-size: cover;
+    text-align: center;
+    .content-box{
+      height:800px;
+      padding:60px 0;
+      .sub-title{
+        display: inline-block;
+        margin-bottom:40px;
+      }
+      h2{
+        margin-bottom:20px;
+        img{
+          margin-left:50px;
+        }
+      }
+      .btn{
+        display: block;
+        margin:0 auto;
+      }
+      .floting-banner{
+        position: absolute;
+        top:10%;
+        left:0;
+        z-index:3;
+      }
+      .floting-banner2{
+        position: absolute;
+        top:310px;
+        left:0;
+        z-index:3;
+      }
+    }
+  }
+  .section-main-banner{
+    background-color: #295ef6;
+    a {
+      margin: 0 auto;
+      display: block;
+      max-width: 1080px;
+    }
+    img {
+      width: 100%;
+      max-width: 1080px;
+    }
+  }
+  .section-main-promotion{
+    background: #2d81ff;
+    text-align: center;
+    .promotion-card{
+      clear:both;
+      width:750px;
+      height:288px;
+      margin:30px auto 0;
+      li{
+        float:left;
+        width:236px;
+        height:288px;
+        margin-left:20px;
+        &.card01{
+          margin-left:0;
+          background: url('#{$IMG_SRC}/visual_more_card01.jpg') no-repeat 0 0;
+        }
+        &.card02{
+          background: url('#{$IMG_SRC}/visual_more_card02.jpg') no-repeat 0 0;
+        }
+        &.card03{
+          background: url('#{$IMG_SRC}/visual_more_card03.jpg') no-repeat 0 0;
+        }
+        &:hover{
+          background-position-x: 100%;
+        }
+      }
+    }
+  }
+  .section-elementary-event{
+    background: #66b2fc;
+    text-align: center;
+  }
+
+  .section-feedback{
+    background: #ffcb04;
+    .content-box{
+      width:950px;
+      height:364px;
+      .section-title{
+        margin-bottom: 10px;
+        font-size:15px;
+        letter-spacing: -1px;
+        a{
+          color:#000;
+        }
+        h3,p{
+          display: inline-block;
+        }
+        h3{
+          margin:0 5px;
+          &:first-child{
+            margin-left:0;
+          }
+        }
+      }
+      .comment-feedback{
+        float:left;
+        width:548px;
+        height:244px;
+        .section-title h3{
+          color:#f16a04;
+        }
+        .comment-area{
+          box-sizing:border-box;
+          width:547px;
+          height:220px;
+          padding:10px;
+          background: #fff;
+        }
+      }
+      .event-feedback{
+        float:right;
+        width:386px;
+        height:244px;
+      }
+    }
+  }
+
+  .section-important{
+    height:1178px;
+    background: #000 url('#{$IMG_SRC}/important_bg.jpg') repeat-x 50% 50%;
+    .content-box{
+      color:#fff;
+      text-align: center;
+      letter-spacing: -1px;
+      .important-title{
+        margin-bottom: 40px;
+        font-size: 18px;
+        .top-title{
+          margin-bottom: 20px;
+          color:#26b3ff;
+          font-size: 20px;
+        }
+        h3{
+          margin-bottom: 20px;
+          font-size:40px;
+        }
+      }
+      .important-move{
+        clear:both;
+        width:950px;
+        height:272px;
+        margin:0 auto 100px;
+        .modal-movie{
+          overflow:hidden;
+          position: relative;
+          box-sizing:border-box;
+          float:left;
+          width:230px;
+          height:150px;
+          margin:0 10px 10px 0;
+          padding:10px;
+          background:#000;
+          border:1px solid #000;
+          border-radius: 10px;
+          color:#24a4e9;
+          font-size:18px;
+          font-weight: bold;
+          text-align: left;
+          img{
+            width:210px;
+            height:130px;
+          }
+          &:nth-child(4n){
+            margin-right: 0;
+          }
+          &:hover{
+            background: #eee;
+            border-color: #eee;
+          }
+          &:after{
+            content:"";
+            position: absolute;
+            top:50%;
+            left:50%;
+            display:block;
+            width:50px;
+            height:50px;
+            margin:-25px 0 0 -25px;
+            background: url('#{$IMG_SRC}/play_btn.png') no-repeat 50% 50%;
+          }
+        }
+      }
+    }
+  }
+
+  .section-benefit{
+    background: #041323;
+    text-align: center;
+    .benefit-text{
+      margin-bottom:34px;
+      color:#fff;
+      font-size: 20px;
+    }
+    .benefit-area{
+      position: relative;
+      .benefit-step{
+        clear:both;
+        width:950px;
+        height:140px;
+        margin:30px auto 0;
+        li{
+          float:left;
+          width:230px;
+          height:140px;
+          margin-left:10px;
+          text-indent: -1000em;
+          &.step01{
+            margin-left:0;
+            background: url('#{$IMG_SRC}/benefit-step01.png') no-repeat 0 0;
+            animation: step01 infinite running step-end 5s;
+          }
+          &.step02{
+            background: url('#{$IMG_SRC}/benefit-step02.png') no-repeat 0 0;
+            animation: step02 infinite running step-end 5s;
+          }
+          &.step03{
+            background: url('#{$IMG_SRC}/benefit-step03.png') no-repeat 0 0;
+            animation: step03 infinite running step-end 5s;
+          }
+          &.step04{
+            background: url('#{$IMG_SRC}/benefit-step04.png') no-repeat 0 0;
+            animation: step04 infinite running step-end 5s;
+          }
+          &:hover{
+            background-position-x: 100%;
+          }
+        }
+      }
+      iframe{
+        margin:20px 0 50px;
+      }
+    }
+  }
+  @keyframes step01 {
+    0% {
+      background-position-x: 100%;
+    }
+    25%{
+      background-position-x: 0;
+    }
+  }
+  @keyframes step02 {
+    25% {
+      background-position-x: 100%;
+    }
+    50%{
+      background-position-x: 0;
+    }
+  }
+  @keyframes step03 {
+    50% {
+      background-position-x: 100%;
+    }
+    75%{
+      background-position-x: 0;
+    }
+  }
+  @keyframes step04 {
+    75% {
+      background-position-x: 100%;
+    }
+    100%{
+      background-position-x: 0;
+    }
+  }
+  .section-solution{
+    padding:50px 0;
+    background: #1374d7;
+    text-align: center;
+  }
+
+  .section-plus{
+    background: #ffcb04;
+    text-align: center;
+    .section-title{
+      margin-bottom: 40px;
+      font-size: 40px;
+      letter-spacing: -1px;
+      .highlight{
+        position: relative;
+        display:inline-block;
+        z-index: 2;
+        &:after{
+          content: "";
+          display: block;
+          position: absolute;
+          left:0;
+          right:0;
+          bottom:0;
+          height:24px;
+          background:#ffcb04;
+          z-index: -1;
+        }
+        & + strong{
+          display:block;
+        }
+      }
+    }
+    .more-content{
+      p{
+        margin-top:35px;
+      }
+    }
+  }
+
+  .section-remind{
+    height:750px;
+    background: #000 url('#{$IMG_SRC}/visual_bg.jpg') no-repeat 50% 50%;
+    background-size:cover;
+    text-align: center;
+    color:#fff;
+    .sub-title{
+      margin-bottom: 50px;
+      font-size: 18px;
+      .sizeup{
+        font-size: 24px;
+        strong{
+          color:#ffcb04;
+        }
+      }
+    }
+    .btn{
+      display:block;
+      margin:20px auto 0;
+    }
+    .remind-logo{
+      margin-left:50px;
+    }
+    .btn-price{
+      display: block;
+    }
+    .remind-text{
+      margin-top:60px;
+      .label-import{
+        padding:5px 10px;
+        background:#ff8e3b;
+        border-radius: 5px;
+        color:#000;
+        letter-spacing: -1px;
+        font-weight: 600;
+      }
+    }
+  }
+
+  .section-event{
+    background: #ee47ac;
+    text-align: center;
+    h3{
+      margin-bottom: 50px;
+    }
+    .event-gift{
+      position: relative;
+      &:before{
+        content:"";
+        position: absolute;
+        top:-158px;
+        right:62px;
+        z-index: 2;
+        display: block;
+        width:132px;
+        height:162px;
+        background: url('#{$IMG_SRC}/event_character.png') no-repeat 0 0;
+      }
+    }
+  }
+
+  .section-comment{
+    background:#fff;
+  }
+
+  #quick-event{
+    margin-left:600px;
+  }
+
+}
+
+
+#daechi_9900pass_mobile{
+ $IMG_SRC_MOBILE: '/image/daechi/ip/9900pass_mobile';
+&.landing-wrap {
+  font-family: 'NanumSR', sans-serif;
+  .section-visual img,
+  .section-9900pass img,
+  .section-event-gate img,
+  .section-reason img,
+  .section-benefit img,
+  .section-visual-bottom img,
+  .section-event img {
+      width:100%;
+  }
+  .skip {
+      overflow:hidden;
+      position:absolute;
+      top:-999em;
+      left:-999em;
+      width:1px;
+      height:1px;
+      font-size:1px;
+      line-height:0
+  }
+}
+
+#day-timer{
+  padding:20px 0 15px;
+  text-align:center;
+  font-size:16px;
+  color:#fff;
+  background:#171a1c;
+  > div{
+      line-height:30px;
+      margin-bottom:10px;
+  }
+  strong {
+    color: #FFCE00;
+    font-weight: bold;
+  }
+  .timer{
+      display:inline-block;
+      height:40px;
+      line-height:40px;
+      span{
+          display:inline-block;
+          width:30px;
+          height:100%;
+          margin:0 3px;
+          border-radius:5px;
+          font-weight:bold;
+          font-size:16px;
+          background:#100f0f;
+      }
+  }
+}
+.section-visual{
+  position: relative;
+  .btn{
+      position:absolute;
+      left:6%;
+      width:88%;
+      height:17%;
+      &.btn-pay{
+        bottom:27%;
+        font-size:0;
+        text-indent:-999999999px;
+        background: url("#{$IMG_SRC_MOBILE}/visual_btn.png") no-repeat 50% 50%;
+        background-size:contain;
+      }
+      &.btn-requst{
+        bottom:10%;
+        img{
+          width:100%;
+        }
+      }
+  }
+}
+.floting-banner2{
+  img{
+    width:100%;
+  }
+}
+.section-9900pass{
+  background:#2d81ff;
+  h3{
+      margin-bottom:8%;
+  }
+  .btn-box{
+      margin-top:3%;
+      padding:5% 0;
+      text-align:center;
+      background:#1374d7;
+      img{
+          width:88%;
+      }
+  }
+}
+.section-main-banner{
+  background-color: #295ef6;
+  a {
+    margin: 0 auto;
+    display: block;
+    max-width: 1080px;
+  }
+  img {
+    width: 100%;
+    max-width: 1080px;
+  }
+}
+.section-event-gate{
+  background:#fff;
+  padding:12% 0;
+  h3{
+      margin-bottom:6%;
+  }
+  .event-box{
+      position: relative;
+      .btn{
+          position: absolute;
+          bottom:9%;
+          left:12%;
+          width:76%;
+          height:21%;
+          font-size:0;
+          text-indent:-999999999px;
+      }
+  }
+}
+.section-reason{
+  position: relative;
+  padding: 12% 0 15%;
+  background: url("#{$IMG_SRC_MOBILE}/bg_reason.jpg") no-repeat center bottom;
+  background-size:cover;
+  h3{
+      margin:11%;
+  }
+  .bx-wrapper{
+    position: relative;
+    width:320px;
+    height:250px;
+    margin:0 auto;
+  }
+  .bx-controls-direction{
+    position: absolute;
+    top:50%;
+    width:100%;
+    a{
+      overflow:hidden;
+      position: absolute;
+      top:-25px;
+      display:block;
+      width: 50px;
+      height: 50px;
+      color:#fff;
+      text-indent: -1000em;
+    }
+    .bx-prev{
+      left:-25px;
+      background: url(asset-path('common/btn-prev.png')) no-repeat 0 0;
+    }
+    .bx-next{
+      right:-25px;
+      background: url(asset-path('common/btn-next.png')) no-repeat 0 0;
+    }
+  }
+  .video-box{
+    position: relative;
+    height:250px;
+  }
+  .modal-movie{
+    width:320px;
+    height:222px;
+    padding:15px;
+    background: #000;
+    border-radius: 10px;
+    img{
+      width:290px;
+      height:192px;
+    }
+    &:after{
+      content:"";
+      position: absolute;
+      top:50%;
+      left:50%;
+      display:block;
+      width:50px;
+      height:50px;
+      margin:-25px 0 0 -25px;
+      background: url('/image/daechi/ip/9900pass/play_btn.png') no-repeat 50% 50%;
+    }
+  }
+}
+.section-benefit{
+  position: relative;
+  padding-top:10%;
+  background:url("#{$IMG_SRC_MOBILE}/bg_benefit_01.jpg");
+  h3{
+      margin-bottom:3%;
+  }
+  .benefit-area{
+      position: relative;
+      padding-top:75%;
+      .benefit-list{
+          li{
+              position:absolute;
+              left:25%;
+              right:25%;
+              &:nth-child(1){
+                  top:0;
+                   z-index:3;
+              }
+              &:nth-child(2){
+                  top:13%;
+                  z-index:2;
+              }
+              &:nth-child(3){
+                  top:26%;
+                  z-index:1;
+              }
+              &:nth-child(4){
+                  top:39%;
+              }
+          }
+      }
+      .btn{
+        padding:0;
+      }
+      .video-box{
+        margin:10% 6% 8%;
+        iframe{
+          width:100%;
+          height:100%;
+        }
+      }
+  }
+  .video-area{
+      padding:12% 0;
+      background:#fff;
+  }
+  .plus-benefit-area{
+      padding:16% 0;
+      background:#ffcb04;
+  }
+}
+.section-elementary-event{
+  background: #66b2fc;
+  text-align: center;
+  padding-bottom:40px;
+  img{
+    width: 100%;
+  }
+}
+
+.section-visual-bottom{
+  position: relative;
+  .btn{
+      position:absolute;
+      left:6%;
+      &.btn-pay{
+        bottom:27%;
+        width:88%;
+        height:17.4%;
+        font-size:0;
+        text-indent:-999999999px;
+        background: url("#{$IMG_SRC_MOBILE}/visual_btn.png") no-repeat 50% 50%;
+        background-size:contain;
+      }
+      &.btn-requst{
+        bottom:8%;
+        img{
+          width:100%;
+        }
+      }
+  }
+  .btn-box{
+      padding:5% 0;
+      text-align:center;
+      background:#fff;
+      img{
+          width:90%;
+      }
+  }
+}
+.section-event{
+  padding:16% 0 13%;
+  background: #ee439c;
+  h3{
+      margin-bottom:3%;
+  }
+}
+
+#main-floting-area {
+  position: fixed;
+  bottom: 16px;
+  left: 0;
+  z-index: 101;
+  width: 100%;
+  text-align: center;
+  a {
+    display: inline-block;
+    height: 44px;
+    margin: 0 auto;
+    padding: 0 20px;
+    background: #29b6f6;
+    border-radius: 44px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 45px;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+    -webkit-animation-name: pulse;
+    animation-name: pulse;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s;
+    -webkit-animation-timing-function: ease;
+    animation-timing-function: ease;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+}
+}

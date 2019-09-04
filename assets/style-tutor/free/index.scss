@@ -1,0 +1,268 @@
+// Place all the styles related to the KidsLounges controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@media all and (min-width:768px) {
+  #freeLoginArea {
+    display: block;
+    width: 70%;
+    max-width: 800px;
+    margin: 10% auto;
+    text-align: center;
+
+    .login-header {
+      width: 100%;
+      display: inline-block;
+
+      a.navbar-brand.icon-bi_h {
+        display: inline-block;
+        font-size: 230%;
+        text-indent: 0;
+        color: $gotcolor;
+        float: none;
+        margin-left: 0%;
+      }
+
+      & .title {
+        display: block;
+        margin: 2% 0px;
+        font-size: 300%;
+        font-weight: 500;
+        color: $gotcolor1;
+      }
+    }
+
+    .login-body {
+      width: 60%;
+      margin: 2% auto;
+
+      .login-noti {
+        text-align: left;
+        width: 100%;
+        &>p {
+          font-weight: bold;
+          color: $red;
+          padding: 2% 2% 2% 5%;
+          font-size: 110%;
+        }
+      }
+
+      .login-form {
+        padding: 2%;
+        text-align: left;
+        & label {
+          display: block;
+          color: $gotcolor1;
+          font-size: 120%;
+          margin: 0 0 2% 1%;
+          font-weight: 500;
+        }
+        & input[type="text"]{
+          width: 100%;
+          font-size: 160%;
+          padding: 2%;
+          margin-bottom: 5%;
+          border: 1px solid $gotcolor1;
+        }
+        & .portrait-area {
+          & input[type="checkbox"]{
+            position: relative;
+            top: -1.5px;
+          }
+          & label {
+            display: inline;
+            font-size: 100%;
+            position: relative;
+            cursor: pointer;
+            top: 1px;
+          }
+          &>a {
+            float: right;
+            color: $gotcolor1;
+            text-decoration: underline;
+            position: relative;
+            top: 1px;
+            cursor: pointer;
+          }
+          .portrait-check-content {
+            display: none;
+            &.open-area{
+              display: block !important;
+            }
+            padding: 4.5%;
+            & li {
+              list-style: circle;
+              margin-bottom: 4%;
+              & a {
+                color: $gotcolor1;
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+        #submitLoginBtn {
+          width: 100%;
+          font-size: 200%;
+          padding: 3%;
+          margin-top: 6%;
+        }
+      }
+      .member-login-text {
+        margin: 5%;
+        display: block;
+        & a {
+          color: $gotcolor1;
+          text-decoration: underline;
+        }
+      }
+    }
+    .login-footer {
+      width: 100%;
+      margin: 10% 0;
+      & span {
+        font-size: 80%;
+      }
+      & strong {
+        font-size: 90%;
+      }
+    }
+  }
+}
+@media all and (max-width:768px) {
+  #freeLoginArea {
+    display: block;
+    width: 100%;
+    max-width: 768px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1vw;
+
+    .login-header {
+      width: 100%;
+      display: inline-block;
+
+      a.navbar-brand.icon-bi_h {
+        display: inline-block;
+        font-size: 5em;
+        text-indent: 0;
+        color: $gotcolor;
+        float: none;
+        margin-left: 0%;
+        height: 1em;
+        padding: 1%;
+      }
+
+      & .title {
+        display: block;
+        margin: 2% 0px;
+        font-size: 7em;
+        font-weight: 500;
+        color: $gotcolor1;
+      }
+    }
+
+    .login-body {
+      width: 80%;
+      margin: 2% auto;
+
+      .login-noti {
+        text-align: left;
+        width: 100%;
+        &>p {
+          font-weight: bold;
+          color: $red;
+          padding: 2% 2% 2% 5%;
+          font-size: 1.3em;
+        }
+      }
+
+      .login-form {
+        padding: 2%;
+        text-align: left;
+        & label {
+          display: block;
+          color: $gotcolor1;
+          font-size: 4em;
+          margin: 0 0 2% 1%;
+          font-weight: 500;
+        }
+        & input[type="text"]{
+          width: 100%;
+          font-size: 4em;
+          padding: 2%;
+          margin-bottom: 5%;
+          border: 1px solid $gotcolor1;
+        }
+        & .portrait-area {
+          font-size: 2em;
+          & input[type="checkbox"]{
+            position: relative;
+            top: -1.5px;
+          }
+          & label {
+            display: inline;
+            position: relative;
+            cursor: pointer;
+            top: -2px;
+            font-size: 1.5em;
+          }
+          &>a {
+            font-size: 1.5em;
+            float: right;
+            color: $gotcolor1;
+            text-decoration: underline;
+            position: relative;
+            top: -2px;
+            cursor: pointer;
+          }
+          .portrait-check-content {
+            display: none;
+            line-height: 1.3;
+            font-size: 1.5em;
+            padding: 2.5% 3.5%;
+            padding-left: 6%;
+            &.open-area{
+              display: block !important;
+            }
+            & li {
+              list-style: circle;
+              margin-bottom: 3%;
+              & a {
+                color: $gotcolor1;
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+        #submitLoginBtn {
+          width: 100%;
+          font-size: 5em;
+          padding: 3%;
+          margin: 8% 0 5%;
+        }
+      }
+      .member-login-text {
+        margin: 4%;
+        display: block;
+        font-size: 3em;
+        line-height: 1.3;
+        & a {
+          display: block;
+          color: $gotcolor1;
+          text-decoration: underline;
+        }
+      }
+    }
+    .login-footer {
+      width: 100%;
+      margin: 5% 0;
+      line-height: 1.3;
+      font-size: 2em;
+      & span {
+        font-size: 1.5em;
+      }
+      & strong {
+        font-size: 1.5em;
+      }
+    }
+  }
+}

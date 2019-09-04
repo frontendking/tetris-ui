@@ -1,0 +1,159 @@
+// Place all the styles related to the academies controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+#partner-profle .wrapper {
+  padding: 0 20px;
+  background: #f4f4f4;
+}
+#partner .navbar-wrapper > .container {
+  padding-right: 0;
+  padding-left: 0;
+}
+#partner .navbar-wrapper .navbar {
+  background-color: #fff;
+  border-color: #fff;
+  border-bottom: 1px solid #e7eaec;
+  padding: 15px;
+  margin:0;
+}
+#partner .navbar-default.navbar-scroll {
+  background-color: #fff;
+  border-color: #fff;
+  padding: 15px 0;
+}
+#partner .navbar-default {
+  background-color: transparent;
+  border-color: transparent;
+  transition: all 0.3s ease-in-out 0s;
+}
+#partner .navbar-default .nav li a {
+  color: #333;
+  font-family: 'Open Sans', helvetica, arial, sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+#partner .navbar-nav > li > a {
+  padding-top: 25px;
+  border-top: 6px solid transparent;
+}
+#partner .navbar-default .navbar-nav > .active > a,
+#partner .navbar-default .navbar-nav > .active > a:hover {
+  background: transparent;
+  color: #fff;
+  border-top: 6px solid #1ab394;
+}
+#partner .navbar-default .navbar-nav > li > a:hover,
+#partner .navbar-default .navbar-nav > li > a:focus {
+  color: #1ab394;
+  background: inherit;
+}
+#partner .navbar-default .navbar-nav > .active > a:focus {
+  background: transparent;
+  color: #fff;
+}
+#partner .navbar-default .navbar-nav > .active > a:focus {
+  background: transparent;
+  color: #ffffff;
+}
+#partner .navbar-default.navbar-scroll .navbar-nav > .active > a:focus {
+  background: transparent;
+  color: inherit;
+}
+#partner .navbar-scroll.navbar-default .nav li a {
+  color: #676a6c;
+}
+#partner .navbar-scroll.navbar-default .nav li a:hover {
+  color: #1ab394;
+}
+#partner .navbar-wrapper{
+  position:relative;
+}
+#partner .navbar-wrapper .navbar.navbar-scroll {
+  position: fixed;
+  top:0;
+  left:0;
+  right:0;
+  z-index:200;
+  background-color: #fff;
+  border-color: #fff;
+  border-bottom: 1px solid #e7eaec;
+  padding: 15px;
+}
+#partner .nav > li.active {
+  border: none;
+  background: inherit;
+}
+#partner .nav > li > a {
+  padding: 25px 10px 15px 10px;
+}
+#partner .cover-img{
+}
+#partner .cover-img .teacher-caption{
+  margin-top:200px;
+  color:#fff;
+  text-align: center;
+}
+#partner .cover-img .teacher-caption h1 {
+  font-weight: 700;
+  font-size: 38px;
+  text-transform: uppercase;
+  text-shadow: none;
+  letter-spacing: -1.5px;
+}
+#partner .cover-img .teacher-caption p {
+  font-weight: 700;
+  text-transform: uppercase;
+  text-shadow: none;
+}
+#partner .cover-img .teacher-caption span.state {
+
+}
+#partner .cover-img .spin-icon {
+  position: absolute;
+  left:auto;
+  right:0;
+  top:20px;
+}
+.dl-horizontal dt{
+  text-align: left;
+}
+
+
+
+
+.modal-dialog.modal-80size {
+  width: 60%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.modal-content.modal-80size {
+  height: auto;
+  min-height: 60%;
+}
+
+.modal.modal-center {
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .modal.modal-center:before {
+    display: inline-block;
+    vertical-align: middle;
+    content: " ";
+    height: 100%;
+  }
+}
+
+.modal-dialog.modal-center {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.cover-img + a > .icon-quick-edit {
+  margin-top: 50px;
+}

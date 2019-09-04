@@ -1,0 +1,79 @@
+// Place all the styles related to the lives controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.live-mathwon {
+  position: relative;
+  min-height: 1037px;
+  height: 100%;
+  background: #e2fbf3;
+  .live-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    margin: -519px auto 0;
+    .live-header {
+      padding-top: 93px;
+      text-align: center;
+      .logo-area {
+        position: relative;
+        margin: 0 auto;
+        width: 278px;
+        &:before {
+          display: block;
+          width: 193px;
+          height: 36px;
+          font-size: 34px;
+          text-indent: 0;
+          color: #29b6f6;
+        }
+        strong {
+          display: block;
+          position: absolute;
+          top: 7px;
+          right: 0;
+          color: #29b6f6;
+          font-size: 12px;
+        }
+      }
+      .title {
+        margin: 45px 0 29px;
+      }
+      .info {
+        margin-bottom: 64px;
+        color: #333;
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+    .live-body {
+      .row {
+        max-width: 1080px;
+        margin: 0 auto;
+        .col-sm-8 {
+          padding: 0;
+          .video-area {
+            max-height: 380px;
+            background: #000;
+          }
+        }
+        .col-sm-4 {
+          padding: 0;
+          .chat-area {
+            max-height: 380px;
+          }
+        }
+      }
+    }
+    .live-footer {
+      .notice {
+        margin-top: 94px;
+        padding-bottom: 111px;
+        color: #999;
+        text-align: center;
+        font-size: 14px;
+        letter-spacing: -0.5px;
+      }
+    }
+  }
+}

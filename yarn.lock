@@ -4286,6 +4286,11 @@ destroy@^1.0.4, destroy@~1.0.4:
   resolved "https://registry.yarnpkg.com/destroy/-/destroy-1.0.4.tgz#978857442c44749e4206613e37946205826abd80"
   integrity sha1-l4hXRCxEdJ5CBmE+N5RiBYJqvYA=
 
+destyle.css@^1.0.10:
+  version "1.0.10"
+  resolved "https://registry.yarnpkg.com/destyle.css/-/destyle.css-1.0.10.tgz#bfa6b064bd84852163a576c91731605716b627f0"
+  integrity sha512-6KKX9n5eD/xiHj2tRNKOXdXvkJDUphcgCBEG/Skl6wsaZs1SS/ERnaHdSoLe3MhI/vUhXgeUe7SWdCKTN77fnQ==
+
 detect-indent@^5.0.0:
   version "5.0.0"
   resolved "https://registry.yarnpkg.com/detect-indent/-/detect-indent-5.0.0.tgz#3871cc0a6a002e8c3e5b3cf7f336264675f06b9d"
@@ -5343,6 +5348,14 @@ fuse.js@^3.4.4:
   version "3.4.5"
   resolved "https://registry.yarnpkg.com/fuse.js/-/fuse.js-3.4.5.tgz#8954fb43f9729bd5dbcb8c08f251db552595a7a6"
   integrity sha512-s9PGTaQIkT69HaeoTVjwGsLfb8V8ScJLx5XGFcKHg0MqLUH/UZ4EKOtqtXX9k7AFqCGxD1aJmYb8Q5VYDibVRQ==
+
+fxjs2@^0.12.5:
+  version "0.12.5"
+  resolved "https://registry.yarnpkg.com/fxjs2/-/fxjs2-0.12.5.tgz#7b1a547c1704843aec08da81296861c9a38846cc"
+  integrity sha512-4LJSZSTMTpB45VJDXpf8U2h/553EnVbOVJUqXfcpwb/XV0fTCiU/itfpW3vLOn3mWN1rRIOEgHm0oLPY0KEDTg==
+  dependencies:
+    core-js "^3.0.1"
+    regenerator-runtime "^0.13.2"
 
 gauge@~2.7.3:
   version "2.7.4"
