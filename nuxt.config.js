@@ -56,7 +56,9 @@ export default {
         }
       }
     },
-    extend (config, ctx) {
+    extend (config, { isClient }) {
+      // Extend only webpack config for client-bundle
+      config.devtool = isClient ? 'eval-source-map' : 'inline-source-map'
     }
   }
 }

@@ -6,7 +6,7 @@
       <section>
         <h3 hidden>선생님 정보 요약</h3>
         <figure id="teacher-picture">
-          <img src="assets/img/pic.png"/>
+          <img src="./assets/img/pic.png"/>
           <figcaption>teacherName</figcaption>
         </figure>
         <hr/>
@@ -40,9 +40,12 @@
   </article>
 </template>
 <script>
+import {getClassInfoPageData} from './assets/data'
+const pageData = getClassInfoPageData(3)
 export default {
   name: 'class-info',
   data () {
+    console.log(JSON.stringify(pageData, null, 2))
     return {}
   }
 }

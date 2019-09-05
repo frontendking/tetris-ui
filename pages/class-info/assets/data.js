@@ -1,87 +1,175 @@
-const faker = require('faker')
+import faker from 'faker/locale/ko'
+import fakerEn from 'faker/locale/en'
 
-module.exports = {
-  classInfo: {
-    teacherName: '김규미 선생님',
-    title: {
-      main: '1학년수학',
-      sub: '8월 목요일 17:00'
-    },
-    target: '초등학교 1학년',
-    recuritment: {
-      personnel: {
-        start: '1',
-        end: '4'
-      },
-      period: {
-        start: '',
-        end: '2019/7/4'
-      }
-    },
-    book: {
-      type: '자체교재',
-      desc: '대치동 ‘㈜ 원리탐구 학원’ 원장님 군단이 만든 ‘일간대치동’ 교재로 학습합니다.'
-    },
-    period: {
-      start: '2019/8/1',
-      end: '2019/8/31',
-    },
-    method: [
-      '매칭 된 요일과 시간 클래스에 15분 전 입장하여 과외를 받습니다.',
-      '7~8월은 여름방학호로 2학기 교과과정 미리보기를 8주간 진행합니다.',
-      '초등 1학년 8월호는 4주간 진행됩니다.',
-      '매주 주1회 50분 학습합니다.',
-      '튜터를 만나지 않는 날은 튜터와 약속한 숙제를 해서 숙제방에 숙제한 내용을 올려 놓습니다. 이 과정을 통해 매일 30분씩 공부하는 공부습관이 만들어집니다.',
-      '과외가 끝나고 나면 튜터의 학습레포트로 피드백을 받을 수 있습니다.'
-    ],
-    count: 4,
-    price: 55000
+import {filter, find, range} from 'fxjs/Strict'
+
+const random = faker.random
+const classCount = 50
+const teacherCount = 30
+const reviewCount = 500
+const userCount = 100
+const gradeRange = [1, 2, 3, 4]
+const ranges = {
+  short: { min: 2, max: 4 },
+  normal: { min: 4, max: 8 },
+  long: { min: 4, max: 12 }
+}
+
+const genId = (prefix, id) => id => `${prefix}${id}`
+const getTeacherId = id => genId('teacher')(id)
+const getClassId = id => genId('class')(id)
+const getReviewId = id => genId('review')(id)
+const getUserId = id => genId('user')(id)
+const subjects = [
+  {
+    id: 1,
+    name: '국어'
   },
-  pageTitle: '수업 정보',
-  subPage: [
-    {
-      title: '튜터 소개',
-      contents: {
-        organization: '일간대치동',
-        course: '',
-        target: '',
-        education: '고려대학교',
-        introduction: {
-          short: '188명의 지원자 중 선발되어, 교육과 인성검사까지 모두 마친 우수한 튜터입니다.',
-          pr: ['인천국제고등학교 졸업', '고려대학교 정경학부 정시 최초합격', '2014 수능 언수외탐 전국 0.16%', '현재 고려대학교 4년 장학생'],
-          contents: [
-            '공부도 해본 사람이 제대로 가르칠 수 있다고 생각합니다. 수험생 시절 정말 누구보다 더 열심히 공부했다고 자부할 수 있습니다. 아이들도 그렇게 만들어보겠습니다. 그러기 위해 필요한 공부하는 이유, 공부하는 방법, 효율적인 시간 배분에 대해 가르치겠습니다.',
-            '아이들이 처음부터 모든 것을 안다고 전제하지 않습니다. 아이들이 이 문제, 내용, 개념을 받아들이고 머릿속에 이해했다고 인식할 수 있도록 제가 도와주겠습니다.'
-          ],
-          profile: [
-            '인천국제고졸, 고려대학교 정경학부 입학. 현재 정치외교학과 재학 중',
-            '3,4년의 과외 경험. 1,2년의 학원 경험.',
-            '중학생, 고등학생 과외, 초등학생 학원 경험 다수',
-            '교육봉사 멘토 경험 다수, 학원 캠프 조교 경험 有',
-          ]
-        }
-      }
-    },
-    {
-      title: '수업 후기',
-      reviews: [
-        {
-          name: '',
-          pictureUrl: '',
-          review: ''
-        }
+  {
+    id: 2,
+    name: '수학'
+  },
+  {
+    id: 3,
+    name: '사회/과학'
+  },
+]
 
+function * genSentences (num) {
+  for (let i = 0; i < num; i++) {
+    yield faker.lorem.sentence()
+  }
+}
+
+function * genLorem (num, genLorem) {
+  for (let i = 0; i < num; i++) {
+    yield genLorem()
+  }
+}
+
+function * genUsers (num) {
+  for (let i = 0; i < num; i++) {
+    yield {
+      id: getUserId(i),
+      name: `${faker.name.lastName()}${faker.name.firstName()}`,
+      avataUrl: faker.image.imageUrl(),
+    }
+  }
+}
+
+
+
+function * genClasses (num) {
+  for (let i = 0; i < num; i++) {
+    const targetGrade = random.arrayElement(gradeRange)
+    const targetSubject = random.arrayElement(subjects).name
+    const personal = {}
+    personal.start = random.number(3)
+    personal.end = random.number({min: personal.start, max: 12})
+    const recuritment = {
+      personal,
+      period: {
+        start: faker.date.past(),
+        end: faker.date.future(),
+      }
+    }
+    function * genSchedule (num) {
+      for (let i = 0; i < num; i++) {
+        let period = {}
+        period.start = faker.date.future(1, recuritment.period.end)
+        period.end = faker.date.future(1, period.start)
+        yield period
+      }
+    }
+    yield {
+      id: getClassId(i),
+      teacherId: getTeacherId(random.number(teacherCount)),
+      targetSubject,
+      targetGrade,
+      recuritment,
+      schedule: [...genSchedule(random.number(ranges.long))],
+      book: {
+        type: faker.lorem.word(),
+        desc: faker.lorem.sentences()
+      },
+      methods: [...genLorem(random.number(ranges.normal), faker.lorem.sentence)],
+      // method: [...genSentences(random.number({min:3, max: 6}))],
+      price: random.arrayElement(range(50000, 100000, 5000))
+    }
+  }
+}
+
+function * genReviews (num) {
+  for (let i = 0; i < num; i++) {
+    yield {
+      id: getReviewId(i),
+      classId: getClassId(random.number(classCount)),
+      userId: getUserId(random.number(userCount)),
+      classRanking: random.arrayElement(range(1, 5, 0.5)),
+      reivew: faker.lorem.sentence(),
+    }
+  }
+}
+
+function * genTeachers (num) {
+  for (let i = 0; i < num; i++) {
+    yield {
+      id: getTeacherId(i),
+      name: `${faker.name.lastName()}${faker.name.firstName()}`,
+      organization: fakerEn.company.companyName(),
+      course: fakerEn.lorem.word(),
+      target: fakerEn.name.jobType(),
+      education: fakerEn.lorem.word(),
+      introduction: {
+        short: faker.lorem.lines(),
+        pr: [...genLorem(random.number({ min: 3, max: 7 }), faker.lorem.sentence)],
+        aspiration: [...genLorem(random.number({ min: 2, max: 4 }), faker.lorem.paragraph)],
+        profiles: [...genLorem(random.number({ min: 3, max: 7 }), faker.lorem.sentence)]
+      }
+    }
+  }
+}
+
+const classes = [...genClasses(classCount)]
+const teachers = [...genTeachers(teacherCount)]
+const reviews = [...genReviews(reviewCount)]
+const users = [...genUsers(userCount)]
+
+export function getClassInfoPageData (classId) {
+  const classInfo = find(classInfo => classInfo.id === getClassId(classId), classes)
+  const teacherInfo = find(teacherInfo => teacherInfo.id === classInfo.teacherId, teachers)
+  const classReviews = filter(review => review.classId === classInfo.id, reviews)
+
+  return {
+    heading: '수업 정보',
+    classSummary: {
+      teacherName: teacherInfo.name,
+
+    },
+    classInfo: {
+      heading: '수업 소개',
+      sections: classInfo,
+    },
+    teacherInfo: {
+      heading: '튜터 소개',
+      sections: teacherInfo,
+    },
+    reviews: {
+      heading: '수업 후기',
+      sections: classReviews
+    },
+    footer: {
+      buttons: [
+        {
+          label: '수업구매하기',
+          url: fakerEn.internet.url()
+        },
+        {
+          label: '수업권으로 수업 예약',
+          url: fakerEn.internet.url()
+        }
       ]
     }
-  ],
-  buttons: [
-    {
-      label: '수업구매하기',
-      url: ''
-    },
-    {
-      label: '수업권으로 수업예약',
-      url: ''
-    }
-  ]
+  }
 }
+
