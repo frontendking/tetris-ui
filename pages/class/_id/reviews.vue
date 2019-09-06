@@ -1,11 +1,13 @@
 <template>
   <section class="ClassReview">
-    ClassReview
+    {{page}}
   </section>
 </template>
 
 <script>
-export default {}
+export default {
+  props: ['page']
+}
 </script>
 
 <style scoped lang=scss>

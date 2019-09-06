@@ -1,7 +1,7 @@
 import faker from 'faker/locale/ko'
 import fakerEn from 'faker/locale/en'
 
-import {filter, find, range} from 'fxjs/Strict'
+import { filter, find, range } from 'fxjs/Strict'
 
 const random = faker.random
 const classCount = 50
@@ -9,10 +9,10 @@ const teacherCount = 30
 const reviewCount = 500
 const userCount = 100
 const gradeRange = [1, 2, 3, 4]
-const ranges = {
-  short: { min: 2, max: 4 },
-  normal: { min: 4, max: 8 },
-  long: { min: 4, max: 12 }
+const randomRange = {
+  small: { min: 1, max: 4 },
+  middle: { min: 4, max: 8 },
+  big: { min: 4, max: 12 }
 }
 
 const genId = (prefix, id) => id => `${prefix}${id}`
@@ -57,15 +57,13 @@ function * genUsers (num) {
   }
 }
 
-
-
 function * genClasses (num) {
   for (let i = 0; i < num; i++) {
     const targetGrade = random.arrayElement(gradeRange)
     const targetSubject = random.arrayElement(subjects).name
     const personal = {}
-    personal.start = random.number(3)
-    personal.end = random.number({min: personal.start, max: 12})
+    personal.start = random.number(randomRange.small)
+    personal.end = random.number(randomRange.big)
     const recuritment = {
       personal,
       period: {
@@ -73,6 +71,7 @@ function * genClasses (num) {
         end: faker.date.future(),
       }
     }
+
     function * genSchedule (num) {
       for (let i = 0; i < num; i++) {
         let period = {}
@@ -81,18 +80,19 @@ function * genClasses (num) {
         yield period
       }
     }
+
     yield {
       id: getClassId(i),
       teacherId: getTeacherId(random.number(teacherCount)),
       targetSubject,
       targetGrade,
       recuritment,
-      schedule: [...genSchedule(random.number(ranges.long))],
+      schedule: [...genSchedule(random.number(randomRange.big))],
       book: {
         type: faker.lorem.word(),
         desc: faker.lorem.sentences()
       },
-      methods: [...genLorem(random.number(ranges.normal), faker.lorem.sentence)],
+      methods: [...genLorem(random.number(randomRange.middle), faker.lorem.sentence)],
       // method: [...genSentences(random.number({min:3, max: 6}))],
       price: random.arrayElement(range(50000, 100000, 5000))
     }
@@ -116,6 +116,7 @@ function * genTeachers (num) {
     yield {
       id: getTeacherId(i),
       name: `${faker.name.lastName()}${faker.name.firstName()}`,
+      imgSrc: require('@/assets/img/teachers/pic.png'),
       organization: fakerEn.company.companyName(),
       course: fakerEn.lorem.word(),
       target: fakerEn.name.jobType(),
@@ -130,42 +131,47 @@ function * genTeachers (num) {
   }
 }
 
-const classes = [...genClasses(classCount)]
-const teachers = [...genTeachers(teacherCount)]
-const reviews = [...genReviews(reviewCount)]
-const users = [...genUsers(userCount)]
+export const classes = [...genClasses(classCount)]
+export const teachers = [...genTeachers(teacherCount)]
+export const reviews = [...genReviews(reviewCount)]
+export const users = [...genUsers(userCount)]
 
-export function getClassInfoPageData (classId) {
-  const classInfo = find(classInfo => classInfo.id === getClassId(classId), classes)
-  const teacherInfo = find(teacherInfo => teacherInfo.id === classInfo.teacherId, teachers)
-  const classReviews = filter(review => review.classId === classInfo.id, reviews)
-
+export function getClasses (classId) {
+  const theClass = find(classInfo => classInfo.id === getClassId(classId), classes)
+  const theTeacher = find(teacherInfo => teacherInfo.id === theClass.teacherId, teachers)
+  const theReviews = filter(review => review.classId === theClass.id, reviews)
+  /*
+  teacherImageSrc: require('@/assets/img/teachers/pic.png'),
+        teacherName: theTeacher.name,
+        classTargetGrade: theClass.targetGrade,
+        classTargetSubject: theClass.targetSubject,
+        classTime: theClass.schedule[0].stjkjjart,
+   */
   return {
-    heading: '수업 정보',
-    classSummary: {
-      teacherName: teacherInfo.name,
-
-    },
-    classInfo: {
-      heading: '수업 소개',
-      sections: classInfo,
-    },
-    teacherInfo: {
-      heading: '튜터 소개',
-      sections: teacherInfo,
-    },
-    reviews: {
-      heading: '수업 후기',
-      sections: classReviews
-    },
+    heading: '수업 신청',
+    theTeacher,
+    theClass,
+    theReviews,
     footer: {
+      restDate: random.number(randomRange.big),
+      restSeat: random.number(randomRange.small),
+      classAcount: theClass.schedule.length,
+      classPrice: theClass.price,
       buttons: [
         {
-          label: '수업구매하기',
-          url: fakerEn.internet.url()
+          label: `수업구매하기(${theClass.price})`,
+          url: fakerEn.internet.url(),
         },
         {
           label: '수업권으로 수업 예약',
+          url: fakerEn.internet.url()
+        },
+        {
+          label: '커넥츠 멤버십으로 예약',
+          url: fakerEn.internet.url()
+        },
+        {
+          label: '일간대치동 수학 교재 구매하기',
           url: fakerEn.internet.url()
         }
       ]

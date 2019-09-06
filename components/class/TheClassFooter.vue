@@ -1,16 +1,17 @@
 <template>
-  <section class="_id">
-
+  <section class="TheClassFooter">
+    {{page}}
   </section>
 </template>
 
 <script>
 export default {
+  name: 'TheClassFooter',
   props: ['page']
 }
 </script>
 
 <style scoped lang=scss>
-._id {
+.TheClassFooter {
 }
 </style>
