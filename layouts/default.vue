@@ -3,9 +3,13 @@
     <TheHeader id="conects-header"></TheHeader>
     <TheConectsLnb id="conects-lnb"></TheConectsLnb>
     <main id="tutor-contents">
-      <TheTutorGnb id="tutor-gnb"></TheTutorGnb>
-      <TheTutorLnb id="tutor-lnb"></TheTutorLnb>
-      <nuxt id=""/>
+      <header>
+        <TheTutorGnb id="tutor-gnb"></TheTutorGnb>
+        <TheTutorLnb id="tutor-lnb"></TheTutorLnb>
+      </header>
+      <main>
+        <nuxt id=""/>
+      </main>
     </main>
     <TheFooter class="footer"></TheFooter>
   </div>
@@ -29,6 +33,7 @@ export default {
 </script>
 <style lang="scss">
 @import '~@/assets/style/global.scss';
+@import 'destyle.css';
 html {
   font-size: 10px;
 }

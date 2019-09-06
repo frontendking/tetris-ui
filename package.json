@@ -15,14 +15,13 @@
     "build-storybook": "build-storybook"
   },
   "dependencies": {
-    "core-js": "^2.6.5",
     "destyle.css": "^1.0.10",
-    "faker": "^4.1.0",
     "fxjs": "^0.12.5",
-    "fxjs2": "^0.12.5",
     "nuxt": "^2.0.0"
   },
   "devDependencies": {
+    "core-js": "^2.6.5",
+    "faker": "^4.1.0",
     "@babel/core": "^7.5.5",
     "@babel/register": "^7.5.5",
     "@storybook/addon-actions": "^5.1.10",
@@ -36,7 +35,6 @@
     "babel-preset-vue": "^2.0.2",
     "chromedriver": "^76.0.0",
     "cucumber": "^5.1.0",
-    "geckodriver": "^1.16.2",
     "jest": "^24.1.0",
     "nodemon": "^1.18.9",
     "sass": "^1.22.9",
