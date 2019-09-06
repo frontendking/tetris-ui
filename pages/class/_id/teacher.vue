@@ -1,6 +1,6 @@
 <template>
   <section class="ClassTutorInfo">
-    {{page}}
+    teacher
   </section>
 </template>
 

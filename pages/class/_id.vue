@@ -16,7 +16,7 @@
         </nuxt-link>
       </li>
     </ul>
-    <nuxt-child :page="(subPages.find(v=>v.id===subPageName)).page"/>
+    <nuxt-child />
     <!--    <the-class-footer :page="page.footer"/>-->
   </article>
 </template>

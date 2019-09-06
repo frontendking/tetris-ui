@@ -1,6 +1,6 @@
 <template>
   <section class="ClassReview">
-    {{page}}
+    reviews
   </section>
 </template>
 

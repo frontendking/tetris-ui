@@ -1,6 +1,6 @@
 <template>
   <section class="_id">
-
+    Class
   </section>
 </template>
 
