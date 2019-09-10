@@ -106,7 +106,7 @@ function * genReviews (num) {
       classId: getClassId(random.number(classCount)),
       userId: getUserId(random.number(userCount)),
       classRanking: random.arrayElement(range(1, 5, 0.5)),
-      reivew: faker.lorem.sentence(),
+      review: faker.lorem.sentence(),
     }
   }
 }
@@ -155,24 +155,28 @@ export function getClasses (classId) {
     footer: {
       restDate: random.number(randomRange.big),
       restSeat: random.number(randomRange.small),
-      classAcount: theClass.schedule.length,
+      classAccount: theClass.schedule.length,
       classPrice: theClass.price,
       buttons: [
         {
-          label: `수업구매하기(${theClass.price})`,
+          label: `수업구매하기(${theClass.price}원)`,
           url: fakerEn.internet.url(),
+          active: true,
         },
         {
           label: '수업권으로 수업 예약',
-          url: fakerEn.internet.url()
+          url: fakerEn.internet.url(),
+          active: true,
         },
         {
           label: '커넥츠 멤버십으로 예약',
-          url: fakerEn.internet.url()
+          url: fakerEn.internet.url(),
+          active: true,
         },
         {
           label: '일간대치동 수학 교재 구매하기',
-          url: fakerEn.internet.url()
+          url: fakerEn.internet.url(),
+          active: false
         }
       ]
     }

@@ -44,7 +44,7 @@ body {
 
 <style scoped lang="scss">
 
-@media(min-width: 600px) {
+@media(min-width: 641px) {
   #tutor-layout {
     display: grid;
     grid-template-rows: auto auto auto auto auto;

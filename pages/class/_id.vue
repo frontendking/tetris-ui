@@ -9,20 +9,22 @@
       :classTime="classTime"
       :summaries="summaries"
     />
-    <ul v-for="v in subPages">
-      <li>
-        <nuxt-link :to="`${v.to}`">
-          {{v.label}}
-        </nuxt-link>
-      </li>
-    </ul>
-    <nuxt-child />
-    <!--    <the-class-footer :page="page.footer"/>-->
+    <nav id="class-info-nav">
+      <ul>
+        <li v-for="v in subPages" @click="activeLink=v.id" :class="v.id===activeLink?'active':''">
+          <nuxt-link :to="`${v.to}`">
+            {{v.label}}
+          </nuxt-link>
+        </li>
+      </ul>
+    </nav>
+    <nuxt-child :page="page" :users="users"/>
+    <the-class-footer id="the-class-footer" :class="isSticky?'sticky':''" :data="footer"/>
   </article>
 </template>
 <script>
 import TheClassHeader from '@/components/class/TheClassHeader'
-import { getClasses } from '../../store/class-info'
+import { getClasses, users } from '../../store/class-info'
 import TheClassFooter from '@/components/class/TheClassFooter'
 import { map } from 'fxjs/Strict'
 
@@ -37,6 +39,7 @@ export default {
     const { theClass, theTeacher, theReviews } = page
     return {
       ...page,
+      users,
       page,
       classId,
       subPageName,
@@ -59,7 +62,9 @@ export default {
           to: `/class/${classId}/reviews`,
           page: { theReviews }
         }
-      ]
+      ],
+      activeLink: 'class',
+      isSticky: true
     }
   },
   watchQuery: ['id'],
@@ -89,32 +94,73 @@ export default {
           paragraph: `초등학교 ${this.theClass.targetGrade}학년`,
         },
         {
-          heading: '교재',
-          paragraph: this.theClass.book.type,
-        },
-        {
-          heading: '수강기간',
-          paragraph: `${this.date(this.theClass.schedule[0].start)}~${this.date(this.theClass.schedule[this.theClass.schedule.length - 1].end)}`
-
-        },
-        {
           heading: '모집인원',
-          paragraph: `${this.theClass.recuritment.personal.start}~${this.theClass.recuritment.personal.end}`,
+          paragraph: `${this.theClass.recuritment.personal.start}명 ~ ${this.theClass.recuritment.personal.end}명`,
+        },
+        {
+          heading: '교재',
+          paragraph: '자체교재'
+          // paragraph: this.theClass.book.type,
         },
         {
           heading: '모집기간',
-          paragraph: `${this.date(this.theClass.recuritment.period.start)}~${this.date(this.theClass.recuritment.period.end)}`,
+          paragraph: '~2019.08.31'
+          // paragraph: `${this.date(this.theClass.recuritment.period.start)}~${this.date(this.theClass.recuritment.period.end)}`,
+        },
+        {
+          heading: '수강기간',
+          paragraph: '2019.08.01~08.31'
+          // paragraph: `${this.date(this.theClass.schedule[0].start)}~${this.date(this.theClass.schedule[this.theClass.schedule.length - 1].end)}`
         },
       ]
     },
+  },
+  mounted(){
+    const footer = document.getElementById("the-class-footer")
+    const sticky = footer.offsetTop
+    window.onscroll = function(e) {
+      if(window.pageYOffset + window.innerHeight === document.body.scrollHeight) {
+        footer.classList.remove('sticky')
+      }
+    }
   }
 }
 </script>
 
-<style scoped lang=scss>
-@import 'destyle.css';
+<style lang=scss>
+@import '~@/assets/style/global.scss';
 
 .class-info {
   font-size: 2rem;
+
+  .sticky {
+    position: fixed;
+    bottom: 0;
+  }
+
+  #class-info-nav ul {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    margin: 0 2.4rem;
+    font-size: 2.2rem;
+    li {
+      flex-grow: 1;
+      display: flex;
+      justify-content: center;
+      padding: 2.4rem 0;
+      font-weight: bolder;
+      &.active {
+        border-bottom: #34b4f9 solid 4px;
+      }
+      &:active, &:hover {
+        border-bottom: #34b4f9 solid 4px;
+      }
+    }
+  }
+  #the-class-footer {
+    width: 100%;
+  }
 }
+
 </style>
