@@ -1,5 +1,5 @@
 <template>
-  <nav class="TheC2cGnb">
+  <nav id="the-header-conects-gnb">
     <div class="st_personal-service">
       <a href="//www.conects.com" class="bi">Conects</a>
       <dl class="this-service">
@@ -189,11 +189,15 @@
 
 <script>
 export default {
-  name: 'TheConectsGnb'
+  name: 'TheConectsGnb',
 }
 </script>
 
-<style scoped lang=scss>
-.TheC2cGnb {
+<style lang=scss>
+.st_conects-nav.personal .st_conects-gnb .st_bi-search .inpt-search {
+  border: none;
+}
+#the-header-conects-gnb {
+
 }
 </style>
