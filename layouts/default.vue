@@ -47,7 +47,7 @@ body {
     grid-template-rows: auto auto auto auto auto;
     grid-template-columns: auto 1fr;
 
-    #conects-header, #conects-lnb, #tutor-gnb, #tutor-lnb, #conects-footer {
+    #conects-header, #conects-lnb, #tutor-lnb, #conects-footer {
       display: initial;
     }
 
@@ -74,6 +74,11 @@ body {
     #conects-main {
       grid-column: 2/3;
       grid-row: 3/4;
+    }
+
+    #tutor-header {
+      height: 12vw;
+      max-height: 13rem;
     }
   }
 }

@@ -1,5 +1,5 @@
 <template>
-  <nav class="TheTutorGnb">
+  <nav class="the-tutor-gnb">
     <h1 id="b2c-navi-title">일간 대치동</h1>
     <ul id="b2c-navi-list">
       <li><a href="#">과목안내</a> <span>V</span></li>
@@ -17,31 +17,54 @@
 
 <script>
 export default {
-  name: 'TheLnbB2c'
+  name: 'the-tutor-gnb'
 }
 </script>
 
 <style lang=scss>
-.TheTutorGnb {
-  display: flex;
-  justify-content: space-between;
-  #b2c-navi-title {
-    font-size: 1.5rem;
-    letter-spacing: 1px;
-  }
-  #b2c-navi-list {
-    display: flex;
-    justify-content: space-around;
-    width: 80%;
+.the-tutor-gnb {
+  display: none;
+  line-height: 1;
 
-    a {
-      font-size: 1rem;
-      letter-spacing: 1px;
-      color: black
-    }
-  }
+}
+</style>
+<style lang="scss">
+.the-tutor-gnb {
   @media(min-width: 641px) {
-    display: none;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    #b2c-navi-title {
+      font-size: 3.2rem;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+    #b2c-navi-list {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 64vw;
+      min-width: 69rem;
+      font-size: 1.6rem;
+      li {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        a {
+          letter-spacing: 1px;
+          font-weight: bold;
+          color: black
+        }
+        span {
+          display: inline-block;
+          font-size: 0.8rem;
+          margin-left: 0.4rem;
+          transform: scaleX(2);
+        }
+      }
+    }
   }
 }
 </style>

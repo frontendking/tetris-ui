@@ -32,7 +32,7 @@ export default {
   name: 'ClassMain',
   async asyncData (context) {
     const { params, route } = context
-    const classId = params.id
+    const classId = 1
     const page = getClasses(classId)
     const _subPageName = route.path.split('/')[3]
     const subPageName = _subPageName || 'class'
@@ -42,25 +42,21 @@ export default {
       users,
       page,
       classId,
-      subPageName,
       subPages: [
         {
           id: 'class',
           label: '수업 소개',
-          to: `/class/${classId}`,
-          page: { theClass }
+          to: `/class`,
         },
         {
           id: 'teacher',
           label: '튜터 소개',
-          to: `/class/${classId}/teacher`,
-          page: { theTeacher }
+          to: `/class/teacher`,
         },
         {
           id: 'reviews',
           label: '수업 리뷰',
-          to: `/class/${classId}/reviews`,
-          page: { theReviews }
+          to: `/class/reviews`,
         }
       ],
       activeLink: 'class',
@@ -178,12 +174,13 @@ article.class-info {
       top: 0;
       left: 0;
       width: 100%;
-      padding: 3rem;
+      padding: 5.9rem 0 8.1rem 0;
+      font-size: 4rem;
+      line-height: 1;
       background-color: #f5f5f5;
     }
     #class-summary {
-      position: relative;
-      top: 8rem;
+      margin-top: 18rem;
     }
   }
 }
