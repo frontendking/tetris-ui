@@ -1,33 +1,30 @@
 <template>
   <div id="tutor-layout">
-    <TheHeader id="conects-header"></TheHeader>
+    <TheConectsHeader id="conects-header"></TheConectsHeader>
     <TheConectsLnb id="conects-lnb"></TheConectsLnb>
-    <main id="tutor-contents">
-      <header>
+    <main id="conects-main">
+      <header id="tutor-header">
         <TheTutorGnb id="tutor-gnb"></TheTutorGnb>
-        <TheTutorLnb id="tutor-lnb"></TheTutorLnb>
       </header>
-      <main>
-        <nuxt id=""/>
+      <main id="tutor-main">
+        <nuxt/>
       </main>
     </main>
-    <TheFooter class="footer"></TheFooter>
+    <TheConectsFooter id="conects-footer"></TheConectsFooter>
   </div>
 </template>
 <script>
-import TheHeader from './TheHeader'
+import TheConectsHeader from './TheConectsHeader'
 import TheTutorGnb from './TheTutorGnb'
-import TheTutorLnb from './TheTutorLnb'
 import TheConectsLnb from './TheConectsLnb'
-import TheFooter from './TheFooter'
+import TheConectsFooter from './TheConectsFooter'
 
 export default {
   components: {
     TheConectsLnb,
     TheTutorGnb,
-    TheTutorLnb,
-    TheHeader,
-    TheFooter
+    TheConectsHeader,
+    TheConectsFooter
   }
 }
 </script>
@@ -42,7 +39,7 @@ body {
 }
 </style>
 
-<style scoped lang="scss">
+<style lang="scss">
 
 @media(min-width: 641px) {
   #tutor-layout {
@@ -50,7 +47,7 @@ body {
     grid-template-rows: auto auto auto auto auto;
     grid-template-columns: auto 1fr;
 
-    #conects-header, #conects-lnb, #tutor-gnb, #tutor-lnb, .footer {
+    #conects-header, #conects-lnb, #tutor-gnb, #tutor-lnb, #conects-footer {
       display: initial;
     }
 
@@ -64,39 +61,41 @@ body {
       grid-row: 2/4;
     }
 
-    #tutor-contents {
+    #conects-main {
       grid-column: 2/3;
       grid-row: 2/4;
     }
 
-    .footer {
+    #conects-footer {
       grid-column: 1/3;
       grid-row: 5/6;
     }
 
-    main {
+    #conects-main {
       grid-column: 2/3;
       grid-row: 3/4;
-      padding: 2rem;
     }
   }
 }
 
 
 /*conects css 초기화*/
-#conects-header {
-  margin-left: 0;
-}
+#tutor-layout {
+  #conects-header {
+    margin-left: 0;
+  }
 
-#conects-lnb {
-  padding-bottom: 5rem;
+  #conects-lnb {
+    padding-bottom: 5rem;
+  }
+  #tutor-main {
+    position: relative;
+  }
+  #conects-footer {
+    min-width: initial;
+  }
 }
-
-#tutor-layout > footer {
-  min-width: initial;
-}
-
-#conects-header, #conects-lnb, #tutor-gnb, #tutor-lnb, .footer {
+#conects-lnb, #conects-footer {
   display: none;
 }
 

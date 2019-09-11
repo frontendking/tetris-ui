@@ -251,7 +251,7 @@ ul.unstyled, ol.unstyled {
 
 /* FOOTER */
 
-.footer {
+.tutor-footer {
 
   background: none repeat scroll 0 0 white;
   border-top: 1px solid $border-color;
@@ -262,7 +262,7 @@ ul.unstyled, ol.unstyled {
   right: 0;
 }
 
-.footer.fixed_full {
+.tutor-footer.fixed_full {
   position: fixed;
   bottom: 0;
   left: 0;
@@ -273,7 +273,7 @@ ul.unstyled, ol.unstyled {
   border-top: 1px solid $border-color;
 }
 
-.footer.fixed {
+.tutor-footer.fixed {
   position: fixed;
   bottom: 0;
   left: 0;
@@ -285,21 +285,21 @@ ul.unstyled, ol.unstyled {
   margin-left: $sidebar-width;
 }
 
-body.mini-navbar .footer.fixed,
-body.body-small.mini-navbar .footer.fixed {
+body.mini-navbar .tutor-footer.fixed,
+body.body-small.mini-navbar .tutor-footer.fixed {
   margin: 0 0 0 70px;
 }
 
-body.mini-navbar.canvas-menu .footer.fixed,
-body.canvas-menu .footer.fixed {
+body.mini-navbar.canvas-menu .tutor-footer.fixed,
+body.canvas-menu .tutor-footer.fixed {
   margin: 0 !important;
 }
 
-body.fixed-sidebar.body-small.mini-navbar .footer.fixed {
+body.fixed-sidebar.body-small.mini-navbar .tutor-footer.fixed {
   margin: 0 0 0 $sidebar-width;
 }
 
-body.body-small .footer.fixed {
+body.body-small .tutor-footer.fixed {
   margin-left: 0;
 }
 

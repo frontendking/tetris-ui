@@ -1,6 +1,6 @@
 <template>
   <article class="class-info">
-    <h1 hidden>{{page.heading}}</h1>
+    <h1 id="page-heading">수업신청</h1>
     <the-class-header
       id="class-summary"
       :teacherName="theTeacher.Name"
@@ -64,7 +64,7 @@ export default {
         }
       ],
       activeLink: 'class',
-      isSticky: true
+      isSticky: false
     }
   },
   watchQuery: ['id'],
@@ -116,13 +116,13 @@ export default {
     },
   },
   mounted(){
-    const footer = document.getElementById("the-class-footer")
+/*    const footer = document.getElementById("the-class-footer")
     const sticky = footer.offsetTop
     window.onscroll = function(e) {
       if(window.pageYOffset + window.innerHeight === document.body.scrollHeight) {
         footer.classList.remove('sticky')
       }
-    }
+    }*/
   }
 }
 </script>
@@ -130,9 +130,16 @@ export default {
 <style lang=scss>
 @import '~@/assets/style/global.scss';
 
-.class-info {
+article.class-info {
+  position: relative;
   font-size: 2rem;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: repeat(4, auto);
 
+  #page-heading {
+    display: none;
+  }
   .sticky {
     position: fixed;
     bottom: 0;
@@ -160,6 +167,24 @@ export default {
   }
   #the-class-footer {
     width: 100%;
+  }
+  @media(min-width: 641px) {
+    padding: 2rem;
+    #page-heading {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 3rem;
+      background-color: #f5f5f5;
+    }
+    #class-summary {
+      position: relative;
+      top: 8rem;
+    }
   }
 }
 

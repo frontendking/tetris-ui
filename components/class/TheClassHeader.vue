@@ -27,7 +27,7 @@ export default {
 }
 </script>
 
-<style scoped lang=scss>
+<style lang=scss>
 $gray : #a3a3a3;
 $gray-dark : #696969;
 
@@ -37,6 +37,7 @@ $gray-dark : #696969;
   align-items: center;
   background-color: #f5f5f5;
   padding: 4.8rem 6.6rem;
+
   .class-summary {
     align-self: stretch;
   }

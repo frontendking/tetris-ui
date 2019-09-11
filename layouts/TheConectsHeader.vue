@@ -1,5 +1,6 @@
 <template>
-  <header >
+  <header class="the-conects-header">
+    <img id="mobile-header" src="../assets/img/mobile-header.png" alt="mobile-header"/>
     <div id="hgroup" class="st_conects-nav personal">
       <div class="st_conects-gnb">
         <div class="st_bi-search">
@@ -10,7 +11,7 @@
             <button type="button" class="btn-search" onclick="_GNB_SEARCH_()">검색</button>
           </div>
         </div>
-        <TheHeaderConectsGnb></TheHeaderConectsGnb>
+        <TheConectsHeaderGnb></TheConectsHeaderGnb>
         <div class="st_conects-util">
           <ul>
             <li>
@@ -36,18 +37,33 @@
 </template>
 
 <script>
-import TheHeaderConectsGnb from './TheHeaderConectsGnb'
+import TheConectsHeaderGnb from './TheConectsHeaderGnb'
 
 export default {
-  name: 'TheHeade',
-  components: { TheHeaderConectsGnb },
-  component: {
-    TheHeaderConectsGnb
-  }
+  name: 'the-conects-header',
+  components: { TheConectsHeaderGnb },
 }
 </script>
 
 <style lang=scss>
-.Gnb {
+
+.the-conects-header {
+  #hgroup button {
+    border:none;
+  }
+  img#mobile-header {
+    width: 100%;
+  }
+  #hgroup {
+    display: none;
+  }
+  @media(min-width: 641px) {
+    img#mobile-header {
+      display: none;
+    }
+    #hgroup {
+      display: block;
+    }
+  }
 }
 </style>

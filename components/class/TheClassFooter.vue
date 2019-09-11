@@ -40,7 +40,6 @@ export default {
     grid-template-rows: auto 1.5fr 1fr;
 
     padding: 3.2rem 4rem;
-    justify-content: stretch;
     font-size: 2.2rem;
     > div {
       display: flex;

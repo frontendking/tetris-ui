@@ -21,7 +21,7 @@ export default {
 }
 </script>
 
-<style scoped lang=scss>
+<style lang=scss>
 .TheTutorGnb {
   display: flex;
   justify-content: space-between;
@@ -39,6 +39,9 @@ export default {
       letter-spacing: 1px;
       color: black
     }
+  }
+  @media(min-width: 641px) {
+    display: none;
   }
 }
 </style>

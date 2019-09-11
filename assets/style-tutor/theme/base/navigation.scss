@@ -349,7 +349,7 @@
   .pace-done .nav-header,
   .pace-done li.active,
   .pace-done #page-wrapper,
-  .pace-done .footer {
+  .pace-done .tutor-footer {
     -webkit-transition: all 0.4s;
     -moz-transition: all 0.4s;
     -o-transition: all 0.4s;
@@ -479,13 +479,13 @@
     margin: 0 0 0 70px;
   }
 
-  body.fixed-sidebar.mini-navbar .footer,
-  body.canvas-menu.mini-navbar .footer {
+  body.fixed-sidebar.mini-navbar .tutor-footer,
+  body.canvas-menu.mini-navbar .tutor-footer {
     margin: 0 0 0 0 !important;
   }
 
   body.canvas-menu.mini-navbar #page-wrapper,
-  body.canvas-menu.mini-navbar .footer {
+  body.canvas-menu.mini-navbar .tutor-footer {
     margin: 0 0 0 0;
   }
 
@@ -1222,7 +1222,7 @@
   }
 }
 
-.got-style .footer {
+.got-style .tutor-footer {
   position: static;
   left: auto;
   right: auto;
@@ -1574,7 +1574,7 @@
       }
     }
 
-    .footer .container {
+    .tutor-footer .container {
       width: 100%;
     }
   }
@@ -1582,7 +1582,7 @@
 
 @media (max-width: 500px) {
   .got-style {
-    .footer {
+    .tutor-footer {
       padding-top: 0;
 
       .info_policy a {
