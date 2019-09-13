@@ -20,9 +20,8 @@
     "nuxt": "^2.0.0"
   },
   "devDependencies": {
-    "core-js": "^2.6.5",
-    "faker": "^4.1.0",
     "@babel/core": "^7.5.5",
+    "@babel/plugin-proposal-logical-assignment-operators": "^7.2.0",
     "@babel/register": "^7.5.5",
     "@storybook/addon-actions": "^5.1.10",
     "@storybook/addon-links": "^5.1.10",
@@ -34,7 +33,9 @@
     "babel-loader": "^8.0.6",
     "babel-preset-vue": "^2.0.2",
     "chromedriver": "^76.0.0",
+    "core-js": "^2.6.5",
     "cucumber": "^5.1.0",
+    "faker": "^4.1.0",
     "jest": "^24.1.0",
     "nodemon": "^1.18.9",
     "sass": "^1.22.9",

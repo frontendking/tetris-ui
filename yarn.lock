@@ -272,6 +272,14 @@
     "@babel/helper-plugin-utils" "^7.0.0"
     "@babel/plugin-syntax-json-strings" "^7.2.0"
 
+"@babel/plugin-proposal-logical-assignment-operators@^7.2.0":
+  version "7.2.0"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-proposal-logical-assignment-operators/-/plugin-proposal-logical-assignment-operators-7.2.0.tgz#8a5cea6c42a7c87446959e02fff5fad012c56f57"
+  integrity sha512-0w797xwdPXKk0m3Js74hDi0mCTZplIu93MOSfb1ZLd/XFe3abWypx1QknVk0J+ohnsjYpvjH4Gwfo2i3RicB6Q==
+  dependencies:
+    "@babel/helper-plugin-utils" "^7.0.0"
+    "@babel/plugin-syntax-logical-assignment-operators" "^7.2.0"
+
 "@babel/plugin-proposal-object-rest-spread@^7.3.2", "@babel/plugin-proposal-object-rest-spread@^7.5.5":
   version "7.5.5"
   resolved "https://registry.yarnpkg.com/@babel/plugin-proposal-object-rest-spread/-/plugin-proposal-object-rest-spread-7.5.5.tgz#61939744f71ba76a3ae46b5eea18a54c16d22e58"
@@ -329,6 +337,13 @@
   version "7.2.0"
   resolved "https://registry.yarnpkg.com/@babel/plugin-syntax-jsx/-/plugin-syntax-jsx-7.2.0.tgz#0b85a3b4bc7cdf4cc4b8bf236335b907ca22e7c7"
   integrity sha512-VyN4QANJkRW6lDBmENzRszvZf3/4AXaj9YR7GwrWeeN9tEBPuXbmDYVU9bYBN0D70zCWVwUy0HWq2553VCb6Hw==
+  dependencies:
+    "@babel/helper-plugin-utils" "^7.0.0"
+
+"@babel/plugin-syntax-logical-assignment-operators@^7.2.0":
+  version "7.2.0"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-syntax-logical-assignment-operators/-/plugin-syntax-logical-assignment-operators-7.2.0.tgz#fcab7388530e96c6f277ce494c55caa6c141fcfb"
+  integrity sha512-l/NKSlrnvd73/EL540t9hZhcSo4TULBrIPs9Palju8Oc/A8DXDO+xQf04whfeuZLpi8AuIvCAdpKmmubLN4EfQ==
   dependencies:
     "@babel/helper-plugin-utils" "^7.0.0"
 

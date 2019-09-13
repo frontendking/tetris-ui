@@ -11,10 +11,10 @@
     />
     <nav id="class-info-nav">
       <ul>
-        <li v-for="v in subPages" @click="activeLink=v.id" :class="v.id===activeLink?'active':''">
-          <nuxt-link :to="`${v.to}`">
-            {{v.label}}
-          </nuxt-link>
+        <li v-for="v in subPages">
+          <a :href="`${v.to}`">
+            {{v.label}} {{$route.params.subpage}}
+          </a>
         </li>
       </ul>
     </nav>
@@ -24,7 +24,7 @@
 </template>
 <script>
 import TheClassHeader from '@/components/class/TheClassHeader'
-import { getClasses, users } from '../../store/class-info'
+import { getClasses, users } from '../store/class-info'
 import TheClassFooter from '@/components/class/TheClassFooter'
 import { map } from 'fxjs/Strict'
 
@@ -34,8 +34,6 @@ export default {
     const { params, route } = context
     const classId = 1
     const page = getClasses(classId)
-    const _subPageName = route.path.split('/')[3]
-    const subPageName = _subPageName || 'class'
     const { theClass, theTeacher, theReviews } = page
     return {
       ...page,
@@ -46,7 +44,7 @@ export default {
         {
           id: 'class',
           label: '수업 소개',
-          to: `/class`,
+          to: `/class/class`,
         },
         {
           id: 'teacher',
@@ -145,7 +143,6 @@ article.class-info {
     display: flex;
     flex-flow: row;
     justify-content: space-between;
-    margin: 0 2.4rem;
     font-size: 2.2rem;
     li {
       flex-grow: 1;
