@@ -44,7 +44,6 @@ $gray-dark : #696969;
   .teacher-name {
     font-size: 3.3rem;
     font-weight: bold;
-    margin-top: 2.38rem;
   }
   .class-title {
     color: #00b9fd;

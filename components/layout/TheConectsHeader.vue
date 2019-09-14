@@ -1,6 +1,6 @@
 <template>
   <header class="the-conects-header">
-    <img id="mobile-header" src="../assets/img/mobile-header.png" alt="mobile-header"/>
+    <img id="mobile-header" src="../../assets/img/mobile-header.png" alt="mobile-header"/>
     <div id="hgroup" class="st_conects-nav personal">
       <div class="st_conects-gnb">
         <div class="st_bi-search">
