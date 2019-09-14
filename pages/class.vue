@@ -30,6 +30,7 @@ import { map } from 'fxjs/Strict'
 
 export default {
   name: 'ClassMain',
+  layout: 'tutor',
   async asyncData (context) {
     const { params, route } = context
     const classId = 1
