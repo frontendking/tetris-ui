@@ -33,8 +33,6 @@ export default {
 }
 </script>
 <style lang="scss">
-@import '~@/assets/style/global.scss';
-@import 'destyle.css';
 html {
   font-size: 10px;
 }

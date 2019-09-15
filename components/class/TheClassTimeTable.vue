@@ -98,5 +98,6 @@ export default {
 <style lang=scss>
 
 .TheClassTimeTable {
+
 }
 </style>
