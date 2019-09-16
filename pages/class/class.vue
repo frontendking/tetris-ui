@@ -33,7 +33,7 @@
 
 <script>
 export default {
-  props: ['page']
+  props: ['page','users']
 }
 </script>
 

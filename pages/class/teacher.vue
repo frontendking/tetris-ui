@@ -36,7 +36,7 @@
 
 <script>
 export default {
-  props: ['page'],
+  props: ['page','users'],
   computed: {
     teacherSummary () {
       return [

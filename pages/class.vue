@@ -38,8 +38,7 @@ import { map } from 'fxjs/Strict'
 export default {
   name: 'ClassMain',
   // layout: 'tutor',
-  async asyncData (context) {
-    const { params, route } = context
+  data() {
     const classId = 1
     const page = getClasses(classId)
     const { theClass, theTeacher, theReviews } = page
