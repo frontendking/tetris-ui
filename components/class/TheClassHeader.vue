@@ -1,9 +1,15 @@
 <template>
   <header class="TheClassSummaryCard">
-    <div class="round-frame">
-      <img :src="teacherImageSrc"/>
-    </div>
-    <p class="teacher-name">김규미 선생님</p>
+    <figure>
+      <div class="round-frame">
+        <img
+          class="teacher-img"
+          alt="this is the profile picture of the teacher"
+          :src="teacherImageSrc"
+        />
+      </div>
+      <figcaption class="teacher-name">김규미 선생님</figcaption>
+    </figure>
     <p class="class-title">{{classTitle}}</p>
     <p class="class-time">{{classTime}}</p>
     <dl class="class-summary">
@@ -28,8 +34,8 @@ export default {
 </script>
 
 <style lang=scss>
-$gray : #a3a3a3;
-$gray-dark : #696969;
+$gray: #a3a3a3;
+$gray-dark: #696969;
 
 .TheClassSummaryCard {
   display: flex;

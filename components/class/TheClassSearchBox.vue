@@ -99,6 +99,7 @@ export default {
     display: flex;
     align-items: center;
   }
+
   legend {
     font-size: 2rem;
     font-weight: bold;
@@ -151,18 +152,22 @@ export default {
 
   .sellect-subjects {
     grid-area: b;
+
     legend {
       justify-content: center;
       flex: 1 0 auto;
     }
+
     .tutor-checkbox {
       flex: 1 0 auto;
       display: flex;
       justify-content: flex-end;
+
       label {
         margin-left: 1.5rem;
       }
     }
+
     input[type=checkbox] {
       appearance: none;
       width: 2.4rem;
@@ -183,6 +188,7 @@ export default {
         transform: rotate(40deg);
         color: #fff;
       }
+
       &:before {
         display: flex;
         justify-content: center;
