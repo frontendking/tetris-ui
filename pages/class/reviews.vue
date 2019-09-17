@@ -1,5 +1,5 @@
 <template>
-  <article class="ClassReview">
+  <article class="review">
     <h1 hidden>reviews</h1>
     <section class="review-section" v-for="v in page.theReviews">
       <h2 hidden>the review</h2>
@@ -27,7 +27,7 @@ export default {
 <style lang=scss>
 @import '~@/assets/style/global.scss';
 
-.ClassReview {
+.review {
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: auto auto;
@@ -72,5 +72,58 @@ export default {
     }
   }
 
+}
+.review {
+  @media(min-width: 641px) {
+
+    grid-gap: 3rem;
+    padding: 0;
+    font-size: 1.6rem;
+
+    .review-section {
+      display: grid;
+      grid-template-columns: min-content auto;
+      grid-template-rows: 1fr 1fr;
+      grid-column-gap: 4rem;
+      grid-row-gap: 1rem;
+      padding: 2rem 0;
+      border-bottom: #e0e0e0 solid 1px;
+      figcaption {
+        margin-top: 1rem;
+      }
+      .star-rank {
+        align-items: center;
+        img {
+          width: 3%;
+        }
+      }
+    }
+    >section {
+      padding-right: 32rem;
+    }
+    h1, h2, h3 {
+      color: #000;
+      font-weight: bold
+    }
+    h1 {
+      display: flex;
+      align-items: center;
+      height: 6.4rem;
+      font-size: 3.2rem;
+      border-bottom: 2px solid #000;
+    }
+    h2, dt {
+      font-weight: bold;
+      font-size: 1.8rem;
+    }
+    h3 {
+      font-size: 1.5rem;
+    }
+    ol {
+      li {
+        line-height: 1.7;
+      }
+    }
+  }
 }
 </style>
