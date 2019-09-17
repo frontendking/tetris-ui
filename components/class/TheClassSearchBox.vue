@@ -84,17 +84,19 @@ export default {
   /*@formatter:off*/
   grid-template-areas:
     "a a b b b"
-    "c c c c c"
+    ". . . . ."
     "d d d d d";
   /*@formatter:on*/
   line-height: 1;
   background-color: #f6f6f6;
   border-top: 2px solid #000000;
   border-bottom: #a3a3a3 1px solid;
-  align-items: center;
+
   font-size: 1.6rem;
   font-weight: 500;
-
+  > * {
+    align-self: center;
+  }
   legend, label {
     display: flex;
     align-items: center;

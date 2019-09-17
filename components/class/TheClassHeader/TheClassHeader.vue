@@ -24,6 +24,7 @@
           <dt>{{v.heading}}</dt>
           <dd>{{v.paragraph}}</dd>
         </template>
+        <dt>후 기</dt><dd>5.0 </dd>
       </dl>
     </div>
   </header>
@@ -150,13 +151,20 @@ $gray-dark: #696969;
 
 .TheClassSummaryCard {
   @media(min-width: 641px) {
+    align-items: center;
     flex-flow: row;
-    padding:0;
+    padding: 0;
+    background-color: #ffffff;
+    border-top: 1px solid #dedede;
+    border-bottom: 1px solid #dedede;
+
     .teacher-summary {
       padding: 4rem 5.8rem 2.7rem;
       display: flex;
       flex-flow: column;
       align-items: center;
+      background-color: #F5F5F5;
+
       figure {
         width: 20rem;
 
@@ -213,31 +221,65 @@ $gray-dark: #696969;
       }
     }
     .class-summary {
-      >dl dd {
-        &:first-of-type {
+      width: 100%;
+      padding: 0 8.2rem;
+
+      > dl {
+        grid-template-columns: max-content 100%;
+        grid-template-rows: auto auto auto auto;
+
+        dt {
+          color: #6e737d;
+          font-size: 1.6rem;
           display: flex;
-          align-content: flex-end;
-          justify-content: flex-start;
-          padding: 0;
-          font-weight: normal;
-          * {
-            color: #000000;
-            font-size: 2.4rem;
+          justify-content: space-between;
+          text-align: justify-all;
+          font-weight: bold;
+        }
+
+        dd {
+          font-size: 1.6rem;
+          color: #6e737d;
+
+          &:before {
+            content: ':';
+            display: inline;
+            padding-right: 1rem;
           }
-          .class-subject {
-            padding-right: 2.4rem;
-            &:after {
-              display: none;
-            }
+
+          &:first-of-type {
+            display: flex;
+            align-content: flex-end;
+            justify-content: flex-start;
+            padding: 0;
+            font-weight: normal;
             &:before {
               display: none;
             }
-          }
-          .class-time {
-            font-weight: 600;
+            * {
+              color: #000000;
+              font-size: 2.4rem;
+            }
+
+            .class-subject {
+              padding-right: 2.4rem;
+
+              &:after {
+                display: none;
+              }
+
+              &:before {
+                display: none;
+              }
+            }
+
+            .class-time {
+              font-weight: 600;
+            }
           }
         }
       }
+
 
     }
   }

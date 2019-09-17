@@ -10,10 +10,10 @@
       :classTime="classTime"
       :summaries="summaries"
     />
-    <nav id="class-info-nav" v-if="$route.name!=='class-search'">
+    <nav id="class-nav" v-if="$route.name!=='class-search'">
       <h2 class="hidden">class page nav</h2>
       <ul>
-        <li v-for="v in subPages">
+        <li v-for="(v, k) in subPages" :class="v.id === $route.path.split('/').pop()?'active': ''">
           <a :href="`${v.to}`">
             {{v.label}} {{$route.params.subpage}}
           </a>
@@ -142,7 +142,7 @@ article.class-info {
   display: grid;
   margin: 0 auto;
   grid-template-rows: repeat(4, auto);
-
+  grid-row-gap: 5.9rem;
   #page-heading {
     display: none;
   }
@@ -152,7 +152,7 @@ article.class-info {
     bottom: 0;
   }
 
-  #class-info-nav ul {
+  #class-nav ul {
     display: flex;
     flex-flow: row;
     justify-content: space-between;
@@ -162,7 +162,6 @@ article.class-info {
       flex-grow: 1;
       display: flex;
       justify-content: center;
-      padding: 2.4rem 0;
       font-weight: bolder;
 
       &.active {
@@ -171,6 +170,12 @@ article.class-info {
 
       &:active, &:hover {
         border-bottom: #34b4f9 solid 4px;
+      }
+      a {
+        display: block;
+        padding: 2.4rem 0;
+        width: 100%;
+        text-align: center;
       }
     }
   }
@@ -196,6 +201,27 @@ article.class-info {
       line-height: 0.96;
       font-weight: 300;
       background-color: #f5f5f5;
+    }
+    #class-nav ul {
+      background-color: #f7f7f7;
+      color: #777;
+      font-size: 1.6rem;
+      font-weight: 500;
+      border: none;
+      li {
+        display: flex;
+        border: solid 1px #e0e0e0;
+        border-right: none;
+
+        &:last-child {
+          border-right: solid 1px #e0e0e0;
+        };
+        &.active, &:hover, &:active {
+          color: #fff;
+          background-color: #6e737d;
+          border-bottom: none;
+        }
+      }
     }
   }
 }
