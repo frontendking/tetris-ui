@@ -44,12 +44,13 @@ export default {
   ** Build configuration
   */
   globals: {
-    id: 'b2c-wrap',
+    id: 'tutor-wrap',
   },
   generate: {
     subFolders: false
   },
   build: {
+    publicPath: '/tutor/',
     extractCSS: true,
     filenames: {
       app: '[name].js',

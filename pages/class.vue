@@ -30,7 +30,7 @@
   </article>
 </template>
 <script>
-import TheClassHeader from '@/components/class/TheClassHeader'
+import TheClassHeader from '@/components/class/TheClassHeader/TheClassHeader'
 import { getClasses, users } from '../store/class-info'
 import TheClassFooter from '@/components/class/TheClassFooter'
 import { map } from 'fxjs/Strict'
@@ -82,7 +82,7 @@ export default {
   },
   computed: {
     classTitle () {
-      return `[${this.theClass.targetGrade}학년 ${this.theClass.targetSubject}]`
+      return `${this.theClass.targetGrade}학년 ${this.theClass.targetSubject}`
     },
     classTime () {
       const date = new Date(this.theClass.schedule[0].start)

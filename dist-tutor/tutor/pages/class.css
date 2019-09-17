@@ -1,0 +1,370 @@
+.TheClassSummaryCard {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  background-color: #f5f5f5;
+  padding: 4.8rem 6.6rem
+}
+
+.TheClassSummaryCard .class-summary {
+  -ms-grid-row-align: stretch;
+  align-self: stretch
+}
+
+.TheClassSummaryCard .teacher-name {
+  font-size: 3.3rem;
+  font-weight: 700
+}
+
+.TheClassSummaryCard .class-subject {
+  color: #00b9fd;
+  margin-top: 2.1rem
+}
+
+.TheClassSummaryCard .class-time {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-top: 1rem
+}
+
+.TheClassSummaryCard .round-frame {
+  position: relative;
+  display: flex;
+  width: 26%;
+  padding-top: 26%;
+  border-radius: 50%;
+  justify-content: center;
+  overflow: hidden;
+  background-color: #fff;
+  border: #696969
+}
+
+.TheClassSummaryCard .round-frame img {
+  width: 80%;
+  position: absolute;
+  top: 0
+}
+
+.TheClassSummaryCard .class-summary {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto 1.5rem auto 1.5rem auto;
+  grid-template-rows: auto auto auto;
+  -ms-grid-columns: -webkit-max-content 1.5rem 4fr 1.5rem -webkit-max-content 1.5rem 4fr;
+  -ms-grid-columns: max-content 1.5rem 4fr 1.5rem max-content 1.5rem 4fr;
+  grid-template-columns: -webkit-max-content 4fr -webkit-max-content 4fr;
+  grid-template-columns: max-content 4fr max-content 4fr;
+  grid-column-gap: 1.5rem;
+  grid-row-gap: 1.5rem;
+  margin-top: 3.4rem;
+  padding-top: 3.3rem;
+  border-top: 1px solid #e3e3e3
+}
+
+.TheClassSummaryCard .class-summary > :first-child {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1
+}
+
+.TheClassSummaryCard .class-summary > :nth-child(2) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3
+}
+
+.TheClassSummaryCard .class-summary > :nth-child(3) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 5
+}
+
+.TheClassSummaryCard .class-summary > :nth-child(4) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 7
+}
+
+.TheClassSummaryCard .class-summary > :nth-child(5) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1
+}
+
+.TheClassSummaryCard .class-summary > :nth-child(6) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3
+}
+
+.TheClassSummaryCard .class-summary > :nth-child(7) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 5
+}
+
+.TheClassSummaryCard .class-summary > :nth-child(8) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 7
+}
+
+.TheClassSummaryCard .class-summary > :nth-child(9) {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1
+}
+
+.TheClassSummaryCard .class-summary > :nth-child(10) {
+  -ms-grid-row: 5;
+  -ms-grid-column: 3
+}
+
+.TheClassSummaryCard .class-summary > :nth-child(11) {
+  -ms-grid-row: 5;
+  -ms-grid-column: 5
+}
+
+.TheClassSummaryCard .class-summary > :nth-child(12) {
+  -ms-grid-row: 5;
+  -ms-grid-column: 7
+}
+
+.TheClassSummaryCard .class-summary dt {
+  color: #a3a3a3;
+  font-weight: 400
+}
+
+.TheClassSummaryCard .class-summary dd {
+  color: #696969
+}
+
+@font-face {
+  font-family: NanumSR;
+  src: url(data:application/vnd.ms-fontobject;base64,);
+  src: url(data:application/vnd.ms-fontobject;base64,?#iefix) format("embedded-opentype"), url(data:font/woff;base64,) format("woff"), url(data:font/ttf;base64,) format("truetype");
+  font-weight: 400;
+  font-style: normal
+}
+
+@font-face {
+  font-family: NanumSR;
+  src: url(data:application/vnd.ms-fontobject;base64,);
+  src: url(data:application/vnd.ms-fontobject;base64,?#iefix) format("embedded-opentype"), url(data:font/woff;base64,) format("woff"), url(data:font/ttf;base64,) format("truetype");
+  font-weight: 700
+}
+
+@font-face {
+  font-family: got-svg;
+  src: url(data:application/vnd.ms-fontobject;base64,);
+  src: url(data:application/vnd.ms-fontobject;base64,?#iefix) format("embedded-opentype"), url(data:font/woff;base64,) format("woff"), url(data:font/ttf;base64,) format("truetype")
+}
+
+.hidden {
+  visibility: hidden;
+  position: absolute
+}
+
+.TheClassFooter {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto;
+  grid-template-columns: auto;
+  -ms-grid-rows: auto 1rem auto 1rem auto 1rem auto 1rem auto;
+  grid-template-rows: repeat(5, auto);
+  grid-gap: 1rem;
+  padding: 2.6rem
+}
+
+.TheClassFooter > :first-child {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1
+}
+
+.TheClassFooter > :nth-child(2) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1
+}
+
+.TheClassFooter > :nth-child(3) {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1
+}
+
+.TheClassFooter > :nth-child(4) {
+  -ms-grid-row: 7;
+  -ms-grid-column: 1
+}
+
+.TheClassFooter > :nth-child(5) {
+  -ms-grid-row: 9;
+  -ms-grid-column: 1
+}
+
+.TheClassFooter #class-permit-summary {
+  background-color: #f5f5f5;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto;
+  grid-template-columns: auto;
+  -ms-grid-rows: auto 1.5fr 1fr;
+  grid-template-rows: auto 1.5fr 1fr;
+  padding: 3.2rem 4rem;
+  font-size: 2.2rem
+}
+
+.TheClassFooter #class-permit-summary > :first-child {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1
+}
+
+.TheClassFooter #class-permit-summary > :nth-child(2) {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1
+}
+
+.TheClassFooter #class-permit-summary > :nth-child(3) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1
+}
+
+.TheClassFooter #class-permit-summary > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1rem
+}
+
+.TheClassFooter #class-permit-summary > div:last-child {
+  border-top: 1px solid #e0e0e0;
+  padding-top: 4rem
+}
+
+.TheClassFooter #class-permit-summary > div#class-permit-summary-goods {
+  padding-bottom: 1rem
+}
+
+.TheClassFooter #class-permit-summary > div#class-permit-summary-goods .vertical-line {
+  font-size: 3.5rem;
+  color: #e3e3e3
+}
+
+.TheClassFooter #class-permit-summary .title {
+  display: flex;
+  justify-content: center;
+  align-self: flex-start;
+  font-size: 2.2rem
+}
+
+.TheClassFooter #class-permit-summary .badge-round {
+  background-color: #ededed;
+  border: 1px solid #e0e0e0;
+  font-weight: 700;
+  -ms-grid-column-align: center;
+  justify-self: center;
+  padding: 2rem 4rem;
+  border-radius: 21%/50%;
+  line-height: 1
+}
+
+.TheClassFooter #class-permit-summary .badge-round span {
+  display: inline-block
+}
+
+.TheClassFooter #class-permit-summary .badge-round span:first-child {
+  color: #00b9fd;
+  font-size: 4.2rem;
+  font-weight: 700
+}
+
+.TheClassFooter #class-permit-summary #class-account {
+  background-color: #00b9fd;
+  color: #fff;
+  -ms-grid-column-align: center;
+  justify-self: center;
+  -ms-grid-row-align: center;
+  align-self: center;
+  padding: .9rem 1.6rem;
+  border-radius: 25%/50%
+}
+
+.TheClassFooter #class-permit-summary #class-price {
+  font-size: 5.2rem;
+  font-weight: 700
+}
+
+.TheClassFooter a {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  background-color: #00b9fd;
+  padding: 3.7rem 3.3rem;
+  color: #fff;
+  font-size: 2.6rem;
+  font-weight: 700;
+  border-radius: 1%/5%
+}
+
+.TheClassFooter a.disabled {
+  background-color: #9ea2a4
+}
+
+.TheClassFooter a span {
+  position: absolute;
+  right: 5%;
+  font-weight: 400
+}
+
+article.class-info {
+  position: relative;
+  font-size: 2rem;
+  display: -ms-grid;
+  display: grid;
+  margin: 0 auto;
+  -ms-grid-rows:(auto) [ 4 ];
+  grid-template-rows: repeat(4, auto)
+}
+
+article.class-info #page-heading {
+  display: none
+}
+
+article.class-info .sticky {
+  position: fixed;
+  bottom: 0
+}
+
+article.class-info #class-info-nav ul {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  font-size: 2.2rem
+}
+
+article.class-info #class-info-nav ul li {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  padding: 2.4rem 0;
+  font-weight: bolder
+}
+
+article.class-info #class-info-nav ul li.active, article.class-info #class-info-nav ul li:active, article.class-info #class-info-nav ul li:hover {
+  border-bottom: 4px solid #34b4f9
+}
+
+article.class-info #the-class-footer {
+  width: 100%
+}
+
+@media (min-width: 641px) {
+  article.class-info > :nth-child(2) {
+    margin-top: 24.2rem
+  }
+
+  article.class-info #page-heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 5.9rem 0 8.1rem;
+    font-size: 4.2rem;
+    line-height: .96;
+    font-weight: 300;
+    background-color: #f5f5f5
+  }
+}

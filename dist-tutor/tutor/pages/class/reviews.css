@@ -1,0 +1,115 @@
+@font-face {
+  font-family: NanumSR;
+  src: url(data:application/vnd.ms-fontobject;base64,);
+  src: url(data:application/vnd.ms-fontobject;base64,?#iefix) format("embedded-opentype"), url(data:font/woff;base64,) format("woff"), url(data:font/ttf;base64,) format("truetype");
+  font-weight: 400;
+  font-style: normal
+}
+
+@font-face {
+  font-family: NanumSR;
+  src: url(data:application/vnd.ms-fontobject;base64,);
+  src: url(data:application/vnd.ms-fontobject;base64,?#iefix) format("embedded-opentype"), url(data:font/woff;base64,) format("woff"), url(data:font/ttf;base64,) format("truetype");
+  font-weight: 700
+}
+
+@font-face {
+  font-family: got-svg;
+  src: url(data:application/vnd.ms-fontobject;base64,);
+  src: url(data:application/vnd.ms-fontobject;base64,?#iefix) format("embedded-opentype"), url(data:font/woff;base64,) format("woff"), url(data:font/ttf;base64,) format("truetype")
+}
+
+.hidden {
+  visibility: hidden;
+  position: absolute
+}
+
+.ClassReview {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto;
+  grid-template-columns: auto;
+  -ms-grid-rows: auto auto;
+  grid-template-rows: auto auto;
+  padding: 8rem 2.6rem;
+  line-height: 1.5;
+  color: #8d8d8d
+}
+
+.ClassReview > :first-child {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1
+}
+
+.ClassReview > :nth-child(2) {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1
+}
+
+.ClassReview .review-section {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: -webkit-min-content 4rem auto;
+  -ms-grid-columns: min-content 4rem auto;
+  grid-template-columns: -webkit-min-content auto;
+  grid-template-columns: min-content auto;
+  -ms-grid-rows: 1fr 3fr;
+  grid-template-rows: 1fr 3fr;
+  grid-column-gap: 4rem;
+  padding: 2rem 0;
+  border-bottom: 1px solid #e0e0e0
+}
+
+.ClassReview .review-section > :first-child {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1
+}
+
+.ClassReview .review-section > :nth-child(2) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3
+}
+
+.ClassReview .review-section > :nth-child(3) {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1
+}
+
+.ClassReview .review-section > :nth-child(4) {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3
+}
+
+.ClassReview .review-section:first-of-type {
+  padding-top: 0
+}
+
+.ClassReview .review-section figure {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1/3;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  align-items: center
+}
+
+.ClassReview .review-section figure img {
+  min-width: 8rem;
+  width: 0;
+  border-radius: 50% 50%
+}
+
+.ClassReview .review-section figure figcaption {
+  line-height: 1
+}
+
+.ClassReview .review-section .star-rank {
+  display: flex;
+  color: #34b4f9
+}
+
+.ClassReview .review-section .star-rank img {
+  width: 4%;
+  margin-right: .5rem
+}
