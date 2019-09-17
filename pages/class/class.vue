@@ -143,27 +143,31 @@ export default {
     }
     .object {
       display: initial;
+
       > table {
         margin-top: 4rem;
       }
+
       table {
         border: solid 1px #dedede;
         border-right: none;
         border-left: none;
         width: 100%;
+        font-size: 1.6rem;
+        color: #6e737d;
+
         tr {
           border-top: solid 1px #dedede;
           height: 8rem;
         }
+
         td, th {
+          text-align: center;
           vertical-align: middle;
         }
-        tr:first-child {
-          > * {
-            th[scope='row'] {
-              width: 20%;
-            }
-          }
+        th[scope='row'] {
+          font-weight: 500;
+          width: 20%;
         }
       }
     }
