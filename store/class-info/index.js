@@ -159,17 +159,17 @@ export function getClasses (classId) {
       classPrice: theClass.price,
       buttons: [
         {
-          label: `수업구매하기(${theClass.price}원)`,
-          url: fakerEn.internet.url(),
-          active: true,
-        },
-        {
-          label: '수업권으로 수업 예약',
+          label: `수업구매하기 (${theClass.price}원)`,
           url: fakerEn.internet.url(),
           active: true,
         },
         {
           label: '커넥츠 멤버십으로 예약',
+          url: fakerEn.internet.url(),
+          active: true,
+        },
+        {
+          label: '수업권으로 수업 예약',
           url: fakerEn.internet.url(),
           active: true,
         },
