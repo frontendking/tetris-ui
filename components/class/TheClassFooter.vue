@@ -129,9 +129,9 @@ export default {
 @media(min-width: 641px) {
   .TheClassFooter {
     grid-template-rows: auto;
-    grid-template-columns: repeat(2, auto);
+    grid-template-columns: 1fr 3fr;
     grid-gap: 0;
-    grid-column-gap: 4.3rem;
+    grid-column-gap: 3.4rem;
     justify-items: flex-start;
     padding: 4rem;
     background-color: #f5f5f5;
@@ -191,25 +191,31 @@ export default {
       flex-flow: row;
       border-radius: 0;
       border: solid 1px #e0e0e0;
-
+      &.float {
+        justify-self: stretch;
+        a:nth-child(n+3){
+          display: none;
+        }
+      }
       a {
         &:first-child {
           border-left: none;
         }
         &.disabled {
-          background-color: #fff;
-          color: #777;
+          background-color: $primary;
+          color: #fff;
         }
         border-radius: 0;
         padding: 1rem;
         font-size: 1.6rem;
         border-left: solid 1px #e0e0e0;
-        background-color: $primary;
-        color: #fff;
+        background-color: #fff;
+        color: #777;
         font-weight: normal;
         text-align: center;
         word-break: keep-all;
         align-items: center;
+        flex: 1 1 auto;
         span {
           display: none;
         }
