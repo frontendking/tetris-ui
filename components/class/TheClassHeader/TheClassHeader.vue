@@ -24,7 +24,7 @@
           <dt>{{v.legend}}</dt>
           <dd>{{v.paragraph}}</dd>
         </template>
-        <dt>후 기</dt><dd>5.0 </dd>
+        <dt class="class-reviews">후 기</dt><dd class="class-reviews">5.0 </dd>
       </dl>
     </div>
   </header>
@@ -49,31 +49,26 @@ $gray-dark: #696969;
 .TheClassSummaryCard {
   display: flex;
   flex-flow: column;
-  align-items: center;
   background-color: #f5f5f5;
   padding: 4.8rem 6.6rem;
-
+  font-size: 2.2rem;
+  .class-reviews, .message-button {
+    display: none;
+  }
   figure {
     display: flex;
     flex-flow: column;
     align-items: center;
-    width: 40%;
-
     .round-frame {
-      position: relative;
       display: flex;
       justify-content: center;
       overflow: hidden;
       background-color: #ffffff;
       border: #e0e0e0 solid 1px;
       border-radius: 50%;
-      width: 65%;
-      padding-top: 65%;
-
+      width: 13.2rem;
       img {
-        position: absolute;
         width: 80%;
-        top: 0;
       }
 
     }
@@ -140,7 +135,7 @@ $gray-dark: #696969;
           align-content: space-between;
           width: 100%;
           top: 0;
-          padding: 0 18rem;
+          padding: 0 17rem;
           height: 5.5rem;
         }
       }
@@ -157,7 +152,9 @@ $gray-dark: #696969;
     background-color: #ffffff;
     border-top: 1px solid #dedede;
     border-bottom: 1px solid #dedede;
-
+    .class-reviews {
+      display: initial;
+    }
     .teacher-summary {
       padding: 4rem 5.8rem 2.7rem;
       display: flex;
@@ -170,7 +167,6 @@ $gray-dark: #696969;
 
         .round-frame {
           width: 100%;
-          padding-top: 100%;
         }
 
         .teacher-name {
