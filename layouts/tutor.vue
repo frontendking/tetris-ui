@@ -35,14 +35,11 @@ export default {
 <style lang="scss">
 html {
   font-size: 10px;
-}
-body {
   font-family: 'Noto Sans KR', 'Malgun Gothic', '맑은고딕', '돋움', 'Dotum', 'Helvetica', 'Apple SD Gothic Neo', Sans-serif, serif;
 }
 </style>
 
 <style lang="scss">
-
 @media(min-width: 641px) {
   #tutor-layout {
     display: grid;

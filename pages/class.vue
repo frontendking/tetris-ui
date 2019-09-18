@@ -138,7 +138,7 @@ $heading-b-m: 6rem;
 
 article.class-info {
   position: relative;
-  font-size: 2rem;
+  font-size: 2.2rem;
   display: grid;
   margin: 0 auto;
   grid-template-rows: repeat(4, auto);

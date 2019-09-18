@@ -16,7 +16,7 @@
 <script>
 export default {
   name: 'TheClassFooter',
-  props: ['data']
+  props: ['data'],
 }
 </script>
 
@@ -25,31 +25,20 @@ export default {
 
 .TheClassFooter {
   display: grid;
+  grid-template-rows: auto auto;
   grid-template-columns: auto;
-  grid-template-rows: repeat(5, auto);
-  grid-gap: 1rem;
+  grid-row-gap: 2.4rem;
   padding: 2.6rem;
 
   .class-permit-summary {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr auto 1fr 1.5fr;
     background-color: $gray-light;
     display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto 1.5fr 1fr;
 
     padding: 3.2rem 4rem;
     font-size: 2.2rem;
-
-    > div {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding-bottom: 1rem;
-
-      &:last-child {
-        border-top: #e0e0e0 solid 1px;
-        padding-top: 4rem;
-      }
-    }
+    border: 1px solid #e0e0e0;
 
     > div#class-permit-summary-goods {
       padding-bottom: 1rem;
@@ -61,42 +50,48 @@ export default {
     }
 
     .title {
+      grid-row: 1;
+      grid-column: 1/3;
       display: flex;
       justify-content: center;
-      align-self: flex-start;
       font-size: 2.2rem;
+      padding-bottom: 3.8rem;
     }
 
-    .badge-round {
-      background-color: #ededed;
-      border: #e0e0e0 solid 1px;
+    .reset-date, .reset-seat {
+      /*     &:before {
+             content: '';
+             width: 20%;
+             padding: 5%;
+             background-color: #ededed;
+             border: #e0e0e0 solid 1px;
+             border-radius: 21% / 50%;
+           }*/
       font-weight: bold;
       justify-self: center;
-      padding: 2rem 4rem;
-      border-radius: 21% / 50%;
       line-height: 1;
 
-      span {
-        display: inline-block;
-
-        &:first-child {
-          color: #00b9fd;
-          font-size: 4.2rem;
-          font-weight: bold;
-        }
+      em {
+        color: #00b9fd;
+        font-style: normal;
+        font-size: 4.2rem;
+        font-weight: bold;
       }
     }
 
+    .class-account, .class-price {
+      border-top: #e0e0e0 solid 1px;
+      display: flex;
+      justify-self: stretch;
+      align-self: stretch;
+    }
+
     .class-account {
-      background-color: #00b9fd;
-      color: #ffffff;
-      justify-self: center;
-      align-self: center;
-      padding: 0.9rem 1.6rem;
-      border-radius: 25% /50%;
+      grid-row: 4;
     }
 
     .class-price {
+      grid-row: 4;
       font-size: 5.2rem;
       font-weight: bold;
     }
@@ -124,6 +119,12 @@ export default {
       font-weight: normal;
     }
   }
+  .purchase-btns {
+    display: grid;
+    grid-template-rows: repeat(4, auto);
+    grid-template-columns: 1fr;
+    grid-row-gap: 1rem;
+  }
 }
 
 @media(min-width: 641px) {
@@ -135,6 +136,7 @@ export default {
     justify-items: flex-start;
     padding: 4rem;
     background-color: #f5f5f5;
+
     .class-permit-summary {
       grid-template-columns: repeat(3, auto);
       grid-template-rows: repeat(3, auto);
@@ -142,33 +144,40 @@ export default {
       padding: 0;
       font-size: 1.6rem;
       background-color: #f5f5f5;
+
       em {
         color: $primary;
         font-style: inherit;
       }
-      > div{
+
+      > div {
         &:last-child {
           border-top: none;
           padding-top: 0;
         }
+
         padding: 0;
       }
+
       .title {
         grid-column: 1/2;
         grid-row: 3/4;
         font-size: inherit;
 
       }
+
       .reset-date {
         grid-column: 2/3;
         grid-row: 3/4;
 
       }
+
       .reset-seat {
         grid-column: 3/4;
         grid-row: 3/4;
       }
-      .class-account{
+
+      .class-account {
         grid-column: 1/2;
         grid-row: 1/2;
         background-color: initial;
@@ -176,6 +185,7 @@ export default {
         padding: 0;
         justify-self: initial;
       }
+
       .class-price {
         grid-column: 1/4;
         grid-row: 2/3;
@@ -186,25 +196,31 @@ export default {
       }
 
     }
+
     .purchase-btns {
       display: flex;
       flex-flow: row;
       border-radius: 0;
       border: solid 1px #e0e0e0;
+
       &.float {
         justify-self: stretch;
-        a:nth-child(n+3){
+
+        a:nth-child(n+3) {
           display: none;
         }
       }
+
       a {
         &:first-child {
           border-left: none;
         }
+
         &.disabled {
           background-color: $primary;
           color: #fff;
         }
+
         border-radius: 0;
         padding: 1rem;
         font-size: 1.6rem;
@@ -216,6 +232,7 @@ export default {
         word-break: keep-all;
         align-items: center;
         flex: 1 1 auto;
+
         span {
           display: none;
         }
