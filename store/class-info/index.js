@@ -159,21 +159,25 @@ export function getClasses (classId) {
       classPrice: theClass.price,
       buttons: [
         {
+          id: 'purchase-class-btn',
           label: `수업구매하기 (${theClass.price}원)`,
           url: fakerEn.internet.url(),
           active: true,
         },
         {
+          id: 'purchase-membership-btn',
           label: '커넥츠 멤버십으로 예약',
           url: fakerEn.internet.url(),
           active: true,
         },
         {
+          id: 'purchase-permit-btn',
           label: '수업권으로 수업 예약',
           url: fakerEn.internet.url(),
           active: true,
         },
         {
+          id: 'purchase-text-math',
           label: '일간대치동 수학 교재 구매하기',
           url: fakerEn.internet.url(),
           active: false

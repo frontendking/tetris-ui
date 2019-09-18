@@ -17,7 +17,9 @@
   "dependencies": {
     "destyle.css": "^1.0.10",
     "fxjs": "^0.12.5",
-    "nuxt": "^2.0.0"
+    "jquery": "^3.4.1",
+    "nuxt": "^2.0.0",
+    "sweetalert2": "^8.17.4"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",

@@ -21,7 +21,7 @@
           <span class="class-time">{{classTime}}</span>
         </dd>
         <template v-for="v in summaries">
-          <dt>{{v.heading}}</dt>
+          <dt>{{v.legend}}</dt>
           <dd>{{v.paragraph}}</dd>
         </template>
         <dt>후 기</dt><dd>5.0 </dd>

@@ -3,7 +3,7 @@
 
     <fieldset class="select-grades">
       <div class="fieldset-wrap">
-        <legend>{{selectGrades.heading}}</legend>
+        <legend>{{selectGrades.legend}}</legend>
         <div class="input">
           <div class="select-box">
             <select>
@@ -15,14 +15,14 @@
     </fieldset>
     <fieldset class="sellect-subjects">
       <div>
-        <legend>{{selectSubjects.heading}}</legend>
+        <legend>{{selectSubjects.legend}}</legend>
         <div class="tutor-checkbox" v-for="v in selectSubjects.paragraphs">
           <input type="checkbox" :id="`subject${v.id}`" :value="v.name">
           <label :for="`subject${v.id}`">{{v.name}}</label>
         </div>
       </div>
     </fieldset>
-    <button class="find-buttons">{{findButtons.heading}}</button>
+    <button class="find-buttons">{{findButtons.legend}}</button>
   </form>
 </template>
 

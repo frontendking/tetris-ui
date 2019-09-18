@@ -5,14 +5,14 @@
       <h2 hidden>teacher summary</h2>
       <dl id="class-teacher-summary">
         <template v-for="v in teacherSummary">
-          <dt>{{v.heading}}</dt>
+          <dt>{{v.legend}}</dt>
           <dd>{{v.paragraph}}</dd>
         </template>
       </dl>
     </section>
 
     <section id="class-teacher-intro">
-      <h2>{{this.teacherIntro.heading}}</h2>
+      <h2>{{this.teacherIntro.legend}}</h2>
       <section id="teacher-intro-short">
         <p>{{this.teacherIntro.sections[3].paragraph}}</p>
       </section>
@@ -27,7 +27,7 @@
         <p v-for="v in teacherIntro.sections[0].paragraph">{{v}}</p>
       </section>
       <section id="teacher-profile">
-        <h3>[ {{teacherIntro.sections[2].heading}} ]</h3>
+        <h3>[ {{teacherIntro.sections[2].legend}} ]</h3>
         <p v-for="v in teacherIntro.sections[2].paragraph">{{v}}</p>
       </section>
     </section>
@@ -140,6 +140,9 @@ export default {
 
 .teacher {
   @media(min-width: 641px) {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto;
     grid-gap: 3rem;
     padding: 0;
     font-size: 1.6rem;

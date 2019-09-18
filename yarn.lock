@@ -6926,6 +6926,11 @@ jest@^24.1.0:
     import-local "^2.0.0"
     jest-cli "^24.9.0"
 
+jquery@^3.4.1:
+  version "3.4.1"
+  resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.4.1.tgz#714f1f8d9dde4bdfa55764ba37ef214630d80ef2"
+  integrity sha512-36+AdBzCL+y6qjw5Tx7HgzeGCzC81MDDgaUP8ld2zhx58HdqXGoBd+tHdrBMiyjGQs0Hxs/MLZTu/eHNJJuWPw==
+
 js-beautify@^1.6.14:
   version "1.10.2"
   resolved "https://registry.yarnpkg.com/js-beautify/-/js-beautify-1.10.2.tgz#88c9099cd6559402b124cfab18754936f8a7b178"
@@ -10920,6 +10925,11 @@ svgo@^1.0.0:
     stable "^0.1.8"
     unquote "~1.1.1"
     util.promisify "~1.0.0"
+
+sweetalert2@^8.17.4:
+  version "8.17.4"
+  resolved "https://registry.yarnpkg.com/sweetalert2/-/sweetalert2-8.17.4.tgz#e66dc24102acdb47265a6700750bd4fda125e733"
+  integrity sha512-+TPiBKwdhke1L5W8irYavtB+SCgWr24IyIWz1AivpA9goCH6YQ/KYpllHjktT7uGa/PPwAPk/f/vstuexNtR7A==
 
 symbol-observable@^1.0.4:
   version "1.2.0"

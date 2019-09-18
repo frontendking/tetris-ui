@@ -75,7 +75,8 @@ export default {
 }
 .review {
   @media(min-width: 641px) {
-
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
     grid-gap: 3rem;
     padding: 0;
     font-size: 1.6rem;

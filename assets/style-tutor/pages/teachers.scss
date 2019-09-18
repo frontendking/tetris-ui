@@ -736,7 +736,7 @@ span.state {
     border: 0 none;
   }
 
-  .modal-body {
+  .modal-dimm {
     .form-group {
       .title {
         color: $gotcolor3;
@@ -747,7 +747,7 @@ span.state {
 }
 
 .modal-dialog.pop-teacher-edit-basic {
-  .modal-body {
+  .modal-dimm {
     .form-group {
       .description {
         .profile-img {
@@ -796,7 +796,7 @@ span.state {
 
 .reports {
   .modal-content {
-    .modal-body {
+    .modal-dimm {
       padding: 0;
     }
 

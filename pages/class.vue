@@ -35,6 +35,7 @@ import { getClasses, users } from '../store/class-info'
 import TheClassFooter from '@/components/class/TheClassFooter'
 import { map } from 'fxjs/Strict'
 
+
 export default {
   name: 'ClassMain',
   // layout: 'tutor',
@@ -117,15 +118,9 @@ export default {
       ]
     },
   },
-  mounted () {
-    /*    const footer = document.getElementById("the-class-footer")
-        const sticky = footer.offsetTop
-        window.onscroll = function(e) {
-          if(window.pageYOffset + window.innerHeight === document.body.scrollHeight) {
-            footer.classList.remove('sticky')
-          }
-        }*/
-  },
+  created(){
+
+  }
 }
 </script>
 
@@ -141,6 +136,7 @@ article.class-info {
   font-size: 2rem;
   display: grid;
   margin: 0 auto;
+  grid-template-columns: 1fr;
   grid-template-rows: repeat(4, auto);
   grid-row-gap: 5.9rem;
   #page-heading {

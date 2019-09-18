@@ -825,7 +825,7 @@ a.btn-more-view {
     border: 0 none;
   }
 
-  .modal-body {
+  .modal-dimm {
     .form-group {
       .title {
         color: $gotcolor3;
@@ -846,7 +846,7 @@ a.btn-more-view {
 }
 
 .modal-dialog.pop-academy-edit-basic {
-  .modal-body {
+  .modal-dimm {
     min-height: 500px;
 
     .tab-pane {
