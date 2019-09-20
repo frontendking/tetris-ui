@@ -10,19 +10,9 @@
       :classTime="classTime"
       :summaries="summaries"
     />
-    <nav id="class-nav" v-if="$route.name!=='class-search'">
-      <h2 class="hidden">class page nav</h2>
-      <ul>
-        <li v-for="(v, k) in subPages" :class="v.id === $route.path.split('/').pop()?'active': ''">
-          <a :href="`${v.to}`">
-            {{v.label}} {{$route.params.subpage}}
-          </a>
-        </li>
-      </ul>
-    </nav>
+    <the-tutor-local-nav :navItems="subPages"/>
     <nuxt-child :page="page" :users="users"/>
     <the-class-footer
-      v-if="$route.name!=='class-search'"
       id="the-class-footer"
       :class="isSticky?'sticky':''"
       :data="footer"
@@ -34,10 +24,11 @@ import TheClassHeader from '@/components/class/TheClassHeader/TheClassHeader'
 import { getClasses, users } from '../store/class-info'
 import TheClassFooter from '@/components/class/TheClassFooter'
 import { map } from 'fxjs/Strict'
+import TheTutorLocalNav from '@/components/class/TheTutorLocalNav'
 
 
 export default {
-  name: 'ClassMain',
+  name: 'class',
   // layout: 'tutor',
   data() {
     const classId = 1
@@ -53,6 +44,7 @@ export default {
           id: 'class',
           label: '수업 소개',
           to: `/class/class`,
+          active: true,
         },
         {
           id: 'teacher',
@@ -69,11 +61,11 @@ export default {
       isSticky: false,
     }
   },
-  watchQuery: ['id'],
   // layout:'tutor',
   components: {
     TheClassHeader,
     TheClassFooter,
+    TheTutorLocalNav,
   },
   methods: {
     date (date) {

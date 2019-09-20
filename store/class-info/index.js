@@ -41,9 +41,9 @@ function * genSentences (num) {
   }
 }
 
-function * genLorem (num, genLorem) {
+function * genLorem (num, gen) {
   for (let i = 0; i < num; i++) {
-    yield genLorem()
+    yield gen()
   }
 }
 
