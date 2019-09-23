@@ -121,7 +121,7 @@ export default {
     grid-gap: 3rem;
     padding: 0;
     font-size: 1.6rem;
-    section {
+    > section {
       padding-right: 32rem;
     }
     h1, h2 {
