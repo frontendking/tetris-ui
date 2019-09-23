@@ -1,8 +1,8 @@
 <template>
-  <article class="class-info">
-    <h1>permit</h1>
-    <the-tutor-local-nav :navItems="subPages"/>
-    <nuxt-child/>
+  <article class="permit">
+    <h1 id=permit-heading class="hidden">수업권 신청</h1>
+    <the-tutor-local-nav id=permit-nav :navItems="subPages"/>
+    <nuxt-child id="permit-article"/>
   </article>
 
 </template>
@@ -13,9 +13,9 @@ import TheTutorLocalNav from '@/components/class/TheTutorLocalNav'
 export default {
   name: 'permit',
   components: {
-    TheTutorLocalNav
+    TheTutorLocalNav,
   },
-  data()  {
+  data () {
     return {
       subPages: [
         {
@@ -36,11 +36,26 @@ export default {
         },
       ],
     }
-  }
+  },
 }
 </script>
 
 <style lang=scss>
 .permit {
+  display: grid;
+  grid-gap: 7.6rem;
+  /*@formatter:off*/
+  grid-template:
+   "nav" auto
+   "article" auto/
+   auto;
+  /*@formatter:on*/
+  #permit-nav {
+    grid-area: nav;
+  }
+  #permit-article {
+    grid-area: article;
+  }
+
 }
 </style>

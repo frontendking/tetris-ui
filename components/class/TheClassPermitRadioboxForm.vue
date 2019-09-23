@@ -90,6 +90,7 @@ export default {
       },
     }
   },
+/*
   mounted () {
     this.$nextTick(function () {
       var purchasePermitForm = document.querySelector('.TheClassPermitRadioboxForm')
@@ -119,7 +120,7 @@ export default {
         }).then((result)=>{
           purchasePermitForm.parentElement.classList.remove('active')
         })
-        /*
+        /!*
         // 수업권을 구매하지 않은 경우
         Swal.fire({
             html: "<p>수업권을 구매하셔야 수업을 예약할 수 있습니다.</p> <p>수업권을 구매하시겠습니까?</p>",
@@ -135,10 +136,11 @@ export default {
                 '확인'
               )
             }
-          })*/
+          })*!/
       })
     })
   }
+*/
 }
 </script>
 

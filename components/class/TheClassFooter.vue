@@ -16,7 +16,7 @@
       </a>
     </div>
     <div class="modal-dimm">
-      <the-class-permit-radiobox-form class="modal-area"/>
+<!--      <the-class-permit-radiobox-form class="modal-area"/>-->
     </div>
   </footer>
 </template>
@@ -32,6 +32,7 @@ export default {
   components: {
     TheClassPermitRadioboxForm,
   },
+/*
   mounted () {
     this.$nextTick(function () {
       const purchaseClassBtn = document.querySelector('.purchase-class-btn')
@@ -59,7 +60,7 @@ export default {
             })
           }
         })
-        /*
+        /!*
         // 단건 구매 이력이 있는 경우
         Swal.fire({
             text: "수업예약을 위해 해당 수업을 구매하셔야 합니다. 결제 화면으로 이동하시겠습니까?",
@@ -75,7 +76,7 @@ export default {
                 '확인'
               )
             }
-          })*/
+          })*!/
       })
 
       purchaseMembershipBtn.addEventListener('click', e => {
@@ -89,7 +90,7 @@ export default {
           focusConfirm: false
         })
 
-        /*
+        /!*
         //멤버십 구매후 7일 후 실 결제 한 경우
         Swal.fire({
           text: "수업 예약이 완료되었습니다.",
@@ -98,8 +99,8 @@ export default {
           confirmButtonText: '확인',
           cancelButtonText: '최소',
           focusConfirm: false
-        })*/
-        /*
+        })*!/
+        /!*
 
         //멤버십 구매 이력이 없는 경우
         Swal.fire({
@@ -117,7 +118,7 @@ export default {
               '확인'
             )
           }
-        })*/
+        })*!/
       })
 
       purchasePermitBtn.addEventListener('click', e => {
@@ -126,6 +127,7 @@ export default {
     })
 
   }
+*/
 }
 </script>
 
