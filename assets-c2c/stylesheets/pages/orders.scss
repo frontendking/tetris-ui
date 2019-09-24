@@ -1,0 +1,87 @@
+// Place all the styles related to the orders controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+#order-modal {
+  .modal-body {
+    padding: 20px;
+  }
+  .info-text {
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: $gotcolor2;
+    line-height: 1.4;
+  }
+  .agree-title {
+    clear: both;
+    overflow: visible;
+    height: 15px;
+    margin-bottom: 10px;
+    .btn-view {
+      float: right;
+      padding: 5px 10px;
+      background: #fff;
+      text-decoration: underline;
+    }
+  }
+  .id-input {
+    input[type="text"] {
+      width: 400px;
+      height: 34px;
+      padding: 3px 10px;
+      vertical-align: middle;
+    }
+  }
+  .id_search {
+    color: $gotcolor;
+    font-size: 14px;
+  }
+  .label-title {
+    display: block;
+    margin-bottom: 5px;
+    background: transparent;
+    font-weight: bold;
+    font-size: 16px;
+  }
+  .agree-detail {
+    display: none;
+    overflow-y: auto;
+    border: 1px solid #dadada;
+    height: 130px;
+    font-size: 14px;
+    table {
+      th,
+      td {
+        border: 1px solid #dadada;
+        border-width: 0 0 1px 1px;
+        padding: 5px;
+        font-size: 14px;
+      }
+    }
+    &.active {
+      display: block;
+    }
+    &.bd-none {
+      border: 0;
+    }
+    .likeness-term {
+      margin: 10px;
+      >li {
+        margin-top: 10px;
+        font-size: 14px;
+        &:first-child {
+          margin: 0;
+        }
+        strong {
+          display: block;
+          color: $gotcolor1;
+        }
+        a {
+          color: $gotcolor1;
+        }
+      }
+    }
+  }
+  .form-group:last-child {
+    margin: 10px 0 0 0;
+  }
+}

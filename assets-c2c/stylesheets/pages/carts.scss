@@ -1,0 +1,207 @@
+// Place all the styles related to the carts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@media only screen and (max-width: 767px) {
+  .cart-wrapper {
+    .row {
+      margin: 0;
+    }
+    .order-item-wrapper {
+      margin-top: 20px;
+      padding-top: 15px;
+      border: dotted #f0f0f0;
+      border-width: 0;
+      border-top-width: 1px;
+      border: solid #dadada;
+      border-width: 1px;
+      border-radius: 3px;
+      padding: 20px;
+      .product-image-wrapper {
+        display: none !important;
+      }
+      .product-title {
+        font-size: 1.3em;
+      }
+      .product-text {
+
+      }
+      .product-item {
+        font-size: 1em;
+        .item {
+          &:before {
+            content: '|';
+            padding: 5px;
+          }
+          &:first-child:before {
+            content: '';
+            padding: 0;
+          }
+        }
+      }
+      .price-wrapper {
+        .price {
+          font-size: 1.2em;
+          font-weight: bold;
+          color: #000;
+        }
+        .real-price {
+          font-size: .9em;
+          text-decoration: line-through;
+          color: #999;
+        }
+      }
+      .cart-foot {
+      }
+    }
+  }
+  #order-modal .modal-body {
+    .form-group {
+      &:nth-last-child(2)  {
+        margin-top: 15px;
+        padding-top: 10px;
+        border: dotted #dadada;
+        border-width: 0;
+        border-top-width: 2px;
+      }
+      .id-input input[type="text"] {
+        max-width: 322px;
+        width: 200px !important;
+        height: 34px;
+        padding: 3px 10px;
+        vertical-align: middle;
+      }
+      .agree-title {
+        height: inherit;
+        input[type="checkbox"] {
+          float: left;
+          margin-top: 7px;
+        }
+        label[for="agree1"],
+        label[for="agree2"] {
+          float: left;
+          font-size: .75em;
+          margin-left: 7px;
+        }
+      }
+    }
+  }
+  .got-style {
+    .gnb-wrap {
+      .gnb {
+        .gnb-utill {
+          > ul li a {
+            padding: 10px 5px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.cart-wrapper {
+  .form-wrap {
+    margin-bottom: 10px;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #dadada;
+    border-radius: 3px;
+    .form-title {
+      clear: both;
+      height: 26px;
+      margin-bottom: 20px;
+      h2 {
+        float: left;
+        color: $gotcolor1;
+      }
+      .h4 {
+        display: block;
+        margin-top: 0;
+        padding-bottom: 15px;
+        border-bottom: 1px solid #dadada;
+        color: $gotcolor1;
+      }
+    }
+    .form-content {
+      ul>li {
+        padding: 20px;
+        margin-bottom: 15px;
+        border: 1px solid #dadada;
+        border-radius: 3px;
+        .table {
+          border: 0;
+          tr {
+            td {
+              padding: 10px 10px 10px 0;
+            }
+          }
+          .product-title {
+            display: block;
+            margin-bottom: 10px;
+            a {
+              color: $gotcolor;
+              font-size: 20px;
+            }
+          }
+          .product-text {
+            margin-bottom: 5px;
+            font-size: 14px;
+          }
+          .product-item {
+            margin-bottom: 5px;
+            font-size: 12px;
+            .item {
+              &:before {
+                content: "|";
+                padding: 5px;
+              }
+              &:first-child:before {
+                content: "";
+                padding: 0
+              }
+            }
+          }
+          .price {
+            display: block;
+            // width: 200px;
+            font-size: 24px;
+            color: $gotcolor1;
+          }
+          .real-price {
+            color: $gotcolor3;
+            font-size: 12px;
+            text-decoration: line-through;
+          }
+          .price-area {
+            position: relative;
+            .btn-primary {
+              display: block;
+              position: relative;
+              margin-top: 20px;
+              padding: 8px 0;
+              min-width: 110px;
+              width: 100%;
+              height: 40px;
+              overflow: hidden;
+            }
+          }
+          tbody {
+            tr {
+              td {
+                padding: 10px 5px 10px;
+              }
+            }
+          }
+        }
+      }
+      .total {
+        display: block;
+        color: $gotcolor2;
+        &+.price {
+          color: $gotcolor1;
+          font-size: 24px;
+        }
+      }
+    }
+  }
+}
