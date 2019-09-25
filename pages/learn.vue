@@ -1,72 +1,229 @@
 <template>
-  <article id="learn">
-    <nav class="navbar-default navbar-static-side" role="navigation">
-      <div class="sidebar-collapse white-bg">
-        <ul class="nav metismenu" id="side-menu">
-          <li class="nav-header text-center">
-            <img class="img-circle profile-img" src="https://st-kr-tutor.s3.amazonaws.com/uploads/user/avatar/1/thumb_%E1%84%8B%E1%85%AF%E1%86%AF%E1%84%8B%E1%85%B5_%E1%84%8F%E1%85%A1%E1%84%90%E1%85%A9%E1%86%A8%E1%84%87%E1%85%A2%E1%84%80%E1%85%A7%E1%86%BC2.png" alt="Thumb %e1%84%8b%e1%85%af%e1%86%af%e1%84%8b%e1%85%b5 %e1%84%8f%e1%85%a1%e1%84%90%e1%85%a9%e1%86%a8%e1%84%87%e1%85%a2%e1%84%80%e1%85%a7%e1%86%bc2" width="80" height="80">
-            <div class="user-info">
-              <p class="user-name">got1 선생님</p>
-              <a href="/me">프로필 보기</a>
-            </div>
-          </li>
-
-          <li class="active">
-            <a href="/learns/courses">
-              <span class="nav-label">내 클래스</span>
-            </a></li>
-          <li class="">
-            <a href="/learns/studies">
-              <span class="nav-label">내 스터디</span>
-            </a></li>
-          <li class="">
-            <a href="/learns/calendars">
-              <span class="nav-label">수업 캘린더</span>
-            </a></li>
-          <li class="">
-            <a href="/learns/reports">
-              <span class="nav-label">학습 리포트 관리</span>
-            </a></li>
-          <li class="">
-            <a href="/learns/attends">
-              <span class="nav-label">출결 현황</span>
-            </a></li>
-          <li class="">
-            <a href="/learns/reviews">
-              <span class="nav-label">수강 후기 관리</span>
-            </a></li>
-          <li class="">
-            <a href="/learns/enrollments">
-              <span class="nav-label">수강신청 내역</span>
-            </a></li>
-          <li class="">
-            <a href="/learns/trial_applies">
-              <span class="nav-label">무료체험 내역</span>
-            </a></li>
-          <li class="">
-            <a href="/learns/checkbooks">
-              <span class="nav-label">수업권 내역</span>
-            </a></li>
-        </ul>
-        <a data-toggle="modal" style="margin-left:15px;" href="#movie_event">
-          <img alt="너의 수업을 보여줘! 수업영상 응모하고 100% 선물받으러가기" src="/image/banner/floating_banner_movie_event.png">
-        </a></div>
-    </nav>
-
-    <nuxt-child/>
+  <article class="class-info">
+    <h1 id="page-heading">배우기</h1>
+    <the-tutor-local-nav :navItems="subPages"/>
+    <nuxt-child :page="page" :users="users"/>
   </article>
 </template>
 
 <script>
+import { map } from 'fxjs/Strict'
+import TheTutorLocalNav from '@/components/class/TheTutorLocalNav'
+import { getClasses, users } from '../store/class-info'
+
 export default {
   name: 'learn',
-  layout: 'tutor'
+  data () {
+    const classId = 1
+    const page = getClasses(classId)
+    const { theClass, theTeacher, theReviews, footer } = page
+    return {
+      footer,
+      theClass,
+      theTeacher,
+      theReviews,
+      users,
+      page,
+      classId,
+      subPages: [
+        {
+          id: 'my-class',
+          label: '수업 소개',
+          to: `/learn/my-class`,
+          active: true,
+        },
+        {
+          id: 'calender',
+          label: '튜터 소개',
+          to: `/class/calender`,
+        },
+        {
+          id: 'report',
+          label: '학습 리포트 관리',
+          to: `/class/report`,
+        },
+        {
+          id: 'attendence',
+          label: '출결현황',
+          to: `/class/attendence`,
+        },
+        {
+          id: 'review',
+          label: '수강 후기 관리',
+          to: `/class/review`,
+        },
+        {
+          id: 'purchase-class',
+          label: '수강신청 내역',
+          to: `/class/purchase-class`,
+        },
+        {
+          id: 'free-class',
+          label: '무료체험 내역',
+          to: `/class/report`,
+        },
+        {
+          id: 'purchase-permit',
+          label: '수업권 내역',
+          to: `/class/purchase-permit`,
+        },
+      ],
+      activeLink: 'class',
+      isSticky: false,
+    }
+  },
+  layout:'tutor',
+  components: {
+    TheTutorLocalNav,
+  },
+  methods: {
+    date (date) {
+      const dateObj = new Date(date)
+      return `${dateObj.getFullYear()}.${dateObj.getMonth()}.${dateObj.getDate()}`
+    },
+  },
+  computed: {
+    classTitle () {
+      return `${this.theClass.targetGrade}학년 ${this.theClass.targetSubject}`
+    },
+    classTime () {
+      const date = new Date(this.theClass.schedule[0].start)
+      const day = ['일', '월', '화', '수', '목', '금', '']
+      return `${date.getMonth()}월 ${day[date.getDay()]}요일 ${date.getHours()}:${date.getMinutes()}`
+    },
+    summaries () {
+      return [
+        {
+          heading: '대상',
+          paragraph: `초등학교 ${this.theClass.targetGrade}학년`,
+        },
+        {
+          heading: '모집인원',
+          paragraph: `${this.theClass.recuritment.personal.start}명 ~ ${this.theClass.recuritment.personal.end}명`,
+        },
+        {
+          heading: '교재',
+          paragraph: '자체교재',
+          // paragraph: this.theClass.book.type,
+        },
+        {
+          heading: '모집기간',
+          paragraph: '~2019.08.31',
+          // paragraph: `${this.date(this.theClass.recuritment.period.start)}~${this.date(this.theClass.recuritment.period.end)}`,
+        },
+        {
+          heading: '수강기간',
+          paragraph: '2019.08.01~08.31',
+          // paragraph: `${this.date(this.theClass.schedule[0].start)}~${this.date(this.theClass.schedule[this.theClass.schedule.length - 1].end)}`
+        },
+      ]
+    },
+  },
 }
 </script>
 
 <style lang=scss>
-@import "@/assets-c2c/stylesheets/application.scss";
+/*@import "@/assets-c2c/stylesheets/application.scss";*/
 
-#learn {
+$heading-font: 4.2rem;
+$heading-p-t: 5.9rem;
+$heading-p-b: 8.1rem;
+$heading-b-m: 6rem;
+
+article.class-info {
+  position: relative;
+  font-size: 2.2rem;
+  display: grid;
+  margin: 0 auto;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, auto);
+  grid-row-gap: 5.9rem;
+
+  #page-heading {
+    display: none;
+  }
+
+  .sticky {
+    position: fixed;
+    bottom: 0;
+  }
+
+  #class-nav ul {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    font-size: 2.2rem;
+
+    li {
+      flex-grow: 1;
+      display: flex;
+      justify-content: center;
+      font-weight: bolder;
+
+      &.active {
+        border-bottom: #34b4f9 solid 4px;
+      }
+
+      &:active, &:hover {
+        border-bottom: #34b4f9 solid 4px;
+      }
+
+      a {
+        display: block;
+        padding: 2.4rem 0;
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+
+  #the-class-footer {
+    width: 100%;
+  }
+
+  @media(min-width: 641px) {
+    > *:nth-child(2) {
+      margin-top: $heading-font + $heading-p-t + $heading-p-b + $heading-b-m;
+    }
+    #page-heading {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: $heading-p-t 0 $heading-p-b;
+      font-size: $heading-font;
+      line-height: 0.96;
+      font-weight: 300;
+      background-color: #f5f5f5;
+    }
+    #class-nav ul {
+      background-color: #f7f7f7;
+      color: #777;
+      font-size: 1.6rem;
+      font-weight: 500;
+      border: none;
+
+      li {
+        display: flex;
+        border: solid 1px #e0e0e0;
+        border-right: none;
+
+        &:last-child {
+          border-right: solid 1px #e0e0e0;
+        }
+      ;
+
+        &.active, &:hover, &:active {
+          color: #fff;
+          background-color: #6e737d;
+          border-bottom: none;
+        }
+      }
+    }
+  }
 }
+
 </style>

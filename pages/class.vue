@@ -33,9 +33,12 @@ export default {
   data() {
     const classId = 1
     const page = getClasses(classId)
-    const { theClass, theTeacher, theReviews } = page
+    const { theClass, theTeacher, theReviews, footer } = page
     return {
-      ...page,
+      footer,
+      theClass,
+      theTeacher,
+      theReviews,
       users,
       page,
       classId,

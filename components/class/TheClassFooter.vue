@@ -12,7 +12,7 @@
          :class="[v.id, {disabled: !v.active}]"
          :url="v.url"
       >
-        {{v.heading}}<span>></span>
+        {{v.label}}<span>></span>
       </a>
     </div>
     <div class="modal-dimm">

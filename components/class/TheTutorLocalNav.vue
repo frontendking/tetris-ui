@@ -23,13 +23,14 @@ export default {
   ul {
     display: flex;
     flex-flow: row;
+    flex-wrap: wrap;
     justify-content: space-between;
     padding: 0 1.5rem;
     font-size: 2.4rem;
     line-height: 1;
 
     li {
-      flex: 1 1 16rem;
+      flex: 1 0 23.6rem;
       display: flex;
       justify-content: center;
       font-weight: normal;
@@ -60,12 +61,12 @@ export default {
       font-weight: 500;
       border: none;
       padding: 0;
-
+      border-bottom: solid 1px #e0e0e0;
       li {
         display: flex;
         border: solid 1px #e0e0e0;
         border-right: none;
-
+        border-bottom: none;
         &:last-child {
           border-right: solid 1px #e0e0e0;
         }
@@ -74,7 +75,7 @@ export default {
         &.active, &:hover, &:active {
           color: #fff;
           background-color: #6e737d;
-          border-bottom: none !important;
+          border-bottom: none;
         }
       }
 
@@ -89,6 +90,7 @@ export default {
         &.active, &:active, &:hover {
           font-weight: bold;
           border-bottom: none;
+          color: inherit;
         }
       }
     }

@@ -15,7 +15,7 @@
         <div class="permit-card" v-for="item in choosePermitFieldset.checkBoxes">
           <input type="radio" :id="item.id" name="permit" :value="item.id">
           <label :for="item.id">
-            <div class="permit-title">{{item.heading.permitTitle}}</div>
+            <div class="permit-title">{{item.label.permitTitle}}</div>
             <dl>
               <template v-for="(v,k) in item.label.permitInfo">
                 <dt>{{v.heading}}</dt>
@@ -90,7 +90,6 @@ export default {
       },
     }
   },
-/*
   mounted () {
     this.$nextTick(function () {
       var purchasePermitForm = document.querySelector('.TheClassPermitRadioboxForm')
@@ -120,7 +119,7 @@ export default {
         }).then((result)=>{
           purchasePermitForm.parentElement.classList.remove('active')
         })
-        /!*
+        /*
         // 수업권을 구매하지 않은 경우
         Swal.fire({
             html: "<p>수업권을 구매하셔야 수업을 예약할 수 있습니다.</p> <p>수업권을 구매하시겠습니까?</p>",
@@ -136,11 +135,10 @@ export default {
                 '확인'
               )
             }
-          })*!/
+          })*/
       })
     })
   }
-*/
 }
 </script>
 
@@ -184,7 +182,6 @@ export default {
       grid-template-rows: auto;
       grid-template-columns: auto auto;
       border-bottom: #e0e0e0 solid 1px;
-      justify-content: space-evenly;
       align-items: center;
       padding: 3rem 0;
 
@@ -221,8 +218,7 @@ export default {
         grid-column: 2;
         border-left: solid 1px #e0e0e0;
         display: flex;
-        align-items: center;
-        justify-content: center;
+        align-items:  center;
       }
     }
 
