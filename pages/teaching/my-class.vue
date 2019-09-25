@@ -35,7 +35,7 @@
           <!---->
         </div>
         <div id="desktop-app">
-          <h1 class="m-b-lg"><strong>내 클래스</strong></h1>
+          <h1 class="m-b-lg"><strong>내 ssssss클래스</strong></h1>
           <div class="tabs-container">
             <ul class="nav nav-tabs">
               <li class="">
