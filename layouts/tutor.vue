@@ -3,16 +3,16 @@
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300&display=swap&subset=korean" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,500&display=swap&subset=korean" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:700,900&display=swap&subset=korean" rel="stylesheet">
-<!--    <link rel="stylesheet" media="all" type="text/css" href="https://static.conects.com/static/css/dangi/common/st_common.css">-->
-<!--    <link rel="stylesheet" media="all" type="text/css" href="https://s3.ap-northeast-2.amazonaws.com/st.dangidata/common/css/st-comm-v4/st-comm-v4.0.0.css">-->
-<!--    <link rel="stylesheet" media="all" type="text/css" href="https://s3.ap-northeast-2.amazonaws.com/st.dangidata/common/css/jquery.mCustomScrollbar.concat/jquery.mCustomScrollbar.css">-->
-<!--    <link rel="stylesheet" media="all" type="text/css" href="https://s3.ap-northeast-2.amazonaws.com/st.dangidata/static_conects/public/css/st_conects.css">-->
-<!--    <link rel="stylesheet" media="all" type="text/css" href="https://cdn.jsdelivr.net/npm/destyle.css@1.0.10/destyle.min.css">-->
+    <link rel="stylesheet" media="all" type="text/css" href="https://static.conects.com/static/css/dangi/common/st_common.css">
+    <link rel="stylesheet" media="all" type="text/css" href="https://s3.ap-northeast-2.amazonaws.com/st.dangidata/common/css/st-comm-v4/st-comm-v4.0.0.css">
+    <link rel="stylesheet" media="all" type="text/css" href="https://s3.ap-northeast-2.amazonaws.com/st.dangidata/common/css/jquery.mCustomScrollbar.concat/jquery.mCustomScrollbar.css">
+    <link rel="stylesheet" media="all" type="text/css" href="https://s3.ap-northeast-2.amazonaws.com/st.dangidata/static_conects/public/css/st_conects.css">
+    <link rel="stylesheet" media="all" type="text/css" href="https://cdn.jsdelivr.net/npm/destyle.css@1.0.10/destyle.min.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
     <!--tutor c2c assets = b2c모델에서 c2c모델의 패이지를 재사용하기 위한 assets-->
-<!--    <link rel="stylesheet" media="all" type="text/css" href="https://qa-got.conects.com/assets/application-27f0298e3ff83da2ebed14d59e85cf883344d6245d99f2022af3e23f28e68202.css">-->
-<!--    <link rel="stylesheet" media="all" type="text/css" href="https://s3.ap-northeast-2.amazonaws.com/st-kr-tutor/frontweb/tutor-staging.css">-->
-<!--    <link rel="stylesheet" media="all" type="text/css" href="https://s3.ap-northeast-2.amazonaws.com/st-kr-tutor/frontweb/tutor-vender-staging.css">-->
+    <link rel="stylesheet" media="all" type="text/css" href="https://qa-got.conects.com/assets/application-27f0298e3ff83da2ebed14d59e85cf883344d6245d99f2022af3e23f28e68202.css">
+    <link rel="stylesheet" media="all" type="text/css" href="https://s3.ap-northeast-2.amazonaws.com/st-kr-tutor/frontweb/tutor-staging.css">
+    <link rel="stylesheet" media="all" type="text/css" href="https://s3.ap-northeast-2.amazonaws.com/st-kr-tutor/frontweb/tutor-vender-staging.css">
     <TheConectsHeader id="conects-header"></TheConectsHeader>
     <TheConectsLnb id="conects-lnb"></TheConectsLnb>
     <main id="conects-main">

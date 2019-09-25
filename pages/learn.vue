@@ -65,7 +65,6 @@ export default {
 </script>
 
 <style lang=scss>
-@import "@/assets-c2c/stylesheets/application.scss";
 
 #learn {
 }
