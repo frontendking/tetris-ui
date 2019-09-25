@@ -21,18 +21,22 @@ export default {
 <style lang=scss>
 .TheTutorLocalNav {
   ul {
-    display: flex;
-    flex-flow: row;
-    justify-content: space-between;
-    padding: 0 1.5rem;
-    font-size: 2.4rem;
-    line-height: 1;
+    display: grid;
+    grid-template-columns: repeat(5, minmax(23.6rem, auto));
+    /*display: flex;*/
+    /*flex-flow: row;*/
+    /*flex-wrap: wrap;*/
+    /*justify-content: space-between;*/
+    /*padding: 0 1.5rem;*/
+    /*font-size: 2.4rem;*/
+    /*line-height: 1;*/
 
     li {
-      flex: 1 1 16rem;
-      display: flex;
-      justify-content: center;
-      font-weight: normal;
+      /*flex: 1 0 23.6rem;*/
+      /*display: flex;*/
+      /*justify-content: center;*/
+      /*font-weight: normal;*/
+
 
       a {
         display: block;
@@ -58,23 +62,16 @@ export default {
       color: #777;
       font-size: 1.6rem;
       font-weight: 500;
-      border: none;
       padding: 0;
-
       li {
         display: flex;
-        border: solid 1px #e0e0e0;
-        border-right: none;
-
         &:last-child {
-          border-right: solid 1px #e0e0e0;
         }
       ;
 
         &.active, &:hover, &:active {
           color: #fff;
           background-color: #6e737d;
-          border-bottom: none !important;
         }
       }
 
@@ -88,7 +85,7 @@ export default {
 
         &.active, &:active, &:hover {
           font-weight: bold;
-          border-bottom: none;
+          color: inherit;
         }
       }
     }

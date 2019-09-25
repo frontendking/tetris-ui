@@ -1,8 +1,8 @@
 <template>
-  <article class="class-info">
-    <h1 id="page-heading">배우기</h1>
+  <article id="teaching">
+    <h1 id="page-heading" v-html="heading"/>
     <the-tutor-local-nav :navItems="subPages"/>
-    <nuxt-child :page="page" :users="users"/>
+    <nuxt-child/>
   </article>
 </template>
 
@@ -12,112 +12,69 @@ import TheTutorLocalNav from '@/components/class/TheTutorLocalNav'
 import { getClasses, users } from '../store/class-info'
 
 export default {
-  name: 'learn',
+  name: 'teaching',
   data () {
     const classId = 1
     const page = getClasses(classId)
     const { theClass, theTeacher, theReviews, footer } = page
     return {
+      heading: '가르치기',
       footer,
-      theClass,
-      theTeacher,
-      theReviews,
-      users,
-      page,
       classId,
       subPages: [
         {
           id: 'my-class',
-          label: '수업 소개',
-          to: `/learn/my-class`,
+          label: '내 클래스',
+          to: `/teaching/my-class`,
           active: true,
         },
         {
           id: 'calender',
-          label: '튜터 소개',
-          to: `/class/calender`,
+          label: '수업 캘린더',
+          to: `/teaching/calender`,
         },
         {
           id: 'report',
-          label: '학습 리포트 관리',
-          to: `/class/report`,
+          label: '학습 리포트',
+          to: `/teaching/report`,
         },
         {
           id: 'attendence',
           label: '출결현황',
-          to: `/class/attendence`,
+          to: `/teaching/attendence`,
         },
         {
           id: 'review',
-          label: '수강 후기 관리',
-          to: `/class/review`,
+          label: '수강신청 내역',
+          to: `/teaching/review`,
         },
         {
           id: 'purchase-class',
-          label: '수강신청 내역',
-          to: `/class/purchase-class`,
+          label: '튜터 공지사항',
+          to: `/teaching/purchase-class`,
         },
         {
           id: 'free-class',
-          label: '무료체험 내역',
+          label: '모니터링',
           to: `/class/report`,
         },
         {
           id: 'purchase-permit',
-          label: '수업권 내역',
+          label: '스케쥴 등록',
           to: `/class/purchase-permit`,
+        },
+        {
+          id: 'profile',
+          label: '프로필',
+          to: `/class/profile`,
         },
       ],
       activeLink: 'class',
-      isSticky: false,
     }
   },
-  layout:'tutor',
+  // layout:'tutor',
   components: {
     TheTutorLocalNav,
-  },
-  methods: {
-    date (date) {
-      const dateObj = new Date(date)
-      return `${dateObj.getFullYear()}.${dateObj.getMonth()}.${dateObj.getDate()}`
-    },
-  },
-  computed: {
-    classTitle () {
-      return `${this.theClass.targetGrade}학년 ${this.theClass.targetSubject}`
-    },
-    classTime () {
-      const date = new Date(this.theClass.schedule[0].start)
-      const day = ['일', '월', '화', '수', '목', '금', '']
-      return `${date.getMonth()}월 ${day[date.getDay()]}요일 ${date.getHours()}:${date.getMinutes()}`
-    },
-    summaries () {
-      return [
-        {
-          heading: '대상',
-          paragraph: `초등학교 ${this.theClass.targetGrade}학년`,
-        },
-        {
-          heading: '모집인원',
-          paragraph: `${this.theClass.recuritment.personal.start}명 ~ ${this.theClass.recuritment.personal.end}명`,
-        },
-        {
-          heading: '교재',
-          paragraph: '자체교재',
-          // paragraph: this.theClass.book.type,
-        },
-        {
-          heading: '모집기간',
-          paragraph: '~2019.08.31',
-          // paragraph: `${this.date(this.theClass.recuritment.period.start)}~${this.date(this.theClass.recuritment.period.end)}`,
-        },
-        {
-          heading: '수강기간',
-          paragraph: '2019.08.01~08.31',
-          // paragraph: `${this.date(this.theClass.schedule[0].start)}~${this.date(this.theClass.schedule[this.theClass.schedule.length - 1].end)}`
-        },
-      ]
-    },
   },
 }
 </script>
@@ -130,7 +87,7 @@ $heading-p-t: 5.9rem;
 $heading-p-b: 8.1rem;
 $heading-b-m: 6rem;
 
-article.class-info {
+#teaching {
   position: relative;
   font-size: 2.2rem;
   display: grid;
