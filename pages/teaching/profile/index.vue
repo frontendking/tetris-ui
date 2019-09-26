@@ -28,7 +28,7 @@
         </fieldset>
         <fieldset class="profile-button">
           <div>
-            <button type="button" v-html="form.button.cancelBtn.label"/>
+            <button class="cancel" type="button" v-html="form.button.cancelBtn.label"/>
             <button v-html="form.button.submitBtn.label"/>
           </div>
         </fieldset>
@@ -90,7 +90,7 @@ export default {
       auto;
     /* @formatter:on*/
     font-size: 1.6rem;
-    font-weight: normal;
+    font-weight: 500;
     line-height: 1.56;
     letter-spacing: normal;
     color: #6e737d;
@@ -155,9 +155,10 @@ export default {
 
           input {
             border: 1px solid #cccccc;
-            padding: 2rem 1rem;
+            padding: 2rem 1.7rem;
             width: 30rem;
           }
+
           #input-file {
             display: none;
           }
@@ -187,15 +188,36 @@ export default {
       .profile-intro {
         grid-area: intro;
       }
-
-      button {
-        grid-area: btn;
-        padding: 1rem;
-        background-color: #34b4f9;
-        color: #ffffff;
-        border-radius: 0.5rem;
-        align-self: center;
+      .profile-button {
+        justify-self: center;
+        align-self: flex-end;
       }
+      .profile-button > div {
+        width: 37.2rem;
+        display: flex;
+        justify-content: space-between;
+
+        button {
+          grid-area: btn;
+          padding: 1rem;
+          background-color: #34b4f9;
+          color: #ffffff;
+          width: 18rem;
+          height: 5rem;
+          border-radius: initial;
+          text-align: center;
+          &.cancel {
+            background-color: #999;
+          }
+        }
+      }
+
+    }
+    textarea {
+      border: 1px solid #cccccc;
+      resize: none;
+      padding: 1.7rem;
+      flex: 1;
     }
   }
 }
