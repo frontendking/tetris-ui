@@ -104,7 +104,8 @@ export default {
       display: initial;
       font-size: 3.4rem;
       font-weight: bolder;
-      padding-bottom: 1rem;
+      line-height: 1;
+      padding-bottom: 1.8rem;
       border-bottom: 2px solid #000000;
     }
     .profile-form > h2 {
