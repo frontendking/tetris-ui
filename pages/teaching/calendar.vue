@@ -396,11 +396,11 @@
 
 <script>
 export default {
-  name: 'calender'
+  name: 'calendar'
 }
 </script>
 
 <style lang=scss>
-.calender {
+.calendar {
 }
 </style>

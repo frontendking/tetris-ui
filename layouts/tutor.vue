@@ -951,7 +951,6 @@ export default {
     this.$nextTick(() => {
       const conectsLayout = document.querySelector('#conects-layout')
       conectsLayout.classList.add('cource', 'pages', 'ip', 'got-style', 'no-skin-config', 'pace-done')
-      conectsLayout.classList.add('program', 'courses', 'index')
       // conectsLayout.classList.add('cource pages ip got-style landing-page no-skin-config pace-done pace-done modal-open body-small')
     })
   }
