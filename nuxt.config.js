@@ -1,3 +1,5 @@
+const globImporter = require('node-sass-glob-importer');
+
 export default {
   mode: 'universal',
   /*
@@ -44,7 +46,7 @@ export default {
   ** Build configuration
   */
   globals: {
-    id: 'tutor-wrap',
+    id: 'tutor-b2c',
   },
   generate: {
     subFolders: false
@@ -66,6 +68,11 @@ export default {
           grid: 'autoplace',
         },
       },
+    },
+    loaders: {
+      scss: {
+        importer: globImporter()
+      }
     },
     extend (config, { isClient }) {
       // Extend only webpack config for client-bundle

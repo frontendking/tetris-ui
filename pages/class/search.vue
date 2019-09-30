@@ -11,6 +11,7 @@ import TheClassTimeTable from '@/components/class/TheClassTimeTable'
 
 export default {
   props: ['page', 'users'],
+  layout:'tutor',
   components: {
     TheClassSearchBox,
     TheClassTimeTable,
