@@ -11,7 +11,7 @@ import TheTutorLocalNav from '@/components/class/TheTutorLocalNav'
 
 export default {
   name: 'teaching',
-  layout:'tutor',
+  // layout:'tutor',
   data () {
     return {
       heading: '가르치기',
