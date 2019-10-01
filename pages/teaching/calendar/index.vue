@@ -1,7 +1,7 @@
 <template>
   <article class="calendar">
     <h1 v-html="heading"/>
-    <div class="table">
+    <div class="calendar-table">
       <div class="table-buttons">
         <button v-for="button in buttons" :class="button.id" v-html="button.label"></button>
       </div>
@@ -137,7 +137,11 @@ export default {
       grid-area: table;
       display: flex;
       flex-flow: column;
-
+      border: none;
+      caption {
+        text-align: center;
+        padding: 2rem 0;
+      }
       tr {
         flex: 1 0 4rem;
         display: flex;
