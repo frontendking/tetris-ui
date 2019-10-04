@@ -1,4 +1,4 @@
-const globImporter = require('node-sass-glob-importer');
+const globImporter = require('node-sass-glob-importer')
 
 export default {
   mode: 'universal',
@@ -10,12 +10,17 @@ export default {
     host: '0.0.0.0', // default: localhost
   },
   router: {
-    extendRoutes(routes, resolve){
+    extendRoutes (routes, resolve) {
       routes.push({
-        name: 'TheSearchBox',
-        path: '/TheSearchBox',
-        component: resolve(__dirname, 'components/TheSearchBox.vue')
-      })
+          name: 'TheSearchBox',
+          path: '/TheSearchBox',
+          component: resolve(__dirname, 'components/TheSearchBox.vue')
+        },
+        {
+          name: 'TheReviewForm',
+          path: '/TheReviewForm',
+          component: resolve(__dirname, 'components/TheReviewForm.vue')
+        })
     }
   },
   head: {
