@@ -10,13 +10,12 @@
     <link rel="stylesheet" media="all" type="text/css" href="https://s3.ap-northeast-2.amazonaws.com/st.dangidata/static_conects/public/css/st_conects.css">
     <link rel="stylesheet" media="all" type="text/css" href="https://cdn.jsdelivr.net/npm/destyle.css@1.0.10/destyle.min.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <!--tutor c2c assets = b2c모델에서 c2c모델의 패이지를 재사용하기 위한 assets-->
     <script>
     window.gon = {}
     </script>
-    <script src="https://kr.tutor.com/assets/application-746623d4004bc34f0c05a7fcb9521700e2ba42009071b277490402130b185b65.js"></script>
-    <link rel="stylesheet" media="all" href="https://kr.tutor.com/assets/application-66964f3b5477c08831eaded3ee787c884877b8c6576288f3a3d3ce417f8bbda1.css">
+    <script src="https://qa-got.conects.com/assets/application-746623d4004bc34f0c05a7fcb9521700e2ba42009071b277490402130b185b65.js"></script>
+    <link rel="stylesheet" media="all" href="https://qa-got.conects.com/assets/application-805165ea71ef2181c40ca71c1968655d0f70865b9579e26c1de179af76104470.css">
     <link rel="stylesheet" media="all" type="text/css" href="https://s3.ap-northeast-2.amazonaws.com/st-kr-tutor/frontweb/tutor-staging.css">
     <link rel="stylesheet" media="all" type="text/css" href="https://s3.ap-northeast-2.amazonaws.com/st-kr-tutor/frontweb/tutor-vender-staging.css">
     <style>

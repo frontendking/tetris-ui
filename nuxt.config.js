@@ -9,6 +9,15 @@ export default {
     port: 8000, // default: 3000
     host: '0.0.0.0', // default: localhost
   },
+  router: {
+    extendRoutes(routes, resolve){
+      routes.push({
+        name: 'TheSearchBox',
+        path: '/TheSearchBox',
+        component: resolve(__dirname, 'components/TheSearchBox.vue')
+      })
+    }
+  },
   head: {
     title: process.env.npm_package_name || '',
     meta: [

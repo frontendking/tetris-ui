@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import BaseTable from '@/ponents/BaseTable'
+import BaseTable from '@/components/BaseTable'
 
 export default {
   name: 'attendance',
