@@ -18,7 +18,7 @@
 
 <script>
 
-import BaseTimeTable from '@/components/BaseTimeTable'
+import BaseTimeTable from '@/components/BaseTable2'
 
 export default {
   name: 'calendar',

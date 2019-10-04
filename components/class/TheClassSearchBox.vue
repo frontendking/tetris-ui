@@ -3,7 +3,7 @@
 
     <fieldset class="select-grades">
       <div class="fieldset-wrap">
-        <legend>{{selectGrades.legend}}</legend>
+        <legend>{{selectGrades.heading}}</legend>
         <div class="input">
           <div class="select-box">
             <select>
@@ -22,7 +22,7 @@
         </div>
       </div>
     </fieldset>
-    <button class="find-buttons">{{findButtons.legend}}</button>
+    <button class="find-buttons">{{findButtons.heading}}</button>
   </form>
 </template>
 

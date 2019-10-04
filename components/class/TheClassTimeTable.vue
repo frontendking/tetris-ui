@@ -1,10 +1,5 @@
 <template>
   <table class="TheClassTimeTable">
-    <caption>
-      <p class="main-caption">{{caption}}</p>
-      <p class="sub-caption"><span class="active">국어</span><span>수학</span></p>
-    </caption>
-
     <thead>
     <tr>
       <th scope="col" v-for="v in colHeader">{{v}}</th>
@@ -15,9 +10,18 @@
       <th scope="row">{{rowHeader[k]}}</th>
       <td v-for="td in tr">
         <div class="class-info" v-if="td!==''">
-          <a class="teacher-name" href="#">{{td.teacher}}</a>
-          <div class="class-message">{{td.message}}</div>
-          <div v-if="td.status" class="class-status">{{td.status?'마감임박':''}}</div>
+          <template v-if="!Array.isArray(td)">
+            <a class="teacher-name" href="#">
+              {{td.teacher}}
+              <div v-if="td.status" class="class-status">{{td.status?'마감임박':''}}</div>
+            </a>
+          </template>
+          <template v-else>
+              <a class="teacher-name" href="#" v-for="v in td">
+                {{v.teacher}}
+                <div v-if="v.status" class="class-status">{{v.status?'마감임박':''}}</div>
+              </a>
+          </template>
         </div>
       </td>
     </tr>
@@ -81,24 +85,28 @@ export default {
       return [
         [
           {
-            teacher: 'Teacher10',
-            message: '04.01 수업시작',
+            teacher: '이현식',
             status: 1,
           },
           '',
           {
-            teacher: 'Got1선생님',
-            message: '08.01 수업시작',
+            teacher: '김미진',
             status: 0,
           }, '', '', '',
         ],
         [
-          {
-            teacher: 'Got1선생님',
-            message: '08.01 수업시작',
-            status: 1,
-          }, '', '', '', '', '',
-        ], ['','','','','',''], ['','','','','',''], ['','','','','','']
+          [
+            {
+              teacher: '튜터닷컴',
+              status: 1,
+            },
+            {
+              teacher: '김윤희',
+              status: 0,
+            },
+          ],
+          '', '', '', '', '',
+        ], ['', '', '', '', '', ''], ['', '', '', '', '', ''], ['', '', '', '', '', '']
       ]
     },
   },
@@ -111,6 +119,7 @@ $td-w: (95rem - 15.2rem) / 6;
 .TheClassTimeTable {
   border-collapse: collapse;
   border: 1px solid #000000;
+
   caption {
     .main-caption {
       padding: 1.6rem 0;
@@ -119,20 +128,25 @@ $td-w: (95rem - 15.2rem) / 6;
       font-weight: bold;
       border-bottom: 2px solid #000000;
     }
+
     .sub-caption {
-      padding: 3rem  0;
+      padding: 3rem 0;
+
       span {
         display: inline-block;
         padding: 0 3rem;
         border-right: 1px solid #000000;
         font-size: 2rem;
         font-weight: 500;
+
         &:first-child {
           padding-left: 0;
         }
+
         &:last-child {
           border-right: none;
         }
+
         &.active {
           font-weight: 900;
         }
@@ -140,27 +154,33 @@ $td-w: (95rem - 15.2rem) / 6;
     }
 
   }
+
   td {
     font-size: 1.2rem;
     font-weight: normal;
     border: 1px solid #b7b7b7;
     padding-left: 2rem;
     padding-top: 2.5rem;
+
     .teacher-name {
       display: block;
       font-size: 1.6rem;
       font-weight: bold;
+
       &:before {
         content: "\02022";
         padding-right: 0.5rem;
         color: #ec4800;
         font-size: 2rem;
       }
+
       margin-left: -1rem;
     }
+
     .class-message {
       padding: 0.5rem 0;
     }
+
     .class-status {
       display: inline-block;
       padding: 0.7rem 0.6rem;
@@ -170,6 +190,7 @@ $td-w: (95rem - 15.2rem) / 6;
       color: #ffffff;
     }
   }
+
   th {
 
     padding: 2.2rem 0;
@@ -178,13 +199,16 @@ $td-w: (95rem - 15.2rem) / 6;
     color: #ffffff;
     background-color: #6e737d;
     text-align: center;
+
     &:nth-child(1) {
       width: 100% / 95rem * 15.2rem;
       min-width: 15.2rem;
     }
-    &:nth-child(n+2){
+
+    &:nth-child(n+2) {
       width: 100% / 95rem * ((95rem - 15.2rem) / 6);
     }
+
     &[scope="row"] {
       padding: 6rem 2.7rem;
       background-color: #f7f7f7;
