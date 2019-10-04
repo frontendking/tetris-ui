@@ -90,9 +90,9 @@ $heading-b-m: 6rem;
       auto;
     /*@formatter:on*/
     grid-gap : 5.8rem;
-/*    > *:nth-child(2) {
-      margin-top: $heading-font + $heading-p-t + $heading-p-b + $heading-b-m;
-    }*/
+    /*    > *:nth-child(2) {
+          margin-top: $heading-font + $heading-p-t + $heading-p-b + $heading-b-m;
+        }*/
     > h1 {
       grid-area: header;
       display: flex;
