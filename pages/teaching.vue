@@ -12,9 +12,13 @@ import TheTutorLocalNav from '@/components/class/TheTutorLocalNav'
 export default {
   name: 'teaching',
   layout: 'tutor',
+  props: {
+    heading: {
+      default: '가르치기'
+    }
+  },
   data () {
     return {
-      heading: '가르치기',
       subPages: [
         {
           id: 'my-class',
