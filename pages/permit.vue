@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import TheTutorLocalNav from '@/components/class/TheTutorLocalNav'
+import TheTutorLocalNav from '@/components/TheLnb'
 
 export default {
   name: 'permit',

@@ -1,5 +1,6 @@
 <template>
-  <admin-my-class
+
+  <classes
     :heading="heading"
   >
     <ul class="nav nav-tabs m-b">
@@ -10,19 +11,20 @@
         <a href="#none">다음달 수업(15)</a>
       </li>
     </ul>
-    <a class="btn btn-sm btn-submit" style="position:absolute;top:10px;right:0;" target="_blank" href="https://kr.tutor.com/tutor/courses">이전 수업 보기</a>
+
     <nuxt-child
       class="card-list"
     />
-  </admin-my-class>
+  </classes>
 </template>>
 
 <script>
-import AdminMyClass from '@/components/admin/classes'
+
+import Classes from '@/pages/admin/classes/layout'
 
 export default {
   name: 'learning-my-class',
-  components: { AdminMyClass },
+  components: { Classes },
   data () {
     return {
       heading: '내 클래스'

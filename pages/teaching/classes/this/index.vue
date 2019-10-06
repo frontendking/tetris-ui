@@ -580,7 +580,7 @@
 </template>
 
 <script>
-import AdminClassThis from '@/components/admin/classes/this/index'
+import AdminClassThis from '@/pages/admin/classes/this'
 export default {
   name: 'teaching-class-this',
   components: { AdminClassThis }

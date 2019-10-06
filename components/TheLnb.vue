@@ -2,8 +2,8 @@
   <nav class="TheTutorLocalNav">
     <h2 class="hidden">tutor local nav</h2>
     <ul>
-      <li v-for="(v, k) in navItems">
-        <a :href="`${v.to}`" :class="v.active?'active':''">
+      <li v-for="(v, k) in navList">
+        <a :href="`${v.to}`" :class="v.isActive?'active':''">
           {{v.label}}
         </a>
       </li>
@@ -14,7 +14,7 @@
 <script>
 export default {
   name: 'TheTutorLocalNav',
-  props: ['navItems'],
+  props: ['navList'],
 }
 </script>
 

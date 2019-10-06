@@ -11,7 +11,7 @@
 <script>
 import Pagenation from '@/pages/teaching/classes/pagenation'
 import ClassCard from '@/pages/teaching/classes/class-card'
-import AdminClassNext from '@/components/admin/classes/next/index'
+import AdminClassNext from '@/pages/admin/classes/next/index'
 
 export default {
   name: 'teaching-class-next',

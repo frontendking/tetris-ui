@@ -4,7 +4,7 @@
       <span class="user-name">teacher_1</span>
       <a class="btn btn-line" href="/t/teacher-1">프로필보기</a>
       <div class="tutor-card-profile">
-        <img class="" src="./assets/img/no_avatar.png" alt="No avatar" width="60" height="60">
+        <img class="" src="assets/img/no_avatar.png" alt="No avatar" width="60" height="60">
       </div>
     </div>
     <a href="/tutor/courses/725">

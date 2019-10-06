@@ -35,6 +35,7 @@ export default {
   color: #000;
   table-layout: fixed;
   width: 100%;
+
   caption {
     text-align: center;
     font-size: 3rem;
@@ -49,9 +50,10 @@ export default {
   }
 
   th {
-    &[scope="col"]{
+    &[scope="col"] {
       height: 3rem;
     }
+
     height: 3rem;
     font-size: 1.6rem;
     font-weight: 500;

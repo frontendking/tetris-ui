@@ -71,7 +71,7 @@
       margin: 0;
       display: flex;
       flex-flow: column;
-      align-items: center;
+      /*align-items: center;*/
       min-width: 102rem;
       max-width: initial;
       width: 100%;
