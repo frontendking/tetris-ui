@@ -9,8 +9,8 @@
 </template>
 
 <script>
-import admin from '@/pages/admin/index'
-import navList from '@/assets/data/navList.js'
+import admin from '@/pages/admin/layout'
+import navList from '@/pages/learning/assets/navList.js'
 
 export default {
   name: 'learning',
@@ -18,7 +18,7 @@ export default {
   data () {
     return {
       heading: '배우기',
-      navList,
+      navList: navList.map(v => ({ ...v, isActive: this.$route.name.includes(v.id) })),
     }
   },
   components: {

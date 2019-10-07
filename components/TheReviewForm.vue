@@ -1,6 +1,6 @@
 <template>
-  <article class="TheReviewForm">
-    <div id="review-form" class="nav-section modal fade in" aria-hidden="true" style="display: block;"><div class="ibox modal-dialog">
+  <div id="review-form" class="TheReviewForm nav-section modal fade" aria-hidden="true" >
+    <div class="ibox modal-dialog">
       <div class="ibox-content modal-content">
         <div class="modal-header assignment-modal-header reviews-pop-header">
           <button type="button" class="close" aria-label="Close">
@@ -17,7 +17,9 @@
           <hr>
         </div>
         <div class="review-area fold-area reviews-pop-content">
-          <form class="new_review" id="new_review" action="/learns/reviews?step=2094" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="daC4KzWuFqYxRXzeXRT4pXkQC3Erhy2jS89xmOcKBlV8Tb13zKY5W6NH23p0vdAYnebWQVPf5fEr1gxiOwDdjQ==">
+          <form class="new_review" id="new_review" action="/learns/reviews?step=2094" accept-charset="UTF-8"
+                method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token"
+                                                                                value="daC4KzWuFqYxRXzeXRT4pXkQC3Erhy2jS89xmOcKBlV8Tb13zKY5W6NH23p0vdAYnebWQVPf5fEr1gxiOwDdjQ==">
             <ul class="review-list">
               <li>
                 <div class="review-grade review-form">
@@ -44,7 +46,8 @@
                     <span class="necessary-content">*</span>
                   </strong>
                   <div class="col-content">
-                    <textarea rows="3" class="form-control" require="true" placeholder="수강 후기를 작성해 주세요 (30자 이상)" name="review[comment]" id="review_comment"></textarea>
+                    <textarea rows="3" class="form-control" require="true" placeholder="수강 후기를 작성해 주세요 (30자 이상)"
+                              name="review[comment]" id="review_comment"></textarea>
                     <p>
                       지금까지 내가 쓴 수강후기 글자 수
                       <span id="content_length" class="necessary-content">0</span>/30
@@ -58,15 +61,15 @@
                     <p>블로그, 카페 및 SNS에 수강후기(공부일기)를 작성하셨나요? URL을 남겨주세요.</p>
                   </div>
                 </div>
-                <input type="submit" name="commit" value="등록하기" class="btn btn-sm btn-submit review_save" data-disable-with="등록하기">
+                <input type="submit" name="commit" value="등록하기" class="btn btn-sm btn-submit review_save"
+                       data-disable-with="등록하기">
               </li>
             </ul>
-          </form>    </div>
+          </form>
+        </div>
       </div>
     </div>
   </div>
-    <div class="modal-backdrop fade in"></div>
-  </article>
 
 </template>
 

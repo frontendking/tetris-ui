@@ -1,19 +1,21 @@
 <template>
-  <article class="profile me-wrapper">
+  <article class="profile">
     <h1 v-html="heading"/>
     <div id="profile" class="form-wrap">
-     <div class="form-content">
+      <div class="form-content">
         <form class="form-horizontal" id="edit_user_1" method="post">
           <div class="form-group">
             <label class="control-label col-sm-2 small-title" for="user_username">회원가입 이름</label>
             <div class="col-sm-8">
-              <input class="form-control" readonly="readonly" type="text" value="got" name="user[username]" id="user_username">
+              <input class="form-control" readonly="readonly" type="text" value="got" name="user[username]"
+                     id="user_username">
             </div>
           </div>
           <div class="form-group">
             <label class="control-label col-sm-2 small-title" style="color: #ff0000" for="user_nickname">학생 이름 *</label>
             <div class="col-sm-8">
-              <input class="form-control" required="required" type="text" value="got1 선생님" name="user[nickname]" id="user_nickname">
+              <input class="form-control" required="required" type="text" value="got1 선생님" name="user[nickname]"
+                     id="user_nickname">
               <p class="description">(수업에서 사용할 <span style="color: #ff0000">학생이름을 꼭</span> 입력해 주세요.)</p>
             </div>
           </div>
@@ -38,9 +40,12 @@
           </div>
           <div class="form-group">
             <script>$(window).load(function () {changeUserBirthdayWithParentInformation('birthday-selector')})</script>
-            <label class="control-label col-sm-2 small-title" style="color: #ff0000" for="user_birth">학생 태어난 연월 *</label>
+            <label class="control-label col-sm-2 small-title" style="color: #ff0000" for="user_birth">학생 태어난 연월
+              *</label>
             <div class="col-sm-8">
-              <select id="birthday-selector1" name="user[birth(1i)]" required="required" class="chosen-select birth-select" onchange="changeUserBirthdayWithParentInformation(this.id)" style="display: none;">
+              <select id="birthday-selector1" name="user[birth(1i)]" required="required"
+                      class="chosen-select birth-select" onchange="changeUserBirthdayWithParentInformation(this.id)"
+                      style="display: none;">
                 <option value="">선택</option>
                 <option value="2019" selected="selected">2019</option>
                 <option value="2018">2018</option>
@@ -124,13 +129,16 @@
                 <option value="1940">1940</option>
                 <option value="1939">1939</option>
               </select>
-              <div class="chosen-container chosen-container-single" style="width: 100%;" title="" id="birthday_selector_chosen">
+              <div class="chosen-container chosen-container-single" style="width: 100%;" title=""
+                   id="birthday_selector_chosen">
                 <div class="chosen-drop">
                   <div class="chosen-search"><input type="text" autocomplete="off"></div>
                   <ul class="chosen-results"></ul>
                 </div>
               </div>
-              <select id="birthday-selector" name="user[birth(2i)]" required="required" class="chosen-select birth-select" onchange="changeUserBirthdayWithParentInformation(this.id)" style="display: none;">
+              <select id="birthday-selector" name="user[birth(2i)]" required="required"
+                      class="chosen-select birth-select" onchange="changeUserBirthdayWithParentInformation(this.id)"
+                      style="display: none;">
                 <option value="">선택</option>
                 <option value="1" selected="selected">1월</option>
                 <option value="2">2월</option>
@@ -145,7 +153,8 @@
                 <option value="11">11월</option>
                 <option value="12">12월</option>
               </select>
-              <div class="chosen-container chosen-container-single" style="width: 100%;" title="" id="birthday_selector_chosen">
+              <div class="chosen-container chosen-container-single" style="width: 100%;" title=""
+                   id="birthday_selector_chosen">
                 <div class="chosen-drop">
                   <div class="chosen-search"><input type="text" autocomplete="off"></div>
                   <ul class="chosen-results"></ul>
@@ -177,15 +186,18 @@
           <div class="form-group padding-sm">
             <label class="control-label col-sm-2 small-title col-xs-12" for="user_location">주소</label>
             <div class="col-sm-3 col-xs-6">
-              <input id="postcode" class="form-control" readonly="readonly" type="text" value="13529" name="user[post_code]">
+              <input id="postcode" class="form-control" readonly="readonly" type="text" value="13529"
+                     name="user[post_code]">
             </div>
             <div class="col-sm-2 col-xs-5">
-              <input type="button" onclick="Common.execDaumPostcode()" value="우편번호 찾기" class="btn btn-default btn-sm"><br>
+              <input type="button" onclick="Common.execDaumPostcode()" value="우편번호 찾기"
+                     class="btn btn-default btn-sm"><br>
             </div>
           </div>
           <div class="form-group">
             <div class="col-sm-offset-2 col-sm-4">
-              <input id="road_address" class="form-control" readonly="readonly" type="text" value="경기 성남시 분당구 분당내곡로 117 (백현동)" name="user[road_address]">
+              <input id="road_address" class="form-control" readonly="readonly" type="text"
+                     value="경기 성남시 분당구 분당내곡로 117 (백현동)" name="user[road_address]">
             </div>
             <div class="col-sm-6">
               <input id="detail_address" class="form-control" type="text" value="1234" name="user[detail_address]">
@@ -205,7 +217,7 @@
 <script>
 export default {
   name: 'profile',
-  data(){
+  data () {
     return {
       heading: '프로필',
       form: {
@@ -221,13 +233,39 @@ export default {
 
 <style scoped lang=scss>
 .profile {
+  display: grid;
+  /*@formatter:off*/
+    grid-template:
+      "header" auto
+      "table" auto/
+      auto;
+    /* @formatter:on*/
+  font-size: 1.6rem;
+  line-height: 1.56;
+  letter-spacing: normal;
+  color: #6e737d;
 
+  h1, h2 {
+    color: #000000;
+  }
+
+  > h1 {
+    grid-area: header;
+    display: initial;
+    font-size: 3.4rem;
+    font-weight: bolder;
+    line-height: 1;
+    padding-bottom: 1.8rem;
+    border-bottom: 2px solid #000000;
+  }
 }
 
 #profile {
+  padding: 5rem 0;
   #birthday_selector_chosen {
     display: none;
   }
+
   #edit_user_1 .col-sm-2 {
     padding-right: 0;
   }

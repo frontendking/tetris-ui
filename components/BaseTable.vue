@@ -3,7 +3,6 @@
     <caption>
       <p v-for="caption in captions" :class="caption.id" v-html="caption.p"/>
     </caption>
-
     <thead>
     <tr v-for="tr in colHeader">
       <th scope="col" v-for="th in tr" v-html="th"></th>
@@ -12,7 +11,7 @@
     <tbody>
     <tr v-for="(tr, k) in tableData">
       <th scope="row">{{rowHeader[k]}}</th>
-      <td v-for="td in tr">
+      <td v-for="(td,k) in tr" :class="{active:k===3}">
         <template v-for="classa in td">
           <p>{{classa?classa.time:''}}</p>
           <p>{{classa?classa.lesson:''}}</p>
@@ -46,6 +45,9 @@ export default {
     font-size: 3rem;
     font-weight: bold;
     padding: 2rem 0;
+  }
+  .active {
+    background-color: #FCF8EF;
   }
 
   td {

@@ -30,49 +30,68 @@ export default {
 
 <style lang=scss>
 .BaseTable2 {
-  border-collapse: collapse;
-  border: 1px solid #000000;
+  display: flex;
+  flex-flow: column;
   color: #000;
-  table-layout: fixed;
-  width: 100%;
-
   caption {
     text-align: center;
-    font-size: 3rem;
-    font-weight: bold;
     padding: 2rem 0;
   }
+  tr {
+    flex: 1 0 4rem;
+    display: flex;
+    align-items: stretch;
+    th, td {
+      border: none;
+      flex: 1;
+      display: flex;
+      height: initial;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    th {
+      font-size: 1.6rem;
+      font-weight: 500;
+      color: #ffffff;
+      background-color: #6e737d;
 
-  td {
-    font-size: 1.2rem;
-    font-weight: normal;
-    border: 1px solid #b7b7b7;
+      &:nth-child(1) {
+        min-width: 6rem;
+      }
+
+      &:nth-child(n+2) {
+      }
+
+      &[scope="row"] {
+        background-color: #f7f7f7;
+        color: #000000;
+        border: 1px solid #b7b7b7;
+      }
+    }
   }
 
-  th {
-    &[scope="col"] {
-      height: 3rem;
-    }
+  thead, tbody {
+    display: flex;
+    flex-flow: column;
+  }
 
-    height: 3rem;
-    font-size: 1.6rem;
-    font-weight: 500;
-    color: #ffffff;
-    background-color: #6e737d;
-    text-align: center;
-    vertical-align: middle;
+  /*specifiy style*/
+  th, td {
+    justify-content: center;
+    padding: 1rem;
+    align-items: center;
+  }
 
-    &:nth-child(1) {
-      min-width: 6rem;
-    }
 
-    &:nth-child(n+2) {
-    }
-
-    &[scope="row"] {
-      background-color: #f7f7f7;
-      color: #000000;
-      border: 1px solid #b7b7b7;
+  tbody {
+    height: 60rem;
+    overflow: auto;
+    border: 1px solid #e0e0e0;
+    border-bottom: none;
+    border-right: none;
+    td {
+      border-right: 1px solid #e0e0e0;
+      border-bottom: 1px solid #e0e0e0;
     }
   }
 }

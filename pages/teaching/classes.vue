@@ -1,27 +1,16 @@
 <template>
-  <ClassesLayout
-    :heading="heading"
-    :navList="navList"
+  <classes
+    id="teaching-classes"
   >
-    <nuxt-child
-      class="card-list"
-    />
-  </ClassesLayout>
-</template>>
+    <nuxt-child/>
+  </classes>
+</template>
 
 <script>
-import ClassesLayout from '@/pages/admin/classes/layout'
-import navList from './classes/assets/data/navList'
+import Classes from '@/pages/admin/classes/classes'
 
 export default {
-  name: 'learning-my-class',
-  components: { ClassesLayout },
-  data () {
-    return {
-      heading: '내 클래스',
-      navList: navList.map(v => ({ ...v, isActive: this.$route.name.includes(v.id) }))
-    }
-  }
+  name: 'teaching-classes',
+  components: { Classes }
 }
 </script>
-

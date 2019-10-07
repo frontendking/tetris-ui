@@ -1,6 +1,10 @@
 <template>
   <article class="attendance">
     <h1 v-html="heading"/>
+    <TheSearchBox
+      :has-permit-search="false"
+      :keyword-types="['전체', '클래스명', '선생님 이름']"
+    />
     <BaseTable
       id="attendance-table"
       :colHeader = "colHeader"
@@ -12,6 +16,7 @@
 
 <script>
 import BaseTable from '../../components/BaseTable2'
+import TheSearchBox from '@/components/TheSearchBox'
 const colHeaderNames = [
   '수강클래스', '출석', '1회차', '2회차', '3회차', '4회차', '출석률', ''
 ]
@@ -69,6 +74,7 @@ export default {
     }
   },
   components: {
+    TheSearchBox,
     BaseTable
   }
 }

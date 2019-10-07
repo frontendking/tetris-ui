@@ -1,24 +1,26 @@
 <template>
   <article class="search">
-    <h1 v-html="heading"/>
+    <h1 v-html="heading" class="hidden"/>
     <TheClassSearchBox/>
     <TheClassTimeTable
       id="theClassTimeTable"
     />
-    <div class="theFooterButtons">
-      <button class="cancel" type="button" v-html="form.btns.cancelBtn"/>
-      <button v-html="form.btns.submitBtn"/>
-    </div>
+    <TheFooterButtons
+      cancel-label="이전"
+      apply-label="저장"
+    />
   </article>
 </template>
 
 <script>
 import TheClassSearchBox from '@/components/class/TheClassSearchBox'
 import TheClassTimeTable from '@/components/class/TheClassTimeTable'
+import TheFooterButtons from '@/pages/admin/TheFooterButtons'
 
 export default {
   props: ['page', 'users'],
   components: {
+    TheFooterButtons,
     TheClassSearchBox,
     TheClassTimeTable,
   },
@@ -43,46 +45,23 @@ export default {
   /*@formatter:off*/
   grid-template:
     "header" auto
-    "table" auto/
+    "table" auto
+    "btns" 10rem/
     auto;
   /*@formatter:on*/
-  h1, h2 {
-    color: #000000;
+
+  .TheClassSearchBox {
+    grid-area: header;
+    border-top: none;
   }
 
-  > h1 {
-    grid-area: header;
-    display: initial;
-    font-size: 3.4rem;
-    font-weight: bolder;
-    line-height: 1;
-    padding-bottom: 1.8rem;
-    border-bottom: 2px solid #000000;
-  }
   #theClassTimeTable {
+    grid-area: table;
     margin-top: 5rem;
   }
-  .theFooterButtons {
-    width: 37.2rem;
-    display: flex;
-    justify-content: space-between;
 
-    button {
-      grid-area: btn;
-      padding: 1rem;
-      background-color: #34b4f9;
-      color: #ffffff;
-      width: 18rem;
-      height: 5rem;
-      border-radius: initial;
-      text-align: center;
-
-      &.cancel {
-        background-color: #999;
-      }
-    }
+  .TheFooterButtons {
+    grid-area: btns;
   }
 }
-
-
 </style>

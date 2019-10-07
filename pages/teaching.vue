@@ -9,8 +9,8 @@
 </template>
 
 <script>
-import admin from '@/pages/admin/index'
-import navList from '@/assets/data/navList.js'
+import admin from '@/pages/admin/layout'
+import navList from '@/pages/teaching/assets/navList.js'
 
 export default {
   name: 'teaching',

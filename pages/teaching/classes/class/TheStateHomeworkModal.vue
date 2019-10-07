@@ -142,7 +142,7 @@
                       <div class="row">
                         <div class="col-sm-2">
                           <img width="30" height="30" alt="avatar image" class="img-circle profile-img"
-                               src="../assets/img/no_avatar.png">
+                               src="../../../assets/img/no_avatar.png">
                         </div>
                         <div class="col-sm-10">
                           <div class="row">
@@ -172,7 +172,7 @@
                       <div class="row">
                         <div class="col-sm-2">
                           <img width="30" height="30" alt="avatar image" class="img-circle profile-img"
-                               src="../assets/img/no_avatar.png">
+                               src="../../../assets/img/no_avatar.png">
                         </div>
                         <div class="col-sm-10">
                           <div class="row">
@@ -202,7 +202,7 @@
                       <div class="row">
                         <div class="col-sm-2">
                           <img width="30" height="30" alt="avatar image" class="img-circle profile-img"
-                               src="../assets/img/no_avatar.png">
+                               src="../../../assets/img/no_avatar.png">
                         </div>
                         <div class="col-sm-10">
                           <div class="row">
