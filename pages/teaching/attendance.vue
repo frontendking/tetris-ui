@@ -16,7 +16,7 @@
 
 <script>
 import BaseTable from '../../components/BaseTable2'
-import Pagenation from '@/pages/teaching/classes/pagenation'
+import Pagenation from '@/pages/admin/classes/pagenation'
 import TheSearchBox from '@/components/TheSearchBox'
 
 const colHeaderNames = [

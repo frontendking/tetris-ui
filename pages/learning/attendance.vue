@@ -1,5 +1,5 @@
 <template>
-  <article class="attendance">
+  <article id="attendance">
     <h1 v-html="heading"/>
     <TheSearchBox
       :has-permit-search="false"
@@ -7,8 +7,8 @@
     />
     <BaseTable
       id="attendance-table"
-      :colHeader = "colHeader"
-      :tableData = "tableData"
+      :colHeader="colHeader"
+      :tableData="tableData"
     />
 
   </article>
@@ -17,6 +17,7 @@
 <script>
 import BaseTable from '../../components/BaseTable2'
 import TheSearchBox from '@/components/TheSearchBox'
+
 const colHeaderNames = [
   '수강클래스', '출석', '1회차', '2회차', '3회차', '4회차', '출석률', ''
 ]
@@ -43,7 +44,7 @@ const seed = [
   }
 ]
 export default {
-   data() {
+  data () {
     return {
       heading: '출결현황',
       searchForm: {
@@ -64,10 +65,10 @@ export default {
         },
         searchBtn: '검색'
       },
-      tableData: [...Array(3)].flatMap(()=>seed),
-      colHeader: Object.keys(seed[0]).map((v,i)=>{
+      tableData: [...Array(3)].flatMap(() => seed),
+      colHeader: Object.keys(seed[0]).map((v, i) => {
         return {
-          id:v,
+          id: v,
           label: colHeaderNames[i]
         }
       })
@@ -81,8 +82,13 @@ export default {
 </script>
 
 <style lang=scss>
-.attendance {
-  @media(min-width: 641px) {
+@media(min-width: 641px) {
+  .attendance {
+    &:before {
+      content: '';
+    }
+  }
+  #attendance {
     display: grid;
     /*@formatter:off*/
     grid-template:

@@ -29,10 +29,12 @@
 </template>
 
 <script>
-export default {}
+export default {
+  name: 'TheChattingWindow'
+}
 </script>
 
-<style scoped lang=scss>
+<style lang=scss>
 .TheChattingWindow {
 }
 </style>

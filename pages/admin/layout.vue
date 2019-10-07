@@ -1,5 +1,5 @@
 <template>
-  <article class="admin">
+  <article id="admin-layout">
     <h1 v-html="heading"/>
     <the-tutor-local-nav id="the-tutor-local-nav" :navList="navList"/>
     <slot/>
@@ -10,7 +10,7 @@
 import TheTutorLocalNav from '@/components/TheLnb'
 
 export default {
-  name: 'admin',
+  name: 'admin-layout',
   props: [
     'heading',
     'navList'
@@ -21,13 +21,13 @@ export default {
 }
 </script>
 
-<style scoped lang=scss>
+<style lang=scss>
 @media(min-width: 641px) {
-  .admin {
+  #admin-layout {
     display: grid;
     /*@formatter:off*/
     grid-template:
-      "header" 18rem
+      "header" 12rem
       "nav" auto
       "article" auto/
       auto;

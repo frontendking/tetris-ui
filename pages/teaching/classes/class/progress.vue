@@ -103,9 +103,9 @@
 </template>
 
 <script>
-import TheCreateHomeworkModal from '@/pages/teaching/classes/class/TheCreateHomeworkModal'
-import TheStateHomeworkModal from '@/pages/teaching/classes/class/TheStateHomeworkModal'
-import TheVideoModal from '@/pages/teaching/classes/class/TheVideoModal'
+import TheCreateHomeworkModal from '@/pages/admin/classes/class/TheCreateHomeworkModal'
+import TheStateHomeworkModal from '@/pages/admin/classes/class/TheStateHomeworkModal'
+import TheVideoModal from '@/pages/admin/classes/class/TheVideoModal'
 
 export default {
   components: { TheVideoModal, TheStateHomeworkModal, TheCreateHomeworkModal }

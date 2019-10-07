@@ -11,8 +11,8 @@
 </template>
 
 <script>
-import Pagenation from '@/pages/teaching/classes/pagenation'
-import ClassCard from '@/pages/teaching/classes/class-card'
+import Pagenation from '@/pages/admin/classes/pagenation'
+import ClassCard from '@/pages/admin/class-card'
 import AdminClassNext from '@/pages/admin/classes/next/index'
 
 export default {

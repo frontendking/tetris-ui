@@ -12,7 +12,7 @@
 
 <script>
 import TheLnbSub from '@/components/TheLnbSub'
-import TheCourseInfo from '@/pages/teaching/classes/class/TheCourseInfo'
+import TheCourseInfo from '@/pages/admin/classes/class/TheCourseInfo'
 
 export default {
   name: 'calss-detail-layout',
@@ -22,7 +22,7 @@ export default {
 }
 </script>
 
-<style scoped lang=scss>
+<style lang=scss>
 .calss-detail {
 }
 </style>

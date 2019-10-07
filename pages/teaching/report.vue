@@ -100,8 +100,7 @@
               </td>
               <td class="center">
                 <a class="btn btn-primary btn-block" data-remote="true" href="/tutor/reports/100/edit"
-                   onclick="$('#apply-modal-form').modal('toggle');">출결
-                  상세보기</a>
+                   onclick="$('#apply-modal-form').modal('toggle');">작성하기</a>
               </td>
             </tr>
             <tr>
@@ -143,8 +142,7 @@
               </td>
               <td class="center">
                 <a class="btn btn-primary btn-block" data-remote="true" href="/tutor/reports/100/edit"
-                   onclick="$('#apply-modal-form').modal('toggle');">출결
-                  상세보기</a>
+                   onclick="$('#apply-modal-form').modal('toggle');">작성하기</a>
               </td>
             </tr>
             </tbody>

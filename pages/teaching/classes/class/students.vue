@@ -39,19 +39,23 @@
           [06097] 서울 강남구 봉은사로 403 (삼성동) 1111
         </td>
         <td style="width: 10%;">
-          <a class="btn btn-default btn-block" href="#" onclick="$('#conversation_43').addClass('active');return false;">메세지 보내기</a>
+          <a class="btn btn-default btn-block" href="#" onclick="$('#conversation_43').addClass('active');return false;">메시지 보내기</a>
         </td>
       </tr>
       </tbody>
     </table>
+    <TheChattingWindow/>
   </div>
 </template>
 
 <script>
-export default {}
+import TheChattingWindow from '@/pages/admin/classes/class/TheChattingWindow'
+export default {
+  components: { TheChattingWindow }
+}
 </script>
 
-<style scoped lang=scss>
+<style lang=scss>
 .students {
 .student-list-table tbody tr td {
   padding-top: 35px;

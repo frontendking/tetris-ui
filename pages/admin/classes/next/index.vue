@@ -8,8 +8,8 @@
 </template>
 
 <script>
-import Pagenation from '@/pages/teaching/classes/pagenation'
-import ClassCard from '@/pages/teaching/classes/class-card'
+import Pagenation from '@/pages/admin/classes/pagenation'
+import ClassCard from '@/pages/admin/class-card'
 
 export default {
   name: 'admin-class-next',
