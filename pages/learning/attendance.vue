@@ -7,19 +7,26 @@
     />
     <BaseTable
       id="attendance-table"
-      :colHeader = "colHeader"
-      :tableData = "tableData"
+      :colHeader="colHeader"
+      :tableData="tableData"
     />
-
+    <BaseTable
+      v-for="v in tableData"
+      :data-id="v.id"
+      :colHeader="colHeaderNasted"
+      :tableData="tableDataNasted"
+    />
   </article>
 </template>
 
 <script>
 import BaseTable from '../../components/BaseTable2'
 import TheSearchBox from '@/components/TheSearchBox'
+
 const colHeaderNames = [
   '수강클래스', '출석', '1회차', '2회차', '3회차', '4회차', '출석률', ''
 ]
+
 const seed = [
   {
     className: '[일간대치동]2기 튜터 실습',
@@ -29,7 +36,7 @@ const seed = [
     lesson3: '<span class="attendance"/>',
     lesson4: '<span class="attendance"/>',
     ratio: '100% (4/4)',
-    expandMark: '<'
+    expandMark: '<button class="expand-button"></button>'
   },
   {
     className: '[일간대치동]2기 튜터 실습',
@@ -39,11 +46,41 @@ const seed = [
     lesson3: '<span class="late"/>',
     lesson4: '<span class="absence"/>',
     ratio: '100% (4/4)',
-    expandMark: '<'
+    expandMark: '<button class="expand-button"></button>'
   }
 ]
+const colHeaderNasted = [
+  '회차', '수업일시', '출결', '입장일시'
+]
+const seedNasted = [
+  {
+    lesson: 1,
+    startDate: '2018-10-29 17:00',
+    statue: '출석',
+    enterDate: '2018:10-29 16:55'
+  },
+  {
+    lesson: 2,
+    startDate: '2018-10-29 17:00',
+    statue: '출석',
+    enterDate: '2018:10-29 16:55'
+  },
+  {
+    lesson: 3,
+    startDate: '2018-10-29 17:00',
+    statue: '출석',
+    enterDate: '2018:10-29 16:55'
+  },
+  {
+    lesson: 4,
+    startDate: '2018-10-29 17:00',
+    statue: '출석',
+    enterDate: '2018:10-29 16:55'
+  },
+]
 export default {
-   data() {
+  name: 'learning-attendance',
+  data () {
     return {
       heading: '출결현황',
       searchForm: {
@@ -64,13 +101,24 @@ export default {
         },
         searchBtn: '검색'
       },
-      tableData: [...Array(3)].flatMap(()=>seed),
-      colHeader: Object.keys(seed[0]).map((v,i)=>{
+      tableData: [...Array(3)]
+        .flatMap(() => seed)
+        .map((v, k) => {
+          return { ...v, id: k }
+        }),
+      colHeader: Object.keys(seed[0]).map((v, i) => {
         return {
-          id:v,
+          id: v,
           label: colHeaderNames[i]
         }
-      })
+      }),
+      colHeaderNasted: Object.keys(seedNasted[0]).map((v, i) => {
+        return {
+          id: v,
+          label: colHeaderNasted[i]
+        }
+      }),
+      tableDataNasted: seedNasted,
     }
   },
   components: {
@@ -80,6 +128,15 @@ export default {
 }
 </script>
 
+<style lang="scss">
+.expand-button {
+  background: url('./assets/arrow-down.svg') no-repeat center center;
+  border: none;
+  background-size: contain;
+  width: 2rem;
+  height: 2rem;
+}
+</style>
 <style lang=scss>
 .attendance {
   @media(min-width: 641px) {
