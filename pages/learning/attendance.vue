@@ -24,7 +24,7 @@ import BaseTable from '../../components/BaseTable2'
 import TheSearchBox from '@/components/TheSearchBox'
 
 const colHeaderNames = [
-  '수강클래스', '출석', '1회차', '2회차', '3회차', '4회차', '출석률', ''
+  '수강클래스', '출석', '1회차', '2회차', '3회차', '4회차', '출석률', '',
 ]
 
 const seed = [
@@ -36,7 +36,7 @@ const seed = [
     lesson3: '<span class="attendance"/>',
     lesson4: '<span class="attendance"/>',
     ratio: '100% (4/4)',
-    expandMark: '<button class="expand-button"></button>'
+    expandMark: '<button class="expand-button"></button>',
   },
   {
     className: '[일간대치동]2기 튜터 실습',
@@ -46,36 +46,36 @@ const seed = [
     lesson3: '<span class="late"/>',
     lesson4: '<span class="absence"/>',
     ratio: '100% (4/4)',
-    expandMark: '<button class="expand-button"></button>'
-  }
+    expandMark: '<button class="expand-button"></button>',
+  },
 ]
 const colHeaderNasted = [
-  '회차', '수업일시', '출결', '입장일시'
+  '회차', '수업일시', '출결', '입장일시',
 ]
 const seedNasted = [
   {
     lesson: 1,
     startDate: '2018-10-29 17:00',
     statue: '출석',
-    enterDate: '2018:10-29 16:55'
+    enterDate: '2018:10-29 16:55',
   },
   {
     lesson: 2,
     startDate: '2018-10-29 17:00',
     statue: '출석',
-    enterDate: '2018:10-29 16:55'
+    enterDate: '2018:10-29 16:55',
   },
   {
     lesson: 3,
     startDate: '2018-10-29 17:00',
     statue: '출석',
-    enterDate: '2018:10-29 16:55'
+    enterDate: '2018:10-29 16:55',
   },
   {
     lesson: 4,
     startDate: '2018-10-29 17:00',
     statue: '출석',
-    enterDate: '2018:10-29 16:55'
+    enterDate: '2018:10-29 16:55',
   },
 ]
 export default {
@@ -88,34 +88,36 @@ export default {
           legend: '검색어',
           type: [
             '클래스명',
-            '선생님명'
+            '선생님명',
           ],
-          placeHolder: '검색어를 입력해 주세요'
+          placeHolder: '검색어를 입력해 주세요',
         },
         searchDate: {
           legend: '기간검색',
           type: [
             '수강시작일',
             '수강신청일',
-          ]
+          ],
         },
-        searchBtn: '검색'
+        searchBtn: '검색',
       },
-      tableData: [...Array(3)]
-        .flatMap(() => seed)
-        .map((v, k) => {
-          return { ...v, id: k }
-        }),
+      tableData: [...Array(3)].flatMap(() => seed).map((v, k) => {
+        return {
+          ...v,
+          id: k,
+          expandMark: v.expandMark.replace('<button', `<button data-id=${k}`),
+        }
+      }),
       colHeader: Object.keys(seed[0]).map((v, i) => {
         return {
           id: v,
-          label: colHeaderNames[i]
+          label: colHeaderNames[i],
         }
       }),
       colHeaderNasted: Object.keys(seedNasted[0]).map((v, i) => {
         return {
           id: v,
-          label: colHeaderNasted[i]
+          label: colHeaderNasted[i],
         }
       }),
       tableDataNasted: seedNasted,
@@ -123,8 +125,33 @@ export default {
   },
   components: {
     TheSearchBox,
-    BaseTable
-  }
+    BaseTable,
+  },
+  mounted () {
+    this.$nextTick(() => {
+      Array.prototype.forEach.call(
+        document.querySelectorAll('.expand-button'),
+        v => {
+          v.addEventListener('click', e => {
+            const target = e.currentTarget
+            const id = target.dataset.id
+            const targetTr = target.parentElement.parentElement
+            const targetTrBottom = targetTr.style.bottom
+            const table = document.querySelector(`.BaseTable2[data-id='${id}']`)
+            target.classList.toggle('active')
+            targetTr.style.flexBasis = `${targetTr.getBoundingClientRect().height + table.getBoundingClientRect().height}px`
+            if (target.classList.contains('active')) {
+              targetTr.parentNode.insertBefore(table, targetTr.nextSibling)
+              table.style.top
+
+            } else {
+              targetTr.parentNode.removeChild(table)
+            }
+          })
+        },
+      )
+    })
+  },
 }
 </script>
 
