@@ -1,21 +1,24 @@
 <template>
-  <article class="attendance">
+  <article id="attendance">
     <h1 v-html="heading"/>
     <TheSearchBox
       :has-permit-search="false"
       :keyword-types="['전체', '클래스명', '선생님 이름']"
     />
-    <BaseTable
-      id="attendance-table"
-      :colHeader="colHeader"
-      :tableData="tableData"
-    />
-    <BaseTable
-      v-for="v in tableData"
-      :data-id="v.id"
-      :colHeader="colHeaderNasted"
-      :tableData="tableDataNasted"
-    />
+    <div id="attendance-table-group">
+      <BaseTable
+        id="attendance-table"
+        :colHeader="colHeader"
+        :tableData="tableData"
+      />
+      <BaseTable
+        v-for="v in tableData"
+        :data-id="v.id"
+        :colHeader="colHeaderNasted"
+        :tableData="tableDataNasted"
+      />
+    </div>
+
   </article>
 </template>
 
@@ -31,20 +34,20 @@ const seed = [
   {
     className: '[일간대치동]2기 튜터 실습',
     statusInfo: '<span class="attendance">출석</span> <span class="late">지각</span> <span class="absence">결석</span>',
-    lesson1: '<span class="attendance"/>',
-    lesson2: '<span class="attendance"/>',
-    lesson3: '<span class="attendance"/>',
-    lesson4: '<span class="attendance"/>',
+    lesson1: '<span class="attendance">출석</span>',
+    lesson2: '<span class="attendance">출석</span>',
+    lesson3: '<span class="attendance">출석</span>',
+    lesson4: '<span class="attendance">출석</span>',
     ratio: '100% (4/4)',
     expandMark: '<button class="expand-button"></button>',
   },
   {
     className: '[일간대치동]2기 튜터 실습',
     statusInfo: '<span class="attendance">출석</span> <span class="late">지각</span> <span class="absence">결석</span>',
-    lesson1: '<span class="attendance"/>',
-    lesson2: '<span class="attendance"/>',
-    lesson3: '<span class="late"/>',
-    lesson4: '<span class="absence"/>',
+    lesson1: '<span class="attendance">출석</span>',
+    lesson2: '<span class="attendance">출석</span>',
+    lesson3: '<span class="late">지각</span>',
+    lesson4: '<span class="absence">결석</span>',
     ratio: '100% (4/4)',
     expandMark: '<button class="expand-button"></button>',
   },
@@ -127,31 +130,49 @@ export default {
     TheSearchBox,
     BaseTable,
   },
+  updated () {
+    js()
+  },
   mounted () {
     this.$nextTick(() => {
-      Array.prototype.forEach.call(
-        document.querySelectorAll('.expand-button'),
-        v => {
-          v.addEventListener('click', e => {
-            const target = e.currentTarget
-            const id = target.dataset.id
-            const targetTr = target.parentElement.parentElement
-            const targetTrBottom = targetTr.style.bottom
-            const table = document.querySelector(`.BaseTable2[data-id='${id}']`)
-            target.classList.toggle('active')
-            targetTr.style.flexBasis = `${targetTr.getBoundingClientRect().height + table.getBoundingClientRect().height}px`
-            if (target.classList.contains('active')) {
-              targetTr.parentNode.insertBefore(table, targetTr.nextSibling)
-              table.style.top
-
-            } else {
-              targetTr.parentNode.removeChild(table)
-            }
-          })
-        },
-      )
+      js()
     })
   },
+}
+
+function js () {
+  const td = document.querySelector('#attendance-table>tbody tr td')
+  const tdPddingBottomOrg = getComputedStyle(td).paddingBottom
+  Array.prototype.forEach.call(
+    document.querySelectorAll('.expand-button'),
+    v => {
+      v.addEventListener('click', e => {
+        const target = e.currentTarget
+        const id = target.dataset.id
+        const targetTr = target.parentElement.parentElement
+        const targetTrHeightOrg = targetTr.offsetHeight
+        const table = targetTr.parentElement.parentElement
+        const thead = table.children[0]
+        const trs = document.querySelectorAll('#attendance-table>tbody tr')
+        const sourceTable = document.querySelector(`.BaseTable2[data-id='${id}']`)
+        const sourceTableHeight = sourceTable.getBoundingClientRect().height
+        target.classList.toggle('active')
+        if (target.classList.contains('active')) {
+          Array.prototype.forEach.call(targetTr.children, function (v) {
+            v.style.paddingBottom = `${sourceTableHeight}px`
+          })
+          sourceTable.style.top = `${targetTr.offsetTop + targetTrHeightOrg}px`
+          sourceTable.style.visibility = 'visible'
+        } else {
+          Array.prototype.forEach.call(targetTr.children, function (v) {
+            v.style.paddingBottom = tdPddingBottomOrg
+          })
+          sourceTable.style.top = '0'
+          sourceTable.style.visibility = 'hidden'
+        }
+      })
+    },
+  )
 }
 </script>
 
@@ -163,9 +184,45 @@ export default {
   width: 2rem;
   height: 2rem;
 }
+.late {
+  display: flex;
+  float: left;
+  &:before {
+    content:'';
+    display:block;
+    background: url('./assets/arrow-down.svg') no-repeat center center;
+    background-size: contain;
+    width: 2rem;
+    height: 2rem;
+  }
+}
+.absence {
+  display: flex;
+  float: left;
+  &:before{
+    content: '';
+    display: block;
+    background: url('./assets/arrow-down.svg') no-repeat center center;
+    background-size: contain;
+    width: 2rem;
+    height: 2rem;
+  }
+}
+.attendance {
+  display: flex;
+  float: left;
+  &:before{
+    content: '';
+    display: block;
+    background: url('./assets/arrow-down.svg') no-repeat center center;
+    background-size: contain;
+    width: 2rem;
+    height: 2rem;
+  }
+}
 </style>
 <style lang=scss>
-.attendance {
+#attendance {
   @media(min-width: 641px) {
     display: grid;
     /*@formatter:off*/
@@ -192,9 +249,27 @@ export default {
       padding-bottom: 1.8rem;
       border-bottom: 2px solid #000000;
     }
-
-    > #attendance-table {
+    #attendance-table-group {
+      position: relative;
       margin-top: 3rem;
+
+      .BaseTable2[data-id] {
+        position: absolute;
+        width: 100%;
+        background-color: white;
+        top: 0;
+        visibility: hidden;
+      }
+
+      #attendance-table {
+
+        td {
+          display: table-cell;
+        }
+        td:nth-child(2) {
+          flex-basis: 10rem;
+        }
+      }
     }
   }
 }
