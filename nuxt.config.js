@@ -9,20 +9,6 @@ export default {
     port: 8000, // default: 3000
     host: '0.0.0.0', // default: localhost
   },
-  router: {
-    extendRoutes (routes, resolve) {
-      routes.push({
-          name: 'TheSearchBox',
-          path: '/TheSearchBox',
-          component: resolve(__dirname, 'components/TheSearchBox.vue')
-        },
-        {
-          name: 'TheReviewForm',
-          path: '/TheReviewForm',
-          component: resolve(__dirname, 'components/TheReviewForm.vue')
-        })
-    }
-  },
   head: {
     title: process.env.npm_package_name || '',
     meta: [
@@ -63,7 +49,11 @@ export default {
     id: 'tutor-b2c',
   },
   generate: {
-    subFolders: false
+    subFolders: false,
+    exclude: [
+      /^(?=.*\bassets\b).*$/,
+      /^(?=.*\badmin\b).*$/
+    ]
   },
   build: {
     publicPath: '/tutor/',
