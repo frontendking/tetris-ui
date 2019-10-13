@@ -14,6 +14,7 @@ import navList from '@/pages/learning/assets/navList.js'
 
 export default {
   name: 'learning',
+  layout: 'tutor',
   data () {
     return {
       heading: '배우기',

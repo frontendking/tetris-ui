@@ -181,43 +181,58 @@ function js () {
   background: url('./assets/arrow-down.svg') no-repeat center center;
   border: none;
   background-size: contain;
-  width: 2rem;
-  height: 2rem;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.late, .absence, .attendance {
+  padding-right: 1rem;
+  padding-top: 0.5rem;
 }
 .late {
   display: flex;
   float: left;
+  line-height: 1;
+  align-items: center;
+
   &:before {
-    content:'';
-    display:block;
-    background: url('./assets/arrow-down.svg') no-repeat center center;
+    content: '';
+    display: block;
+    background: url('./assets/history.svg') no-repeat center center;
     background-size: contain;
-    width: 2rem;
-    height: 2rem;
+    width: 1.5rem;
+    height: 1.5rem;
   }
 }
+
 .absence {
   display: flex;
   float: left;
-  &:before{
+  line-height: 1;
+  align-items: center;
+
+  &:before {
     content: '';
     display: block;
-    background: url('./assets/arrow-down.svg') no-repeat center center;
+    background: url('./assets/cancel.svg') no-repeat center center;
     background-size: contain;
-    width: 2rem;
-    height: 2rem;
+    width: 1.5rem;
+    height: 1.5rem;
   }
 }
+
 .attendance {
   display: flex;
   float: left;
-  &:before{
+  line-height: 1;
+  align-items: center;
+
+  &:before {
     content: '';
     display: block;
-    background: url('./assets/arrow-down.svg') no-repeat center center;
+    background: url('./assets/circle.svg') no-repeat center center;
     background-size: contain;
-    width: 2rem;
-    height: 2rem;
+    width: 1.5rem;
+    height: 1.5rem;
   }
 }
 </style>
@@ -266,9 +281,20 @@ function js () {
         td {
           display: table-cell;
         }
-        td:nth-child(2) {
-          flex-basis: 10rem;
+
+        td:nth-child(2),th:nth-child(2) {
+          flex-basis: 6rem;
         }
+
+        td:nth-child(3), td:nth-child(4), td:nth-child(5), td:nth-child(6), td:last-child {
+          font-size: 0;
+          flex: 0 1 6rem;
+        }
+
+        th:nth-child(3), th:nth-child(4), th:nth-child(5), th:nth-child(6), th:last-child {
+          flex: 0 1 6rem;
+        }
+
       }
     }
   }
