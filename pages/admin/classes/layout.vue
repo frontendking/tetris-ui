@@ -13,7 +13,10 @@
         <a class="prev-class-btn btn btn-sm btn-submit" target="_blank"
            href="https://kr.tutor.com/tutor/courses">이전 수업 보기</a>
       </div>
-      <TheClassAlignUI class="the-class-align-ui"/>
+      <TheClassAlignUI
+        v-if="$route.path.includes('teaching/')"
+        class="the-class-align-ui"
+      />
       <slot/>
     </div>
 
@@ -34,15 +37,13 @@ export default {
 <style lang=scss>
 .classes-layout {
   display: grid;
-  grid-template-rows: repeat(3, auto);
-  grid-template-columns: auto;
+  align-items: center;
 
   /*@formatter:off*/
   grid-template :
     'heading' auto
     'lnbsub' auto
-    'class-align-ui' 10rem
-    'contents' auto/
+    'class-align-ui' 10rem/
     auto;
   /*@formatter:on*/
   > h1 {
@@ -53,7 +54,6 @@ export default {
     border-bottom: 2px solid #000000;
     display: flex;
     justify-content: space-between;
-
     span {
       align-self: flex-end;
       font-size: 1.5rem;
@@ -63,7 +63,6 @@ export default {
   }
 
   > .tabs-container {
-    display: contents;
 
     .nav-tabs {
       margin-bottom: 0;
@@ -77,18 +76,21 @@ export default {
       position: relative;
       display: flex;
       border-bottom: 1px solid #333;
-
+      &+* {
+        margin-top: 3rem;
+      }
       ul {
         border-bottom: none;
       }
 
       #the-lnb-sub {
         flex: 1;
+
       }
     }
 
     .the-class-align-ui {
-      margin-top: 3rem;
+      margin-bottom: 3rem;
     }
   }
 

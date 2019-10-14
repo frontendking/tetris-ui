@@ -15,7 +15,7 @@
     window.gon = {}
     </script>
     <script src="https://qa-got.conects.com/assets/application-746623d4004bc34f0c05a7fcb9521700e2ba42009071b277490402130b185b65.js"></script>
-    <link rel="stylesheet" media="all" href="https://qa-got.conects.com/assets/application-8bd78587f94aeea901d51927ee49c6373662625ab2ecb509fb6f6f24200dc144.css">
+    <link rel="stylesheet" media="all" type="text/css" href="https://qa-got.conects.com/assets/application-3b1986470e79c7a009b8538d661c00d8fa2f28df53bae74d5c8b1d5427c7eedb.css">
     <link rel="stylesheet" media="all" type="text/css" href="https://s3.ap-northeast-2.amazonaws.com/st-kr-tutor/frontweb/tutor-staging.css">
     <link rel="stylesheet" media="all" type="text/css" href="https://s3.ap-northeast-2.amazonaws.com/st-kr-tutor/frontweb/tutor-vender-staging.css">
     <style>
@@ -72,8 +72,7 @@
       display: flex;
       flex-flow: column;
       /*align-items: center;*/
-      min-width: 102rem;
-      max-width: initial;
+      /*max-width: initial;*/
       width: 100%;
     }
 
