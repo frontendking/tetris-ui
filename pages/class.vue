@@ -30,7 +30,7 @@ import TheTutorLocalNav from '@/components/TheLnb'
 export default {
   name: 'class',
   // layout: 'tutor',
-  layout:'tutor',
+  // layout:'tutor',
   data() {
     const classId = 1
     const page = getClasses(classId)
@@ -132,7 +132,7 @@ article.class-info {
   font-size: 2.2rem;
   display: grid;
   margin: 0 auto;
-  grid-template-columns: 1fr;
+  grid-template-columns: 100%;
   grid-template-rows: repeat(4, auto);
   grid-row-gap: 5.9rem;
   #page-heading {
