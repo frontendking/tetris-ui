@@ -138,13 +138,19 @@ export default {
   grid-template-rows: repeat(5, auto);
   grid-gap: 1rem;
   padding: 2.6rem;
-
+  color: #000;
   .class-permit-summary {
     background-color: $gray-light;
     display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto 1.5fr 1fr;
-
+    /*@formatter:off*/
+    grid-template:
+      "title title" 7.5rem
+      "rest-date rest-seat" 11.7rem
+      "class-account class-price" 12.8rem/
+      1fr 1fr;
+    /* @formatter:on*/
+    align-items: flex-start;
+    justify-items: center;
     padding: 3.2rem 4rem;
     font-size: 2.2rem;
 
@@ -170,12 +176,19 @@ export default {
     }
 
     .title {
+      grid-area: title;
       display: flex;
       justify-content: center;
       align-self: flex-start;
       font-size: 2.2rem;
     }
-
+    .reset-date {
+      grid-area:  rest-date;
+      width: 16.6rem;
+    }
+    .reset-seat {
+      grid-area: rest-seat;
+    }
     .badge-round {
       background-color: #ededed;
       border: #e0e0e0 solid 1px;
@@ -263,6 +276,7 @@ export default {
   .TheClassFooter {
     grid-template-rows: auto;
     grid-template-columns: 1fr 3fr;
+
     grid-gap: 0;
     grid-column-gap: 3.4rem;
 
