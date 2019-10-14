@@ -26,11 +26,13 @@
     #page-wrapper {
       margin: 0;
       min-height: initial;
-    }
     .content-box {
       position: relative;
       margin: 0;
+      width:100%;
     }
+    }
+
 
     .st_business-nav {
       min-height: 1121px;
