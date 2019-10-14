@@ -101,7 +101,6 @@ $gray-dark: #696969;
 
   .class-summary {
     position: relative;
-
     > dl {
       display: grid;
       grid-template-rows: auto auto auto auto;
@@ -146,8 +145,14 @@ $gray-dark: #696969;
           align-content: space-between;
           width: 100%;
           top: 0;
-          padding: 0 18rem;
+          padding: 0 17rem;
           height: 5.5rem;
+        }
+      }
+      .class-review {
+        display: none;
+        &+dd {
+          display: none;
         }
       }
     }
