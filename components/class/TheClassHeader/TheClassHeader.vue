@@ -24,7 +24,8 @@
           <dt>{{v.heading}}</dt>
           <dd>{{v.paragraph}}</dd>
         </template>
-        <dt class="class-review">후 기</dt><dd>5.0 </dd>
+        <dt class="class-review">후 기</dt>
+        <dd>5.0</dd>
       </dl>
     </div>
   </header>
@@ -53,44 +54,49 @@ $gray-dark: #696969;
   background-color: #f5f5f5;
   padding: 4.8rem 6.6rem;
 
-  figure {
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    width: 40%;
-
-    .round-frame {
-      position: relative;
+  .teacher-summary {
+    figure {
       display: flex;
-      justify-content: center;
-      overflow: hidden;
-      background-color: #ffffff;
-      border: #e0e0e0 solid 1px;
-      border-radius: 50%;
-      width: 65%;
-      padding-top: 65%;
+      flex-flow: column;
+      align-items: center;
 
-      img {
-        position: absolute;
-        width: 80%;
-        top: 0;
+      .round-frame {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+        background-color: #ffffff;
+        border: #e0e0e0 solid 1px;
+        border-radius: 50%;
+        width: 65%;
+        padding-top: 65%;
+
+        img {
+          position: absolute;
+          width: 80%;
+          top: 0;
+        }
+
+      }
+
+      .teacher-name {
+        padding: 1.5rem 0;
+        font-size: 3.3rem;
+        font-weight: bold;
+        word-break: keep-all;
+        text-align: center;
+        color: #000;
+
+        &:after {
+          display: none;
+        }
       }
 
     }
 
-    .teacher-name {
-      padding: 1.5rem 0;
-      font-size: 3.3rem;
-      font-weight: bold;
-      word-break: keep-all;
-      text-align: center;
-
-      &:after {
-        display: none;
-      }
+    .message-button {
+      display: none;
     }
-
-
   }
 
   .class-summary {
@@ -147,7 +153,6 @@ $gray-dark: #696969;
     }
   }
 }
-
 
 .TheClassSummaryCard {
   @media(min-width: 641px) {
@@ -253,9 +258,11 @@ $gray-dark: #696969;
             justify-content: flex-start;
             padding: 0;
             font-weight: normal;
+
             &:before {
               display: none;
             }
+
             * {
               color: #000000;
               font-size: 2.4rem;
@@ -279,7 +286,6 @@ $gray-dark: #696969;
           }
         }
       }
-
 
     }
   }
