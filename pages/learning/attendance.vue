@@ -235,6 +235,7 @@ function js () {
     height: 1.5rem;
   }
 }
+
 </style>
 <style lang=scss>
 #attendance {
