@@ -52,7 +52,10 @@ export default {
     subFolders: false,
     exclude: [
       /^(?=.*\bassets\b).*$/,
-      /^(?=.*\badmin\b).*$/
+      /^(?=.*\badmin\b).*$/,
+      /^(?=.*\bclass\b).*$/,
+      /^(?=.*\bpermit\b).*$/,
+      /^(?=.*\blearning\b).*$/
     ]
   },
   build: {

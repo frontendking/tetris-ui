@@ -44,7 +44,6 @@ export default {
   }
 
   tr {
-    flex: 1 0 4rem;
     display: flex;
     align-items: stretch;
 
@@ -76,6 +75,12 @@ export default {
       }
     }
   }
+  thead tr {
+    flex: 1 0 3rem;
+  }
+  tbody tr {
+    flex: 1 0 6rem;
+  }
 
   thead, tbody {
     display: flex;
@@ -85,7 +90,6 @@ export default {
   /*specifiy style*/
   th, td {
     justify-content: center;
-    padding: 1rem;
     align-items: center;
   }
 

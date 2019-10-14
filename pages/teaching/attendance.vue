@@ -1,5 +1,5 @@
 <template>
-  <article class="attendance">
+  <article id="attendance">
     <h1 v-html="heading"/>
     <TheSearchBox
       :has-permit-search="false"
@@ -20,33 +20,37 @@ import Pagenation from '@/pages/admin/classes/pagenation'
 import TheSearchBox from '@/components/TheSearchBox'
 
 const colHeaderNames = [
-  '학년', '과목', '요일', '시간', '학생이름', '학생ID', '1회', '2회', '3회', '4회', '출석률'
+  '년도', '월', '학년', '과목', '요일', '시간','학생이름', '학생 ID', '1회','2회','3회', '4회', '출석률'
 ]
 const seed = [
   {
+    year: '2019년',
+    month: '7월',
     grade: '1학년',
     subject: '수학',
-    day: '요일',
+    day: '목',
     time: '17:00',
     name: '홍길동',
     id: 'hong11',
-    lesson1: '<span>2019-07-04 17:00</span><span class="attendance"/>',
-    lesson2: '<span>2019-07-04 17:00</span><span class="attendance"/>',
-    lesson3: '<span>2019-07-04 17:00</span><span class="attendance"/>',
-    lesson4: '<span>2019-07-04 17:00</span><span class="attendance"/>',
+    lesson1: '<span>2019-07-04 17:00</span><span class="attendance">출석</span>',
+    lesson2: '<span>2019-07-04 17:00</span><span class="attendance">출석</span>',
+    lesson3: '<span>2019-07-04 17:00</span><span class="late">지각</span>',
+    lesson4: '<span>2019-07-04 17:00</span><span class="absence">결석</span>',
     ratio: '100% (4/4)',
   },
   {
+    year: '2019년',
+    month: '7월',
     grade: '1학년',
     subject: '수학',
-    day: '요일',
+    day: '목',
     time: '17:00',
     name: '홍길동',
     id: 'hong11',
-    lesson1: '<span>2019-07-04 17:00</span><span class="attendance"/>',
-    lesson2: '<span>2019-07-04 17:00</span><span class="attendance"/>',
-    lesson3: '<span>2019-07-04 17:00</span><span class="late"/>',
-    lesson4: '<span>2019-07-04 17:00</span><span class="absence"/>',
+    lesson1: '<span>2019-07-04 17:00</span><span class="attendance">출석</span>',
+    lesson2: '<span>2019-07-04 17:00</span><span class="attendance">출석</span>',
+    lesson3: '<span>2019-07-04 17:00</span><span class="attendance">출석</span>',
+    lesson4: '<span>2019-07-04 17:00</span><span class="attendance">출석</span>',
     ratio: '100% (4/4)',
   },
 ]
@@ -84,7 +88,55 @@ export default {
 </script>
 
 <style lang=scss>
+.late {
+  display: flex;
+  float: left;
+  line-height: 1;
+  align-items: center;
+
+  &:before {
+    content: '';
+    display: block;
+    background: url('./assets/history.svg') no-repeat center center;
+    background-size: contain;
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
+
+.absence {
+  display: flex;
+  float: left;
+  line-height: 1;
+  align-items: center;
+
+  &:before {
+    content: '';
+    display: block;
+    background: url('./assets/cancel.svg') no-repeat center center;
+    background-size: contain;
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
+
 .attendance {
+  display: flex;
+  float: left;
+  line-height: 1;
+  align-items: center;
+
+  &:before {
+    content: '';
+    display: block;
+    background: url('./assets/circle.svg') no-repeat center center;
+    background-size: contain;
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
+
+#attendance {
   @media(min-width: 641px) {
     display: grid;
     /*@formatter:off*/
@@ -114,6 +166,23 @@ export default {
 
     > #attendance-table {
       margin-top: 3rem;
+      font-size: 0.9em;
+      td {
+        flex-flow: column;
+      }
+      tr > th, tr > td {
+        &:nth-child(1), &:nth-child(n+6):nth-child(-n+8) {
+          flex:0 0 6rem;
+        }
+        &:nth-child(n+2):nth-child(-n+5){
+          flex: 0 0 5rem;
+        }
+        &:nth-child(n+9):nth-child(-n+12){
+          .attendance, .late, .absence {
+            font-size:0
+          }
+        }
+      }
     }
   }
 }
