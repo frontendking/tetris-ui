@@ -1,5 +1,5 @@
 <template>
-  <article id="admin-layout">
+  <article class="admin-layout">
     <h1 v-html="heading"/>
     <the-tutor-local-nav id="the-tutor-local-nav" :navList="navList"/>
     <slot/>
@@ -23,7 +23,7 @@ export default {
 
 <style  lang=scss>
 @media(min-width: 641px) {
-  #admin-layout {
+  .admin-layout {
     display: grid;
     /*@formatter:off*/
     grid-template:

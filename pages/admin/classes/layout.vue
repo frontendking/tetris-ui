@@ -12,8 +12,8 @@
         />
         <a class="prev-class-btn btn btn-sm btn-submit" target="_blank"
            href="https://kr.tutor.com/tutor/courses">이전 수업 보기</a>
-
       </div>
+      <TheClassAlignUI class="the-class-align-ui"/>
       <slot/>
     </div>
 
@@ -22,10 +22,11 @@
 
 <script>
 import TheLnbSub from '@/components/TheLnbSub'
+import TheClassAlignUI from '@/pages/admin/classes/TheClassAlignUI'
 
 export default {
   name: 'classes-layout',
-  components: { TheLnbSub },
+  components: { TheLnbSub, TheClassAlignUI },
   props: ['heading', 'navList'],
 }
 </script>
@@ -36,6 +37,14 @@ export default {
   grid-template-rows: repeat(3, auto);
   grid-template-columns: auto;
 
+  /*@formatter:off*/
+  grid-template :
+    'heading' auto
+    'lnbsub' auto
+    'class-align-ui' 10rem
+    'contents' auto/
+    auto;
+  /*@formatter:on*/
   > h1 {
     font-size: 3.4rem;
     font-weight: bolder;
@@ -73,13 +82,13 @@ export default {
         border-bottom: none;
       }
 
-      + * {
-        margin-top: 3rem;
-      }
-
       #the-lnb-sub {
         flex: 1;
       }
+    }
+
+    .the-class-align-ui {
+      margin-top: 3rem;
     }
   }
 
