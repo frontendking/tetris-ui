@@ -55,7 +55,7 @@ export default {
 }
 </script>
 
-<style lang=scss>
+<style  lang=scss>
 .students {
 .student-list-table tbody tr td {
   padding-top: 35px;

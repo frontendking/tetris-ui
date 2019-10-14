@@ -12,7 +12,7 @@ export default {
 }
 </script>
 
-<style lang=scss>
+<style  lang=scss>
 .TheFooterButtons {
   display: flex;
   width: 37.2rem;

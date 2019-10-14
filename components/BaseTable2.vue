@@ -23,7 +23,7 @@ export default {
   props: [
     'captions',
     'colHeader',
-    'tableData'
+    'tableData',
   ],
 }
 </script>
@@ -33,22 +33,29 @@ export default {
   display: flex;
   flex-flow: column;
   color: #000;
+
   caption {
     text-align: center;
     padding: 2rem 0;
   }
+
+  thead {
+    height: auto;
+  }
+
   tr {
     flex: 1 0 4rem;
     display: flex;
     align-items: stretch;
+
     th, td {
       border: none;
       flex: 1;
       display: flex;
-      height: initial;
       align-items: center;
       flex-wrap: wrap;
     }
+
     th {
       font-size: 1.6rem;
       font-weight: 500;
@@ -82,13 +89,12 @@ export default {
     align-items: center;
   }
 
-
   tbody {
-    height: 60rem;
     overflow: auto;
     border: 1px solid #e0e0e0;
     border-bottom: none;
     border-right: none;
+
     td {
       border-right: 1px solid #e0e0e0;
       border-bottom: 1px solid #e0e0e0;

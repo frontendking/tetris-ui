@@ -231,7 +231,7 @@ export default {
 }
 </script>
 
-<style lang=scss>
+<style  lang=scss>
 .profile {
   display: grid;
   /*@formatter:off*/

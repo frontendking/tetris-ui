@@ -21,7 +21,7 @@ export default {
 }
 </script>
 
-<style lang=scss>
+<style  lang=scss>
 @media(min-width: 641px) {
   #admin-layout {
     display: grid;
