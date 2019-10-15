@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import Pagenation from '@/components/admin/classes/pagenation'
+import Pagenation from '@/components/pagenation'
 import ClassCard from '@/components/admin/class-card'
 
 export default {

@@ -3,7 +3,7 @@
     <h1 v-html="`${heading}<span>수업 시간 15분 전부터 수업 입장 가능합니다.</span>`"/>
     <div class="tabs-container">
       <div
-        v-if="!$route.path.includes('classes/class')"
+        v-if="!$route.path.includes('classes/class')&&!$route.path.includes('classes/update')"
         class="classes-lnb-sub"
       >
         <TheLnbSub
