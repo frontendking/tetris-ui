@@ -1,19 +1,19 @@
 <template>
   <article class="permit">
     <h1 id=permit-heading class="hidden">수업권 신청</h1>
-    <the-tutor-local-nav id=permit-nav :navItems="subPages"/>
+    <TheLnb id=permit-nav :navItems="subPages"/>
     <nuxt-child id="permit-article"/>
   </article>
 
 </template>
 
 <script>
-import TheTutorLocalNav from '@/components/TheLnb'
+import TheLnb from '@/components/TheLnb'
 
 export default {
   name: 'permit',
   components: {
-    TheTutorLocalNav,
+    TheLnb,
   },
   data () {
     return {

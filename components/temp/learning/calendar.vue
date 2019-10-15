@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import Calendar from '@/components/temp/admin/calendar/index'
+import Calendar from '@/components/admin/calendar/index'
 export default {
   name: 'learning-calendar',
   components: { Calendar }

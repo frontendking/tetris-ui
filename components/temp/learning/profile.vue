@@ -219,7 +219,7 @@
 </template>
 
 <script>
-import TheFooterButtons from '@/components/temp/admin/TheFooterButtons'
+import TheFooterButtons from '@/components/admin/TheFooterButtons'
 export default {
   name: 'profile',
   components: { TheFooterButtons },

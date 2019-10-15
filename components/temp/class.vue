@@ -10,7 +10,7 @@
       :classTime="classTime"
       :summaries="summaries"
     />
-    <the-tutor-local-nav :navItems="subPages"/>
+    <TheLnb :navItems="subPages"/>
     <nuxt-child :page="page" :users="users"/>
     <the-class-footer
       id="the-class-footer"
@@ -24,7 +24,7 @@ import TheClassHeader from '@/components/class/TheClassHeader/TheClassHeader'
 import { getClasses, users } from '../../store/class-info'
 import TheClassFooter from '@/components/class/TheClassFooter'
 import { map } from 'fxjs/Strict'
-import TheTutorLocalNav from '@/components/TheLnb'
+import TheLnb from '@/components/TheLnb'
 
 
 export default {
@@ -69,7 +69,7 @@ export default {
   components: {
     TheClassHeader,
     TheClassFooter,
-    TheTutorLocalNav,
+    TheLnb,
   },
   methods: {
     date (date) {

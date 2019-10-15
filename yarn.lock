@@ -861,11 +861,6 @@
   resolved "https://registry.yarnpkg.com/@emotion/weak-memoize/-/weak-memoize-0.2.4.tgz#622a72bebd1e3f48d921563b4b60a762295a81fc"
   integrity sha512-6PYY5DVdAY1ifaQW6XYTnOMihmBVT27elqSjEoodchsGjzYlEsTQMcEhSud99kVawatyTZRTiVkJ/c6lwbQ7nA==
 
-"@fortawesome/fontawesome-free@^5.11.2":
-  version "5.11.2"
-  resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-free/-/fontawesome-free-5.11.2.tgz#8644bc25b19475779a7b7c1fc104bc0a794f4465"
-  integrity sha512-XiUPoS79r1G7PcpnNtq85TJ7inJWe0v+b5oZJZKb0pGHNIV6+UiNeQWiFGmuQ0aj7GEhnD/v9iqxIsjuRKtEnQ==
-
 "@icons/material@^0.2.4":
   version "0.2.4"
   resolved "https://registry.yarnpkg.com/@icons/material/-/material-0.2.4.tgz#e90c9f71768b3736e76d7dd6783fc6c2afa88bc8"
@@ -3791,6 +3786,11 @@ core-js@^3.0.1, core-js@^3.0.4:
   resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.2.1.tgz#cd41f38534da6cc59f7db050fe67307de9868b09"
   integrity sha512-Qa5XSVefSVPRxy2XfUC13WbvqkxhkwB3ve+pgCQveNgYzbM/UxZeu1dcOX/xr4UmfUd+muuvsaxilQzCyUurMw==
 
+core-js@^3.2.1:
+  version "3.3.2"
+  resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.3.2.tgz#cd42da1d7b0bb33ef11326be3a721934277ceb42"
+  integrity sha512-S1FfZpeBchkhyoY76YAdFzKS4zz9aOK7EeFaNA2aJlyXyA+sgqz6xdxmLPGXEAf0nF44MVN1kSjrA9Kt3ATDQg==
+
 core-util-is@1.0.2, core-util-is@~1.0.0:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/core-util-is/-/core-util-is-1.0.2.tgz#b5fd54220aa2bc5ab57aab7140c940754503c1a7"
@@ -5335,11 +5335,6 @@ focus-lock@^0.6.3:
   resolved "https://registry.yarnpkg.com/focus-lock/-/focus-lock-0.6.5.tgz#f6eb37832a9b1b205406175f5277396a28c0fce1"
   integrity sha512-i/mVBOoa9o+tl+u9owOJUF8k8L85odZNIsctB+JAK2HFT8jckiBwmk+3uydlm6FN8czgnkIwQtBv6yyAbrzXjw==
 
-font-awesome@^4.7.0:
-  version "4.7.0"
-  resolved "https://registry.yarnpkg.com/font-awesome/-/font-awesome-4.7.0.tgz#8fa8cf0411a1a31afd07b06d2902bb9fc815a133"
-  integrity sha1-j6jPBBGhoxr9B7BtKQK7n8gVoTM=
-
 for-in@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/for-in/-/for-in-1.0.2.tgz#81068d295a8142ec0ac726c6e2200c30fb6d5e80"
@@ -5483,13 +5478,13 @@ fuse.js@^3.4.4:
   resolved "https://registry.yarnpkg.com/fuse.js/-/fuse.js-3.4.5.tgz#8954fb43f9729bd5dbcb8c08f251db552595a7a6"
   integrity sha512-s9PGTaQIkT69HaeoTVjwGsLfb8V8ScJLx5XGFcKHg0MqLUH/UZ4EKOtqtXX9k7AFqCGxD1aJmYb8Q5VYDibVRQ==
 
-fxjs@^0.12.5:
-  version "0.12.5"
-  resolved "https://registry.yarnpkg.com/fxjs/-/fxjs-0.12.5.tgz#3191251e9d226ecc73c59a4951700551cb5a6636"
-  integrity sha512-c93y6SzujWtjFDS+rNQkwGdLevCWW7+EkT4NBFSv1iFxP7VT2cdPaY8iK1lyGqUcnLHGh17d6aUxlwqnTZec8Q==
+fxjs@^0.14.0:
+  version "0.14.0"
+  resolved "https://registry.yarnpkg.com/fxjs/-/fxjs-0.14.0.tgz#6df47e53bb4c9ab6e8710923ba7626c3f89edee7"
+  integrity sha512-LNvyOdfvbm4nB1VuAtajDjLgp5tiR/Wieuem4eAJuNMt+qOaALTwIUUjwbq9kpUieaoH1cQGZxL96XHNBIlPwQ==
   dependencies:
-    core-js "^3.0.1"
-    regenerator-runtime "^0.13.2"
+    core-js "^3.2.1"
+    regenerator-runtime "^0.13.3"
 
 gauge@~2.7.3:
   version "2.7.4"
@@ -7101,11 +7096,6 @@ jest@^24.1.0:
   dependencies:
     import-local "^2.0.0"
     jest-cli "^24.9.0"
-
-jquery@^3.4.1:
-  version "3.4.1"
-  resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.4.1.tgz#714f1f8d9dde4bdfa55764ba37ef214630d80ef2"
-  integrity sha512-36+AdBzCL+y6qjw5Tx7HgzeGCzC81MDDgaUP8ld2zhx58HdqXGoBd+tHdrBMiyjGQs0Hxs/MLZTu/eHNJJuWPw==
 
 js-beautify@^1.6.14:
   version "1.10.2"
@@ -10098,7 +10088,7 @@ regenerator-runtime@^0.12.0, regenerator-runtime@^0.12.1:
   resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.12.1.tgz#fa1a71544764c036f8c49b13a08b2594c9f8a0de"
   integrity sha512-odxIc1/vDlo4iZcfXqRYFj0vpXFNoGdKMAUieAlFYO6m/nl5e9KR/beGf41z4a1FI+aQgtjhuaSlDxQ0hmkrHg==
 
-regenerator-runtime@^0.13.2:
+regenerator-runtime@^0.13.2, regenerator-runtime@^0.13.3:
   version "0.13.3"
   resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.13.3.tgz#7cf6a77d8f5c6f60eb73c5fc1955b2ceb01e6bf5"
   integrity sha512-naKIZz2GQ8JWh///G7L3X6LaQUAMp2lvb1rvwwsURe/VXwD6VMfr+/1NuNw3ag8v2kY1aQ/go5SNn79O9JU7yw==
@@ -11646,6 +11636,11 @@ undefsafe@^2.0.2:
   integrity sha1-Il9rngM3Zj4Njnz9aG/Cg2zKznY=
   dependencies:
     debug "^2.2.0"
+
+underscore@^1.9.1:
+  version "1.9.1"
+  resolved "https://registry.yarnpkg.com/underscore/-/underscore-1.9.1.tgz#06dce34a0e68a7babc29b365b8e74b8925203961"
+  integrity sha512-5/4etnCkd9c8gwgowi5/om/mYO5ajCaOgdzj/oW+0eQV9WxKBDZw5+ycmKmeaTXjInS/W0BzpGLo2xR2aBwZdg==
 
 unfetch@^4.1.0:
   version "4.1.0"

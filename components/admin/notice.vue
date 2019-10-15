@@ -6,13 +6,12 @@
       :colHeader = "colHeader"
       :tableData = "tableData"
     />
-    <pagenation/>
+
   </article>
 </template>
 
 <script>
-import BaseTable from '../../BaseTable2'
-import Pagenation from '@/components/admin/classes/pagenation'
+import BaseTable from '../BaseTable2'
 
 const colHeaderNames = [
   '글번호', '제목', '작성자', '작성일'
@@ -59,7 +58,6 @@ export default {
     }
   },
   components: {
-    Pagenation,
     BaseTable
   }
 }
@@ -72,8 +70,7 @@ export default {
     /*@formatter:off*/
     grid-template:
       "header" auto
-      "table" auto
-      "pagenation" auto/
+      "table" auto/
       auto;
     /* @formatter:on*/
     font-size: 1.6rem;
@@ -97,9 +94,6 @@ export default {
 
     > #attendance-table {
       margin-top: 3rem;
-    }
-    > .pagination {
-      margin: 3rem auto;
     }
   }
 }

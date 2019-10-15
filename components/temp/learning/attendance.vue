@@ -178,7 +178,7 @@ function js () {
 
 <style lang="scss">
 .expand-button {
-  background: url('../../../pages/learning/assets/arrow-down.svg') no-repeat center center;
+  background: url('../../../pages/learning/classes/update/assets/arrow-down.svg') no-repeat center center;
   border: none;
   background-size: contain;
   width: 1.5rem;
@@ -197,7 +197,7 @@ function js () {
   &:before {
     content: '';
     display: block;
-    background: url('../../../pages/learning/assets/history.svg') no-repeat center center;
+    background: url('../../../pages/learning/classes/update/assets/history.svg') no-repeat center center;
     background-size: contain;
     width: 1.5rem;
     height: 1.5rem;
@@ -213,7 +213,7 @@ function js () {
   &:before {
     content: '';
     display: block;
-    background: url('../../../pages/learning/assets/cancel.svg') no-repeat center center;
+    background: url('../../../pages/learning/classes/update/assets/cancel.svg') no-repeat center center;
     background-size: contain;
     width: 1.5rem;
     height: 1.5rem;
@@ -229,7 +229,7 @@ function js () {
   &:before {
     content: '';
     display: block;
-    background: url('../../../pages/learning/assets/circle.svg') no-repeat center center;
+    background: url('../../../pages/learning/classes/update/assets/circle.svg') no-repeat center center;
     background-size: contain;
     width: 1.5rem;
     height: 1.5rem;
