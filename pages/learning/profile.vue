@@ -211,12 +211,18 @@
         </form>
       </div>
     </div>
+    <TheFooterButtons
+      cancel-label="취소"
+      apply-label="저장"
+    />
   </article>
 </template>
 
 <script>
+import TheFooterButtons from '@/pages/admin/TheFooterButtons'
 export default {
   name: 'profile',
+  components: { TheFooterButtons },
   data () {
     return {
       heading: '프로필',

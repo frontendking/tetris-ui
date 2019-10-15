@@ -18,6 +18,33 @@
         </template>
       </td>
     </tr>
+    <div id="class-mark-1" class="class-mark"
+         :style="{
+        top: '8rem',
+        left: '26rem',
+        height: '8rem',
+        width: '12.6rem',
+      }"
+    ><span>오후 12:00 - 오전:1200</span>6회차
+    </div>
+    <div id="class-mark-2" class="class-mark"
+         :style="{
+        top: '8rem',
+        left: '39rem',
+        height: '24rem',
+        width: '9.6rem',
+      }"
+    ><span>오후 12:00 - 오전:1200</span>6회차
+    </div>
+    <div id="class-mark-3" class="class-mark"
+         :style="{
+        top: '16rem',
+        left: '42rem',
+        height: '8rem',
+        width: '9.6rem',
+      }"
+    ><span>오후 12:00 - 오전:1200</span>6회차
+    </div>
     </tbody>
   </table>
 </template>
@@ -40,12 +67,17 @@ export default {
   color: #000;
   table-layout: fixed;
   width: 100%;
+  tbody {
+    position: relative;
+  }
+
   caption {
     text-align: center;
     font-size: 3rem;
     font-weight: bold;
     padding: 2rem 0;
   }
+
   .active {
     background-color: #FCF8EF;
   }
@@ -57,9 +89,10 @@ export default {
   }
 
   th {
-    &[scope="col"]{
+    &[scope="col"] {
       height: 3rem;
     }
+
     height: 3rem;
     font-size: 1.6rem;
     font-weight: 500;
@@ -80,6 +113,18 @@ export default {
       color: #000000;
       border: 1px solid #b7b7b7;
     }
+  }
+
+  .class-mark {
+    position: absolute;
+    display: flex;
+    flex-flow: column;
+    background-color: #6dc8f9;
+    color: #fff;
+    border: #0c79c5 solid 1px;
+    font-size: 1.3rem;
+    border-radius: 5px;
+    padding: 0.5rem;
   }
 }
 </style>

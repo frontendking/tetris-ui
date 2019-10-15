@@ -13,6 +13,7 @@
         :tableData="table.data"
       />
     </div>
+
   </article>
 </template>
 
@@ -49,41 +50,41 @@ export default {
         data: [
           ...Array(46).fill([...Array(7)]),
         ]
-/*
-          .map((v, k) => {
-            if (k > 7 && k < 30) {
-              return v.map((v, day) => {
-                let classes = []
-                if (day === 1) classes.push({
-                  time: '12:00pm - 12:00am',
-                  lesson: 4
-                })
-                if (day === 2) classes.push({
-                  time: '12:00pm - 12:00am',
-                  lesson: 5
-                })
-                if (day === 3) classes.push({
-                  time: '12:00pm - 12:00am',
-                  lesson: 6
-                })
-                if (day === 4) classes.push({
-                  time: '12:00pm - 12:00am',
-                  lesson: 7
-                })
-                if (k < 9 && day === 5) classes.push({
-                  time: '12:00pm - 1:00pm',
-                  lesson: 8
-                })
-                if (k > 13 && k < 15 && day === 3) classes.push({
-                  time: '4:05pm - 5:05pm',
-                  lesson: 9
-                })
-                return classes.length === 0 ? v : classes
-              })
-            }
-            return v
-          }),
-*/
+        /*
+                  .map((v, k) => {
+                    if (k > 7 && k < 30) {
+                      return v.map((v, day) => {
+                        let classes = []
+                        if (day === 1) classes.push({
+                          time: '12:00pm - 12:00am',
+                          lesson: 4
+                        })
+                        if (day === 2) classes.push({
+                          time: '12:00pm - 12:00am',
+                          lesson: 5
+                        })
+                        if (day === 3) classes.push({
+                          time: '12:00pm - 12:00am',
+                          lesson: 6
+                        })
+                        if (day === 4) classes.push({
+                          time: '12:00pm - 12:00am',
+                          lesson: 7
+                        })
+                        if (k < 9 && day === 5) classes.push({
+                          time: '12:00pm - 1:00pm',
+                          lesson: 8
+                        })
+                        if (k > 13 && k < 15 && day === 3) classes.push({
+                          time: '4:05pm - 5:05pm',
+                          lesson: 9
+                        })
+                        return classes.length === 0 ? v : classes
+                      })
+                    }
+                    return v
+                  }),
+        */
       },
       buttons: [
         {
@@ -138,10 +139,12 @@ export default {
       display: flex;
       flex-flow: column;
       border: none;
+
       caption {
         text-align: center;
         padding: 2rem 0;
       }
+
       tr {
         flex: 1 0 4rem;
         display: flex;
@@ -259,5 +262,6 @@ export default {
       }
     }
   }
+
 }
 </style>
