@@ -30,6 +30,7 @@ export default {
   ** Global CSS
   */
   css: [
+    '@/assets/style/color.scss',
     '@/assets/style/global.scss'
   ],
   /*

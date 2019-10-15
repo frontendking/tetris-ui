@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import Classes from '@/components/admin/classes/classes'
+import Classes from '@/components/admin/classes/layout-sub-classes'
 
 export default {
   name: 'teaching-classes',

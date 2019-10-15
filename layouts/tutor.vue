@@ -617,8 +617,23 @@ export default {
 @import '../assets-conects/st-comm-v4.0.0.css';
 @import '../assets-conects/st_conects.css';
 @import 'destyle.css';
-@import '../assets/style/b2c-reset-2.css';
 @import '../assets/style/b2c-reset.css';
 
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: 'Noto Sans KR', 'Malgun Gothic', '맑은고딕', '돋움', 'Dotum', 'Helvetica', 'Apple SD Gothic Neo', Sans-serif, serif;
+  font-size: 2.2rem;
+  letter-spacing: 0.079rem;
+  font-weight: normal;
+  color: #8d8d8d;
+  word-break: keep-all;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
 
 </style>

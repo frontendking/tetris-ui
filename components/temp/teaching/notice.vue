@@ -12,7 +12,7 @@
 
 <script>
 import BaseTable from '../../BaseTable2'
-import Pagenation from '@/components/admin/classes/pagenation'
+import Pagenation from '@/components/pagenation'
 
 const colHeaderNames = [
   '글번호', '제목', '작성자', '작성일'

@@ -1,3 +1,98 @@
+legend {
+  border: none;
+}
+label {
+  margin: 0;
+  line-height: initial;
+}
+#wrap {
+  min-width: initial;
+}
+
+#page-wrapper > div {
+  min-width: initial;
+}
+
+#page-wrapper {
+  padding: 0;
+}
+
+#b2c-wrapper caption {
+  display: table-caption;
+  padding-top: initial;
+  padding-bottom: initial;
+  color: initial;
+  text-align: initial;
+}
+
+.got-style {
+  position: relative;
+  font-size: 1.6rem;
+  color: #333;
+  letter-spacing: 0.05rem;
+}
+
+.class-timetable-search-section.pc-view {
+  padding: 0;
+}
+
+#page-wrapper > div > div > div {
+  width: initial;
+  margin: 0;
+}
+
+/*front에서 수정할 것*/
+
+#b2c-navi-title {
+  word-break: keep-all;
+  padding-right: 1rem;
+}
+
+#the-class-footer > div.modal-dimm.active > form {
+  max-width: 70rem;
+}
+
+#the-class-footer > div.modal-dimm.active > form .choose-permit {
+  max-height: 80rem;
+}
+
+#the-class-footer > div.modal-dimm.active > form > fieldset input {
+  justify-self: center
+}
+
+#the-class-footer > div.modal-dimm.active > form > fieldset > div {
+  overflow: scroll;
+}
+
+#b2c-wrapper legend {
+  width: initial;
+}
+
+#tutor-header {
+  /*max-width: 102rem;*/
+  width: 102rem;
+  margin: 0 auto;
+}
+
+.the-tutor-gnb #b2c-navi-list {
+  width: 77rem;
+}
+
+#tutor-gnb {
+  padding: 2rem 0;
+}
+
+#the-class-footer > div.modal-dimm.active > form > fieldset > div > div {
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 7fr;
+}
+
+#the-class-footer > div.modal-dimm.active > form > fieldset > .choose-permit {
+}
+
+#ticketCardList .permit-card input {
+  justify-self: center;
+}
 #wrap > div.content-wrapper.white-bg {
   padding: 3.3rem 2rem;
 }
@@ -77,6 +172,7 @@ img#mobile-header {
   line-height: 1
 }
 
+/*
 @media (min-width: 641px) {
 
   .the-tutor-gnb #b2c-navi-title {
@@ -113,6 +209,7 @@ img#mobile-header {
     transform: scaleX(2)
   }
 }
+*/
 
 
 #page-wrapper {
@@ -159,6 +256,11 @@ img#mobile-header {
   display: none
 }
 
+.the-tutor-gnb {
+  display: none;
+  line-height: 1
+}
+
 @media (min-width: 641px) {
   #wrap {
     min-width: 1120px;
@@ -172,14 +274,7 @@ img#mobile-header {
   #hgroup, #conects-footer {
     display: block
   }
-}
 
-.the-tutor-gnb {
-  display: none;
-  line-height: 1
-}
-
-@media (min-width: 641px) {
   .the-tutor-gnb {
     height: 100%;
     display: flex;

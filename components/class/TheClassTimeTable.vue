@@ -9,20 +9,7 @@
     <tr v-for="(tr, k) in tableBody">
       <th scope="row">{{rowHeader[k]}}</th>
       <td v-for="td in tr">
-        <div class="class-info" v-if="td!==''">
-          <template v-if="!Array.isArray(td)">
-            <a class="teacher-name" href="#">
-              {{td.teacher}}
-              <div v-if="td.status" class="class-status">{{td.status?'마감임박':''}}</div>
-            </a>
-          </template>
-          <template v-else>
-              <a class="teacher-name" href="#" v-for="v in td">
-                {{v.teacher}}
-                <div v-if="v.status" class="class-status">{{v.status?'마감임박':''}}</div>
-              </a>
-          </template>
-        </div>
+        <div class="class-info" v-if="td!==''" v-html="td"/>
       </td>
     </tr>
     </tbody>
@@ -31,6 +18,25 @@
 
 <script>
 export default {
+  props: {
+    tableBody: {
+      default: [
+        [
+          `<a class="teacher-name" href="#">이현식 <div class="class-status">마감임박</div></a>`,
+          '',
+          `<a class="teacher-name" href="#">김미진</a>`,
+          , '', '', '',
+        ],
+        [
+          [
+            `<a class="teacher-name" href="#">이현식 <div class="class-status">마감임박</div></a>`,
+            `<a class="teacher-name" href="#">김미진</a>`,
+          ],
+          '', '', '', '', '',
+        ], ['', '', '', '', '', ''], ['', '', '', '', '', ''], ['', '', '', '', '', '']
+      ]
+    }
+  },
   data () {
     return {
       caption: '과목 시간표',
@@ -48,27 +54,6 @@ export default {
           name: '수학',
         },
       ],
-      classe: [
-        {
-          teacher: 'Teacher10',
-          schedule: [
-            {
-              start: '2019.04.01, 월, 13:00',
-            },
-          ],
-        },
-        {
-          teacher: 'Got1선생님',
-          schedule: [
-            {
-              start: '2019.08.01, 수, 13:00',
-            },
-            {
-              start: '2019.08.01, 월, 18:00',
-            },
-          ],
-        },
-      ],
     }
   },
   computed: {
@@ -79,34 +64,6 @@ export default {
         '19:00 - 20:00',
         '20:00 - 21:00',
         '21:00 - 22:00',
-      ]
-    },
-    tableBody () {
-      return [
-        [
-          {
-            teacher: '이현식',
-            status: 1,
-          },
-          '',
-          {
-            teacher: '김미진',
-            status: 0,
-          }, '', '', '',
-        ],
-        [
-          [
-            {
-              teacher: '튜터닷컴',
-              status: 1,
-            },
-            {
-              teacher: '김윤희',
-              status: 0,
-            },
-          ],
-          '', '', '', '', '',
-        ], ['', '', '', '', '', ''], ['', '', '', '', '', ''], ['', '', '', '', '', '']
       ]
     },
   },
@@ -159,9 +116,8 @@ $td-w: (95rem - 15.2rem) / 6;
     font-size: 1.2rem;
     font-weight: normal;
     border: 1px solid #b7b7b7;
-    padding-left: 2rem;
-    padding-top: 2.5rem;
-
+    vertical-align: middle;
+    text-align: center;
     .teacher-name {
       display: block;
       font-size: 1.6rem;

@@ -1,14 +1,19 @@
 <template>
   <article class="search">
     <h1 v-html="heading" class="hidden"/>
-    <TheClassSearchBox/>
-    <TheClassTimeTable
-      id="theClassTimeTable"
+    <TheClassSearchBox
+      class="learning-update-subject"
     />
-    <TheFooterButtons
-      cancel-label="이전"
-      apply-label="저장"
-    />
+    <form class="TheClassUpdateForm">
+      <TheClassTimeTable
+        id="theClassTimeTable"
+        :table-body="tableBody"
+      />
+      <TheFooterButtons
+        cancel-label="이전"
+        apply-label="저장"
+      />
+    </form>
   </article>
 </template>
 
@@ -32,7 +37,28 @@ export default {
           cancelBtn: '이전',
           submitBtn: '저장'
         }
-      }
+      },
+      tableBody: [
+        [
+          `<div class="checkbox-update-class">
+  <input type="checkbox" id="ch1"><label for="ch1" value="class1">이현식 <div class="class-status">마감임박</div></label>
+</div>`,
+          '',
+          `<div class="checkbox-update-class">
+  <input type="checkbox" id="ch2"><label for="ch2" value="class1">김미진</label>
+</div>`,
+          , '', '',
+        ],
+        [
+            `<div class="checkbox-update-class">
+  <input type="checkbox" id="ch3"><label for="ch3" value="class1">이현식 <div class="class-status">마감임박</div></label>
+</div><div class="checkbox-update-class">
+  <input type="checkbox" id="ch4"><label for="ch4" value="class1">김미진</label>
+</div>`,
+
+          '', '', '', '', '',
+        ], ['', '', '', '', '', ''], ['', '', '', '', '', ''], ['', '', '', '', '', '']
+      ]
     }
   },
 }
@@ -55,13 +81,39 @@ export default {
     border-top: none;
   }
 
-  #theClassTimeTable {
-    grid-area: table;
-    margin-top: 5rem;
-  }
+  .TheClassUpdateForm {
+    display: contents;
 
-  .TheFooterButtons {
-    grid-area: btns;
+    #theClassTimeTable {
+      grid-area: table;
+      margin-top: 5rem;
+      .class-info {
+        display: inline-block;
+      }
+      .checkbox-update-class {
+        margin-bottom: 1rem;
+        &:last-child {
+          margin-bottom: 0;
+        }
+        input {
+          display: none;
+          & + * {
+            display: flex;
+            flex-flow: column;
+            background: #eee;
+            padding: 0.5rem;
+          }
+
+          &:checked + * {
+            background-color: #34b4f9;
+          }
+        }
+      }
+    }
+
+    .TheFooterButtons {
+      grid-area: btns;
+    }
   }
 }
 </style>

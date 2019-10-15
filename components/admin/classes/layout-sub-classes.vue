@@ -9,7 +9,7 @@
 </template>>
 
 <script>
-import ClassesLayout from '@/components/admin/classes/layout'
+import ClassesLayout from '@/components/admin/layout-sub-2'
 import navList from './assets/data/navList'
 
 export default {
