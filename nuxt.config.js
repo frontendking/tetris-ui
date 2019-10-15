@@ -53,7 +53,7 @@ export default {
       /^(?=.*\badmin\b).*$/,
       /^(?=.*\bclass\b).*$/,
       /^(?=.*\bpermit\b).*$/,
-      /^(?=.*\blearning\b).*$/
+      // /^(?=.*\blearning\b).*$/
     ]
   },
   build: {

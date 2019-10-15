@@ -1,5 +1,5 @@
 <template>
-  <admin-class-this class="learning-class-this">
+  <admin-class-this class="teaching-class-this">
     <div class="row">
       <div class="col-md-3">
         <div class="class-card tutor">
@@ -7,7 +7,7 @@
             <span class="user-name">teacher_1</span>
             <a class="btn btn-line" href="/t/teacher-1">프로필보기</a>
             <div class="tutor-card-profile">
-              <img class="" src="../../../assets/img/no_avatar.png" alt="No avatar" width="60" height="60">
+              <img class="" src="../../assets/img/no_avatar.png" alt="No avatar" width="60" height="60">
             </div>
           </div>
           <a href="/tutor/courses/721">
@@ -39,7 +39,7 @@
             <span class="user-name">teacher_1</span>
             <a class="btn btn-line" href="/t/teacher-1">프로필보기</a>
             <div class="tutor-card-profile">
-              <img class="" src="../../../assets/img/no_avatar.png" alt="No avatar" width="60" height="60">
+              <img class="" src="../../assets/img/no_avatar.png" alt="No avatar" width="60" height="60">
             </div>
           </div>
           <a href="/tutor/courses/725">
@@ -74,7 +74,7 @@
             <span class="user-name">teacher_1</span>
             <a class="btn btn-line" href="/t/teacher-1">프로필보기</a>
             <div class="tutor-card-profile">
-              <img class="" src="../../../assets/img/no_avatar.png" alt="No avatar" width="60" height="60">
+              <img class="" src="../../assets/img/no_avatar.png" alt="No avatar" width="60" height="60">
             </div>
           </div>
           <a href="/tutor/courses/438">
@@ -125,7 +125,7 @@
             <span class="user-name">teacher_1</span>
             <a class="btn btn-line" href="/t/teacher-1">프로필보기</a>
             <div class="tutor-card-profile">
-              <img class="" src="../../../assets/img/no_avatar.png" alt="No avatar" width="60" height="60">
+              <img class="" src="../../assets/img/no_avatar.png" alt="No avatar" width="60" height="60">
             </div>
           </div>
           <a href="/tutor/courses/557">
@@ -158,7 +158,7 @@
             <span class="user-name">teacher_1</span>
             <a class="btn btn-line" href="/t/teacher-1">프로필보기</a>
             <div class="tutor-card-profile">
-              <img class="" src="../../../assets/img/no_avatar.png" alt="No avatar" width="60" height="60">
+              <img class="" src="../../assets/img/no_avatar.png" alt="No avatar" width="60" height="60">
             </div>
           </div>
           <a href="/tutor/courses/721">
@@ -190,7 +190,7 @@
             <span class="user-name">teacher_1</span>
             <a class="btn btn-line" href="/t/teacher-1">프로필보기</a>
             <div class="tutor-card-profile">
-              <img class="" src="../../../assets/img/no_avatar.png" alt="No avatar" width="60" height="60">
+              <img class="" src="../../assets/img/no_avatar.png" alt="No avatar" width="60" height="60">
             </div>
           </div>
           <a href="/tutor/courses/725">
@@ -225,7 +225,7 @@
             <span class="user-name">teacher_1</span>
             <a class="btn btn-line" href="/t/teacher-1">프로필보기</a>
             <div class="tutor-card-profile">
-              <img class="" src="../../../assets/img/no_avatar.png" alt="No avatar" width="60" height="60">
+              <img class="" src="../../assets/img/no_avatar.png" alt="No avatar" width="60" height="60">
             </div>
           </div>
           <a href="/tutor/courses/438">
@@ -276,7 +276,7 @@
             <span class="user-name">teacher_1</span>
             <a class="btn btn-line" href="/t/teacher-1">프로필보기</a>
             <div class="tutor-card-profile">
-              <img class="" src="../../../assets/img/no_avatar.png" alt="No avatar" width="60" height="60">
+              <img class="" src="../../assets/img/no_avatar.png" alt="No avatar" width="60" height="60">
             </div>
           </div>
           <a href="/tutor/courses/557">
@@ -309,7 +309,7 @@
             <span class="user-name">teacher_1</span>
             <a class="btn btn-line" href="/t/teacher-1">프로필보기</a>
             <div class="tutor-card-profile">
-              <img class="" src="../../../assets/img/no_avatar.png" alt="No avatar" width="60" height="60">
+              <img class="" src="../../assets/img/no_avatar.png" alt="No avatar" width="60" height="60">
             </div>
           </div>
           <a href="/tutor/courses/721">
@@ -341,7 +341,7 @@
             <span class="user-name">teacher_1</span>
             <a class="btn btn-line" href="/t/teacher-1">프로필보기</a>
             <div class="tutor-card-profile">
-              <img class="" src="../../../assets/img/no_avatar.png" alt="No avatar" width="60" height="60">
+              <img class="" src="../../assets/img/no_avatar.png" alt="No avatar" width="60" height="60">
             </div>
           </div>
           <a href="/tutor/courses/725">
@@ -376,7 +376,7 @@
             <span class="user-name">teacher_1</span>
             <a class="btn btn-line" href="/t/teacher-1">프로필보기</a>
             <div class="tutor-card-profile">
-              <img class="" src="../../../assets/img/no_avatar.png" alt="No avatar" width="60" height="60">
+              <img class="" src="../../assets/img/no_avatar.png" alt="No avatar" width="60" height="60">
             </div>
           </div>
           <a href="/tutor/courses/438">
@@ -427,7 +427,7 @@
             <span class="user-name">teacher_1</span>
             <a class="btn btn-line" href="/t/teacher-1">프로필보기</a>
             <div class="tutor-card-profile">
-              <img class="" src="../../../assets/img/no_avatar.png" alt="No avatar" width="60" height="60">
+              <img class="" src="../../assets/img/no_avatar.png" alt="No avatar" width="60" height="60">
             </div>
           </div>
           <a href="/tutor/courses/557">
@@ -460,7 +460,7 @@
             <span class="user-name">teacher_1</span>
             <a class="btn btn-line" href="/t/teacher-1">프로필보기</a>
             <div class="tutor-card-profile">
-              <img class="" src="../../../assets/img/no_avatar.png" alt="No avatar" width="60" height="60">
+              <img class="" src="../../assets/img/no_avatar.png" alt="No avatar" width="60" height="60">
             </div>
           </div>
           <a href="/tutor/courses/721">
@@ -492,7 +492,7 @@
             <span class="user-name">teacher_1</span>
             <a class="btn btn-line" href="/t/teacher-1">프로필보기</a>
             <div class="tutor-card-profile">
-              <img class="" src="../../../assets/img/no_avatar.png" alt="No avatar" width="60" height="60">
+              <img class="" src="../../assets/img/no_avatar.png" alt="No avatar" width="60" height="60">
             </div>
           </div>
           <a href="/tutor/courses/725">
@@ -527,7 +527,7 @@
             <span class="user-name">teacher_1</span>
             <a class="btn btn-line" href="/t/teacher-1">프로필보기</a>
             <div class="tutor-card-profile">
-              <img class="" src="../../../assets/img/no_avatar.png" alt="No avatar" width="60" height="60">
+              <img class="" src="../../assets/img/no_avatar.png" alt="No avatar" width="60" height="60">
             </div>
           </div>
           <a href="/tutor/courses/438">
@@ -582,7 +582,7 @@
 <script>
 import AdminClassThis from '@/components/temp/admin/classes/this'
 export default {
-  name: 'learning-class-this',
+  name: 'teaching-class-this',
   components: { AdminClassThis }
 }
 </script>
