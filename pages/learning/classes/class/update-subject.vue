@@ -15,7 +15,7 @@
 <script>
 import TheClassSearchBox from '@/components/class/TheClassSearchBox'
 import TheClassTimeTable from '@/components/class/TheClassTimeTable'
-import TheFooterButtons from '@/pages/admin/TheFooterButtons'
+import TheFooterButtons from '@/components/temp/admin/TheFooterButtons'
 
 export default {
   props: ['page', 'users'],

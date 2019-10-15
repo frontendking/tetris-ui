@@ -6,7 +6,7 @@
 
 <script>
 import classDetail from '@/components/temp/admin/classes/class/layout'
-import navList from './class/assets/navList'
+import navList from './class/assets/data/navList'
 
 export default {
   components: { classDetail },

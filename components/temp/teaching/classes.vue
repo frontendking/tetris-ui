@@ -1,6 +1,6 @@
 <template>
   <classes
-    id="learning-classes"
+    id="teaching-classes"
   >
     <nuxt-child/>
   </classes>
@@ -10,7 +10,7 @@
 import Classes from '@/components/temp/admin/classes/classes'
 
 export default {
-  name: 'learning-classes',
+  name: 'teaching-classes',
   components: { Classes }
 }
 </script>
