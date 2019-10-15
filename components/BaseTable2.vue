@@ -61,12 +61,6 @@ export default {
       color: #ffffff;
       background-color: #6e737d;
 
-      &:nth-child(1) {
-        min-width: 6rem;
-      }
-
-      &:nth-child(n+2) {
-      }
 
       &[scope="row"] {
         background-color: #f7f7f7;

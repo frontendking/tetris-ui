@@ -3,8 +3,8 @@
     <h1 v-html="heading"/>
     <BaseTable
       id="attendance-table"
-      :colHeader = "colHeader"
-      :tableData = "tableData"
+      :colHeader="colHeader"
+      :tableData="tableData"
     />
 
   </article>
@@ -12,27 +12,30 @@
 
 <script>
 import BaseTable from '../../components/BaseTable2'
+
 const colHeaderNames = [
-  '주문번호', '결제수단', '신청일시', '아이디', '이름', '전화번호', '수강클래스', '수강기간', '상품금액', '결제 상태'
+  '년도', '월', '수강상태', '수업신청 유형', '신청일시', '학생이름', '커넥츠ID', '전화번호', '클래스 ID', '수업명', '수강기간', '결제유형'
 ]
 const seed = [
   {
-    orderId: '-',
-    method: '지급',
-    applyDate: '2018-08-28 14:03',
-    userId:'choco',
+    year: '2019년',
+    month: '7월',
+    state: '수강중',
+    type: '멤버십',
+    orderDate: '2018-08-28 14:03',
     userName: '추경아(추경아)',
+    userId: 'choco',
     userPhone: '010-7672-9595',
+    classId: '123456',
     className: '2기 튜터 실습(0828)',
     period: '2018.08.28-2018.08.31',
-    price: '0원',
-    orderState: '결제완료'
+    orderType: '유료',
   },
 ]
 export default {
-  data() {
+  data () {
     return {
-      heading: '수업신청 내역',
+      heading: '수강신청 내역',
       searchForm: {
         searchKeyword: {
           legend: '검색어',
@@ -45,10 +48,10 @@ export default {
         },
         searchBtn: '검색'
       },
-      tableData: [...Array(10)].flatMap(()=>seed),
-      colHeader: Object.keys(seed[0]).map((v,i)=>{
+      tableData: [...Array(10)].flatMap(() => seed),
+      colHeader: Object.keys(seed[0]).map((v, i) => {
         return {
-          id:v,
+          id: v,
           label: colHeaderNames[i]
         }
       })
@@ -93,6 +96,30 @@ export default {
       margin-top: 3rem;
     }
   }
+
+  > #attendance-table {
+    margin-top: 3rem;
+
+    td {
+      flex-flow: column;
+    }
+
+    tr > th, tr > td {
+      flex: 1 0 5rem;
+      font-size: 0.9em;
+      text-align: center;
+      padding: 0 0.5rem;
+
+      &:nth-child(n):nth-child(-n+4), &:nth-last-child(1) {
+        flex: 0 0 7rem;
+      }
+
+      &:nth-child(5), &:nth-child(8), &:nth-child(10), &:nth-child(11) {
+        flex: 1 0 14rem;
+      }
+    }
+  }
+
 }
 
 </style>
