@@ -15,7 +15,7 @@
   integrity sha512-l8zto/fuoZIbncm+01p8zPSDZu/VuuJhAfA7d/AbzM09WR7iVhavvfNDYCNpo1VvLk6E6xgAoP9P+/EMJHuRkQ==
   dependencies:
     "@babel/code-frame" "^7.5.5"
-    "@babel/generator" "^7.6.2"
+    "@babel/generator"t  "^7.6.2"
     "@babel/helpers" "^7.6.2"
     "@babel/parser" "^7.6.2"
     "@babel/template" "^7.6.0"
