@@ -17,15 +17,14 @@
   "dependencies": {
     "destyle.css": "^1.0.10",
     "fxjs": "^0.12.5",
-    "jquery": "^3.4.1",
     "nuxt": "^2.0.0",
-    "sweetalert2": "^8.17.4"
+    "sweetalert2": "^8.17.4",
+    "underscore": "^1.9.1"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",
     "@babel/plugin-proposal-logical-assignment-operators": "^7.2.0",
     "@babel/register": "^7.5.5",
-    "@fortawesome/fontawesome-free": "^5.11.2",
     "@storybook/addon-actions": "^5.1.10",
     "@storybook/addon-links": "^5.1.10",
     "@storybook/addons": "^5.1.10",
@@ -39,9 +38,7 @@
     "core-js": "^2.6.5",
     "cucumber": "^5.1.0",
     "faker": "^4.1.0",
-    "font-awesome": "^4.7.0",
     "jest": "^24.1.0",
-    "node-sass-glob-importer": "^5.3.2",
     "nodemon": "^1.18.9",
     "sass": "^1.22.9",
     "sass-loader": "^7.2.0",
