@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import BaseTable from '../../base/BaseTable2'
+import BaseTable from '@/components/base/BaseTable2'
 import Pagenation from '@/components/base/BasePagenation2'
 
 const colHeaderNames = [

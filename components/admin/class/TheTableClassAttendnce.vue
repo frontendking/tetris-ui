@@ -1,5 +1,5 @@
 <template>
-  <div class="TheAttendanceTable teaching-class-attendance tab-pane m-t-xl active">
+  <div class="TheTableAttendance teaching-class-attendance tab-pane m-t-xl active">
     <div class="row">
       <div class="col-sm-12">
         <h4 class="sort-result">총 12 회</h4>
@@ -61,12 +61,12 @@
 
 <script>
 export default {
-  name: 'TheAttendanceTable'
+  name: 'TheTableAttendance'
 }
 </script>
 
 <style lang=scss>
-.TheAttendanceTable {
+.TheTableAttendance {
   .row {
     float: left;
     margin-right: 0;

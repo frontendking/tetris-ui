@@ -18,7 +18,8 @@
       <tbody>
       <tr>
         <td class="sort-result" width="5%" style="text-align:center;">
-          <img width="50" height="50" alt="avatar image" class="profile-img img-circle" src="../../../../components/temp/assets/img/no_avatar.png">
+          <img width="50" height="50" alt="avatar image" class="profile-img img-circle"
+               src="../../../../components/temp/assets/img/no_avatar.png">
         </td>
         <td width="10%" style="text-align:center;">
           student_10(student_10)
@@ -39,7 +40,8 @@
           [06097] 서울 강남구 봉은사로 403 (삼성동) 1111
         </td>
         <td style="width: 10%;">
-          <a class="btn btn-default btn-block" href="#" onclick="$('#conversation_43').addClass('active');return false;">메시지 보내기</a>
+          <a class="btn btn-default btn-block" href="#"
+             onclick="$('#conversation_43').addClass('active');return false;">메시지 보내기</a>
         </td>
       </tr>
       </tbody>
@@ -50,16 +52,17 @@
 
 <script>
 import TheChattingWindow from '@/components/admin/classes/class/TheChattingWindow'
+
 export default {
-  components: { TheChattingWindow }
+  components: { TheChattingWindow },
 }
 </script>
 
-<style  lang=scss>
+<style lang=scss>
 .students {
-.student-list-table tbody tr td {
-  padding-top: 35px;
-}
+  .student-list-table tbody tr td {
+    padding-top: 35px;
+  }
 }
 </style>
 
