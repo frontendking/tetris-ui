@@ -36,11 +36,6 @@ export default {
     justify-content: space-between;
     align-items: center;
     padding: 2rem;
-    #b2c-navi-title {
-      font-size: 3.2rem;
-      font-weight: bold;
-      letter-spacing: 1px;
-    }
     #b2c-navi-list {
       display: flex;
       justify-content: space-between;

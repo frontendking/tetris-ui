@@ -1,6 +1,5 @@
 <template>
   <form class="TheClassSearchBox">
-
     <fieldset class="select-grades">
       <div class="fieldset-wrap">
         <legend>{{selectGrades.heading}}</legend>
@@ -15,7 +14,7 @@
     </fieldset>
     <fieldset class="sellect-subjects">
       <div>
-        <legend>{{selectSubjects.legend}}</legend>
+        <legend>{{selectSubjects.heading}}</legend>
         <div class="tutor-checkbox" v-for="v in selectSubjects.paragraphs">
           <input type="checkbox" :id="`subject${v.id}`" :value="v.name">
           <label :for="`subject${v.id}`">{{v.name}}</label>
@@ -77,12 +76,19 @@ export default {
 <style lang=scss>
 
 .TheClassSearchBox {
+  .select-grades {
+    display: none;
+  }
+  .sellect-subjects {
+    grid-area: b;
+  }
+  .find-buttons {
+    grid-area: d;
+  }
   padding: 4rem 11rem;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: 1fr 1fr 1fr;
   /*@formatter:off*/
-  grid-template-areas:
+  grid-template:
     "a a b b b"
     ". . . . ."
     "d d d d d";
@@ -215,5 +221,16 @@ export default {
     font-size: 1.6rem;
     font-weight: normal;
   }
+}
+.TheClassSearchBox.learning-update-subject {
+  /*@formatter:off*/
+    grid-template:
+      "b b b d" auto/
+      auto auto auto auto;
+  /*@formatter:on*/
+  legend, .tutor-checkbox {
+    justify-content: flex-start;
+  }
+;
 }
 </style>

@@ -1,6 +1,4 @@
-@import './material-design-variables';
-@import './tutor-color';
-@import './typography';
+@import '@/assets/font/index.scss';
 
 .hidden {
   visibility: hidden;
@@ -10,5 +8,3 @@
 legend {
   width: initial;
 }
-
-
