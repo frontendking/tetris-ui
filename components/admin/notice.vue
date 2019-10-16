@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import BaseTable from '../BaseTable2'
+import BaseTable from '../base/BaseTable2'
 
 const colHeaderNames = [
   '글번호', '제목', '작성자', '작성일'

@@ -19,7 +19,7 @@ export default {
 
 <style lang=scss>
 .TheVideoModal {
-  .modal-dialog {
+  .modal-content {
     width: 64rem;
   }
 }

@@ -1,5 +1,5 @@
 <template>
-  <admin-class-this class="learning-class-this">
+  <div>
     <div class="row">
       <div class="col-md-3">
         <div class="class-card tutor">
@@ -576,14 +576,15 @@
     <div class="text-center">
       <pagenation/>
     </div>
-  </admin-class-this>
+  </div>
 </template>
 
 <script>
-import AdminClassThis from '@/components/admin/classes/this'
+import Pagenation from '@/components/base/BasePagenation2'
+
 export default {
   name: 'learning-class-this',
-  components: { AdminClassThis }
+  components: { Pagenation}
 }
 </script>
 

@@ -1,5 +1,5 @@
 <template>
-  <admin-class-next>
+  <div>
     <div class="row">
       <div class="col-md-3">
         <class-card
@@ -7,20 +7,21 @@
         />
       </div>
     </div>
-  </admin-class-next>
+    <div class="text-center">
+      <pagenation/>
+    </div>
+  </div>
 </template>
 
 <script>
-import Pagenation from '@/components/pagenation'
+import Pagenation from '@/components/base/BasePagenation2'
 import ClassCard from '@/components/admin/class-card'
-import AdminClassNext from '@/components/admin/classes/next/index'
 
 export default {
-  name: 'learning-class-next',
+  name: 'learning-classes-next',
   components: {
-    AdminClassNext,
     ClassCard,
-    Pagenation,
+    Pagenation
   }
 }
 </script>

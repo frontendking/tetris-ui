@@ -1,6 +1,6 @@
 <template>
   <article class="classes-layout">
-    <h1 v-html="`${heading}<span>수업 시간 15분 전부터 수업 입장 가능합니다.</span>`"/>
+    <h1 v-html="heading"/>
     <div class="tabs-container">
       <div
         v-if="!$route.path.includes('classes/class')&&!$route.path.includes('classes/update')"
@@ -24,7 +24,7 @@
 </template>
 
 <script>
-import TheLnbSub from '@/components/TheLnbSub'
+import TheLnbSub from '@/components/admin/TheLnbSub'
 import TheClassAlignUI from '@/components/admin/classes/TheClassAlignUI'
 
 export default {

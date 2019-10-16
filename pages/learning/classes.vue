@@ -1,16 +1,16 @@
 <template>
-  <Classes
-    id="learning-classes"
-  >
-    <nuxt-child/>
-  </Classes>
+  <layout-classes/>
 </template>
 
 <script>
-import Classes from '@/components/admin/classes/layout-sub-classes'
-
+import LayoutClasses from '@/components/admin/classes/layout'
 export default {
-  name: 'learning-classes',
-  components: { Classes }
+  name: 'classes',
+  components: { LayoutClasses }
 }
 </script>
+
+<style scoped lang=scss>
+.classes {
+}
+</style>

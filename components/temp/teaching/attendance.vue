@@ -15,9 +15,9 @@
 </template>
 
 <script>
-import BaseTable from '../../BaseTable2'
-import Pagenation from '@/components/pagenation'
-import TheSearchBox from '@/components/TheSearchBox'
+import BaseTable from '../../base/BaseTable2'
+import Pagenation from '@/components/base/BasePagenation2'
+import TheSearchBox from '@/components/admin/TheSearchBox'
 
 const colHeaderNames = [
   '년도', '월', '학년', '과목', '요일', '시간','학생이름', '학생 ID', '1회','2회','3회', '4회', '출석률'

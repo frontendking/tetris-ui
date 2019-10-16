@@ -16,9 +16,9 @@
 </template>
 
 <script>
-import BaseTable from '../../BaseTable2'
-import TheReviewForm from '@/components/TheReviewForm'
-import TheSearchBox from '@/components/TheSearchBox'
+import BaseTable from '../../base/BaseTable2'
+import TheReviewForm from '@/components/admin/TheReviewForm'
+import TheSearchBox from '@/components/admin/TheSearchBox'
 
 const colHeaderNames = [
   '수강클래스', '1회차', '2회차', '3회차', '4회차', '후기등록률'

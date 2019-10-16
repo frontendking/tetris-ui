@@ -11,8 +11,8 @@
 </template>
 
 <script>
-import BaseTable from '../../BaseTable2'
-import Pagenation from '@/components/pagenation'
+import BaseTable from '../../base/BaseTable2'
+import Pagenation from '@/components/base/BasePagenation2'
 
 const colHeaderNames = [
   '글번호', '제목', '작성자', '작성일'

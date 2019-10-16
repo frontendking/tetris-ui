@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import BaseTable from '../../BaseTable2'
+import BaseTable from '../../base/BaseTable2'
 const colHeaderNames = [
   '주문번호', '결제수단', '결제일시', '이름', '수강클래스', '선생님', '수강기간', '상품금액', '상태'
 ]

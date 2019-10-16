@@ -1,5 +1,5 @@
 <template>
-  <div id="attend-tab" class="teaching-class-attendance tab-pane m-t-xl active">
+  <div class="TheAttendanceTable teaching-class-attendance tab-pane m-t-xl active">
     <div class="row">
       <div class="col-sm-12">
         <h4 class="sort-result">총 12 회</h4>
@@ -61,16 +61,17 @@
 
 <script>
 export default {
-  name: 'teaching-class-attendance'
+  name: 'TheAttendanceTable'
 }
 </script>
 
 <style lang=scss>
-#attend-tab {
+.TheAttendanceTable {
   .row {
     float: left;
     margin-right: 0;
   }
+
   caption#attend-tab-caption {
     display: flex;
     position: relative;
@@ -81,22 +82,27 @@ export default {
     justify-content: space-between;
   }
 
+  td {
+    vertical-align: middle;
+
+    .late, .absence, .attendance {
+      font-size: 0;
+      width: auto;
+
+      &:before {
+        margin: 0 auto;
+      }
+    }
+
+  }
+
+
   .late, .absence, .attendance {
     padding: 0;
     margin: 0;
     display: flex;
     justify-content: space-between;
     width: 4.7rem;
-  }
-  td {
-    vertical-align: middle;
-    .late, .absence, .attendance {
-      font-size: 0;
-      width: auto;
-      &:before {
-        margin: 0 auto;
-      }
-    }
   }
 
   .late {
@@ -107,7 +113,7 @@ export default {
     &:before {
       content: '';
       display: block;
-      background: url('assets/history.svg') no-repeat center center;
+      /*background: url('@/assets/img/attendance/history.svg') no-repeat center center;*/
       background-size: contain;
       width: 1.5rem;
       height: 1.5rem;
@@ -122,7 +128,7 @@ export default {
     &:before {
       content: '';
       display: block;
-      background: url('assets/cancel.svg') no-repeat center center;
+      /*background: url('@/assets/img/attendance/cancel.svg') no-repeat center center;*/
       background-size: contain;
       width: 1.5rem;
       height: 1.5rem;
@@ -137,7 +143,7 @@ export default {
     &:before {
       content: '';
       display: block;
-      background: url('assets/circle.svg') no-repeat center center;
+      /*background: url('@/assets/img/attendance/circle.svg') no-repeat center center;*/
       background-size: contain;
       width: 1.5rem;
       height: 1.5rem;

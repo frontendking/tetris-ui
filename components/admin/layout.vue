@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import TheLnb from '@/components/TheLnb'
+import TheLnb from '@/components/admin/TheLnb'
 
 export default {
   name: 'admin',

@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import TheLnbSub from '@/components/TheLnbSub'
+import TheLnbSub from '@/components/admin/TheLnbSub'
 import TheCourseInfo from '@/components/admin/classes/class/TheCourseInfo'
 
 export default {
