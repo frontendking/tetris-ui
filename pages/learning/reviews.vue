@@ -1,37 +1,42 @@
 <template>
-  <article class="class-purchase">
+  <article class="review">
     <h1 v-html="heading"/>
+    <TheSearchBox
+      :has-permit-search="false"
+      :keyword-types="['전체', '클래스명', '선생님 이름']"
+    />
     <BaseTable
       id="attendance-table"
       :colHeader = "colHeader"
       :tableData = "tableData"
     />
+    <TheReviewForm/>
 
   </article>
 </template>
 
 <script>
-import BaseTable from '../../base/BaseTable2'
+import BaseTable from '@/components/base/BaseTable2'
+import TheReviewForm from '@/components/admin/TheReviewForm'
+import TheSearchBox from '@/components/admin/TheSearchBox'
+
 const colHeaderNames = [
-  '주문번호', '결제수단', '결제일시', '이름', '수강클래스', '선생님', '수강기간', '상품금액', '상태'
+  '수강클래스', '1회차', '2회차', '3회차', '4회차', '후기등록률'
 ]
 const seed = [
   {
-    orderId: '-',
-    method: '신용카드',
-    applyDate: '2018-08-28 14:03',
-    userName: '추경아',
-    className: '2기 튜터 실습(0828)',
-    teacherName: '최수용',
-    period: '2018.08.28-2018.08.31',
-    price: '0원',
-    orderState: '<span class="complete">결제완료</span>'
+    className: '[일간대치동]2기 튜터 실습',
+    lesson1: `<div>수업일자 2018-10-22</div><button onclick="$('#review-form').modal('toggle');" class="update">수정하기</button>`,
+    lesson2: `<div>수업일자 2018-10-22</div><button onclick="$('#review-form').modal('toggle');"<button class="write">작성하기</button>`,
+    lesson3: `<div>수업일자 2018-10-22</div><button onclick="$('#review-form').modal('toggle');"<button class="update">작성하기</button>`,
+    lesson4: `<div>수업일자 2018-10-22</div><button onclick="$('#review-form').modal('toggle');"<button class="update">작성하기</button>`,
+    reviewRatio: '25% (1/4)'
   },
 ]
 export default {
   data() {
     return {
-      heading: '수업신청 내역',
+      heading: '리뷰작성하기',
       searchForm: {
         searchKeyword: {
           legend: '검색어',
@@ -44,7 +49,9 @@ export default {
         },
         searchBtn: '검색'
       },
-      tableData: [...Array(10)].flatMap(()=>seed),
+      tableData:[
+        ...[...Array(10)].flatMap(()=>seed),
+      ],
       colHeader: Object.keys(seed[0]).map((v,i)=>{
         return {
           id:v,
@@ -54,13 +61,15 @@ export default {
     }
   },
   components: {
+    TheSearchBox,
+    TheReviewForm,
     BaseTable
   }
 }
 </script>
 
 <style lang=scss>
-.class-purchase {
+.review {
   @media(min-width: 641px) {
     display: grid;
     /*@formatter:off*/

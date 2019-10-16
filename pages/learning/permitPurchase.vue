@@ -1,42 +1,35 @@
 <template>
-  <article class="review">
+  <article class="class-purchase">
     <h1 v-html="heading"/>
-    <TheSearchBox
-      :has-permit-search="false"
-      :keyword-types="['전체', '클래스명', '선생님 이름']"
-    />
     <BaseTable
       id="attendance-table"
       :colHeader = "colHeader"
       :tableData = "tableData"
     />
-    <TheReviewForm/>
 
   </article>
 </template>
 
 <script>
-import BaseTable from '../../base/BaseTable2'
-import TheReviewForm from '@/components/admin/TheReviewForm'
-import TheSearchBox from '@/components/admin/TheSearchBox'
-
+import BaseTable from '@/components/base/BaseTable2'
 const colHeaderNames = [
-  '수강클래스', '1회차', '2회차', '3회차', '4회차', '후기등록률'
+  '주문번호', '결제일시','수업권', '클래스수', '결제수단', '결제금액', '결제상태'
 ]
 const seed = [
   {
-    className: '[일간대치동]2기 튜터 실습',
-    lesson1: `<div>수업일자 2018-10-22</div><button onclick="$('#review-form').modal('toggle');" class="update">수정하기</button>`,
-    lesson2: `<div>수업일자 2018-10-22</div><button onclick="$('#review-form').modal('toggle');"<button class="write">작성하기</button>`,
-    lesson3: `<div>수업일자 2018-10-22</div><button onclick="$('#review-form').modal('toggle');"<button class="update">작성하기</button>`,
-    lesson4: `<div>수업일자 2018-10-22</div><button onclick="$('#review-form').modal('toggle');"<button class="update">작성하기</button>`,
-    reviewRatio: '25% (1/4)'
+    orderId: '12950293',
+    purchaseDate: '2018-08-28 14:03',
+    permitName: '일간대치동 2과목 수업권 3개월 수업권',
+    classCount: '6',
+    method: '신용카드',
+    price: '230,000원',
+    state: '결제완료'
   },
 ]
 export default {
   data() {
     return {
-      heading: '리뷰작성하기',
+      heading: '수업권 내역',
       searchForm: {
         searchKeyword: {
           legend: '검색어',
@@ -49,9 +42,7 @@ export default {
         },
         searchBtn: '검색'
       },
-      tableData:[
-        ...[...Array(10)].flatMap(()=>seed),
-      ],
+      tableData: [...Array(10)].flatMap(()=>seed),
       colHeader: Object.keys(seed[0]).map((v,i)=>{
         return {
           id:v,
@@ -61,15 +52,13 @@ export default {
     }
   },
   components: {
-    TheSearchBox,
-    TheReviewForm,
     BaseTable
   }
 }
 </script>
 
 <style lang=scss>
-.review {
+.class-purchase {
   @media(min-width: 641px) {
     display: grid;
     /*@formatter:off*/

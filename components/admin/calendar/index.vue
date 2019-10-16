@@ -13,7 +13,6 @@
         :tableData="table.data"
       />
     </div>
-
   </article>
 </template>
 

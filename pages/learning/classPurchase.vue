@@ -6,30 +6,31 @@
       :colHeader = "colHeader"
       :tableData = "tableData"
     />
-
   </article>
 </template>
 
 <script>
-import BaseTable from '../../base/BaseTable2'
+import BaseTable from '@/components/base/BaseTable2'
 const colHeaderNames = [
-  '주문번호', '결제일시','수업권', '클래스수', '결제수단', '결제금액', '결제상태'
+  '주문번호', '결제수단', '결제일시', '이름', '수강클래스', '선생님', '수강기간', '상품금액', '상태'
 ]
 const seed = [
   {
-    orderId: '12950293',
-    purchaseDate: '2018-08-28 14:03',
-    permitName: '일간대치동 2과목 수업권 3개월 수업권',
-    classCount: '6',
+    orderId: '-',
     method: '신용카드',
-    price: '230,000원',
-    state: '결제완료'
+    applyDate: '2018-08-28 14:03',
+    userName: '추경아',
+    className: '2기 튜터 실습(0828)',
+    teacherName: '최수용',
+    period: '2018.08.28-2018.08.31',
+    price: '0원',
+    orderState: '<span class="complete">결제완료</span>'
   },
 ]
 export default {
   data() {
     return {
-      heading: '수업권 내역',
+      heading: '수업신청 내역',
       searchForm: {
         searchKeyword: {
           legend: '검색어',

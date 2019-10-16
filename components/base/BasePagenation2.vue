@@ -1,5 +1,5 @@
 <template>
-  <ul class="pagination ">
+  <ul class="pagination">
     <li class="first">
       <a href="/tutor/courses?status=closes">« 처음</a>
     </li>

@@ -23,7 +23,7 @@
 </template>
 
 <script>
-import BaseTable from '../../base/BaseTable2'
+import BaseTable from '@/components/base/BaseTable2'
 import TheSearchBox from '@/components/admin/TheSearchBox'
 
 const colHeaderNames = [
@@ -177,64 +177,16 @@ function js () {
 </script>
 
 <style lang="scss">
+@import '@/assets/style/attendance.scss';
+
 .expand-button {
-  background: url('../../../pages/learning/classes/update/assets/arrow-down.svg') no-repeat center center;
+  background: url('./assets/arrow-down.svg') no-repeat center center;
   border: none;
   background-size: contain;
   width: 1.5rem;
   height: 1.5rem;
 }
-.late, .absence, .attendance {
-  padding-right: 1rem;
-  padding-top: 0.5rem;
-}
-.late {
-  display: flex;
-  float: left;
-  line-height: 1;
-  align-items: center;
 
-  &:before {
-    content: '';
-    display: block;
-    background: url('../../../pages/learning/classes/update/assets/history.svg') no-repeat center center;
-    background-size: contain;
-    width: 1.5rem;
-    height: 1.5rem;
-  }
-}
-
-.absence {
-  display: flex;
-  float: left;
-  line-height: 1;
-  align-items: center;
-
-  &:before {
-    content: '';
-    display: block;
-    background: url('../../../pages/learning/classes/update/assets/cancel.svg') no-repeat center center;
-    background-size: contain;
-    width: 1.5rem;
-    height: 1.5rem;
-  }
-}
-
-.attendance {
-  display: flex;
-  float: left;
-  line-height: 1;
-  align-items: center;
-
-  &:before {
-    content: '';
-    display: block;
-    background: url('../../../pages/learning/classes/update/assets/circle.svg') no-repeat center center;
-    background-size: contain;
-    width: 1.5rem;
-    height: 1.5rem;
-  }
-}
 
 </style>
 <style lang=scss>
@@ -278,10 +230,6 @@ function js () {
       }
 
       #attendance-table {
-
-        td {
-          display: table-cell;
-        }
 
         td:nth-child(2),th:nth-child(2) {
           flex-basis: 6rem;
