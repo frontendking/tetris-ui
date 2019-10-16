@@ -1,5 +1,3 @@
-const globImporter = require('node-sass-glob-importer')
-
 export default {
   mode: 'universal',
   /*
@@ -75,11 +73,6 @@ export default {
           grid: 'autoplace',
         },
       },
-    },
-    loaders: {
-      scss: {
-        importer: globImporter()
-      }
     },
     extend (config, { isClient }) {
       // Extend only webpack config for client-bundle
