@@ -1,3 +1,30 @@
+.chosen-container-single .chosen-single div b {
+  background: url(https://qa-got.conects.com/assets/chosen-sprite-e670fdcaf8cd467a9a1a67e9a5c1f73288089f59dc08031b118dc26fbd233c80.png) no-repeat 0 7px;
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+.chosen-container-single .chosen-single {
+  background-color: #fff;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  border: 1px solid #e5e6e7;
+  border-top-right-radius: 4px;
+  border-top-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  color: #555555;
+  display: block;
+  height: 34px;
+  overflow: hidden;
+  line-height: 24px;
+  padding: 0 0 0 8px;
+  position: relative;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
 legend {
   border: none;
 }
@@ -70,7 +97,7 @@ label {
 
 #tutor-header {
   /*max-width: 102rem;*/
-  width: 102rem;
+  width: 122rem;
   margin: 0 auto;
 }
 
