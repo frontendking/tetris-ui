@@ -1,55 +1,65 @@
 <template>
-  <article class="notice">
+  <article class="report">
     <h1 v-html="heading"/>
     <BaseTable
       id="attendance-table"
       :colHeader = "colHeader"
       :tableData = "tableData"
     />
-    <pagenation/>
+
   </article>
 </template>
 
 <script>
-import BaseTable from '../../BaseTable2'
-import Pagenation from '@/components/admin/classes/pagenation'
-
+import BaseTable from '../BaseTable2'
 const colHeaderNames = [
-  '글번호', '제목', '작성자', '작성일'
+  '수강클래스', '출석', '1회차', '2회차', '3회차', '4회차', '출석률', ''
 ]
 const seed = [
   {
-    articleNo: '179',
-    title:'[수업 가이드] 7월 2,3,4주차 수업 가이드 안내',
-    author: 'tutor.com',
-    writeDate: '2019.07.24'
+    className: '[일간대치동]2기 튜터 실습',
+    statusInfo: '<span class="attendance">출석</span> <span class="late">지각</span> <span class="absence">결석</span>',
+    lesson1: '<span class="attendance"/>',
+    lesson2: '<span class="attendance"/>',
+    lesson3: '<span class="attendance"/>',
+    lesson4: '<span class="attendance"/>',
+    ratio: '100% (4/4)',
+    expandMark: '<'
   },
+  {
+    className: '[일간대치동]2기 튜터 실습',
+    statusInfo: '<span class="attendance">출석</span> <span class="late">지각</span> <span class="absence">결석</span>',
+    lesson1: '<span class="attendance"/>',
+    lesson2: '<span class="attendance"/>',
+    lesson3: '<span class="late"/>',
+    lesson4: '<span class="absence"/>',
+    ratio: '100% (4/4)',
+    expandMark: '<'
+  }
 ]
 export default {
   data() {
     return {
-      heading: '튜터 공지사항',
+      heading: '출결현황',
       searchForm: {
         searchKeyword: {
           legend: '검색어',
           type: [
-            '전체',
             '클래스명',
             '선생님명'
           ],
           placeHolder: '검색어를 입력해 주세요'
         },
+        searchDate: {
+          legend: '기간검색',
+          type: [
+            '수강시작일',
+            '수강신청일',
+          ]
+        },
         searchBtn: '검색'
       },
-      tableData:[
-        {
-          articleNo: '<span class="important">[중요한 공지사항]</span>',
-          title:'[수업 가이드] 7월 2,3,4주차 수업 가이드 안내',
-          author: 'tutor.com',
-          writeDate: '2019.07.24'
-        },
-        ...[...Array(10)].flatMap(()=>seed),
-      ],
+      tableData: [...Array(3)].flatMap(()=>seed),
       colHeader: Object.keys(seed[0]).map((v,i)=>{
         return {
           id:v,
@@ -59,21 +69,19 @@ export default {
     }
   },
   components: {
-    Pagenation,
     BaseTable
   }
 }
 </script>
 
 <style lang=scss>
-.notice {
+.report {
   @media(min-width: 641px) {
     display: grid;
     /*@formatter:off*/
     grid-template:
       "header" auto
-      "table" auto
-      "pagenation" auto/
+      "table" auto/
       auto;
     /* @formatter:on*/
     font-size: 1.6rem;
@@ -97,9 +105,6 @@ export default {
 
     > #attendance-table {
       margin-top: 3rem;
-    }
-    > .pagination {
-      margin: 3rem auto;
     }
   }
 }

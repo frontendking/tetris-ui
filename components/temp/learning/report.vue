@@ -34,9 +34,9 @@
 </template>
 
 <script>
-import LayoutSub from '@/components/temp/admin/layout-sub'
-import TheSearchbar from '@/components/temp/admin/TheSearchbar'
-import TheReportModal from '@/components/temp/admin/TheReportModal'
+import LayoutSub from '@/components/admin/layout-sub'
+import TheSearchbar from '@/components/admin/TheSearchbar'
+import TheReportModal from '@/components/admin/TheReportModal'
 
 export default {
   name: 'report',

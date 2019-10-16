@@ -3754,6 +3754,11 @@ core-js@^3.0.1, core-js@^3.0.4:
   resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.2.1.tgz#cd41f38534da6cc59f7db050fe67307de9868b09"
   integrity sha512-Qa5XSVefSVPRxy2XfUC13WbvqkxhkwB3ve+pgCQveNgYzbM/UxZeu1dcOX/xr4UmfUd+muuvsaxilQzCyUurMw==
 
+core-js@^3.2.1:
+  version "3.3.2"
+  resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.3.2.tgz#cd42da1d7b0bb33ef11326be3a721934277ceb42"
+  integrity sha512-S1FfZpeBchkhyoY76YAdFzKS4zz9aOK7EeFaNA2aJlyXyA+sgqz6xdxmLPGXEAf0nF44MVN1kSjrA9Kt3ATDQg==
+
 core-util-is@1.0.2, core-util-is@~1.0.0:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/core-util-is/-/core-util-is-1.0.2.tgz#b5fd54220aa2bc5ab57aab7140c940754503c1a7"
@@ -5397,13 +5402,13 @@ fuse.js@^3.4.4:
   resolved "https://registry.yarnpkg.com/fuse.js/-/fuse.js-3.4.5.tgz#8954fb43f9729bd5dbcb8c08f251db552595a7a6"
   integrity sha512-s9PGTaQIkT69HaeoTVjwGsLfb8V8ScJLx5XGFcKHg0MqLUH/UZ4EKOtqtXX9k7AFqCGxD1aJmYb8Q5VYDibVRQ==
 
-fxjs@^0.12.5:
-  version "0.12.5"
-  resolved "https://registry.yarnpkg.com/fxjs/-/fxjs-0.12.5.tgz#3191251e9d226ecc73c59a4951700551cb5a6636"
-  integrity sha512-c93y6SzujWtjFDS+rNQkwGdLevCWW7+EkT4NBFSv1iFxP7VT2cdPaY8iK1lyGqUcnLHGh17d6aUxlwqnTZec8Q==
+fxjs@^0.14.0:
+  version "0.14.0"
+  resolved "https://registry.yarnpkg.com/fxjs/-/fxjs-0.14.0.tgz#6df47e53bb4c9ab6e8710923ba7626c3f89edee7"
+  integrity sha512-LNvyOdfvbm4nB1VuAtajDjLgp5tiR/Wieuem4eAJuNMt+qOaALTwIUUjwbq9kpUieaoH1cQGZxL96XHNBIlPwQ==
   dependencies:
-    core-js "^3.0.1"
-    regenerator-runtime "^0.13.2"
+    core-js "^3.2.1"
+    regenerator-runtime "^0.13.3"
 
 gauge@~2.7.3:
   version "2.7.4"
@@ -9890,7 +9895,7 @@ regenerator-runtime@^0.12.0, regenerator-runtime@^0.12.1:
   resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.12.1.tgz#fa1a71544764c036f8c49b13a08b2594c9f8a0de"
   integrity sha512-odxIc1/vDlo4iZcfXqRYFj0vpXFNoGdKMAUieAlFYO6m/nl5e9KR/beGf41z4a1FI+aQgtjhuaSlDxQ0hmkrHg==
 
-regenerator-runtime@^0.13.2:
+regenerator-runtime@^0.13.2, regenerator-runtime@^0.13.3:
   version "0.13.3"
   resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.13.3.tgz#7cf6a77d8f5c6f60eb73c5fc1955b2ceb01e6bf5"
   integrity sha512-naKIZz2GQ8JWh///G7L3X6LaQUAMp2lvb1rvwwsURe/VXwD6VMfr+/1NuNw3ag8v2kY1aQ/go5SNn79O9JU7yw==

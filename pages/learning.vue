@@ -1,6 +1,6 @@
 <template>
   <admin
-    id="teaching"
+    id="learning"
     :heading="heading"
     :navList="navList"
   >
@@ -10,14 +10,14 @@
 
 <script>
 import admin from '@/components/admin/layout'
-import navList from '@/components/temp/teaching/assets/navList.js'
+import navList from '@/pages/learning/classes/update/assets/navList.js'
 
 export default {
-  name: 'teaching',
+  name: 'learning',
   layout: 'tutor',
   data () {
     return {
-      heading: '가르치기',
+      heading: '배우기',
       navList: navList.map(v => ({ ...v, isActive: this.$route.name.includes(v.id) })),
     }
   },
@@ -26,8 +26,3 @@ export default {
   },
 }
 </script>
-
-<style lang=scss>
-#teaching {
-}
-</style>

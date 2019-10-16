@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import Classes from '@/components/temp/admin/classes/classes'
+import Classes from '@/components/admin/classes/classes'
 
 export default {
   name: 'learning-classes',

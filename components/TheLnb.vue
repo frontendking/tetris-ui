@@ -22,6 +22,7 @@ export default {
 .TheTutorLocalNav {
   ul {
     display: grid;
+    grid-template-rows: auto;
     grid-template-columns: repeat(5, minmax(18.9rem, auto));
     /*display: flex;*/
     /*flex-flow: row;*/

@@ -1,34 +1,38 @@
 <template>
-  <article class="notice">
+  <article class="class-purchase">
     <h1 v-html="heading"/>
     <BaseTable
       id="attendance-table"
       :colHeader = "colHeader"
       :tableData = "tableData"
     />
-    <pagenation/>
+
   </article>
 </template>
 
 <script>
-import BaseTable from '../../BaseTable2'
-import Pagenation from '@/components/admin/classes/pagenation'
-
+import BaseTable from '../BaseTable2'
 const colHeaderNames = [
-  '글번호', '제목', '작성자', '작성일'
+  '주문번호', '결제수단', '신청일시', '아이디', '이름', '전화번호', '수강클래스', '수강기간', '상품금액', '결제 상태'
 ]
 const seed = [
   {
-    articleNo: '179',
-    title:'[수업 가이드] 7월 2,3,4주차 수업 가이드 안내',
-    author: 'tutor.com',
-    writeDate: '2019.07.24'
+    orderId: '-',
+    method: '지급',
+    applyDate: '2018-08-28 14:03',
+    userId:'choco',
+    userName: '추경아(추경아)',
+    userPhone: '010-7672-9595',
+    className: '2기 튜터 실습(0828)',
+    period: '2018.08.28-2018.08.31',
+    price: '0원',
+    orderState: '결제완료'
   },
 ]
 export default {
   data() {
     return {
-      heading: '튜터 공지사항',
+      heading: '수업신청 내역',
       searchForm: {
         searchKeyword: {
           legend: '검색어',
@@ -41,15 +45,7 @@ export default {
         },
         searchBtn: '검색'
       },
-      tableData:[
-        {
-          articleNo: '<span class="important">[중요한 공지사항]</span>',
-          title:'[수업 가이드] 7월 2,3,4주차 수업 가이드 안내',
-          author: 'tutor.com',
-          writeDate: '2019.07.24'
-        },
-        ...[...Array(10)].flatMap(()=>seed),
-      ],
+      tableData: [...Array(10)].flatMap(()=>seed),
       colHeader: Object.keys(seed[0]).map((v,i)=>{
         return {
           id:v,
@@ -59,21 +55,19 @@ export default {
     }
   },
   components: {
-    Pagenation,
     BaseTable
   }
 }
 </script>
 
 <style lang=scss>
-.notice {
+.class-purchase {
   @media(min-width: 641px) {
     display: grid;
     /*@formatter:off*/
     grid-template:
       "header" auto
-      "table" auto
-      "pagenation" auto/
+      "table" auto/
       auto;
     /* @formatter:on*/
     font-size: 1.6rem;
@@ -97,9 +91,6 @@ export default {
 
     > #attendance-table {
       margin-top: 3rem;
-    }
-    > .pagination {
-      margin: 3rem auto;
     }
   }
 }

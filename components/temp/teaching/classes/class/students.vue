@@ -49,7 +49,7 @@
 </template>
 
 <script>
-import TheChattingWindow from '@/components/temp/admin/classes/class/TheChattingWindow'
+import TheChattingWindow from '@/components/admin/classes/class/TheChattingWindow'
 export default {
   components: { TheChattingWindow }
 }

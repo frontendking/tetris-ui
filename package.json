@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "destyle.css": "^1.0.10",
-    "fxjs": "^0.12.5",
+    "fxjs": "^0.14.0",
     "nuxt": "^2.0.0",
     "sweetalert2": "^8.17.4",
     "underscore": "^1.9.1"
