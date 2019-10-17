@@ -253,11 +253,11 @@ export default {
       }
 
       &.left:before {
-        background-image: url(assets/left.svg);
+        background-image: url(calendar/assets/left.svg);
       }
 
       &.right:before {
-        background-image: url(assets/right.svg);
+        background-image: url(calendar/assets/right.svg);
       }
     }
   }
