@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import TheAttendanceTable from '@/components/admin/TheAttendanceTable'
+import TheAttendanceTable from '@/components/admin/class/TheTableClassAttendnce'
 export default {
   name: 'teaching-class-attendance',
   components: { TheAttendanceTable }

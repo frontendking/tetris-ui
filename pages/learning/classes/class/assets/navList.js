@@ -4,12 +4,6 @@ export default [
     label: '회차별 진행상황',
     url: '#',
   },
-
-  {
-    id: 'students',
-    label: '수강생 현황',
-    url: '#',
-  },
   {
     id: 'attendance',
     label: '출결현황',

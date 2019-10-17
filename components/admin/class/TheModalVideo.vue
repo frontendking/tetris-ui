@@ -1,5 +1,5 @@
 <template>
-  <div class="TheVideoModal modal-dialog" role="document">
+  <div class="TheModalVideo modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-body">
         <iframe width="650" height="400" src="https://www.youtube.com/embed/g1EIFeFF77g" frameborder="0" allow="encrypted-media"></iframe>
@@ -13,12 +13,12 @@
 
 <script>
 export default {
-  name: 'TheVideoModal'
+  name: 'TheModalVideo'
 }
 </script>
 
 <style lang=scss>
-.TheVideoModal {
+.TheModalVideo {
   .modal-content {
     width: 64rem;
   }

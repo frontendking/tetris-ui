@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import BaseTable from '../../base/BaseTable2'
+import BaseTable from '@/components/base/BaseTable2'
 import Pagenation from '@/components/base/BasePagenation2'
 import TheSearchBox from '@/components/admin/TheSearchBox'
 
@@ -88,54 +88,7 @@ export default {
 </script>
 
 <style lang=scss>
-.late {
-  display: flex;
-  float: left;
-  line-height: 1;
-  align-items: center;
-
-  &:before {
-    content: '';
-    display: block;
-    background: url('assets/history.svg') no-repeat center center;
-    background-size: contain;
-    width: 1.5rem;
-    height: 1.5rem;
-  }
-}
-
-.absence {
-  display: flex;
-  float: left;
-  line-height: 1;
-  align-items: center;
-
-  &:before {
-    content: '';
-    display: block;
-    background: url('assets/cancel.svg') no-repeat center center;
-    background-size: contain;
-    width: 1.5rem;
-    height: 1.5rem;
-  }
-}
-
-.attendance {
-  display: flex;
-  float: left;
-  line-height: 1;
-  align-items: center;
-
-  &:before {
-    content: '';
-    display: block;
-    background: url('assets/circle.svg') no-repeat center center;
-    background-size: contain;
-    width: 1.5rem;
-    height: 1.5rem;
-  }
-}
-
+@import "@/assets/style/attendance.scss";
 #attendance {
   @media(min-width: 641px) {
     display: grid;

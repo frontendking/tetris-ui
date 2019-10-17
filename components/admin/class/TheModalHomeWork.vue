@@ -1,5 +1,5 @@
 <template>
-  <div id="assignment-details-2230" class="TheHomeWorkModal modal fade in" aria-hidden="true" style="display: block; padding-left: 0px;">
+  <div id="assignment-details-2230" class="TheModalHomeWork modal fade in" aria-hidden="true" style="display: block; padding-left: 0px;">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header assignment-modal-header">
@@ -143,11 +143,7 @@
 
 <script>
 export default {
-  name: 'TheHomeWorkModal'
+  name: 'TheModalHomeWork'
 }
 </script>
 
-<style scoped lang=scss>
-.TheHomeWorkModal {
-}
-</style>
