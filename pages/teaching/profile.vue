@@ -177,7 +177,7 @@ export default {
             float: left;
             width: 2rem;
             padding-top: 2rem;
-            background: url('../../components/temp/teaching/assets/file.svg') no-repeat;
+            background: url('./assets/file.svg') no-repeat;
           }
         }
       }

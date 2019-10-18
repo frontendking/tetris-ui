@@ -4,13 +4,13 @@
     <section class="review-section" v-for="v in page.theReviews">
       <h2 hidden>the review</h2>
       <figure>
-        <img src="../../../assets/img/no_avatar.png">
+        <img src="@/assets/img/no_avatar.png">
         <figcaption>
           {{users[v.userId.match(/\d+/g)[0]].name}}
         </figcaption>
       </figure>
       <div class="star-rank">
-        <img v-for="n in Math.floor(v.classRanking)" src="../../../assets/img/star.svg">
+        <img v-for="n in Math.floor(v.classRanking)" src="@/assets/img/star.svg">
         <span class="class-ranking">{{v.classRanking}}</span>
       </div>
       <p>{{v.review}}</p>
@@ -26,7 +26,7 @@ export default {
 
 <style lang=scss>
 @import '~@/assets/style/global.scss';
-
+@import '~@/assets/style/color.scss';
 .review {
   display: grid;
   grid-template-columns: auto;

@@ -1,7 +1,10 @@
 <template>
   <article class="admin">
     <h1 v-html="heading"/>
-    <TheLnb id="the-tutor-local-nav" :navList="navList"/>
+    <TheLnb
+      v-if="navList.length!==0"
+      id="the-tutor-local-nav"
+      :navList="navList"/>
     <slot/>
   </article>
 </template>

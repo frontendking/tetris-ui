@@ -103,28 +103,6 @@ video::-webkit-media-controls-panel {
   text-overflow: ellipsis
 }
 
-@font-face {
-  font-family: 'Noto Sans KR';
-  font-style: normal;
-  font-weight: 300;
-  src: url(//static.conects.com/common/font/notosanskr/NotoSansKR-Light.woff2) format("woff2"), url(//static.conects.com/common/font/notosanskr/NotoSansKR-Light.woff) format("woff"), url(//static.conects.com/common/font/notosanskr/NotoSansKR-Light.otf) format("opentype")
-}
-
-@font-face {
-  font-family: 'Noto Sans KR';
-  font-style: bold;
-  font-weight: 700;
-  src: url(//static.conects.com/common/font/notosanskr/NotoSansKR-Bold.woff2) format("woff2"), url(//static.conects.com/common/font/notosanskr/NotoSansKR-Bold.woff) format("woff"), url(//static.conects.com/common/font/notosanskr/NotoSansKR-Bold.otf) format("opentype")
-}
-
-@font-face {
-  font-family: st-icon-set;
-  src: url(//static.conects.com/common/font/icon/st-icon-set-v0.0.3.eot?ng4jso);
-  src: url(//static.conects.com/common/font/icon/st-icon-set-v0.0.3.eot?ng4jso#iefix) format("embedded-opentype"), url(//static.conects.com/common/font/icon/st-icon-set-v0.0.3.ttf?ng4jso) format("truetype"), url(//static.conects.com/common/font/icon/st-icon-set-v0.0.3.woff?ng4jso) format("woff"), url(//static.conects.com/common/font/icon/st-icon-set-v0.0.3.svg?ng4jso#icomoon) format("svg");
-  font-weight: 400;
-  font-style: normal
-}
-
 [class*=" st-icon"], [class^=st-icon] {
   font-family: st-icon-set;
   speak: none;
