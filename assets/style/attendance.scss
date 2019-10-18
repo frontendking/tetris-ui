@@ -1,0 +1,52 @@
+.late, .absence, .attendance {
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+}
+
+.late {
+  display: flex;
+  float: left;
+  line-height: 1;
+  align-items: center;
+
+  &:before {
+    content: '';
+    display: block;
+    background: url('~assets/img/attendance/history.svg') no-repeat center center;
+    background-size: contain;
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
+
+.absence {
+  display: flex;
+  float: left;
+  line-height: 1;
+  align-items: center;
+
+  &:before {
+    content: '';
+    display: block;
+    background: url('~assets/img/attendance/cancel.svg') no-repeat center center;
+    background-size: contain;
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
+
+.attendance {
+  display: flex;
+  float: left;
+  line-height: 1;
+  align-items: center;
+
+  &:before {
+    content: '';
+    display: block;
+    background: url('~assets/img/attendance/circle.svg') no-repeat center center;
+    background-size: contain;
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}

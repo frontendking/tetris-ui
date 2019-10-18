@@ -5,7 +5,7 @@
 <script>
 import TheAttendanceTable from '@/components/admin/class/TheTableClassAttendnce'
 export default {
-  name: 'learning-class-attendance',
+  name: 'teaching-class-attendance',
   components: { TheAttendanceTable }
 }
 </script>
