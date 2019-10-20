@@ -26,7 +26,6 @@ export default {
 
 <style lang=scss>
 @import '~@/assets/style/global.scss';
-@import '~@/assets/style/color.scss';
 .review {
   display: grid;
   grid-template-columns: auto;

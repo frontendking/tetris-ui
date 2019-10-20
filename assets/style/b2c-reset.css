@@ -2,7 +2,7 @@ body {
   line-height: initial;
 }
 .chosen-container-single .chosen-single div b {
-  background: url(https://qa-got.conects.com/assets/chosen-sprite-e670fdcaf8cd467a9a1a67e9a5c1f73288089f59dc08031b118dc26fbd233c80.png) no-repeat 0 7px;
+  background: url(/assets/common/chosen-sprite.png) no-repeat 0 7px;
   display: block;
   height: 100%;
   width: 100%;

@@ -618,7 +618,6 @@ export default {
 @import '../assets-conects/st_conects.css';
 @import 'destyle.css';
 @import '../assets/style/b2c-reset.css';
-
 html {
   font-size: 10px;
 }
