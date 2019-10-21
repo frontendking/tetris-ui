@@ -44,8 +44,7 @@ export default {
 </script>
 
 <style lang=scss>
-$gray: #a3a3a3;
-$gray-dark: #696969;
+@import '@/assets/style/global.scss';
 
 .TheClassSummaryCard {
   display: flex;
@@ -154,8 +153,8 @@ $gray-dark: #696969;
   }
 }
 
-.TheClassSummaryCard {
-  @media(min-width: 641px) {
+/*@media(min-width: 641px) {
+  .TheClassSummaryCard {
     align-items: center;
     flex-flow: row;
     padding: 0;
@@ -209,7 +208,7 @@ $gray-dark: #696969;
           content: '';
           background-image: url('./assets/email.png');
           background-repeat: no-repeat;
-          /*          padding-top: 100% * 19px / 15px;*/
+          !*          padding-top: 100% * 19px / 15px;*!
           width: 2rem;
           padding-top: 1.5rem;
           display: block;
@@ -225,6 +224,7 @@ $gray-dark: #696969;
         }
       }
     }
+
     .class-summary {
       width: 100%;
       padding: 0 8.2rem;
@@ -289,5 +289,5 @@ $gray-dark: #696969;
 
     }
   }
-}
+}*/
 </style>

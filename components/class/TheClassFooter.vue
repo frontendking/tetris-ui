@@ -1,11 +1,11 @@
 <template>
   <footer class="TheClassFooter">
     <div class="class-permit-summary">
-      <div class="title">마감까지</div>
-      <div class="reset-date"><em>{{data.restDate}}</em> <span>일 남음</span></div>
-      <div class="reset-seat"><em>{{data.restSeat}}</em> <span>자리 남음</span></div>
-      <div class="class-account">총 {{data.classAccount}}회</div>
-      <div class="class-price"><span>55,000</span><strong>원</strong></div>
+      <div class="title" v-html="title"></div>
+      <div class="reset-date" v-html="restDate"></div>
+      <div class="reset-seat" v-html="restSeat"></div>
+      <div class="class-account" v-html="classAccount"></div>
+      <div class="class-price" v-html="classPrice"></div>
     </div>
     <div class="purchase-btns">
       <a v-for="v in data.buttons"
@@ -28,9 +28,17 @@ import TheClassPermitRadioboxForm from '@/components/class/TheClassPermitRadiobo
 
 export default {
   name: 'TheClassFooter',
-  props: ['data'],
   components: {
     TheClassPermitRadioboxForm,
+  },
+  data(){
+    return {
+      title: '마감까지',
+      restDate: '<em>8일</em> 남음',
+      restSeat: '<em>1자리</em> 남음',
+      classAccount: '총 4회',
+      classPrice: '<span>55,000</span>원'
+    }
   },
   mounted () {
     this.$nextTick(function () {
@@ -136,46 +144,39 @@ export default {
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: repeat(5, auto);
-  grid-gap: 1rem;
-  padding: 2.6rem;
 
   .class-permit-summary {
     background-color: $gray-light;
     display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto 1.5fr 1fr;
-
-    padding: 3.2rem 4rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 7.5rem 11.7rem 12.8rem;
     font-size: 2.2rem;
-
-    > div {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding-bottom: 1rem;
-
-      &:last-child {
-        border-top: #e0e0e0 solid 1px;
-        padding-top: 4rem;
-      }
-    }
-
-    > div#class-permit-summary-goods {
-      padding-bottom: 1rem;
-
-      .vertical-line {
-        font-size: 3.5rem;
-        color: #e3e3e3;
-      }
-    }
-
+    justify-items: center;
+    align-items: center;
     .title {
+      grid-column: 1/3;
       display: flex;
       justify-content: center;
-      align-self: flex-start;
       font-size: 2.2rem;
     }
-
+    .reset-date {
+      width: 80%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      justify-self: flex-end;
+      border-bottom: 1px solid
+    }
+    .reset-seat {
+      width: 80%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      justify-self: flex-start;
+      border-bottom: 1px solid
+    }
     .badge-round {
       background-color: #ededed;
       border: #e0e0e0 solid 1px;

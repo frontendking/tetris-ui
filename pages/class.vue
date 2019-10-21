@@ -10,13 +10,16 @@
       :classTime="classTime"
       :summaries="summaries"
     />
-    <TheLnb :navItems="subPages"/>
-    <nuxt-child :page="page" :users="users"/>
+    <TheLnb :navList="subPages"/>
     <the-class-footer
       id="the-class-footer"
       :class="isSticky?'sticky':''"
       :data="footer"
     />
+<!--
+    <nuxt-child :page="page" :users="users"/>
+
+-->
   </article>
 </template>
 <script>
@@ -48,7 +51,6 @@ export default {
           id: 'class',
           label: '수업 소개',
           to: `/class/class`,
-          active: true,
         },
         {
           id: 'teacher',
@@ -60,7 +62,12 @@ export default {
           label: '수업 리뷰',
           to: `/class/reviews`,
         },
-      ],
+      ].map(v=>{
+        if(RegExp(`class/${v.id}$`).test(this.$route.path)){
+          v.isActive = true
+        }
+        return v
+      }),
       activeLink: 'class',
       isSticky: false,
     }
