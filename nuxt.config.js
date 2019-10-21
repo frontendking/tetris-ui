@@ -27,12 +27,6 @@ export default {
   */
   loading: { color: '#fff' },
   /*
-  ** Global CSS
-  */
-  css: [
-    '@/assets/style/global.scss'
-  ],
-  /*
   ** Plugins to load before mounting the App
   */
   plugins: [],
