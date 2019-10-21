@@ -17,6 +17,7 @@
   "dependencies": {
     "destyle.css": "^1.0.10",
     "fxjs": "^0.14.0",
+    "jquery": "^3.4.1",
     "nuxt": "^2.0.0",
     "sweetalert2": "^8.17.4",
     "underscore": "^1.9.1"
@@ -34,14 +35,14 @@
     "babel-jest": "^24.1.0",
     "babel-loader": "^8.0.6",
     "babel-preset-vue": "^2.0.2",
-    "node-sass": "^4.12.0",
     "chromedriver": "^76.0.0",
-    "sass-loader": "^8.0.0",
     "core-js": "^2.6.5",
     "cucumber": "^5.1.0",
     "faker": "^4.1.0",
     "jest": "^24.1.0",
+    "node-sass": "^4.12.0",
     "nodemon": "^1.18.9",
+    "sass-loader": "^8.0.0",
     "selenium-webdriver": "^4.0.0-alpha.4",
     "vue-jest": "^3.0.3"
   }
