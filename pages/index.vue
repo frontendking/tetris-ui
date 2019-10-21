@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  name: 'b2c-page'
+  name: 'b2c-page',
 }
 </script>
 
