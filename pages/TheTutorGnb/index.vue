@@ -2,7 +2,7 @@
   <nav class="the-tutor-gnb">
     <ul id="b2c-navi-list">
       <li>
-        <a href="#">과목 안내</a>
+        <a href="#">과목 안내 V</a>
         <ul>
           <li><a>궁금해요! 일간대치동</a></li>
           <li><a>일간대치동수학</a></li>
@@ -31,6 +31,7 @@ export default {
       const topLists = document.querySelectorAll('.the-tutor-gnb > ul > li')
       const lists = document.querySelectorAll('.the-tutor-gnb li')
       let nestUl
+
       function toggleMenu () {
         ul.classList.toggle('active')
         menu.classList.toggle('active')
@@ -97,6 +98,7 @@ export default {
   > ul {
     display: none;
     margin-top: 9rem;
+
     &.active {
       line-height: 1;
       display: grid;
@@ -148,6 +150,42 @@ export default {
 
           &:hover {
             background: #e0e0e0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media(min-width: 641px) {
+  .the-tutor-gnb {
+    background: none;
+    width: 100%;
+    height: initial;
+
+    > ul > li >  a {
+      display: flex;
+      width: 100%;
+      height: 5rem;
+      align-items: center;
+      justify-content: flex-end;
+    }
+
+    > ul {
+      display: grid;
+      grid-template-columns: repeat(7, minmax(5rem, 20rem));
+      justify-items: flex-end;
+      margin: initial;
+      color: #000;
+    }
+
+    li > ul {
+
+      &.active {
+
+        li {
+          a {
+            text-indent: initial;
           }
         }
       }
