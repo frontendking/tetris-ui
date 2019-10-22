@@ -1,5 +1,5 @@
 <template>
-  <nav class="the-tutor-gnb">
+  <nav id="theTutorGnb">
     <ul id="b2c-navi-list">
       <li>
         <a href="#">과목 안내 V</a>
@@ -26,10 +26,10 @@ export default {
   name: 'the-tutor-gnb',
   mounted () {
     this.$nextTick(function () {
-      const menu = document.querySelector('.the-tutor-gnb')
-      const ul = document.querySelector('.the-tutor-gnb>ul')
-      const topLists = document.querySelectorAll('.the-tutor-gnb > ul > li')
-      const lists = document.querySelectorAll('.the-tutor-gnb li')
+      const menu = document.querySelector('#theTutorGnb')
+      const ul = document.querySelector('#theTutorGnb>ul')
+      const topLists = document.querySelectorAll('#theTutorGnb> ul > li')
+      const lists = document.querySelectorAll('#theTutorGnb li')
       let nestUl
 
       function toggleMenu () {
@@ -79,8 +79,8 @@ export default {
 </script>
 
 <style lang="scss">
-.the-tutor-gnb {
-  background: url('./assets/menu-button.svg') no-repeat;
+#theTutorGnb {
+  background: url('assets/menu-button.svg') no-repeat;
   background-size: 3rem 3rem;
   background-position-y: 3rem;
   background-position-x: 3rem;
@@ -90,8 +90,8 @@ export default {
   position: absolute;
 
   &.active {
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     background-color: rgba(0, 0, 0, 0.3);
   }
 
@@ -158,7 +158,7 @@ export default {
 }
 
 @media(min-width: 641px) {
-  .the-tutor-gnb {
+  #theTutorGnb {
     background: none;
     width: 100%;
     height: initial;

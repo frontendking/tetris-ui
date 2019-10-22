@@ -1,16 +1,5 @@
 <template>
   <div id="conects-layout">
-    <link href="/application.css" rel="stylesheet">
-    <link rel="stylesheet" media="all" href="https://s3.ap-northeast-2.amazonaws.com/st-kr-tutor/frontweb/tutor-vender.css?1571365435">
-    <script src="/application.js"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.js"></script>
-    <!--tutor-->
-    <link rel="stylesheet" media="all" href="https://s3.ap-northeast-2.amazonaws.com/st-kr-tutor/frontweb/tutor.css?1571365435">
-    <link rel="stylesheet" media="all" href="https://s3.ap-northeast-2.amazonaws.com/st-kr-tutor/frontweb/tutor-vender.css?1571365435">
-    <link rel="stylesheet" href="/daechi_application.css">
-    <link rel="stylesheet" href="/tutor.css">
-    <link rel="stylesheet" href="/tutor-vender.css">
     <div id="wrap">
       <div id="hgroup">
         <div class="st_conects-nav personal">
@@ -597,14 +586,11 @@
         </div>
       </div>
     </div>
-    <script src="/daechi_application.js"></script>
-    <script src="/tutor.js"></script>
-    <script src="/tutor-vender.js"></script>
   </div>
 </template>
 <script>
 // import TheConectsHeader from '../components/layout/TheConectsHeader'
-import TheTutorGnb from '../pages/TheTutorGnb/index'
+import TheTutorGnb from '../components/layout/TheTutorGnb'
 // import TheConectsLnb from '../components/layout/TheConectsLnb'
 // import TheConectsFooter from '../components/layout/TheConectsFooter'
 
@@ -627,10 +613,11 @@ export default {
 
 
 <style lang="scss">
-/*@import '../assets-conects/st_common.css';
+@import '../assets-conects/st_common.css';
 @import '../assets-conects/st-comm-v4.0.0.css';
 @import '../assets-conects/st_conects.css';
-@import '../assets/style/b2c-reset.css';*/
+@import 'destyle.css';
+@import '../assets/style/b2c-reset.css';
 
 html {
   font-size: 10px;
@@ -649,4 +636,42 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+#wrap > div.content-wrapper.white-bg {
+  padding: 0;
+}
+
+#b2c-wrapper {
+  > article {
+    > h1 {
+      display: none
+    }
+
+    > nav {
+      display: none;
+    }
+  }
+}
+#theTutorGnb {
+  margin-top: -9rem;
+  z-index: 1;
+}
+
+@media(min-width: 641px) {
+  #tutor-header {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    width: 100%;
+  }
+
+  #theTutorGnb {
+    top: -1rem;
+    width: 80%;
+  }
+
+  #b2c-wrapper {
+    margin-top: 5rem;
+  }
+
+}
 </style>
