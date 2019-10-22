@@ -213,7 +213,6 @@ export default {
       display: flex;
       align-items: flex-end;
     }
-
     .reset-seat {
       background-size: 8rem 4rem;
       margin-top: 2rem;
@@ -314,6 +313,7 @@ export default {
   .TheClassFooter {
     grid-template-rows: auto;
     grid-template-columns: 1fr 3fr;
+
     grid-gap: 0;
     grid-column-gap: 3.4rem;
     > * {

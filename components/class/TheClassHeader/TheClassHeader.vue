@@ -75,7 +75,6 @@ export default {
           width: 80%;
           top: 0;
         }
-
       }
 
       .teacher-name {
@@ -100,7 +99,6 @@ export default {
 
   .class-summary {
     position: relative;
-
     > dl {
       display: grid;
       grid-template-rows: auto auto auto auto;
@@ -145,8 +143,14 @@ export default {
           align-content: space-between;
           width: 100%;
           top: 0;
-          padding: 0 18rem;
+          padding: 0 17rem;
           height: 5.5rem;
+        }
+      }
+      .class-review {
+        display: none;
+        &+dd {
+          display: none;
         }
       }
     }
