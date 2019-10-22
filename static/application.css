@@ -8405,7 +8405,7 @@ th.hidden-lg, td.hidden-lg {
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 2dppx) {
   .chosen-rtl .chosen-search input[type="text"], .chosen-container-single .chosen-single abbr, .chosen-container-single .chosen-single div b, .chosen-container-single .chosen-search input[type="text"], .chosen-container-multi .chosen-choices .search-choice .search-choice-close, .chosen-container .chosen-results-scroll-down span, .chosen-container .chosen-results-scroll-up span {
-    background-image: url("/assets/chosen-sprite@2x-edc297359fe8a5f6ee0bc4a1abc36ce4a773104a9225e17bbe592f820c617a72.png") !important;
+    background-image: url("/assets/chosen-sprite@2x.png") !important;
     background-size: 52px 37px !important;
     background-repeat: no-repeat !important
   }
@@ -10416,7 +10416,7 @@ a.fc-more:hover {
 }
 
 .slick-loading .slick-list {
-  background: #fff url("/assets/ajax-loader-e7b44c86b050fca766a96ddac2d0932af0126da6f2305280342d909168dcce6b.gif") center center no-repeat
+  background: #fff url("/assets/ajax-loader.gif") center center no-repeat
 }
 
 .slick-prev, .slick-next {
@@ -21527,7 +21527,7 @@ h3, h4, h5 {
 .admin .nav-header {
   padding: 33px 25px;
   background-color: #2F4050;
-  background-image: url("/assets/patterns/header-profile-c05909898218a521d3bd19ba09a9a43338de6de5fdf1d3fc771b0ec28ae416c5.png")
+  background-image: url("/assets/patterns/header-profile.png")
 }
 
 .admin .pace-done .nav-header {
@@ -22039,7 +22039,7 @@ h3, h4, h5 {
   display: block;
   width: 32px;
   height: 32px;
-  background: #dadada url("/assets/common/btn-search-7f6790490c6a6544bb5739c55510b5f2bb4b98f2f19b5ae82571a845eec9ce74.png") no-repeat 50% 50%;
+  background: #dadada url("/assets/common/btn-search.png") no-repeat 50% 50%;
   border: 0;
   text-indent: -1000em
 }
@@ -28980,7 +28980,7 @@ body.body-small .vote-icon {
   text-indent: -999em;
   z-index: 2;
   border-radius: 3px;
-  background: #fd0 url("/assets/common/icon-clock-9c518a8d73177be3ccb616bd7717a4aaf1c0a6bc58fc6a1978c899d66d2e5796.gif") no-repeat 0 0
+  background: #fd0 url("/assets/common/icon-clock.gif") no-repeat 0 0
 }
 
 .product-card .mark-wrap .label.close {
@@ -29470,7 +29470,7 @@ body.body-small .vote-icon {
   text-indent: -999em;
   z-index: 2;
   border-radius: 3px;
-  background: #fd0 url("/assets/common/icon-clock-9c518a8d73177be3ccb616bd7717a4aaf1c0a6bc58fc6a1978c899d66d2e5796.gif") no-repeat 0 0
+  background: #fd0 url("/assets/common/icon-clock.gif") no-repeat 0 0
 }
 
 .article_card-class .mark-wrap .label.close {
@@ -29664,7 +29664,7 @@ body.body-small .vote-icon {
   line-height: 25px;
   text-indent: -999em;
   border-radius: 3px;
-  background: #fd0 url("/assets/common/icon-clock-9c518a8d73177be3ccb616bd7717a4aaf1c0a6bc58fc6a1978c899d66d2e5796.gif") no-repeat 0 0;
+  background: #fd0 url("/assets/common/icon-clock.gif") no-repeat 0 0;
   vertical-align: middle
 }
 
@@ -39253,7 +39253,7 @@ a.btn-more-view {
 
 .jam-coding.landing-content .ip-director .inner {
   padding: 140px 0 105px;
-  background: #fff url("/image/elementary/ip/jam_coding/bg-jam-director.png") bottom left 70% no-repeat
+  background: #fff url("/image/elementary/ip/jam_coding/bg-jam.png") bottom left 70% no-repeat
 }
 
 .jam-coding.landing-content .ip-director .director-career {
@@ -42127,7 +42127,7 @@ a.btn-more-view {
 }
 
 .landing-content.school-permit .permit-visual {
-  background: #58bfcb url("/image/elementary/ip/school_permit/bg-permit-visual.png") top 45px center no-repeat
+  background: #58bfcb url("/image/elementary/ip/school_permit/bg-permit.png") top 45px center no-repeat
 }
 
 .landing-content.school-permit .permit-visual .content-box {
@@ -47812,20 +47812,20 @@ a.btn-more-view {
 }
 
 .help-wrap .support-wrap .support-step li:nth-child(1) {
-  background-image: url("/assets/common/support-step1-aa569d66e238198333fafb9e661e08de9e608bf4b91ba93552fcdd2ff120b750.png");
+  background-image: url("/assets/common/support-step1.png");
   background-position: 66% 45%
 }
 
 .help-wrap .support-wrap .support-step li:nth-child(2) {
-  background-image: url("/assets/common/support-step2-20d5d8b553bd717c0f38e1e3cd916f50e178668def802f268474b6ccabdf4a79.png")
+  background-image: url("/assets/common/support-step2.png")
 }
 
 .help-wrap .support-wrap .support-step li:nth-child(3) {
-  background-image: url("/assets/common/support-step3-fa6f03475809554884a1fc766c24af5d4b05577207b0bd752f53e70754277638.png")
+  background-image: url("/assets/common/support-step3.png")
 }
 
 .help-wrap .support-wrap .support-step li:nth-child(4) {
-  background-image: url("/assets/common/support-step4-11e7477b6f9db3992dd5b4ee8d4e3330e3aea82833cc9e6d54dfd4520ac434ef.png")
+  background-image: url("/assets/common/support-step4.png")
 }
 
 .help-wrap .support-wrap .description {
@@ -47915,7 +47915,7 @@ a.btn-more-view {
 .help-wrap .support-wrap.cs-new > .content .content-box.kakao {
   width: 374px;
   height: 175px;
-  background: #fff url("/assets/common/customer_kakao-7b0d656a52e90b85b0e5b0adf359d5347b913f685d8eb6be5cba2763c9e4e2c2.png") no-repeat 21px 15px
+  background: #fff url("/assets/common/customer_kakao.png") no-repeat 21px 15px
 }
 
 .help-wrap .support-wrap.cs-new > .content .content-box.tel {
@@ -47923,14 +47923,14 @@ a.btn-more-view {
   width: 374px;
   height: 175px;
   margin: 0;
-  background: #fff url("/assets/common/customer_tel-26851ecad57041fc908e20705a8a63f817c6a93c10366b28dc1ff320cb885a59.png") no-repeat 21px 15px
+  background: #fff url("/assets/common/customer_tel.png") no-repeat 21px 15px
 }
 
 .help-wrap .support-wrap.cs-new > .content .content-box.custom {
   width: 750px;
   height: 80px;
   margin: 2px 0 5px 0;
-  background: #fff url("/assets/common/customer_tak-4748278124496e9f926b770ed7dd377aea032d683175c2316f2c3fb8d51cadb3.png") no-repeat 21px 15px
+  background: #fff url("/assets/common/customer_tak.png") no-repeat 21px 15px
 }
 
 .help-wrap .support-wrap.cs-new > .content .description {
@@ -48599,7 +48599,7 @@ a.btn-more-view {
   width: 260px;
   height: 260px;
   margin-left: 10px;
-  background: #dadada url("/assets/common/bg_picture-d9cf2898dd05e1faad67861abcfd2ed573ced6f7eb43ff80e4e8849cf94b1f98.png") no-repeat center center;
+  background: #dadada url("/assets/common/bg_picture.png") no-repeat center center;
   color: #000
 }
 
@@ -55616,7 +55616,7 @@ a.btn-more-view {
   height: 128px;
   padding: 19px 0 0 70px;
   box-sizing: border-box;
-  background: #fff url("/image/secondary/main/icon-univ.png") 23px 17px no-repeat;
+  background: #fff url("/image/secondary/main/icon.png") 23px 17px no-repeat;
   border-radius: 0 0 2px 2px
 }
 

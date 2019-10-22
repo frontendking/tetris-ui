@@ -23,15 +23,10 @@ export default {
   ul {
     display: grid;
     grid-template-rows: auto;
-    grid-template-columns: repeat(5, minmax(18.9rem, auto));
-    /*display: flex;*/
-    /*flex-flow: row;*/
-    /*flex-wrap: wrap;*/
-    /*justify-content: space-between;*/
-    /*padding: 0 1.5rem;*/
-    /*font-size: 2.4rem;*/
-    /*line-height: 1;*/
-
+    grid-template-columns: repeat(3, minmax(18.9rem, auto));
+    font-size: 2.4rem;
+    line-height: 1;
+    height: 4.7rem;
     li {
       /*flex: 1 0 23.6rem;*/
       /*display: flex;*/
@@ -42,12 +37,13 @@ export default {
         display: block;
         width: 100%;
         text-align: center;
-        color: rgba(0, 0, 0, 0.8);
         letter-spacing: 0.06rem;
-
+        color: #000;
+        height: 100%;
         &.active, &:active, &:hover {
-          /*font-weight: bold;*/
-          /*border-bottom: #34b4f9 solid 4px;*/
+          text-decoration: none;
+          font-weight: bold;
+          border-bottom: #34b4f9 solid 4px;
         }
       }
     }

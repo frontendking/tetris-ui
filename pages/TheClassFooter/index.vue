@@ -1,14 +1,14 @@
 <template>
   <footer class="TheClassFooter">
     <div class="class-permit-summary">
-      <div class="title">마감까지</div>
-      <div class="reset-date"><em>{{data.restDate}}</em> <span>일 남음</span></div>
-      <div class="reset-seat"><em>{{data.restSeat}}</em> <span>자리 남음</span></div>
-      <div class="class-account">총 {{data.classAccount}}회</div>
-      <div class="class-price"><span>55,000</span><strong>원</strong></div>
+      <div class="title" v-html="title"></div>
+      <div class="reset-date" v-html="restDate"></div>
+      <div class="reset-seat" v-html="restSeat"></div>
+      <div class="class-account" v-html="classAccount"></div>
+      <div class="class-price" v-html="classPrice"></div>
     </div>
     <div class="purchase-btns">
-      <a v-for="v in data.buttons"
+      <a v-for="v in buttons"
          :class="[v.id, {disabled: !v.active}]"
          :url="v.url"
       >
@@ -28,9 +28,43 @@ import TheClassPermitRadioboxForm from '@/components/class/TheClassPermitRadiobo
 
 export default {
   name: 'TheClassFooter',
-  props: ['data'],
   components: {
     TheClassPermitRadioboxForm,
+  },
+  data () {
+    return {
+      title: '마감까지',
+      restDate: '<em>8</em>일 남음',
+      restSeat: '<em>1</em>자리 남음',
+      classAccount: '총 4회',
+      classPrice: '<span>55,000</span>원',
+      buttons: [
+        {
+          id: 'purchase-class-btn',
+          label: `수업구매하기 (5000원)`,
+          url: '',
+          active: true,
+        },
+        {
+          id: 'purchase-membership-btn',
+          label: '커넥츠 멤버십으로 예약',
+          url: '',
+          active: true,
+        },
+        {
+          id: 'purchase-permit-btn',
+          label: '수업권으로 수업 예약',
+          url: '',
+          active: true,
+        },
+        {
+          id: 'purchase-text-math',
+          label: '일간대치동 수학 교재 구매하기',
+          url: '',
+          active: false,
+        },
+      ],
+    }
   },
   mounted () {
     this.$nextTick(function () {
@@ -46,7 +80,7 @@ export default {
           confirmButtonColor: '#00b9fd',
           confirmButtonText: '확인',
           cancelButtonText: '최소',
-          focusConfirm: false
+          focusConfirm: false,
         }).then((result) => {
           if (result.value) {
             Swal.fire({
@@ -55,7 +89,7 @@ export default {
               confirmButtonColor: '#00b9fd',
               confirmButtonText: '확인',
               cancelButtonText: '최소',
-              focusConfirm: false
+              focusConfirm: false,
             })
           }
         })
@@ -86,7 +120,7 @@ export default {
           confirmButtonColor: '#00b9fd',
           confirmButtonText: '확인',
           cancelButtonText: '최소',
-          focusConfirm: false
+          focusConfirm: false,
         })
 
         /*
@@ -125,105 +159,106 @@ export default {
       })
     })
 
-  }
+  },
 }
 </script>
 
 <style lang=scss>
 @import '~@/assets/style/global.scss';
-@import '~@/assets/style/color.scss';
+
 
 .TheClassFooter {
   display: grid;
   grid-template-columns: auto;
-  grid-template-rows: repeat(5, auto);
-  grid-gap: 1rem;
-  padding: 2.6rem;
-  color: #000;
+  grid-template-rows: repeat(2, auto);
+  grid-row-gap: 2.4rem;  min-width: 64rem;
   .class-permit-summary {
-    background-color: $gray-light;
     display: grid;
-    /*@formatter:off*/
-    grid-template:
-      "title title" 7.5rem
-      "rest-date rest-seat" 11.7rem
-      "class-account class-price" 12.8rem/
-      1fr 1fr;
-    /* @formatter:on*/
-    align-items: flex-start;
-    justify-items: center;
-    padding: 3.2rem 4rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 7.5rem 11.7rem 12.8rem;
     font-size: 2.2rem;
-
-    > div {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding-bottom: 1rem;
-
-      &:last-child {
-        border-top: #e0e0e0 solid 1px;
-        padding-top: 4rem;
-      }
-    }
-
-    > div#class-permit-summary-goods {
-      padding-bottom: 1rem;
-
-      .vertical-line {
-        font-size: 3.5rem;
-        color: #e3e3e3;
-      }
-    }
-
+    justify-items: stretch;
+    align-items: stretch;
+    background-image: url(/tutor/pages/TheClassFooter/assets/Flowchart_Terminal-gray.svg), url(/tutor/pages/TheClassFooter/assets/Flowchart_Terminal-gray.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-position-x: 14.5%, 83%;
+    background-position-y: 33%;
+    background-color: #f5f5f5;
+    background-size: 26%;
+    border: 1px solid #e0e0e0;
     .title {
-      grid-area: title;
+      grid-column: 1/3;
       display: flex;
       justify-content: center;
-      align-self: flex-start;
+      align-items: center;
       font-size: 2.2rem;
     }
+
+    em {
+      color: #00b9fd;
+      font-weight: bold;
+      font-size: 4.2rem;
+      font-style: normal;
+      line-height: 0.8;
+      display: block;
+    }
+
     .reset-date {
-      grid-area:  rest-date;
-      width: 16.6rem;
+      background-size: 8rem 4rem;
+      border-right: 3px solid #e3e3e3;
+      margin-top: 2rem;
+      margin-bottom: 6rem;
+      line-height: 1;
+      justify-content: center;
+      display: flex;
+      align-items: flex-end;
     }
     .reset-seat {
-      grid-area: rest-seat;
-    }
-    .badge-round {
-      background-color: #ededed;
-      border: #e0e0e0 solid 1px;
-      font-weight: bold;
-      justify-self: center;
-      padding: 2rem 4rem;
-      border-radius: 21% / 50%;
+      background-size: 8rem 4rem;
+      margin-top: 2rem;
+      margin-bottom: 6rem;
       line-height: 1;
-
-      span {
-        display: inline-block;
-
-        &:first-child {
-          color: #00b9fd;
-          font-size: 4.2rem;
-          font-weight: bold;
-        }
-      }
+      justify-content: center;
+      display: flex;
+      align-items: flex-end;
     }
 
     .class-account {
-      background-color: #00b9fd;
+      justify-self: flex-end;
+      border-top: 1px solid #e0e0e0;
+      width: 85%;
+      background: url(./assets/Flowchart_Terminal.svg) no-repeat center left;
+      background-size: 8rem 4rem;
+      display: flex;
+      align-items: center;
       color: #ffffff;
-      justify-self: center;
-      align-self: center;
-      padding: 0.9rem 1.6rem;
-      border-radius: 25% /50%;
+      text-indent: 1rem;
+      line-height: 1;
     }
 
     .class-price {
-      font-size: 5.2rem;
-      font-weight: bold;
-    }
+      justify-self: flex-start;
+      border-top: 1px solid #e0e0e0;
+      width: 85%;
+      display: flex;
+      color: #000000;
+      line-height: 1;
+      font-size: 2.2rem;
+      justify-content: flex-end;
+      padding-bottom: 4rem;
+      align-items: flex-end;
 
+      span {
+        font-size: 5.2rem;
+        font-weight: bold;
+      }
+    }
+  }
+  .purchase-btns {
+    display: grid;
+    grid-template-rows: repeat(4, 10rem);
+    grid-template-columns: auto;
+    grid-row-gap: 1rem;
   }
 
   a {
@@ -250,6 +285,7 @@ export default {
 
   .modal-dimm {
     visibility: hidden;
+
     &.active {
       visibility: visible;
     }
@@ -280,7 +316,6 @@ export default {
 
     grid-gap: 0;
     grid-column-gap: 3.4rem;
-
     > * {
       justify-self: flex-start
     }
@@ -295,6 +330,8 @@ export default {
       padding: 0;
       font-size: 1.6rem;
       background-color: #f5f5f5;
+      border: none;
+      background-image: none;
 
       em {
         color: $primary;
@@ -331,10 +368,13 @@ export default {
       .class-account {
         grid-column: 1/2;
         grid-row: 1/2;
-        background-color: initial;
-        color: inherit;
-        padding: 0;
-        justify-self: initial;
+        background: none;
+        border: none;
+        width: initial;
+        color:initial;
+        justify-self: flex-start;
+        text-indent: initial;
+        font-size: 1.6rem;
       }
 
       .class-price {
@@ -342,8 +382,11 @@ export default {
         grid-row: 2/3;
         border-top: none;
         padding: 0;
-        font-size: 3rem;
+        font-size: 2rem;
         display: initial;
+        span {
+          font-size: 4rem;
+        }
       }
 
     }

@@ -44,8 +44,7 @@ export default {
 </script>
 
 <style lang=scss>
-$gray: #a3a3a3;
-$gray-dark: #696969;
+@import '@/assets/style/global.scss';
 
 .TheClassSummaryCard {
   display: flex;
@@ -76,7 +75,6 @@ $gray-dark: #696969;
           width: 80%;
           top: 0;
         }
-
       }
 
       .teacher-name {
@@ -214,7 +212,6 @@ $gray-dark: #696969;
           content: '';
           background-image: url('./assets/email.png');
           background-repeat: no-repeat;
-          /*          padding-top: 100% * 19px / 15px;*/
           width: 2rem;
           padding-top: 1.5rem;
           display: block;
@@ -230,6 +227,7 @@ $gray-dark: #696969;
         }
       }
     }
+
     .class-summary {
       width: 100%;
       padding: 0 8.2rem;

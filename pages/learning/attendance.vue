@@ -177,8 +177,6 @@ function js () {
 </script>
 
 <style lang="scss">
-@import '@/assets/style/attendance.scss';
-
 .expand-button {
   background: url('./assets/arrow-down.svg') no-repeat center center;
   border: none;
@@ -187,9 +185,10 @@ function js () {
   height: 1.5rem;
 }
 
-
 </style>
 <style lang=scss>
+@import '@/assets/style/global.scss';
+
 #attendance {
   @media(min-width: 641px) {
     display: grid;
@@ -202,7 +201,7 @@ function js () {
     font-size: 1.6rem;
     line-height: 1.56;
     letter-spacing: normal;
-    color: #6e737d;
+    color: $gray;
 
     h1, h2 {
       color: #000000;
