@@ -3,7 +3,6 @@
     <header class="permit-header">
       <h1 v-html="heading"/>
     </header>
-    <div class="banner event"></div>
     <section class="permit-intro">
       <header>
         <h2 v-html="permitIntro.heading"/>
@@ -136,81 +135,29 @@ export default {
 </script>
 
 <style lang=scss>
+$heading-font: 4.2rem;
+$heading-p-t: 5.9rem;
+$heading-p-b: 8.1rem;
+$heading-b-m: 6rem;
+
 .permit-subject-1 {
+  position: relative;
+  font-size: 2.2rem;
   display: grid;
-  grid-gap: 7.6rem;
-  /*@formatter:off*/
+  margin: 0 auto;
   grid-template:
     "intro" auto
-    "adventage" auto/
-    auto;
-  /*@formatter:on*/
-  .permit-header, .permit-intro > header > h2 {
-    display: none;
-  }
-
-  em {
-    font-style: normal;
-  }
-
-  section > header, section h2:first-child {
-    em {
-      color: #34b4f9;
-    }
-
-    font-size: 2.8rem;
-    font-weight: bold;
-    font-style: normal;
-    line-height: 1.43;
-    letter-spacing: -0.101rem;
-    color: #000000;
-    width: 40.7rem;
-    min-width: min-content;
-    margin-bottom: 3.7rem;
-  }
-
-  p {
-    em {
-      color: #ff0e00;
-      font-weight: bold;
-    }
-  }
-
-  .permit-header {
-    grid-area: header;
-  }
-
+    "adventage" auto
+    "form" auto/
+      auto;
   .permit-intro {
-    grid-area: intro;
-  }
 
+  }
   .permit-adventage {
-    grid-area: adventage;
 
   }
+  .permit-fomr {
 
-  .permit-form {
-    grid-area: form;
-
-    form {
-      legend {
-        font-size: 2rem;
-        font-weight: bold;
-        line-height: 1.25;
-        letter-spacing: normal;
-        color: #000000;
-      }
-
-      label {
-        width: 35.7rem;
-        max-width: max-content;
-        font-size: 1.6rem;
-        font-weight: 500;
-        line-height: 1.56;
-        letter-spacing: normal;
-        color: #000000;
-      }
-    }
   }
 }
 

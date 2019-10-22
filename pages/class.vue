@@ -11,28 +11,25 @@
       :summaries="summaries"
     />
     <TheLnb :navList="subPages"/>
+    <nuxt-child :page="page" :users="users"/>
     <the-class-footer
       id="the-class-footer"
       :class="isSticky?'sticky':''"
       :data="footer"
     />
-<!--
-    <nuxt-child :page="page" :users="users"/>
-
--->
   </article>
 </template>
 <script>
 import TheClassHeader from '@/components/class/TheClassHeader/TheClassHeader'
 import { getClasses, users } from '../store/class-info'
-import TheClassFooter from '@/pages/TheClassFooter/index'
+import TheClassFooter from '@/components/class/TheClassFooter/index'
 import { map } from 'fxjs/Strict'
 import TheLnb from '@/components/admin/TheLnb'
 
 
 export default {
   name: 'class',
-  // layout: 'tutor',
+  layout: 'tutor',
   // layout:'tutor',
   data() {
     const classId = 1
@@ -145,7 +142,9 @@ article.class-info {
   #page-heading {
     display: none;
   }
-
+  > article {
+    position: static;
+  }
   .sticky {
     position: fixed;
     bottom: 0;

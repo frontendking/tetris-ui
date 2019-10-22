@@ -23,10 +23,9 @@ export default {
   ul {
     display: grid;
     grid-template-rows: auto;
-    grid-template-columns: repeat(3, minmax(18.9rem, auto));
+    grid-template-columns: repeat(auto-fit, minmax(18.9rem, auto));
     font-size: 2.4rem;
     line-height: 1;
-    height: 4.7rem;
     li {
       /*flex: 1 0 23.6rem;*/
       /*display: flex;*/
@@ -78,6 +77,7 @@ export default {
             font-weight: bold;
             color: #fff;
             background-color: #6e737d;
+            border-bottom: none;
           }
         }
       }

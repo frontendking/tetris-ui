@@ -52,10 +52,10 @@ export default {
 
     > #the-tutor-local-nav {
       grid-area: nav;
-      margin-top: 2.2rem;
-
+      padding: 0 5rem;
       & + * {
         grid-area: article;
+        padding: 0 5rem;
       }
     }
   }

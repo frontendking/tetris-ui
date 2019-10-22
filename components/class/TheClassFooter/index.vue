@@ -53,13 +53,13 @@ export default {
         },
         {
           id: 'purchase-permit-btn',
-          label: '수업권으로 수업 예약',
+          label: '수업권으로 수업예약',
           url: '',
           active: true,
         },
         {
           id: 'purchase-text-math',
-          label: '일간대치동 수학 교재 구매하기',
+          label: '일간대치동 수학교재 구매하기',
           url: '',
           active: false,
         },
@@ -166,12 +166,13 @@ export default {
 <style lang=scss>
 @import '~@/assets/style/global.scss';
 
-
 .TheClassFooter {
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: repeat(2, auto);
-  grid-row-gap: 2.4rem;  min-width: 64rem;
+  grid-row-gap: 2.4rem;
+  min-width: 64rem;
+
   .class-permit-summary {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -179,13 +180,14 @@ export default {
     font-size: 2.2rem;
     justify-items: stretch;
     align-items: stretch;
-    background-image: url(/tutor/pages/TheClassFooter/assets/Flowchart_Terminal-gray.svg), url(/tutor/pages/TheClassFooter/assets/Flowchart_Terminal-gray.svg);
+    background-image: url(assets/Flowchart_Terminal-gray.svg), url(assets/Flowchart_Terminal-gray.svg);
     background-repeat: no-repeat, no-repeat;
     background-position-x: 14.5%, 83%;
     background-position-y: 33%;
     background-color: #f5f5f5;
     background-size: 26%;
     border: 1px solid #e0e0e0;
+
     .title {
       grid-column: 1/3;
       display: flex;
@@ -213,6 +215,7 @@ export default {
       display: flex;
       align-items: flex-end;
     }
+
     .reset-seat {
       background-size: 8rem 4rem;
       margin-top: 2rem;
@@ -227,7 +230,7 @@ export default {
       justify-self: flex-end;
       border-top: 1px solid #e0e0e0;
       width: 85%;
-      background: url(./assets/Flowchart_Terminal.svg) no-repeat center left;
+      background: url(assets/Flowchart_Terminal.svg) no-repeat center left;
       background-size: 8rem 4rem;
       display: flex;
       align-items: center;
@@ -254,6 +257,7 @@ export default {
       }
     }
   }
+
   .purchase-btns {
     display: grid;
     grid-template-rows: repeat(4, 10rem);
@@ -310,32 +314,41 @@ export default {
 }
 
 @media(min-width: 641px) {
+  %innerFont {
+    font-size: 1.1rem;
+    margin: 0;
+    display: block;
+    color: #000000;
+    font-weight: bold;
+  }
   .TheClassFooter {
     grid-template-rows: auto;
     grid-template-columns: 1fr 3fr;
 
     grid-gap: 0;
     grid-column-gap: 3.4rem;
-    > * {
-      justify-self: flex-start
-    }
 
     padding: 4rem;
     background-color: #f5f5f5;
 
     .class-permit-summary {
-      grid-template-columns: repeat(3, auto);
-      grid-template-rows: repeat(3, auto);
-      grid-gap: 1.1rem;
+      max-height: 15.8rem;
+      max-width: 95rem;
+      grid-template-rows: 1.6rem 2.7rem 1.1rem;
+      grid-template-columns: repeat(3, max-content);
+      grid-column-gap: 0.3rem;
+      grid-row-gap: 1.1rem;
+      line-height: 1;
       padding: 0;
-      font-size: 1.6rem;
       background-color: #f5f5f5;
       border: none;
       background-image: none;
+      color: #000;
+      font-size: 1.1rem;
 
       em {
         color: $primary;
-        font-style: inherit;
+        font-size: 1.1rem;
       }
 
       > div {
@@ -347,17 +360,23 @@ export default {
         padding: 0;
       }
 
+      .title, .reset-date, .reset-seat {
+        color: #000;
+        font-size: 1.1rem;
+        font-weight: bold;
+        margin: 0;
+        width: 100%;
+        align-items: center;
+      }
+
       .title {
         grid-column: 1/2;
         grid-row: 3/4;
-        font-size: inherit;
-
       }
 
       .reset-date {
         grid-column: 2/3;
         grid-row: 3/4;
-
       }
 
       .reset-seat {
@@ -370,22 +389,28 @@ export default {
         grid-row: 1/2;
         background: none;
         border: none;
-        width: initial;
-        color:initial;
         justify-self: flex-start;
-        text-indent: initial;
         font-size: 1.6rem;
+        width: 100%;
+        color: #000;
+        text-indent: 0;
       }
 
       .class-price {
         grid-column: 1/4;
         grid-row: 2/3;
-        border-top: none;
         padding: 0;
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        color: #000;
         font-size: 2rem;
-        display: initial;
+        text-indent: 0;
+        line-height: 1.1;
+
         span {
-          font-size: 4rem;
+          font-size: 3rem;
+          line-height: 1
         }
       }
 

@@ -641,22 +641,29 @@ body {
 }
 
 #b2c-wrapper {
+  padding-top: 9rem;
   > article {
     > h1 {
       display: none
     }
-
-    > nav {
-      display: none;
-    }
   }
 }
 #theTutorGnb {
-  margin-top: -9rem;
   z-index: 1;
 }
 
 @media(min-width: 641px) {
+  #b2c-wrapper {
+    padding-top: 9rem;
+    > article {
+      padding: 0 5rem;
+      > h1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
   #tutor-header {
     display: flex;
     justify-content: flex-end;
@@ -665,12 +672,8 @@ body {
   }
 
   #theTutorGnb {
-    top: -1rem;
+    margin-top: 2rem;
     width: 80%;
-  }
-
-  #b2c-wrapper {
-    margin-top: 5rem;
   }
 
 }
