@@ -4,11 +4,11 @@
       <li>
         <a href="#">과목 안내</a>
         <ul>
-          <li>궁금해요! 일간대치동</li>
-          <li>일간대치동수학</li>
-          <li>일간대치동국어</li>
-          <li>일간대치동사회</li>
-          <li>일간대치동과학</li>
+          <li><a>궁금해요! 일간대치동</a></li>
+          <li><a>일간대치동수학</a></li>
+          <li><a>일간대치동국어</a></li>
+          <li><a>일간대치동사회</a></li>
+          <li><a>일간대치동과학</a></li>
         </ul>
       </li>
       <li><a href="#">멤버십 구매</a></li>
@@ -27,13 +27,50 @@ export default {
   mounted () {
     this.$nextTick(function () {
       const menu = document.querySelector('.the-tutor-gnb')
-      const list = document.querySelector('.the-tutor-gnb>ul')
+      const ul = document.querySelector('.the-tutor-gnb>ul')
+      const topLists = document.querySelectorAll('.the-tutor-gnb > ul > li')
+      const lists = document.querySelectorAll('.the-tutor-gnb li')
+      let nestUl
+      function toggleMenu () {
+        ul.classList.toggle('active')
+        menu.classList.toggle('active')
+      }
+
+      function closeMenu () {
+        ul.classList.remove('active')
+        menu.classList.remove('active')
+      }
+
+      function openMenu () {
+        ul.classList.toggle('active')
+        menu.classList.toggle('active')
+      }
+
       menu.addEventListener('click', function (e) {
-        e.stopImmediatePropagation()
-        if(e.target===menu){
-          list.classList.toggle('active')
-          menu.classList.toggle('active')
+        e.stopPropagation()
+        if (e.target === menu) {
+          toggleMenu()
         }
+      })
+      Array.prototype.map.call(lists, function (li) {
+        li.addEventListener('click', function (e) {
+          const clieckedList = e.target
+          const curList = e.currentTarget
+          e.stopPropagation()
+
+          nestUl = curList.querySelector('ul')
+          if (nestUl) {
+            nestUl.classList.toggle('active')
+          } else {
+            Array.prototype.forEach.call(topLists, function (li) {
+              const nestUl = li.querySelector('ul')
+              if (nestUl) {
+                nestUl.classList.remove('active')
+              }
+            })
+            closeMenu()
+          }
+        })
       })
     })
   }
@@ -44,10 +81,10 @@ export default {
 .the-tutor-gnb {
   background: url('./assets/menu-button.svg') no-repeat;
   background-size: 3rem 3rem;
-  background-position-y: top;
-  background-position-x: left;
-  height: 3rem;
-  width: 3rem;
+  background-position-y: 3rem;
+  background-position-x: 3rem;
+  height: 9rem;
+  width: 39em;
   cursor: pointer;
   position: absolute;
 
@@ -59,23 +96,24 @@ export default {
 
   > ul {
     display: none;
-
+    margin-top: 9rem;
     &.active {
       line-height: 1;
       display: grid;
-      /*grid-template-columns: repeat(auto-fit, minmax(3rem, auto));*/
-      /*grid-template-rows: 3rem;*/
-      grid-auto-rows: 5rem;
+      grid-auto-rows: minmax(5rem, auto);
+      align-content: flex-start;
       align-items: stretch;
       width: 80%;
       height: 100%;
       background-color: #ffffff;
       box-shadow: 0px 8px 10px -5px rgba(0, 0, 0, 0.2), 0px 16px 24px 2px rgba(0, 0, 0, 0.14), 0px 6px 30px 5px rgba(0, 0, 0, 0.12);
+
       li {
         display: flex;
+        flex-flow: column;
 
         a {
-          flex: 1;
+          flex: 1 5rem;
           display: flex;
           align-items: center;
           text-indent: 3rem;
@@ -88,8 +126,32 @@ export default {
     }
   }
 
-  li ul {
+  li > ul {
     display: none;
+
+    &.active {
+      display: grid;
+      grid-auto-rows: minmax(5rem, auto);
+      align-content: flex-start;
+      align-items: stretch;
+      background-color: #ffffff;
+
+      li {
+        display: flex;
+        flex-flow: column;
+
+        a {
+          flex: 1;
+          display: flex;
+          align-items: center;
+          text-indent: 6rem;
+
+          &:hover {
+            background: #e0e0e0;
+          }
+        }
+      }
+    }
   }
 }
 </style>
