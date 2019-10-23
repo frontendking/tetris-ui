@@ -22,10 +22,11 @@ export default {
 .TheTutorLocalNav {
   ul {
     display: grid;
-    grid-template-rows: auto;
+    grid-template-rows: 5rem;
     grid-template-columns: repeat(auto-fit, minmax(18.9rem, auto));
     font-size: 2.4rem;
     line-height: 1;
+
     li {
       /*flex: 1 0 23.6rem;*/
       /*display: flex;*/

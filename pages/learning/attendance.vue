@@ -12,7 +12,8 @@
         :tableData="tableData"
       />
       <BaseTable
-        v-for="v in tableData"
+        v-for="(v,k) in tableData"
+        :key="k"
         :data-id="v.id"
         :colHeader="colHeaderNasted"
         :tableData="tableDataNasted"

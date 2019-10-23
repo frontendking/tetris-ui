@@ -1,41 +1,38 @@
 <template>
   <article class="permit-subject-1">
-    <header class="permit-header">
-      <h1 v-html="heading"/>
-    </header>
-    <section class="permit-intro">
-      <header>
-        <h2 v-html="permitIntro.heading"/>
-        <p v-html="permitIntro.paragraphs[0]"/>
-      </header>
-      <p v-html="permitIntro.paragraphs[1]"/>
-    </section>
-    <section class="permit-adventage">
-      <h2 v-html="purchaseAdventage.heading"/>
-      <p v-for="paragraph in purchaseAdventage.paragraphs" v-html="paragraph"/>
-    </section>
+<!--    <header class="permit-header">-->
+<!--      <h1 v-html="heading"/>-->
+<!--    </header>-->
+<!--    <section class="permit-intro">-->
+<!--      <header>-->
+<!--        <h2 v-html="permitIntro.heading"/>-->
+<!--        <p v-html="permitIntro.paragraphs[0]"/>-->
+<!--      </header>-->
+<!--      <p v-html="permitIntro.paragraphs[1]"/>-->
+<!--    </section>-->
+<!--    <section class="permit-adventage">-->
+<!--      <h2 v-html="purchaseAdventage.heading"/>-->
+<!--      <p v-for="paragraph in purchaseAdventage.paragraphs" v-html="paragraph"/>-->
+<!--    </section>-->
     <section class="permit-form">
       <h3 v-html="permitForm.label"/>
       <form class="permit-form">
-        <fieldset class="permit-selection">
-          <div>
-            <legend v-html="permitForm.permitSelection.legend"/>
-            <ThePermitCard v-for="permitType in permitForm.permitSelection.permiTypes"
-                           :key="permitType.id"
-                           :id="permitType.id"
-                           :type="permitType.type"
-                           :price="permitType.price"
-                           :discount="permitType.discount"
-            />
-          </div>
-        </fieldset>
+<!--        <fieldset class="permit-selection">-->
+<!--          <div>-->
+<!--            <legend v-html="permitForm.permitSelection.legend"/>-->
+<!--            <ThePermitCard v-for="permitType in permitForm.permitSelection.permiTypes"-->
+<!--                           :key="permitType.id"-->
+<!--                           :id="permitType.id"-->
+<!--                           :type="permitType.type"-->
+<!--                           :price="permitType.price"-->
+<!--                           :discount="permitType.discount"-->
+<!--            />-->
+<!--          </div>-->
+<!--        </fieldset>-->
         <fieldset class="term-agreement">
           <div>
             <legend v-html="permitForm.termAggrement.legend"/>
-            <label>
-              <input type="checkbox"/>
-              {{permitForm.termAggrement.label}}
-            </label>
+            <BaseCheckbox :checkboxId="`termAggrementCheck`" :label="permitForm.termAggrement.label"/>
             <article>
               <h1 v-html="permitForm.term.title"/>
               <p v-for=" content in permitForm.term.contents" v-html="content"/>
@@ -52,7 +49,8 @@
 <script>
 import faker from 'faker/locale/ko'
 import { genLorem } from '@/utils'
-import ThePermitCard from '@/components/permit/ThePermitCard/ThePermitCard'
+import ThePermitCard from '@/pages/ThePermitCard/index'
+import BaseCheckbox from '@/components/base/BaseCheckbox/index'
 
 export default {
   name: 'permit-subject-1',
@@ -123,46 +121,194 @@ export default {
         },
         term: api.permitTerm,
         submitBtn: {
-          label: '수업권 구매하기',
+          label: '동의 후 결제',
         },
       },
     }
   },
   components: {
+    BaseCheckbox,
     ThePermitCard,
   },
 }
 </script>
 
 <style lang=scss>
+@import '@/assets/style/global.scss';
+
 $heading-font: 4.2rem;
 $heading-p-t: 5.9rem;
 $heading-p-b: 8.1rem;
 $heading-b-m: 6rem;
+
+$grid-row-gap: 3.7rem;
+
+%permit-sub-grid {
+  display: grid;
+  grid-template-columns: auto;
+  grid-row-gap: $grid-row-gap;
+}
+
+em {
+  color: $primary;
+}
+
+section {
+  margin-bottom: 4.7rem;
+}
+
+@function headings($from:1, $to:6) {
+  @if $from == $to {
+    @return 'h#{$from}';
+  } @else {
+    @return 'h#{$from},'+headings($from+1, $to)
+  }
+}
+
+#{headings(1,6)}, header {
+  margin-bottom: $grid-row-gap;
+}
 
 .permit-subject-1 {
   position: relative;
   font-size: 2.2rem;
   display: grid;
   margin: 0 auto;
+  /*@formatter:off*/
   grid-template:
     "intro" auto
     "adventage" auto
     "form" auto/
       auto;
-  .permit-intro {
+  /*@formatter:on*/
+  grid-row-gap: $grid-row-gap;
+  padding: 2rem;
+
+  header.permit-header {
+    display: none;
+  }
+
+  section.permit-intro {
+    header {
+      h2 {
+        display: none;
+      }
+
+      p {
+        font-weight: bold;
+      }
+    }
+  }
+
+  section.permit-adventage {
+    p {
+      &:before {
+        content: '-';
+      }
+    }
+
+    strong, em {
+      color: #ff4639;
+      font-weight: normal;
+    }
 
   }
-  .permit-adventage {
+
+  section.permit-form {
+    display: flex;
+    flex-flow: column;
+
+    h3 {
+      display: none;
+    }
+
+    .permit-selection > div {
+      legend {
+        display: none;
+      }
+
+      display: grid;
+      grid-template-rows: repeat(2, auto);
+      grid-template-columns: repeat(2, auto);
+    }
+
+    .ThePermitCard {
+      &:nth-of-type(1) {
+        background-color: #ffbc51;
+      }
+
+      &:nth-of-type(2) {
+        background-color: #74bbc7;
+      }
+
+      &:nth-of-type(3) {
+        background-color: #72baa5;
+      }
+
+      &:nth-of-type(4) {
+        background-color: #7275ba;
+      }
+    }
+
+    .term-agreement {
+      padding-top: 4.4rem;
+
+      legend {
+        padding: 1.6rem 0;
+        font-size: 2.8rem;
+        font-weight: bold;
+      }
+
+      .BaseCheckbox {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        height: 7.1rem;
+        border-top: 2px solid #000000;
+        border-bottom: 1px solid #000000;
+        padding: 0 2rem;
+        font-weight: 500;
+        font-size: 2rem;
+
+        &:after {
+          content: '';
+          width: 1.4rem;
+          height: 0.7rem;
+          background: url("./assets/select-arrow.svg") no-repeat top left / contain;
+          margin-left: auto;
+        }
+      }
+
+      article {
+        padding: 1rem;
+        margin-bottom: 1rem;
+        display: none;
+        h1 {
+          color: #000000;
+          font-size: 1.5rem;
+        }
+
+        p {
+          font-size: 1.2rem;
+          text-indent: -0.6rem;
+
+          &:before {
+            content: '- ';
+          }
+
+          padding-left: 0.5rem;
+        }
+
+        border-bottom: 1px solid #000000;
+      }
+    }
 
   }
-  .permit-fomr {
 
-  }
 }
 
-.permit-subject-1 {
-  @media(min-width: 641px) {
+@media(min-width: 641px) {
+  .permit-subject-1 {
     font-size: 1.6rem;
     font-weight: normal;
     line-height: 1.56;
@@ -185,6 +331,7 @@ $heading-b-m: 6rem;
     .permit-selection legend {
       display: none;
     }
+
     section > header {
       font-size: 1.6rem;
       font-weight: normal;
@@ -197,9 +344,11 @@ $heading-b-m: 6rem;
         color: inherit;
       }
     }
+
     h2, legend, label {
       color: #000000;
     }
+
     section h2:first-child {
       font-size: 1.8rem;
       font-weight: bold;
@@ -209,6 +358,7 @@ $heading-b-m: 6rem;
       width: 40.7rem;
       margin: initial;
     }
+
     /*@formatter:on*/
     .permit-header {
       grid-area: header;
@@ -226,6 +376,7 @@ $heading-b-m: 6rem;
         color: #000000;
       }
     }
+
     .permit-adventage {
       p {
         &:before {
@@ -239,9 +390,11 @@ $heading-b-m: 6rem;
       }
 
     }
+
     .permit-form {
       display: flex;
       flex-flow: column;
+
       .permit-selection > div {
         display: flex;
         width: 95rem;
@@ -281,27 +434,34 @@ $heading-b-m: 6rem;
           border-top: 2px solid #000000;
           border-bottom: 1px solid #000000;
         }
+
         article {
           padding: 1rem;
           margin-bottom: 1rem;
+
           h1 {
             color: #000000;
             font-size: 1.5rem;
           }
+
           p {
             font-size: 1.2rem;
             text-indent: -0.6rem;
+
             &:before {
               content: '- ';
 
             }
+
             padding-left: 0.5rem;
           }
+
           border-bottom: 1px solid #000000;
         }
       }
 
     }
+
     button {
       padding: 1rem;
       background-color: #34b4f9;

@@ -2,7 +2,6 @@
   <article class="permit">
     <h1 id=permit-heading class="hidden">수업권 신청</h1>
     <div id="ThePermitBanner">
-      이벤트 배너 영역
     </div>
     <TheLnb id=permit-nav :navList="subPages"/>
     <nuxt-child id="permit-article"/>
