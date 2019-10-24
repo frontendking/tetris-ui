@@ -54,7 +54,7 @@ import faker from 'faker/locale/ko'
 import { genLorem } from '@/utils'
 import ThePermitCard from '@/components/permit/ThePermitCard/index'
 import BaseCheckbox from '@/components/base/BaseCheckbox/index'
-import BaseButton from '@/pages/BaseButton/index'
+import BaseButton from '@/components/base/BaseButton/index'
 
 export default {
   name: 'permit-subject-1',
@@ -92,7 +92,15 @@ export default {
       ],
       permitTerm: {
         title: '수업권 규정 및 이용약관(필수)를 확인하고 동의 합니다.',
-        contents: [...genLorem(10, faker.lorem.sentences)],
+        contents: [
+          '특정 프로그램을 일정 기간 동안 수강할 수 있는 수업권으로 수업권에 대한 전체 수강료를 구매 후, 클래스 수강 신청을 할 수 있습니다.',
+          '수업권 구매 후, 수업권으로 수강 가능한 클래스를 선택(수업권으로 수강하기) 하신 후, 클래스를 수강 가능합니다.',
+          '수업권에 이용 가능한 클래스 수가 부여되며, 클래스 수강신청시마다 클래스 수가 차감됩니다.',
+          '12개월 수업권 사용시, 개인 사정으로 12개월 기간내 보류가 필요한 경우 3개월 학습 경과된 후에 보류 신청이 가능하며, 1회에 3개월까지 가능, 최대 2회 보류 가능합니다. 6개월 수업권의 경우, 보류가 불가능 합니다.',
+          '수업권은 수업권으로 수강신청하게 되는 첫 번째 클래스에 수강 신청한 자녀 기준으로 이용 가능하며, 다른 사람에게 양도*양수 불가합니다. (1회 적발 시, 경고 / 2회 적발 시, 이용 가능한 클래스 1회 차감 / 3회 적발시, 이용 가능한 클래스 2회 차감, 4회 적발 시, 차감된 클래스 수를 제외한 나머지 횟수만큼 환불처리)',
+          '수업권 환불 시 클래스 수강 중인 경우 수강중인 클래스에 해당하는 수강료는 학원법을 따르며, 남은 개월 수는 전액 환불하고, 12개월권의 경우 할인율을 적용하지 않은 원 수강료 기준을 적용하여 환불됩니다.',
+        ],
+        notice: '* 수업권에 대한 규정은 추가 및 변경될 수 있으며, 이전 내용이 변경되는 경우, 별도 안내됩니다.',
       },
     }
     return {
@@ -134,6 +142,16 @@ export default {
     BaseButton,
     BaseCheckbox,
     ThePermitCard,
+  },
+  mounted () {
+    this.$nextTick(function () {
+      const label = document.querySelector('.term-agreement label')
+
+      label.addEventListener('click', function () {
+        const term = label.parentElement.querySelector('article')
+        term.classList.toggle('active')
+      })
+    })
   },
 }
 </script>
@@ -283,8 +301,8 @@ export default {
           height: 0.7rem;
           background: url("./assets/select-arrow.svg") no-repeat top left / contain;
           margin-left: auto;
-          bottom: 3rem;
           position: absolute;
+          top: 10.7rem;
           right: 2rem;
         }
       }
@@ -313,7 +331,7 @@ export default {
         order: initial;
         margin-right: 1rem;
         position: absolute;
-        bottom: 1.8rem;
+        top: 9.5rem;
         left: 2rem;
       }
 
@@ -322,9 +340,14 @@ export default {
         margin-bottom: 1rem;
         display: none;
 
+        &.active {
+          display: block;
+        }
+
         h1 {
           color: #000000;
           font-size: 1.5rem;
+          margin: 0;
         }
 
         p {
@@ -454,6 +477,7 @@ export default {
         legend {
           display: none;
         }
+
         grid-template-rows: unset;
         grid-template-columns: repeat(auto-fill, minmax(22.4rem, auto));
         justify-items: center;
@@ -532,6 +556,7 @@ export default {
           h1 {
             color: #000000;
             font-size: 1.5rem;
+            border: none;
           }
 
           p {
@@ -551,6 +576,8 @@ export default {
 
       button {
         margin: 3rem auto 8rem auto;
+        width: 18rem;
+        height: 5rem;
       }
     }
 

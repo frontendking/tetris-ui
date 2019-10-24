@@ -51,7 +51,6 @@ export default {
 .ThePermitCard {
   position: relative;
   display: flex;
-  width: 28.6rem;
   height: 20.8rem;
   color: $onSecondary;
   background-image: url('assets/permit-card-bg.png');

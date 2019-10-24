@@ -1,6 +1,14 @@
 @import '@/assets/font/index.scss';
 @import './color.scss';
 
+@function headings($from:1, $to:6) {
+  @if $from == $to {
+    @return 'h#{$from}';
+  } @else {
+    @return 'h#{$from},'+headings($from+1, $to)
+  }
+}
+
 .hidden {
   visibility: hidden;
   position: absolute;

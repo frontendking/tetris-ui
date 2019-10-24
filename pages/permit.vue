@@ -12,7 +12,7 @@ import TheLnb from '@/components/admin/TheLnb'
 
 export default {
   name: 'permit',
-  // layout: 'tutor',
+  layout: 'tutor',
   components: {
     TheLnb,
   },
@@ -82,6 +82,7 @@ $m-t: 6rem;
       font-weight: 300;
       background-color: #f5f5f5;
       color: #000000;
+      left: 0;
     }
 
     > #TheTutorLocalNav {
