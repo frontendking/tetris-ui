@@ -1,7 +1,7 @@
 <template>
   <label class="ThePermitCard">
     <div>
-      <BaseCheckbox type="radio" checkbox-id="radioboxId" name="permitType"/>
+      <BaseCheckbox overwrap type="checkbox" id="radioboxId" name="permitType"/>
       <div class="title" v-html="visualTitle"/>
       <div class="summary">
         <div class="title" v-html="title"/>
@@ -23,19 +23,19 @@ export default {
       default: 'ThePermitCard',
     },
     type: {
-      default: '12'
+      default: '12',
     },
     price: {
-      default: '20'
+      default: '20',
     },
     discount: {
-      default: '10'
-    }
+      default: '10',
+    },
   },
   filters: {},
   computed: {
     visualTitle () {
-      return `일간 대치동 <em class="permit-card">${this.type}개월</em>`
+      return `일간대치동 <em class="permit-card">${this.type}개월</em>`
     },
     title () {
       return `${this.type}개월 수업`
@@ -51,9 +51,8 @@ export default {
   position: relative;
   display: flex;
   width: 28.6rem;
-  height: 32.4rem;
+  height: 20.8rem;
   color: $onSecondary;
-
   &:before {
     position: absolute;
     content: '';
@@ -66,30 +65,57 @@ export default {
     background-position: right 80%;
     border-radius: 0.5rem;
     background-color: $yellow;
+    z-index: -1;
   }
 
   > div {
     display: flex;
     padding: 2.9rem 2.5rem;
+    flex: 1;
+    justify-content: space-between;
 
     .title {
       font-size: 3.2rem;
       line-height: 1.2;
-
+      width: 14.9rem;
+      z-index:1;
       em.permit-card {
         font-size: 3.3rem;
         font-weight: 800;
       }
     }
 
-    .BaseCheckbox {
+    .summary {
+      display: flex;
+      flex-flow: column;
       position: absolute;
-      width: 2.4rem;
-      height: 2.4rem;
-      top: 0;
-      right: 0;
+      top: 105%;
+      color: #000;
+      left: 0.4rem;
+      .title {
+        margin-bottom: 2rem;
+        font-size: 2.2rem;
+        line-height: 1;
+      }
+      .price {
+        margin-bottom: 0.5rem;
+        line-height: 1;
+        color: #b5b5b5;
+        visibility: hidden;
+        .delete {
+          visibility: visible;
+          line-height: 1;
+        }
+      }
+      .discount-price {
+        line-height: 1;
+        font-weight: bold;
+      }
     }
 
+    .input {
+
+    }
     /*    .summary {
           .title {
             display: none;

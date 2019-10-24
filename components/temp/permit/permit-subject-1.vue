@@ -53,7 +53,7 @@
 <script>
 import faker from 'faker/locale/ko'
 import { genLorem } from '@/utils'
-import ThePermitCard from '@/pages/ThePermitCard/index'
+import ThePermitCard from '@/components/permit/ThePermitCard/index'
 
 export default {
   name: 'permit-subject-1',

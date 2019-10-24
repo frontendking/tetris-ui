@@ -49,7 +49,7 @@
 <script>
 import faker from 'faker/locale/ko'
 import { genLorem } from '@/utils'
-import ThePermitCard from '@/pages/ThePermitCard/index'
+import ThePermitCard from '@/components/permit/ThePermitCard/index'
 import BaseCheckbox from '@/components/base/BaseCheckbox/index'
 
 export default {
