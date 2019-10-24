@@ -19,14 +19,15 @@ export default {
 </script>
 
 <style lang=scss>
+@import '@/assets/style/color.scss';
+
 .TheTutorLocalNav {
   ul {
     display: grid;
-    grid-template-rows: 5rem;
+    grid-template-rows: 7.5rem;
     grid-template-columns: repeat(auto-fit, minmax(18.9rem, auto));
     font-size: 2.4rem;
     line-height: 1;
-
     li {
       /*flex: 1 0 23.6rem;*/
       /*display: flex;*/
@@ -34,16 +35,18 @@ export default {
       /*font-weight: normal;*/
 
       a {
-        display: block;
-        width: 100%;
-        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         letter-spacing: 0.06rem;
-        color: #000;
+        color: $onSurface;
         height: 100%;
+        width: 100%;
+        border-bottom: 1px solid $line;
         &.active, &:active, &:hover {
           text-decoration: none;
           font-weight: bold;
-          border-bottom: #34b4f9 solid 4px;
+          border-bottom: $primary solid 4px;
         }
       }
     }
@@ -57,27 +60,26 @@ export default {
       font-size: 1.6rem;
       font-weight: 500;
       padding: 0;
-      border-top: 1px solid #e0e0e0;
-      border-left: 1px solid #e0e0e0;
+      border-top: 1px solid $line-darker;
+      border-left: 1px solid $line-darker;
 
       li {
         display: flex;
 
         a {
           display: flex;
-          height: 5.8rem;
-          width: 100%;
           justify-content: center;
           align-items: center;
-          color: #888888;
+          color: $onSurface-variant;
           letter-spacing: 0.06rem;
-          border-bottom: 1px solid #e0e0e0;
-          border-right: 1px solid #e0e0e0;
-
+          border-bottom: 1px solid $line-darker;
+          border-right: 1px solid $line-darker;
+          background-color: $surface;
+          font-weight: bold;
           &.active, &:active, &:hover {
             font-weight: bold;
-            color: #fff;
-            background-color: #6e737d;
+            color: $surface;
+            background-color: $onSurface-variant;
             border-bottom: none;
           }
         }

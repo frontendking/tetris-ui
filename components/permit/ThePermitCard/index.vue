@@ -1,7 +1,7 @@
 <template>
   <label class="ThePermitCard">
     <div>
-      <BaseCheckbox overwrap type="checkbox" id="radioboxId" name="permitType"/>
+      <BaseCheckbox overwrap type="radio" id="radioboxId" name="permitType"/>
       <div class="title" v-html="visualTitle"/>
       <div class="summary">
         <div class="title" v-html="title"/>
@@ -32,6 +32,7 @@ export default {
       default: '10',
     },
   },
+
   filters: {},
   computed: {
     visualTitle () {
@@ -53,20 +54,12 @@ export default {
   width: 28.6rem;
   height: 20.8rem;
   color: $onSecondary;
-  &:before {
-    position: absolute;
-    content: '';
-    display: block;
-    width: 100%;
-    padding-top: 100/286*208%;
-    background-image: url('assets/permit-card-bg.png');
-    background-size: 45%;
-    background-repeat: no-repeat;
-    background-position: right 80%;
-    border-radius: 0.5rem;
-    background-color: $yellow;
-    z-index: -1;
-  }
+  background-image: url('assets/permit-card-bg.png');
+  background-size: 45%;
+  background-repeat: no-repeat;
+  background-position: right 80%;
+  border-radius: 0.5rem;
+  background-color: $yellow;
 
   > div {
     display: flex;
@@ -78,7 +71,8 @@ export default {
       font-size: 3.2rem;
       line-height: 1.2;
       width: 14.9rem;
-      z-index:1;
+      z-index: 1;
+
       em.permit-card {
         font-size: 3.3rem;
         font-weight: 800;
@@ -92,21 +86,26 @@ export default {
       top: 105%;
       color: #000;
       left: 0.4rem;
+      width: 100%;
+
       .title {
         margin-bottom: 2rem;
         font-size: 2.2rem;
         line-height: 1;
       }
+
       .price {
         margin-bottom: 0.5rem;
         line-height: 1;
         color: #b5b5b5;
         visibility: hidden;
+
         .delete {
           visibility: visible;
           line-height: 1;
         }
       }
+
       .discount-price {
         line-height: 1;
         font-weight: bold;
@@ -116,69 +115,56 @@ export default {
     .input {
 
     }
-    /*    .summary {
-          .title {
-            display: none;
-          }
-
-          .price {
-            em.delete {
-              color: #ffffff;
-              text-decoration: line-through;
-            }
-          }
-
-          .discount-price {
-            font-size: 2rem;
-            font-weight: bold;
-          }
-        }*/
   }
 }
 
 @media(min-width: 641px) {
-  .ThePermitCard > div {
-    position: relative;
+  .ThePermitCard {
+    background-image: url('assets/permit-vertical-line.svg'), url('assets/permit-card-bg.png');
+    background-repeat: no-repeat no-repeat;
+    background-position: 2rem 12.5rem, right 13.3rem;
+    background-size: initial;
+    display: flex;
     width: 22.4rem;
     height: 32.8rem;
-    background-image: url('assets/permit-vertical-line.svg'),
-    url('assets/permit-card-bg.png');
-    background-repeat: no-repeat;
-    background-position: 2rem 12.5rem, right 13.3rem;
-    padding: 3.1rem 2rem 2rem;
-    display: flex;
-    flex-flow: column;
-    justify-content: space-between;
+    color: $onSecondary;
+    border-radius: 0.5rem;
+    > div {
+      padding: 2rem 2rem;
 
-    .title {
-      font-size: 3.2rem;
-      line-height: 1.2;
-      color: #ffffff;
-
-      em.permit-card {
-        font-size: 3.3rem;
-        font-weight: 800;
-        color: inherit;
-      }
-    }
-
-    .summary {
       .title {
-        display: none;
+        display: initial;
+        z-index: unset;
       }
 
-      .price {
-        em.delete {
-          color: #ffffff;
-          text-decoration: line-through;
+      .summary {
+        position: absolute;
+        bottom: 2rem;
+        left: 2rem;
+        top: unset;
+
+        .title {
+          display: none;
+        }
+
+        .price {
+          color: $onBackground;
+          visibility: visible;
+          font-weight: bold;
+
+          .delete {
+            color: $onSecondary;
+          }
+        }
+
+        .discount-price {
+          color: $onBackground;
+          font-size: 2rem;
+          font-weight: bold;
         }
       }
-
-      .discount-price {
-        font-size: 2rem;
-        font-weight: bold;
-      }
     }
+
   }
 
 }

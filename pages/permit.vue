@@ -1,12 +1,10 @@
 <template>
   <article class="permit">
-    <h1 id=permit-heading class="hidden">수업권 신청</h1>
-    <div id="ThePermitBanner">
-    </div>
+    <h1 id=permit-heading>수업권 신청</h1>
     <TheLnb id=permit-nav :navList="subPages"/>
     <nuxt-child id="permit-article"/>
+    <div id="ThePermitBanner">배너 영역</div>
   </article>
-
 </template>
 
 <script>
@@ -14,7 +12,7 @@ import TheLnb from '@/components/admin/TheLnb'
 
 export default {
   name: 'permit',
-  layout: 'tutor',
+  // layout: 'tutor',
   components: {
     TheLnb,
   },
@@ -44,47 +42,59 @@ export default {
 </script>
 
 <style lang=scss>
-.permit {
+article.permit {
   display: grid;
-  /*@formatter:off*/
-  grid-template:
-    "banner" 23rem
-   "nav" 7.5rem
-   "article" auto/
-   auto;
-  /*@formatter:on*/
-  #permit-nav {
-    grid-area: nav;
+  grid-template-columns: 100%;
+  grid-template-rows: repeat(4, auto);
 
+  > h1 {
+    display: none;
   }
+
   #ThePermitBanner {
-    grid-area: banner;
     background-color: #e0e0e0;
-  }
-  #permit-article {
-    grid-area: article;
+    height: 23rem;
+    order: -1;
   }
 
+  #permit-article {
+    margin-top: 7.5rem;
+  }
 }
 
+$heading-height: 12rem;
+$m-t: 6rem;
 @media(min-width: 641px) {
-  .permit {
-    display: grid;
-    grid-gap: 7.6rem;
-    /*@formatter:off*/
-    grid-template:
-      "nav" 4rem
-      "article" auto/
-      auto;
-    /*@formatter:on*/
-    #permit-nav {
-      grid-area: nav;
+  article.permit {
+    > *:nth-child(2) {
+      margin-top: $heading-height + $m-t;
     }
 
-    #permit-article {
-      grid-area: article;
+    > h1 {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: $heading-height;
+      font-size: 4.2rem;
+      line-height: 0.96;
+      font-weight: 300;
+      background-color: #f5f5f5;
+      color: #000000;
     }
 
+    > #TheTutorLocalNav {
+      padding: 0 5rem;
+
+      & + * {
+        padding: 0 5rem;
+      }
+    }
+
+    #ThePermitBanner {
+      order: 0;
+    }
   }
 }
 </style>

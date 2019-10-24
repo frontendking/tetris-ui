@@ -13,8 +13,10 @@ $error: #ec4800;
 
 $onPrimary: #ffffff;
 $onSecondary: #ffffff;
-$onBackground: #6e737d;
-$onSurface: #6e737d;
+$onBackground: #000000;
+$onBackground-variant: #6e737d;
+$onSurface: #000000;
+$onSurface-variant:#6e737d;
 $onError: #ffffff;
 
 
@@ -24,3 +26,5 @@ $red: $error;
 $yellow: $secondary-variant;
 $blue: $primary-variant;
 
+$line: #efefef;
+$line-darker: $gray-light;

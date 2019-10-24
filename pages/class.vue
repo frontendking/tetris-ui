@@ -23,15 +23,13 @@
 import TheClassHeader from '@/components/class/TheClassHeader/TheClassHeader'
 import { getClasses, users } from '../store/class-info'
 import TheClassFooter from '@/components/class/TheClassFooter/index'
-import { map } from 'fxjs/Strict'
 import TheLnb from '@/components/admin/TheLnb'
-
 
 export default {
   name: 'class',
   layout: 'tutor',
   // layout:'tutor',
-  data() {
+  data () {
     const classId = 1
     const page = getClasses(classId)
     const { theClass, theTeacher, theReviews, footer } = page
@@ -59,8 +57,8 @@ export default {
           label: '수업 리뷰',
           to: `/class/reviews`,
         },
-      ].map(v=>{
-        if(RegExp(`class/${v.id}$`).test(this.$route.path)){
+      ].map(v => {
+        if (RegExp(`class/${v.id}$`).test(this.$route.path)) {
           v.isActive = true
         }
         return v
@@ -118,7 +116,7 @@ export default {
       ]
     },
   },
-  created(){
+  created () {
 
   }
 }
@@ -139,12 +137,15 @@ article.class-info {
   grid-template-columns: 100%;
   grid-template-rows: repeat(4, auto);
   grid-row-gap: 5.9rem;
-  #page-heading {
+
+  h1 {
     display: none;
   }
+
   > article {
     position: static;
   }
+
   .sticky {
     position: fixed;
     bottom: 0;
@@ -169,6 +170,7 @@ article.class-info {
       &:active, &:hover {
         border-bottom: #34b4f9 solid 4px;
       }
+
       a {
         display: block;
         padding: 2.4rem 0;
@@ -182,11 +184,16 @@ article.class-info {
     width: 100%;
   }
 
-  @media(min-width: 641px) {
+}
+
+@media(min-width: 641px) {
+  article.class-info {
+
     > *:nth-child(2) {
       margin-top: $heading-font + $heading-p-t + $heading-p-b + $heading-b-m;
     }
-    #page-heading {
+
+    > h1 {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -200,12 +207,14 @@ article.class-info {
       font-weight: 300;
       background-color: #f5f5f5;
     }
+
     #class-nav ul {
       background-color: #f7f7f7;
       color: #777;
       font-size: 1.6rem;
       font-weight: 500;
       border: none;
+
       li {
         display: flex;
         border: solid 1px #e0e0e0;
@@ -213,7 +222,9 @@ article.class-info {
 
         &:last-child {
           border-right: solid 1px #e0e0e0;
-        };
+        }
+      ;
+
         &.active, &:hover, &:active {
           color: #fff;
           background-color: #6e737d;

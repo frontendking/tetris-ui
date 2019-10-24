@@ -1,5 +1,5 @@
 <template>
-  <input type='checkbox' v-bind=$attrs>
+  <input v-bind=$attrs>
 </template>
 
 <script>
@@ -38,6 +38,9 @@ input[type] {
 }
 
 .ThePermitCard {
+  input[type] {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
 
   input:checked {
     background: $primary;
@@ -53,7 +56,7 @@ input[type] {
       height: 100%;
       border: $primary solid 0.4rem;
       border-radius: 0.5rem;
-      background: rgba(0,0,0,0.7);
+      background: rgba(0, 0, 0, 0.5);
       /* opacity: 0.5; */
     }
 
@@ -64,11 +67,37 @@ input[type] {
       width: 2rem;
       height: 2rem;
       border-radius: 50%;
-      position:relative;
-      top:0;
-      right:0;
+      position: relative;
+      top: 0;
+      right: 0;
     }
   }
 }
 
+@media(min-width: 641px) {
+  .ThePermitCard {
+    input[type] {
+      visibility: hidden;
+      position: static;
+    }
+
+    input:checked {
+      &:before {
+        visibility: visible;
+        border:none;
+        z-index: 1;
+      }
+    }
+
+    > div {
+      border-radius: 0.5rem;
+
+      &:hover {
+        box-shadow: 0 0 0 5px $onBackground-variant inset;
+      }
+
+    }
+  }
+
+}
 </style>
