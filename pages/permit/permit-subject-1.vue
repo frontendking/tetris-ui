@@ -17,18 +17,18 @@
     <section class="permit-form">
       <h3 v-html="permitForm.label"/>
       <form class="permit-form">
-<!--        <fieldset class="permit-selection">-->
-<!--          <div>-->
-<!--            <legend v-html="permitForm.permitSelection.legend"/>-->
-<!--            <ThePermitCard v-for="permitType in permitForm.permitSelection.permiTypes"-->
-<!--                           :key="permitType.id"-->
-<!--                           :id="permitType.id"-->
-<!--                           :type="permitType.type"-->
-<!--                           :price="permitType.price"-->
-<!--                           :discount="permitType.discount"-->
-<!--            />-->
-<!--          </div>-->
-<!--        </fieldset>-->
+        <fieldset class="permit-selection">
+          <div>
+            <legend v-html="permitForm.permitSelection.legend"/>
+            <ThePermitCard v-for="permitType in permitForm.permitSelection.permiTypes"
+                           :key="permitType.id"
+                           :id="permitType.id"
+                           :type="permitType.type"
+                           :price="permitType.price"
+                           :discount="permitType.discount"
+            />
+          </div>
+        </fieldset>
         <fieldset class="term-agreement">
           <div>
             <legend v-html="permitForm.termAggrement.legend"/>
