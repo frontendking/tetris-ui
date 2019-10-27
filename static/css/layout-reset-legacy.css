@@ -1,0 +1,137 @@
+/*일간대치동 소개*/
+#main-floting-area > a {
+  display: none;
+}
+
+#report_modal_info {
+  border-top: none;
+}
+
+#b2c-wrapper > iframe {
+  position: absolute;
+  top: 0;
+  left: -2rem;
+  width: 104%;
+}
+
+#tutor-header {
+  max-width: 1024px;
+  margin: 0 auto;
+  margin-bottom: 3rem;
+}
+
+#tutor-gnb {
+  justify-content: flex-start;
+}
+
+#b2c-navi-list {
+
+}
+
+
+#b2c-navi-title {
+  width: 24rem;
+  flex-shrink: 0;
+  padding-right: 7rem;
+}
+
+#calss-detail-layout > div.TheCourseInfo.courses-info.gray-bg {
+  background: #f3f3f4;
+}
+
+#videoModal > div > div {
+  width: 71rem;
+}
+
+#homework_form > div:nth-child(4) > label {
+  z-index: 1;
+}
+
+#homework_form > div:nth-child(4) > div {
+  z-index: 1;
+}
+
+#homework_form > div:nth-child(5) > label {
+  z-index: 1;
+}
+
+.got-style .top-container {
+  font-size: 34px;
+  padding-bottom: 18px;
+  border-bottom: 2px solid #000;
+}
+
+.program-wrapper .tabs-container .nav-tabs li a,
+.program-wrapper .tab-content .nav-tabs li a {
+  font-size: 20px;
+}
+
+.program-wrapper .tabs-container {
+  position: relative;
+}
+
+.nav-tabs > li:first-child > a {
+  padding-left: 0;
+}
+
+.nav-tabs > li > a:before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 15px;
+  width: 1px;
+  height: 19px;
+  object-fit: contain;
+  opacity: 0.2;
+  background-color: #000000;
+}
+
+.nav-tabs > li:first-child > a:before {
+  display: none;
+}
+
+.program-wrapper .tabs-container .nav-tabs li a,
+.program-wrapper .tab-content .nav-tabs li a {
+  border-bottom: 0;
+}
+
+.courses-info .txt-01 {
+  display: inline-block;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+.courses-info .txt-02 {
+  font-size: 2.8rem;
+  letter-spacing: -1.4px;
+}
+
+.courses-info .info-list {
+  border-top: 1px solid #ccc;
+}
+
+.courses-info .info-list:first-child {
+  border-top: 0;
+}
+
+
+@media (min-width: 641px) {
+  #main-floting-area > a {
+    display: none;
+  }
+
+  #b2c-wrapper {
+    min-width: 1024px;
+  }
+
+  #wrap > div.content-wrapper {
+    padding: 3.3rem 9rem;
+  }
+
+  .content-box h1 {
+    display:  block;
+    float: left;
+    padding:40px 0;
+  }
+}
