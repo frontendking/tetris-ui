@@ -55,8 +55,8 @@ export default {
     exclude: [
       /^(?=.*\bassets\b).*$/,
       /^(?=.*\badmin\b).*$/,
-      /^(?=.*\bclass\b).*$/,
-      /^(?=.*\bpermit\b).*$/,
+      // /^(?=.*\bclass\b).*$/,
+      // /^(?=.*\bpermit\b).*$/,
       // /^(?=.*\blearning\b).*$/
     ]
   },
