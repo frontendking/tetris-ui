@@ -78,7 +78,7 @@ input[type] {
   .ThePermitCard {
     input[type] {
       visibility: hidden;
-      position: static;
+      position: absolute;
     }
 
     input:checked {

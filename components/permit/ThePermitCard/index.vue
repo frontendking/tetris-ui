@@ -36,7 +36,7 @@ export default {
   filters: {},
   computed: {
     visualTitle () {
-      return `일간대치동 <em class="permit-card">${this.type}개월</em>`
+      return `일간대치동 <em class="permit-card">3과목 ${this.type}개월</em>`
     },
     title () {
       return `${this.type}개월 수업`
@@ -69,7 +69,7 @@ export default {
     .title {
       font-size: 3.2rem;
       line-height: 1.2;
-      width: 14.9rem;
+      width: 17.9rem;
       z-index: 1;
 
       em.permit-card {
@@ -102,6 +102,7 @@ export default {
         .delete {
           visibility: visible;
           line-height: 1;
+          text-decoration: line-through;
         }
       }
 

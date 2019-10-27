@@ -39,6 +39,7 @@
             <article>
               <h1 v-html="permitForm.term.title"/>
               <p v-for=" content in permitForm.term.contents" v-html="content"/>
+              <p class="term-notice" v-html="permitForm.term.notice"></p>
             </article>
           </div>
         </fieldset>
@@ -50,8 +51,6 @@
 </template>
 
 <script>
-import faker from 'faker/locale/ko'
-import { genLorem } from '@/utils'
 import ThePermitCard from '@/components/permit/ThePermitCard/index'
 import BaseCheckbox from '@/components/base/BaseCheckbox/index'
 import BaseButton from '@/components/base/BaseButton/index'
@@ -91,14 +90,14 @@ export default {
         },
       ],
       permitTerm: {
-        title: '수업권 규정 및 이용약관(필수)를 확인하고 동의 합니다.',
+        title: '*수업권 구매에 따른 추가 규정* (18.08.13)',
         contents: [
           '특정 프로그램을 일정 기간 동안 수강할 수 있는 수업권으로 수업권에 대한 전체 수강료를 구매 후, 클래스 수강 신청을 할 수 있습니다.',
-          '수업권 구매 후, 수업권으로 수강 가능한 클래스를 선택(수업권으로 수강하기) 하신 후, 클래스를 수강 가능합니다.',
-          '수업권에 이용 가능한 클래스 수가 부여되며, 클래스 수강신청시마다 클래스 수가 차감됩니다.',
-          '12개월 수업권 사용시, 개인 사정으로 12개월 기간내 보류가 필요한 경우 3개월 학습 경과된 후에 보류 신청이 가능하며, 1회에 3개월까지 가능, 최대 2회 보류 가능합니다. 6개월 수업권의 경우, 보류가 불가능 합니다.',
-          '수업권은 수업권으로 수강신청하게 되는 첫 번째 클래스에 수강 신청한 자녀 기준으로 이용 가능하며, 다른 사람에게 양도*양수 불가합니다. (1회 적발 시, 경고 / 2회 적발 시, 이용 가능한 클래스 1회 차감 / 3회 적발시, 이용 가능한 클래스 2회 차감, 4회 적발 시, 차감된 클래스 수를 제외한 나머지 횟수만큼 환불처리)',
-          '수업권 환불 시 클래스 수강 중인 경우 수강중인 클래스에 해당하는 수강료는 학원법을 따르며, 남은 개월 수는 전액 환불하고, 12개월권의 경우 할인율을 적용하지 않은 원 수강료 기준을 적용하여 환불됩니다.',
+          '1. 수업권 구매 후, 수업권으로 수강 가능한 클래스를 선택(수업권으로 수강하기) 하신 후, 클래스를 수강 가능합니다.',
+          '2. 수업권에 이용 가능한 클래스 수가 부여되며, 클래스 수강신청시마다 클래스 수가 차감됩니다.',
+          '3. 12개월 수업권 사용시, 개인 사정으로 12개월 기간내 보류가 필요한 경우 3개월 학습 경과된 후에 보류 신청이 가능하며, 1회에 3개월까지 가능, 최대 2회 보류 가능합니다. 6개월 수업권의 경우, 보류가 불가능 합니다.',
+          '4. 수업권은 수업권으로 수강신청하게 되는 첫 번째 클래스에 수강 신청한 자녀 기준으로 이용 가능하며, 다른 사람에게 양도*양수 불가합니다. (1회 적발 시, 경고 / 2회 적발 시, 이용 가능한 클래스 1회 차감 / 3회 적발시, 이용 가능한 클래스 2회 차감, 4회 적발 시, 차감된 클래스 수를 제외한 나머지 횟수만큼 환불처리)',
+          '5. 수업권 환불 시 클래스 수강 중인 경우 수강중인 클래스에 해당하는 수강료는 학원법을 따르며, 남은 개월 수는 전액 환불하고, 12개월권의 경우 할인율을 적용하지 않은 원 수강료 기준을 적용하여 환불됩니다.',
         ],
         notice: '* 수업권에 대한 규정은 추가 및 변경될 수 있으며, 이전 내용이 변경되는 경우, 별도 안내됩니다.',
       },
@@ -157,7 +156,7 @@ export default {
 </script>
 
 <style lang=scss>
-@import '@/assets/style/global.scss';
+@import '@/assets/style/color.scss';
 
 @function headings($from:1, $to:6) {
   @if $from == $to {
@@ -228,12 +227,6 @@ export default {
 
   section.permit-adventage {
     margin-bottom: 0;
-
-    p {
-      &:before {
-        content: '-';
-      }
-    }
 
     strong {
       color: $onBackground-variant;
@@ -352,12 +345,8 @@ export default {
 
         p {
           font-size: 1.2rem;
-          text-indent: -0.6rem;
-
-          &:before {
-            content: '- ';
-          }
-
+          text-indent: -1.5rem;
+          margin-left: 1.5rem;
           padding-left: 0.5rem;
         }
 
@@ -367,6 +356,7 @@ export default {
 
     button {
       margin-top: 4rem;
+      width: 100%;
     }
   }
 
@@ -441,12 +431,6 @@ export default {
 
     section.permit-adventage {
       margin-bottom: 0;
-
-      p {
-        &:before {
-          content: '-';
-        }
-      }
 
       strong {
         color: $onBackground-variant;
@@ -557,19 +541,13 @@ export default {
             color: #000000;
             font-size: 1.5rem;
             border: none;
-          }
-
-          p {
-            font-size: 1.2rem;
-            text-indent: -0.6rem;
-
-            &:before {
-              content: '- ';
+            + p {
+              padding-bottom: 1.8rem;
             }
-
-            padding-left: 0.5rem;
           }
-
+          .term-notice {
+            padding-top: 1.8rem;
+          }
           border-bottom: 1px solid #000000;
         }
       }
@@ -582,165 +560,5 @@ export default {
     }
 
   }
-
-  /*
-    .permit-subject-1 {
-      font-size: 1.6rem;
-      font-weight: normal;
-      line-height: 1.56;
-      letter-spacing: normal;
-      color: #6e737d;
-      grid-gap: 2.9rem;
-      !*@formatter:off*!
-      grid-template:
-        "header" auto
-        "intro" auto
-        "adventage" auto
-        "form" auto/
-        auto;
-    !* @formatter:on*!
-      .permit-header {
-        display: initial;
-      }
-
-      .permit-form > h3,
-      .permit-selection legend {
-        display: none;
-      }
-
-      section > header {
-        font-size: 1.6rem;
-        font-weight: normal;
-        line-height: 1.56;
-        letter-spacing: normal;
-        color: #6e737d;
-        width: initial;
-
-        em {
-          color: inherit;
-        }
-      }
-
-      h2, legend, label {
-        color: #000000;
-      }
-
-      section h2:first-child {
-        font-size: 1.8rem;
-        font-weight: bold;
-        font-style: normal;
-        line-height: 1.43;
-        letter-spacing: -0.101rem;
-        width: 40.7rem;
-        margin: initial;
-      }
-
-      !*@formatter:on*!
-      .permit-header {
-        grid-area: header;
-
-        h1 {
-          width: 100%;
-          font-size: 3.4rem;
-          font-weight: bold;
-          font-style: normal;
-          font-stretch: normal;
-          line-height: normal;
-          letter-spacing: -0.085rem;
-          border-bottom: solid 2px #000000;
-          padding-bottom: 1.6rem;
-          color: #000000;
-        }
-      }
-
-      .permit-adventage {
-        p {
-          &:before {
-            content: '-';
-          }
-        }
-
-        strong, em {
-          color: #ff4639;
-          font-weight: normal;
-        }
-
-      }
-
-      .permit-form {
-        display: flex;
-        flex-flow: column;
-
-        .permit-selection > div {
-          display: flex;
-          width: 95rem;
-          justify-content: space-between;
-        }
-
-        .ThePermitCard {
-          &:nth-of-type(1) {
-            background-color: #ffbc51;
-          }
-
-          &:nth-of-type(2) {
-            background-color: #74bbc7;
-          }
-
-          &:nth-of-type(3) {
-            background-color: #72baa5;
-          }
-
-          &:nth-of-type(4) {
-            background-color: #7275ba;
-          }
-        }
-
-        .term-agreement {
-          padding-top: 4.4rem;
-
-          legend {
-            padding: 1.6rem 0;
-          }
-
-          label {
-            display: block;
-            padding: 2.7rem 0;
-            width: 100%;
-            max-width: initial;
-            border-top: 2px solid #000000;
-            border-bottom: 1px solid #000000;
-          }
-
-          article {
-            padding: 1rem;
-            margin-bottom: 1rem;
-
-            h1 {
-              color: #000000;
-              font-size: 1.5rem;
-            }
-
-            p {
-              font-size: 1.2rem;
-              text-indent: -0.6rem;
-
-              &:before {
-                content: '- ';
-
-              }
-
-              padding-left: 0.5rem;
-            }
-
-            border-bottom: 1px solid #000000;
-          }
-        }
-
-        button {
-          margin-top: 4rem;
-        }
-      }
-    }
-  */
 }
 </style>

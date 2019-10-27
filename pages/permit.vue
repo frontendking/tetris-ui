@@ -59,6 +59,7 @@ article.permit {
 
   #permit-article {
     margin-top: 7.5rem;
+    padding: 0 2rem;
   }
 }
 
@@ -92,7 +93,9 @@ $m-t: 6rem;
         padding: 0 5rem;
       }
     }
-
+    #permit-article {
+      padding: 0;
+    }
     #ThePermitBanner {
       order: 0;
     }
