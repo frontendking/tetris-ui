@@ -68,7 +68,7 @@ export default {
     pages: 'css',
   },
   build: {
-    publicPath: process.env.NODE_ENV === 'production' ? '/' : '/b2c',
+    publicPath: '/',
     extractCSS: true,
     filenames: {
       app: 'js/b2c/[name].js',
