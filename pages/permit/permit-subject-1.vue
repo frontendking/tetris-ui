@@ -53,7 +53,7 @@
 <script>
 import ThePermitCard from '@/components/permit/ThePermitCard/index'
 import BaseCheckbox from '@/components/base/BaseCheckbox/index'
-import BaseButton from '@/css/BaseButton/index'
+import BaseButton from '@/components/base/BaseButton/index'
 
 export default {
   name: 'permit-subject-1',

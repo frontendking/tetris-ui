@@ -9,16 +9,15 @@ export default {
     port: 8000, // default: 3000
     host: '0.0.0.0', // default: localhost
   },
-  /*
-    router: {
-      extendRoutes(routes, resolve){
-        routes.push({
-          name: 'ThePermitCard',
-          path: '/ThePermitCard',
-          component: resolve(__dirname, 'components/permit/ThePermitCard/index.vue')
-        })
-      }
-    },*/
+  router: {
+    extendRoutes (routes, resolve) {
+      routes.push({
+        name: 'TheStBiSearch',
+        path: '/TheStBiSearch',
+        component: resolve(__dirname, 'components/layout/TheStBiSearch.vue')
+      })
+    }
+  },
   head: {
     title: process.env.npm_package_name || '',
     meta: [
@@ -59,25 +58,25 @@ export default {
     exclude: [
       /^(?=.*\bassets\b).*$/,
       /^(?=.*\badmin\b).*$/,
-      // /^(?=.*\bclass\b).*$/,
-      // /^(?=.*\bpermit\b).*$/,
-      // /^(?=.*\blearning\b).*$/
+      /^(?=.*\bclass\b).*$/,
+      /^(?=.*\bpermit\b).*$/,
+      /^(?=.*\bmembership\b).*$/,
+      /^(?=.*\blearning\b).*$/,
+      /^(?=.*\bteaching\b).*$/,
+      /^(?=.*\bpermit\b).*$/
     ],
   },
-  dir: {
-    pages: 'css',
-  },
   build: {
-    publicPath: '/',
-    extractCSS: true,
-    filenames: {
-      app: 'js/b2c/[name].js',
-      chunk: 'js/b2c/[name].js',
-      css: '[name].css',
-      img: 'img/b2c/[name].[ext]',
-      // css: `${b2cPath}/css/b2c/[name].css`,
-      // img: `${b2cPath}/img/b2c/[name].[ext]`,
-    },
+    /*     publicPath: '/',
+        extractCSS: true,
+        filenames: {
+          app: 'js/b2c/[name].js',
+          chunk: 'js/b2c/[name].js',
+          css: '[name].css',
+          img: 'img/b2c/[name].[ext]',
+          // css: `${b2cPath}/css/b2c/[name].css`,
+          // img: `${b2cPath}/img/b2c/[name].[ext]`,
+        },*/
     postcss: {
       preset: {
         autoprefixer: {

@@ -590,7 +590,7 @@
 </template>
 <script>
 // import TheConectsHeader from '../components/layout/TheConectsHeader'
-import TheTutorGnb from '../components/layout/TheTutorGnb'
+import TheTutorGnb from './TheTutorGnb/index'
 // import TheConectsLnb from '../components/layout/TheConectsLnb'
 // import TheConectsFooter from '../components/layout/TheConectsFooter'
 
@@ -613,11 +613,11 @@ export default {
 
 
 <style lang="scss">
-@import '../assets-conects/st_common.css';
-@import '../assets-conects/st-comm-v4.0.0.css';
-@import '../assets-conects/st_conects.css';
+@import '../../assets-conects/st_common.css';
+@import '../../assets-conects/st-comm-v4.0.0.css';
+@import '../../assets-conects/st_conects.css';
 @import 'destyle.css';
-@import '../assets/style/b2c-reset.css';
+@import '../../assets/style/b2c-reset.css';
 
 html {
   font-size: 10px;
