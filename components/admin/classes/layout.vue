@@ -9,7 +9,7 @@
 
 <script>
 import ClassesLayout from '@/components/admin/layout-sub-2'
-import navList from '../../../pages/learning/classes/assets/navList'
+import navList from '@/css/teaching/classes/assets/navList'
 export default {
   name: 'layout-classes',
   data() {
