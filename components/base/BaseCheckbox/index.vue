@@ -17,7 +17,7 @@ export default {
 <style lang=scss>
 @import '@/assets/style/global.scss';
 
-input[type] {
+.permit input[type=radio], .permit input[type=checkbox] {
   position: static;
   display: flex;
   justify-content: center;
