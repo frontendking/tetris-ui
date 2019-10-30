@@ -1,0 +1,385 @@
+.class-timetable-search-section.pc-view {
+  padding: 50px 0 120px
+}
+
+.class-timetable-search-section.pc-view .content-box {
+  width: 1200px;
+  margin: 0 auto
+}
+
+.class-timetable-search-section.pc-view .timetable-search-section .txt-no-result {
+  padding: 30px 0;
+  font-weight: 700;
+  font-size: 20px;
+  color: #000;
+  text-align: center
+}
+
+.class-timetable-search-section.pc-view .timetable-search-section h3.tit-class-timetable {
+  font-size: 18px
+}
+
+.class-timetable-search-section.pc-view .timetable-search-section h3.tit-class-timetable > span {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 900;
+  font-size: 14px;
+  color: #29b6fb
+}
+
+.class-timetable-search-section.pc-view .timetable-search-section .class-search-box {
+  overflow: hidden;
+  padding: 25px;
+  border: 1px solid #cbcbcb;
+  border-radius: 3px 3px 0 0;
+  background: #f2f2f2
+}
+
+.class-timetable-search-section.pc-view .timetable-search-section .class-search-box .class-reserve-search-area {
+  float: left;
+  width: calc(100% - 100px)
+}
+
+.class-timetable-search-section.pc-view .timetable-search-section .class-search-box .class-reserve-search-area .comment {
+  padding-left: 85px;
+  font-size: 13px
+}
+
+.class-timetable-search-section.pc-view .timetable-search-section .class-search-box .class-reserve-search-area > div {
+  float: left;
+  width: 50%;
+  position: relative;
+  margin-left: -1px;
+  padding: 0 20px 0 25px;
+  border: 1px solid #dadada;
+  border-width: 0 1px
+}
+
+.class-timetable-search-section.pc-view .timetable-search-section .class-search-box .class-reserve-search-area > div:after, .class-timetable-search-section.pc-view .timetable-search-section .class-search-box .class-reserve-search-area > div:before {
+  position: absolute;
+  top: 0;
+  width: 1px;
+  height: 100%;
+  background: #fff;
+  content: ""
+}
+
+.class-timetable-search-section.pc-view .timetable-search-section .class-search-box .class-reserve-search-area > div:before {
+  left: 0
+}
+
+.class-timetable-search-section.pc-view .timetable-search-section .class-search-box .class-reserve-search-area > div:after {
+  right: 0
+}
+
+.class-timetable-search-section.pc-view .timetable-search-section .class-search-box .class-reserve-search-area > div:first-child {
+  padding-left: 0;
+  border-left: 0
+}
+
+.class-timetable-search-section.pc-view .timetable-search-section .class-search-box .class-reserve-search-area > div:first-child:before {
+  display: none
+}
+
+.class-timetable-search-section.pc-view .timetable-search-section .class-search-box .class-reserve-search-area > div:last-child {
+  border-right: 0
+}
+
+.class-timetable-search-section.pc-view .timetable-search-section .class-search-box .class-reserve-search-area > div:last-child:after {
+  display: none
+}
+
+.class-timetable-search-section.pc-view .timetable-search-section .class-search-box .class-reserve-search-area > div h3 {
+  float: left;
+  margin-right: 20px
+}
+
+.class-timetable-search-section.pc-view .timetable-search-section .class-search-box .class-reserve-search-area > div .select-filter {
+  float: left;
+  max-width: calc(100% - 80px)
+}
+
+.class-timetable-search-section.pc-view .timetable-search-section .class-search-box .class-reserve-search-area > div .select-filter button.btn-select {
+  display: block;
+  float: left;
+  min-width: 70px;
+  padding: 8px 10px;
+  margin: 0 5px 5px 0;
+  color: #000;
+  text-align: center;
+  border: 1px solid #cbcbcb;
+  border-radius: 3px;
+  background: #f5f5f5;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box
+}
+
+.class-timetable-search-section.pc-view .timetable-search-section .class-search-box .class-reserve-search-area > div .select-filter button.btn-select:last-child {
+  margin-right: 0
+}
+
+.class-timetable-search-section.pc-view .timetable-search-section .class-search-box .class-reserve-search-area > div .select-filter button.btn-select.active {
+  color: #fff;
+  background: #29b6f6;
+  -webkit-box-shadow: 3px 3px 3px rgba(0, 0, 0, .1) inset;
+  box-shadow: inset 3px 3px 3px rgba(0, 0, 0, .1)
+}
+
+.class-timetable-search-section.pc-view .timetable-search-section .class-search-box .btn-timetable-search {
+  display: block;
+  float: left;
+  min-width: 80px;
+  padding: 8px 10px;
+  color: #fff;
+  background: #29b6fb;
+  border: 1px solid #cbcbcb;
+  border-radius: 3px
+}
+
+.class-timetable-search-section.pc-view .timetable-search-section .result-box {
+  padding: 25px;
+  border: 1px solid #cbcbcb;
+  border-width: 0 1px 1px;
+  border-radius: 0 0 3px 3px
+}
+
+.class-timetable-search-section.pc-view .timetable-search-section .result-box h3.tit-class-timetable {
+  margin-bottom: 20px
+}
+
+.class-timetable-search-section.pc-view .timetable-search-section .result-box .timetable-result-section table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: separate;
+  border-spacing: 5px 3px
+}
+
+.class-timetable-search-section.pc-view .timetable-search-section .result-box .timetable-result-section table tbody th {
+  padding: 10px 0;
+  font-weight: 400;
+  font-size: 14px;
+  color: #666;
+  text-align: center;
+  background: #eee
+}
+
+.class-timetable-search-section.pc-view .timetable-search-section .result-box .timetable-result-section table tbody th {
+  font-size: 16px;
+  vertical-align: middle;
+  border-radius: 3px
+}
+
+.class-timetable-search-section.pc-view .timetable-search-section .result-box .timetable-result-section table tbody td {
+  padding: 10px 3px 5px 6px;
+  border: 1px solid #e5e5e5
+}
+
+.class-timetable-search-section.pc-view .timetable-search-section .result-box .timetable-result-section table tbody td div:after {
+  clear: both;
+  display: block;
+  content: ""
+}
+
+.class-timetable-search-section.pc-view .timetable-search-section .result-box .timetable-result-section table tbody td div .btn-class-teacher-popup {
+  display: block;
+  float: left;
+  position: relative;
+  margin: 0 5px 5px 0;
+  padding: 5px 10px;
+  border: 1px solid #cbcbcb;
+  border-radius: 3px;
+  background: #f5f5f5;
+  line-height: 1.4
+}
+
+.class-timetable-search-section.pc-view .timetable-search-section .result-box .timetable-result-section table tbody td div .btn-class-teacher-popup .icon-deadline {
+  position: absolute;
+  top: -10px;
+  right: -20px
+}
+
+.class-timetable-search-section.pc-view .timetable-search-section .result-box .timetable-result-section table tbody td div .btn-class-teacher-popup > span {
+  display: block;
+  font-size: 14px;
+  color: #000;
+  text-align: center
+}
+
+.class-timetable-search-section.pc-view .timetable-search-section .result-box .timetable-result-section table tbody td div .btn-class-teacher-popup > span.first-date {
+  font-size: 12px
+}
+
+.class-timetable-search-section.pc-view .timetable-search-section .result-box .timetable-result-section table tbody td div .btn-class-teacher-popup.closed {
+  font-weight: 700;
+  background: #dadada
+}
+
+.class-timetable-search-section.pc-view .timetable-search-section .result-box .timetable-result-section table tbody td div .btn-class-teacher-popup.closed > span {
+  color: #999
+}
+
+.class-timetable-search-section.pc-view #request-class-info .modal-dialog {
+  width: 400px
+}
+
+.class-timetable-search-section.mobile .content-box {
+  max-width: 640px;
+  margin: 0 auto
+}
+
+.class-timetable-search-section.mobile .timetable-search-section h3.tit-class-timetable {
+  font-size: 18px
+}
+
+.class-timetable-search-section.mobile .timetable-search-section h3.tit-class-timetable > span {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 900;
+  font-size: 14px;
+  color: #29b6fb
+}
+
+.class-timetable-search-section.mobile .timetable-search-section .search-box {
+  overflow: hidden;
+  padding: 10px;
+  border: 1px solid #cbcbcb;
+  border-radius: 3px 3px 0 0;
+  background: #f2f2f2
+}
+
+.class-timetable-search-section.mobile .timetable-search-section .search-box .search-area > div {
+  padding: 10px 0;
+  border-bottom: 1px solid #cbcbcb
+}
+
+.class-timetable-search-section.mobile .timetable-search-section .search-box .search-area > div:first-child {
+  padding-top: 0
+}
+
+.class-timetable-search-section.mobile .timetable-search-section .search-box .search-area > div:after {
+  display: block;
+  clear: both;
+  content: ""
+}
+
+.class-timetable-search-section.mobile .timetable-search-section .search-box .search-area > div .select-filter {
+  margin-top: 10px
+}
+
+.class-timetable-search-section.mobile .timetable-search-section .search-box .search-area > div .select-filter button.btn-select {
+  display: block;
+  float: left;
+  min-width: calc(25% - 5px);
+  padding: 8px 10px;
+  margin: 0 5px 5px 0;
+  color: #000;
+  text-align: center;
+  border: 1px solid #cbcbcb;
+  border-radius: 3px;
+  background: #f5f5f5;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box
+}
+
+.class-timetable-search-section.mobile .timetable-search-section .search-box .search-area > div .select-filter button.btn-select:last-child {
+  margin-right: 0
+}
+
+.class-timetable-search-section.mobile .timetable-search-section .search-box .search-area > div .select-filter button.btn-select.active {
+  color: #fff;
+  background: #29b6f6;
+  -webkit-box-shadow: 3px 3px 3px rgba(0, 0, 0, .1) inset;
+  box-shadow: inset 3px 3px 3px rgba(0, 0, 0, .1)
+}
+
+.class-timetable-search-section.mobile .timetable-search-section .search-box .btn-timetable-search {
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+  padding: 8px 10px;
+  color: #fff;
+  background: #29b6fb;
+  border: 1px solid #cbcbcb;
+  border-radius: 3px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box
+}
+
+.class-timetable-search-section.mobile .timetable-search-section .result-box {
+  padding: 25px 10px;
+  border: 1px solid #cbcbcb;
+  border-width: 0 1px 1px;
+  border-radius: 0 0 3px 3px
+}
+
+.class-timetable-search-section.mobile .timetable-search-section .result-box h3.tit-class-timetable {
+  margin-bottom: 20px
+}
+
+.class-timetable-search-section.mobile .timetable-search-section .result-box .timetable-result-section table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: separate;
+  border-spacing: 5px 3px
+}
+
+.class-timetable-search-section.mobile .timetable-search-section .result-box .timetable-result-section table tbody th {
+  padding: 10px 0;
+  font-weight: 400;
+  font-size: 14px;
+  color: #666;
+  text-align: center;
+  background: #eee;
+  font-size: 16px;
+  vertical-align: middle;
+  border-radius: 3px
+}
+
+.class-timetable-search-section.mobile .timetable-search-section .result-box .timetable-result-section table tbody td {
+  padding: 10px 5px 5px 10px;
+  border: 1px solid #e5e5e5
+}
+
+.class-timetable-search-section.mobile .timetable-search-section .result-box .timetable-result-section table tbody td div:after {
+  clear: both;
+  display: block;
+  content: ""
+}
+
+.class-timetable-search-section.mobile .timetable-search-section .result-box .timetable-result-section table tbody td div .btn-class-teacher-popup {
+  display: block;
+  float: left;
+  position: relative;
+  margin: 0 5px 5px 0;
+  padding: 5px 10px;
+  border: 1px solid #cbcbcb;
+  border-radius: 3px;
+  background: #f5f5f5;
+  line-height: 1.4
+}
+
+.class-timetable-search-section.mobile .timetable-search-section .result-box .timetable-result-section table tbody td div .btn-class-teacher-popup .icon-deadline {
+  position: absolute;
+  top: -10px;
+  right: -20px
+}
+
+.class-timetable-search-section.mobile .timetable-search-section .result-box .timetable-result-section table tbody td div .btn-class-teacher-popup > span {
+  display: block;
+  font-size: 14px;
+  color: #000;
+  text-align: center
+}
+
+.class-timetable-search-section.mobile .timetable-search-section .result-box .timetable-result-section table tbody td div .btn-class-teacher-popup > span.first-date {
+  font-size: 12px
+}
+
+.class-timetable-search-section.mobile .timetable-search-section .result-box .timetable-result-section table tbody td div .btn-class-teacher-popup.closed {
+  font-weight: 700;
+  background: #dadada
+}
+
+.class-timetable-search-section.mobile .timetable-search-section .result-box .timetable-result-section table tbody td div .btn-class-teacher-popup.closed > span {
+  color: #999
+}

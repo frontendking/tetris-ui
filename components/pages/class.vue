@@ -21,7 +21,7 @@
 </template>
 <script>
 import TheClassHeader from '@/components/class/TheClassHeader/TheClassHeader'
-import { getClasses, users } from '../store/class-info'
+import { getClasses, users } from '../../store/class-info'
 import TheClassFooter from '@/components/class/TheClassFooter/index'
 import TheLnb from '@/components/admin/TheLnb'
 

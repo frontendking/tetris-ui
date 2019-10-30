@@ -179,7 +179,7 @@ function js () {
 
 <style lang="scss">
 .expand-button {
-  background: url('./assets/arrow-down.svg') no-repeat center center;
+  background: url('assets/arrow-down.svg') no-repeat center center;
   border: none;
   background-size: contain;
   width: 1.5rem;

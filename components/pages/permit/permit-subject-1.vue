@@ -282,7 +282,7 @@ export default {
           content: '';
           width: 1.4rem;
           height: 0.7rem;
-          background: url("./assets/select-arrow.svg") no-repeat top left / contain;
+          background: url("assets/select-arrow.svg") no-repeat top left / contain;
           margin-left: auto;
           bottom: 3rem;
           position: absolute;
@@ -480,7 +480,7 @@ export default {
             content: '';
             width: 1.4rem;
             height: 0.7rem;
-            background: url("./assets/select-arrow.svg") no-repeat top left / contain;
+            background: url("assets/select-arrow.svg") no-repeat top left / contain;
             margin-left: auto;
             bottom: 3rem;
             position: absolute;

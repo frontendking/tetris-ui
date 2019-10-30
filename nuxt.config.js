@@ -2,22 +2,30 @@ const b2cPath = '../../../../b2c/src/main/webapp/resources'
 const b2cAbsPath = '/Volumes/DataHD/Code/stunitas/b2c/src/main/webapp/resources'
 export default {
   mode: 'universal',
-  /*  router: {
-      base: '/html/',
-    },*/
-  server: {
-    port: 8000, // default: 3000
-    host: '0.0.0.0', // default: localhost
+  build: {
+    /*     publicPath: '/',
+        extractCSS: true,
+        filenames: {
+          app: 'js/b2c/[name].js',
+          chunk: 'js/b2c/[name].js',
+          css: '[name].css',
+          img: 'img/b2c/[name].[ext]',
+          // css: `${b2cPath}/css/b2c/[name].css`,
+          // img: `${b2cPath}/img/b2c/[name].[ext]`,
+        },*/
+    postcss: {
+      preset: {
+        autoprefixer: {
+          grid: 'autoplace',
+        },
+      },
+    },
+    extend (config, { isClient }) {
+      // Extend only webpack config for client-bundle
+      config.devtool = isClient ? 'eval-source-map' : 'inline-source-map'
+    },
   },
-  router: {
-    extendRoutes (routes, resolve) {
-      routes.push({
-        name: 'TheStBiSearch',
-        path: '/TheStBiSearch',
-        component: resolve(__dirname, 'components/layout/TheStBiSearch.vue')
-      })
-    }
-  },
+/*
   head: {
     title: process.env.npm_package_name || '',
     meta: [
@@ -46,9 +54,9 @@ export default {
       '~assets/style/color.scss',
     ],
   },
-  /*
+  /!*
   ** Build configuration
-  */
+  *!/
   globals: {
     id: 'tutor-b2c',
   },
@@ -66,27 +74,5 @@ export default {
       /^(?=.*\bpermit\b).*$/
     ],
   },
-  build: {
-    /*     publicPath: '/',
-        extractCSS: true,
-        filenames: {
-          app: 'js/b2c/[name].js',
-          chunk: 'js/b2c/[name].js',
-          css: '[name].css',
-          img: 'img/b2c/[name].[ext]',
-          // css: `${b2cPath}/css/b2c/[name].css`,
-          // img: `${b2cPath}/img/b2c/[name].[ext]`,
-        },*/
-    postcss: {
-      preset: {
-        autoprefixer: {
-          grid: 'autoplace',
-        },
-      },
-    },
-    extend (config, { isClient }) {
-      // Extend only webpack config for client-bundle
-      config.devtool = isClient ? 'eval-source-map' : 'inline-source-map'
-    },
-  },
+*/
 }

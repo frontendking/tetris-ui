@@ -19,7 +19,7 @@
       <tr>
         <td class="sort-result" width="5%" style="text-align:center;">
           <img width="50" height="50" alt="avatar image" class="profile-img img-circle"
-               src="../../../../components/temp/assets/img/no_avatar.png">
+               src="../../../../temp/assets/img/no_avatar.png">
         </td>
         <td width="10%" style="text-align:center;">
           student_10(student_10)

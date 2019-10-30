@@ -10,7 +10,7 @@
 
 <script>
 import admin from '@/components/admin/layout'
-import navList from '@/pages/teaching/assets/navList.js'
+import navList from '@/components/pages/teaching/assets/navList.js'
 
 export default {
   name: 'teaching',
