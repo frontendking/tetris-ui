@@ -24,7 +24,6 @@ export default {
 <style lang="scss">
 @import '../assets-conects/st-comm-v4.0.0.css';
 @import '../assets-conects/st_conects.css';
-@import 'destyle.css';
 @import '../assets/style/b2c-reset.css';
 
 html {
@@ -36,8 +35,6 @@ body {
   font-size: 2.2rem;
   letter-spacing: 0.079rem;
   font-weight: normal;
-  color: #8d8d8d;
-  word-break: keep-all;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   -moz-osx-font-smoothing: grayscale;

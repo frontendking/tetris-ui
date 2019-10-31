@@ -3,16 +3,8 @@ const b2cAbsPath = '/Volumes/DataHD/Code/stunitas/b2c/src/main/webapp/resources'
 export default {
   mode: 'universal',
   build: {
-    /*     publicPath: '/',
-        extractCSS: true,
-        filenames: {
-          app: 'js/b2c/[name].js',
-          chunk: 'js/b2c/[name].js',
-          css: '[name].css',
-          img: 'img/b2c/[name].[ext]',
-          // css: `${b2cPath}/css/b2c/[name].css`,
-          // img: `${b2cPath}/img/b2c/[name].[ext]`,
-        },*/
+    publicPath: '/',
+    extractCSS: true,
     postcss: {
       preset: {
         autoprefixer: {
@@ -22,57 +14,65 @@ export default {
     },
     extend (config, { isClient }) {
       // Extend only webpack config for client-bundle
-      config.devtool = isClient ? 'eval-source-map' : 'inline-source-map'
+      if(process.env.NODE_ENV === 'development'){
+        config.devtool = isClient
+          ? 'eval-source-map'
+          : 'inline-source-map'
+      }
     },
   },
-/*
-  head: {
-    title: process.env.npm_package_name || '',
-    meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      {
-        hid: 'description',
-        name: 'description',
-        content: process.env.npm_package_description || '',
-      },
-    ],
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-    ],
-  },
-  loading: { color: '#fff' },
-  plugins: [],
+  css: [
+    'destyle.css'
+  ],
   modules: [
     '@nuxtjs/style-resources',
   ],
-  css: [
-    '~assets/style/global.scss',
-  ],
+
   styleResources: {
     scss: [
       '~assets/style/color.scss',
     ],
   },
-  /!*
-  ** Build configuration
-  *!/
   globals: {
     id: 'tutor-b2c',
   },
-  generate: {
-    dir: `${b2cAbsPath}/b2c`,
-    subFolders: false,
-    exclude: [
-      /^(?=.*\bassets\b).*$/,
-      /^(?=.*\badmin\b).*$/,
-      /^(?=.*\bclass\b).*$/,
-      /^(?=.*\bpermit\b).*$/,
-      /^(?=.*\bmembership\b).*$/,
-      /^(?=.*\blearning\b).*$/,
-      /^(?=.*\bteaching\b).*$/,
-      /^(?=.*\bpermit\b).*$/
-    ],
-  },
-*/
+  loading: { color: '#fff' },
+
+  /*
+    head: {
+      title: process.env.npm_package_name || '',
+      meta: [
+        { charset: 'utf-8' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+        {
+          hid: 'description',
+          name: 'description',
+          content: process.env.npm_package_description || '',
+        },
+      ],
+      link: [
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      ],
+    },
+    plugins: [],
+
+    /!*
+    ** Build configuration
+    *!/
+
+    generate: {
+      dir: `${b2cAbsPath}/b2c`,
+      subFolders: false,
+      exclude: [
+        /^(?=.*\bassets\b).*$/,
+        /^(?=.*\badmin\b).*$/,
+        /^(?=.*\bclass\b).*$/,
+        /^(?=.*\bpermit\b).*$/,
+        /^(?=.*\bmembership\b).*$/,
+        /^(?=.*\blearning\b).*$/,
+        /^(?=.*\bteaching\b).*$/,
+        /^(?=.*\bpermit\b).*$/
+      ],
+    },
+  */
 }

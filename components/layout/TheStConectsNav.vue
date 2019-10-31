@@ -331,7 +331,7 @@
 </template>
 
 <script>
-import TheStBiSearch from '@/pages/TheStBiSearch'
+import TheStBiSearch from '@/components/layout/TheStBiSearch'
 import TheStPersnalService from '@/components/layout/TheStPersnalService'
 import TheStSocialService from '@/components/layout/TheStSocialService'
 
@@ -341,7 +341,3 @@ export default {
 }
 </script>
 
-<style scoped lang=scss>
-.TheStConectsNav {
-}
-</style>
