@@ -22,9 +22,19 @@
                 <a
                   class="btn-class-teacher-popup"
                   :class="{closed : itemCourse.remain_count <= 0}"
+                  :href="`#request-class-info-${modal_uuid}`"
                   data-toggle="modal"
                   v-for="(itemCourse, idxCourses) in classResult.class[idxClass].courses"
                   :key="idxCourses"
+                  :course_id="itemCourse.id"
+                  :course_name="itemCourse.name"
+                  :price="itemCourse.price"
+                  :user_id="itemCourse.course_teacher.user_id"
+                  :teacher_name="itemCourse.course_teacher.name"
+                  :domain="itemCourse.course_teacher.domain"
+                  :remain_count="itemCourse.remain_count"
+                  :avatar="itemCourse.course_teacher.avatar.mobile.url"
+                  @click="sendPopupData(itemCourse.id)"
                 >
                   <img
                     v-if="itemCourse.remain_count <=2 && itemCourse.remain_count > 0"
