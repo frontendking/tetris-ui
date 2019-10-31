@@ -3,7 +3,6 @@ const b2cAbsPath = '/Volumes/DataHD/Code/stunitas/b2c/src/main/webapp/resources'
 export default {
   mode: 'universal',
   build: {
-    publicPath: '/',
     extractCSS: true,
     postcss: {
       preset: {
@@ -22,7 +21,6 @@ export default {
     },
   },
   css: [
-    'destyle.css'
   ],
   modules: [
     '@nuxtjs/style-resources',
@@ -34,7 +32,7 @@ export default {
     ],
   },
   globals: {
-    id: 'tutor-b2c',
+    id: 'wrap',
   },
   loading: { color: '#fff' },
 

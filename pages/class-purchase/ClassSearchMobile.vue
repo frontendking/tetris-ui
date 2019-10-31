@@ -172,7 +172,3 @@ export default {
   }
 };
 </script>
-<style scoped lang="scss">
-  @import "./assets/application.css";
-  @import "./assets/tutor.css";
-</style>
