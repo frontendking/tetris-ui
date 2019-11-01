@@ -75,26 +75,26 @@ export default {
       isActiveSubject: false,
       isActiveDay: false,
       targetList: [
-        // { name: "예비초등", text: "예비 초1", value: 75 },
-        { name: "초1", text: "1학년", value: 'GD1001' },
-        { name: "초2", text: "2학년", value: 'GD2001' },
-        { name: "초3", text: "3학년", value: 'GD3001' },
-        { name: "초3", text: "4학년", value: 'GD4001' }
+        // { name: "예비초등", text: "예비초1", value: 75 },
+        { name: "초1", text: "1학년", value: 34 },
+        { name: "초2", text: "2학년", value: 35 },
+        { name: "초3", text: "3학년", value: 36 },
+        { name: "초4", text: "4학년", value: 37 }
       ],
       subjectList: [
-        { name: "국어", text: "국어", value: 'SJ1001' },
+        { name: "국어", text: "국어", value: 29 },
         // { name: "영어", text: "영어", value: 30 },
-        { name: "수학", text: "수학", value: 'SJ2001' },
-        { name: "사회/과학", text: "사회/과학", value: "SJ3001" }
+        { name: "수학", text: "수학", value: 31 },
+        { name: "사회/과학", text: "사회/과학", value: 32 }
       ],
       dayOfWeekList: [
         // { name: "일요일", text: "일", value: 1 },
-        { name: "월요일", text: "월", value: 'WD1001' },
-        { name: "화요일", text: "화", value: 'WD1002' },
-        { name: "수요일", text: "수", value: 'WD1003' },
-        { name: "목요일", text: "목", value: 'WD1004' },
-        { name: "금요일", text: "금", value: 'WD1005' },
-        { name: "토요일", text: "토", value: 'WD1006' }
+        { name: "월요일", text: "월", value: 2 },
+        { name: "화요일", text: "화", value: 3 },
+        { name: "수요일", text: "수", value: 4 },
+        { name: "목요일", text: "목", value: 5 },
+        { name: "금요일", text: "금", value: 6 }
+        // { name: "토요일", text: "토", value: 7 }
       ]
     };
   },
