@@ -2,6 +2,15 @@ const b2cPath = '../../../../b2c/src/main/webapp/resources'
 const b2cAbsPath = '/Volumes/DataHD/Code/stunitas/b2c/src/main/webapp/resources'
 export default {
   mode: 'universal',
+  router: {
+    extendRoutes(routes, resolve){
+      routes.push({
+        name: 'TheClassFooter',
+        path: '/TheClassFooter',
+        component: resolve(__dirname, 'components/class/TheClassFooter/index.vue')
+      })
+    }
+  },
   build: {
     extractCSS: true,
     postcss: {

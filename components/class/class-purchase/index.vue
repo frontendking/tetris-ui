@@ -42,10 +42,10 @@
 </template>
 
 <script>
-import TheTutorLayout from '@/pages/TheTutorLayout'
-import ClassTimetableSearchMobile from '@/pages/class-purchase/ClassSearchMobile'
+import TheTutorLayout from '@/components/layout/TheTutorLayout'
+import ClassTimetableSearchMobile from '@/components/class/class-purchase/ClassSearchMobile'
 import $ from 'jquery'
-import ClassTimetableMobileComponent from '@/pages/class-purchase/ClassResultMobile'
+import ClassTimetableMobileComponent from '@/components/class/class-purchase/ClassResultMobile'
 
 export default {
   name: 'elementary-class-reserve-mobile-screen',

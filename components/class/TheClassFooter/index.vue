@@ -15,15 +15,10 @@
         {{v.label}}<span>></span>
       </a>
     </div>
-    <div class="modal-dimm">
-      <the-class-permit-radiobox-form class="modal-area"/>
-    </div>
   </footer>
 </template>
 
 <script>
-import Swal from 'sweetalert2/dist/sweetalert2'
-import 'sweetalert2/src/sweetalert2.scss'
 import TheClassPermitRadioboxForm from '@/components/class/TheClassPermitRadioboxForm'
 
 export default {
@@ -65,100 +60,6 @@ export default {
         },
       ],
     }
-  },
-  mounted () {
-    this.$nextTick(function () {
-      const purchaseClassBtn = document.querySelector('.purchase-class-btn')
-      const purchaseMembershipBtn = document.querySelector('.purchase-membership-btn')
-      const purchasePermitBtn = document.querySelector('.purchase-permit-btn')
-
-      purchaseClassBtn.addEventListener('click', e => {
-        // 단건 구매한 경우
-        Swal.fire({
-          text: '수업을 예약하시겠습니까?',
-          showCancelButton: true,
-          confirmButtonColor: '#00b9fd',
-          confirmButtonText: '확인',
-          cancelButtonText: '최소',
-          focusConfirm: false,
-        }).then((result) => {
-          if (result.value) {
-            Swal.fire({
-              text: '수업예약이 완료되었습니다.',
-              showCancelButton: true,
-              confirmButtonColor: '#00b9fd',
-              confirmButtonText: '확인',
-              cancelButtonText: '최소',
-              focusConfirm: false,
-            })
-          }
-        })
-        /*
-        // 단건 구매 이력이 있는 경우
-        Swal.fire({
-            text: "수업예약을 위해 해당 수업을 구매하셔야 합니다. 결제 화면으로 이동하시겠습니까?",
-            showCancelButton: true,
-            confirmButtonColor: '#00b9fd',
-            confirmButtonText: '확인', // 결제화면으로 이동
-            focusConfirm: false
-          }).then((result) => {
-            if (!result.value) {
-              Swal.fire(
-                '',
-                '수업예약이 취소되었습니다.',
-                '확인'
-              )
-            }
-          })*/
-      })
-
-      purchaseMembershipBtn.addEventListener('click', e => {
-        //멤버십 구매 후 7일 경과 전
-        Swal.fire({
-          text: '멤버십을 구매하고 7일 후 수업을 등록할 수 있습니다.',
-          showCancelButton: true,
-          confirmButtonColor: '#00b9fd',
-          confirmButtonText: '확인',
-          cancelButtonText: '최소',
-          focusConfirm: false,
-        })
-
-        /*
-        //멤버십 구매후 7일 후 실 결제 한 경우
-        Swal.fire({
-          text: "수업 예약이 완료되었습니다.",
-          showCancelButton: true,
-          confirmButtonColor: '#00b9fd',
-          confirmButtonText: '확인',
-          cancelButtonText: '최소',
-          focusConfirm: false
-        })*/
-        /*
-
-        //멤버십 구매 이력이 없는 경우
-        Swal.fire({
-          html: "멤버십을 구매하셔야 수업 예약이 가능합니다. <br>멤버십을 구매하시겠습니까?",
-          showCancelButton: true,
-          confirmButtonColor: '#00b9fd',
-          confirmButtonText: '확인', //멤버십 구매화면으로 이동
-          cancelButtonText: '최소',
-          focusConfirm: false
-        }).then((result) => {
-          if (!result.value) {
-            Swal.fire(
-              '',
-              '수업예약이 취소되었습니다.',
-              '확인'
-            )
-          }
-        })*/
-      })
-
-      purchasePermitBtn.addEventListener('click', e => {
-        document.querySelector('.TheClassFooter>.modal-dimm').classList.add('active')
-      })
-    })
-
   },
 }
 </script>

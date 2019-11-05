@@ -1,7 +1,7 @@
 <template>
   <article class="class-info">
     <h1 id="page-heading">수업신청</h1>
-    <the-class-header
+<!--    <the-class-header
       v-if="$route.name!=='class-search'"
       id="class-summary"
       :teacherName="theTeacher.Name"
@@ -9,7 +9,7 @@
       :classTitle="classTitle"
       :classTime="classTime"
       :summaries="summaries"
-    />
+    />-->
     <TheLnb :navList="subPages"/>
     <nuxt-child :page="page" :users="users"/>
     <the-class-footer
