@@ -3,13 +3,14 @@ const b2cAbsPath = '/Volumes/DataHD/Code/stunitas/b2c/src/main/webapp/resources'
 export default {
   mode: 'universal',
   router: {
-    extendRoutes(routes, resolve){
+    extendRoutes (routes, resolve) {
       routes.push({
         name: 'TheClassFooter',
         path: '/TheClassFooter',
-        component: resolve(__dirname, 'components/class/TheClassFooter/index.vue')
+        component: resolve(__dirname,
+          'components/class/TheClassFooter/index.vue'),
       })
-    }
+    },
   },
   build: {
     extractCSS: true,
@@ -22,15 +23,14 @@ export default {
     },
     extend (config, { isClient }) {
       // Extend only webpack config for client-bundle
-      if(process.env.NODE_ENV === 'development'){
+      if (process.env.NODE_ENV === 'development') {
         config.devtool = isClient
           ? 'eval-source-map'
           : 'inline-source-map'
       }
     },
   },
-  css: [
-  ],
+  css: [],
   modules: [
     '@nuxtjs/style-resources',
   ],
@@ -44,23 +44,24 @@ export default {
     id: 'wrap',
   },
   loading: { color: '#fff' },
-
+  head: {
+    title: process.env.npm_package_name || '',
+    meta: [
+      { charset: 'utf-8' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      {
+        hid: 'description',
+        name: 'description',
+        content: process.env.npm_package_description || '',
+      },
+    ],
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'stylesheet', href: '/destyle.css' },
+    ],
+  },
   /*
-    head: {
-      title: process.env.npm_package_name || '',
-      meta: [
-        { charset: 'utf-8' },
-        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        {
-          hid: 'description',
-          name: 'description',
-          content: process.env.npm_package_description || '',
-        },
-      ],
-      link: [
-        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      ],
-    },
+
     plugins: [],
 
     /!*
