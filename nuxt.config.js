@@ -30,7 +30,9 @@ export default {
       }
     },
   },
-  css: [],
+  css: [
+    'destyle.css'
+  ],
   modules: [
     '@nuxtjs/style-resources',
   ],
