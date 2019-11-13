@@ -68,11 +68,11 @@ export default {
 @import '~@/assets/style/global.scss';
 
 .TheClassFooter {
+  font-family: 'Noto Sans KR', sans-serif;
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: repeat(2, auto);
   grid-row-gap: 2.4rem;
-  min-width: 64rem;
 
   .class-permit-summary {
     display: grid;
@@ -214,7 +214,7 @@ export default {
   }
 }
 
-@media(min-width: 641px) {
+@media(min-width: 960px) {
   %innerFont {
     font-size: 1.1rem;
     margin: 0;

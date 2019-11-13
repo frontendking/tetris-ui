@@ -4,12 +4,26 @@ export default {
   mode: 'universal',
   router: {
     extendRoutes (routes, resolve) {
-      routes.push({
-        name: 'TheClassFooter',
-        path: '/TheClassFooter',
+      routes.push(
+/*        {
+          name: 'TheClassFooter',
+          path: '/TheClassFooter',
+          component: resolve(__dirname,
+            'components/class/TheClassFooter/index.vue'),
+        },*/
+        {
+          name: 'TheLayout',
+          path: '/TheLayout',
+          component: resolve(__dirname,
+            'components/layout/TheLayout.vue'),
+        },
+      {
+        name: 'TheLayoutConectsHeaderGnb',
+          path: '/TheLayoutConectsHeaderGnb',
         component: resolve(__dirname,
-          'components/class/TheClassFooter/index.vue'),
-      })
+        'components/layout/TheLayoutConectsHeaderGnb.vue'),
+      }
+    )
     },
   },
   build: {
@@ -60,6 +74,10 @@ export default {
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'stylesheet', href: '/destyle.css' },
+      {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900|Noto+Sans:400,400i,700,700i|Noto+Serif+KR:200,300,400,500,600,700,900|Noto+Serif:400,400i,700,700i&display=swap&subset=korean'
+      }
     ],
   },
   /*

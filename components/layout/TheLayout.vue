@@ -1,6 +1,6 @@
 <template>
     <TheStConectsContents>
-        <slot>goo</slot>
+        <slot/>
     </TheStConectsContents>
 </template>
 <script>

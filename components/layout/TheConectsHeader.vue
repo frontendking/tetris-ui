@@ -37,7 +37,7 @@
 </template>
 
 <script>
-import TheConectsHeaderGnb from './TheConectsHeaderGnb'
+import TheConectsHeaderGnb from './TheLayoutConectsHeaderGnb'
 
 export default {
   name: 'the-conects-header',

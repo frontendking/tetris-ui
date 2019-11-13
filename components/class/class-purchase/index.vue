@@ -42,7 +42,7 @@
 </template>
 
 <script>
-import TheTutorLayout from '@/components/layout/TheTutorLayout'
+import TheTutorLayout from '@/components/layout/TheLayout'
 import ClassTimetableSearchMobile from '@/components/class/class-purchase/ClassSearchMobile'
 import $ from 'jquery'
 import ClassTimetableMobileComponent from '@/components/class/class-purchase/ClassResultMobile'
