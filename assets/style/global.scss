@@ -9,37 +9,3 @@
   }
 }
 
-/*accept reponsive all area*/
-html {
-  font-size: 10px;
-}
-
-/*shadow responsive specific area*/
-@media (min-width: 320px) {
-  html {
-    /* 15 / 960 * 100 */
-    font-size: 1.5625vw;
-  }
-}
-
-@media (min-width: 960px) {
-  html {
-    font-size: calc(1.5625vw - 10px);
-  }
-}
-
-@media (min-width: 1600px) {
-  html {
-    font-size: 15px;
-  }
-}
-
-body {
-  font-family: 'Noto Sans KR', 'Malgun Gothic', '맑은고딕', '돋움', 'Dotum', 'Helvetica', 'Apple SD Gothic Neo', serif;
-  font-weight: normal;
-  color: $onBackground;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-}
