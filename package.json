@@ -18,12 +18,14 @@
     "build-storybook": "build-storybook"
   },
   "dependencies": {
+    "bxslider": "^4.2.14",
     "destyle.css": "^1.0.10",
     "fxjs": "^0.14.0",
     "jquery": "^3.4.1",
     "nuxt": "^2.0.0"
   },
   "devDependencies": {
+    "cypress": "^3.6.1",
     "@nuxtjs/style-resources": "^1.0.0",
     "@vue/test-utils": "^1.0.0-beta.27",
     "babel-core": "7.0.0-bridge.0",
