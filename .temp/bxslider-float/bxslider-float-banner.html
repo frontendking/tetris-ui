@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.js"></script>
+  <title>Document</title>
+  <style>
+  #quick-banner {
+    position: absolute;
+    top: 130px;
+    left: 50%;
+    width: 110px;
+    z-index: 10;
+  }
+
+  #quick-banner a {
+    display: block;
+  }
+
+  #quick-banner .mt20 {
+    margin-top: 20px;
+  }
+
+  #quick-banner #quick_top {
+    display: block;
+    width: 110px;
+    height: 30px;
+    background: #fff;
+    border: 1px solid #999;
+    border-radius: 10px;
+    font-size: 12px;
+    text-align: center;
+    color: #999;
+    line-height: 30px;
+  }
+
+  #quick-banner #quick_top:after {
+    content: "▶︎";
+    display: inline-block;
+    transform: rotate(-90deg);
+    font-size: 10px;
+  }
+
+
+  #quick-banner-m .section-top-ban {
+    width: 100%;
+    background: #0e268b;
+  }
+
+  #quick-banner-m .ban-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+  }
+
+  #quick-banner-m .ban-float {
+    position: fixed;
+    top: 15%;
+    right: 2%;
+    left: 75%;
+    z-index: 200;
+  }
+
+  #quick-banner-m .in {
+    position: relative;
+    margin: 0 auto;
+    max-width: 640px;
+    min-width: 320px;
+  }
+
+  #quick-banner-m img {
+    width: 100%;
+  }
+  </style>
+</head>
+<body>
+  <div class="wrapper" style="height:3024px">
+    <div id="quick-banner">
+      <div>
+        <a href="/daechi/ip/9900popup_consulting" target="_blank">
+          <img src="./q_ban01.png" alt="궁금해요 일간대치동 상담신청하기">
+        </a>
+      </div>
+
+      <div class="mt20">
+        <a href="/elementary/dyn/evt/december_event">
+          <img src="./q_ban02.png" alt="수강료 최대 150%환급">
+        </a>
+        <a href="/elementary/main/frame?url=/help/notices/552">
+          <img src="./q_ban03.png" alt="예비초등 맞춤 특강 개설">
+        </a>
+        <a href="/edu/ip/elementary_free_promotion" target="_blank">
+          <img src="./q_ban04.png" alt="멤버십 3개월 정기결제시 10%즉시할인">
+        </a>
+      </div>
+
+
+      <a href="#" id="quick_top" class="mt20">Top</a>
+    </div>
+    <script type="text/javascript">
+    $(window).on('scroll', function () {
+      var scTop = $(this).scrollTop()
+      var offsetHeight = 55
+      if (scTop > offsetHeight) {
+        $('#quick-banner').stop().animate({
+          top: scTop + offsetHeight + 'px'
+        }, 500)
+      } else {
+        $('#quick-banner').stop().animate({
+          top: offsetHeight+'px'
+        }, 500)
+      }
+
+      if (scTop > 56) {
+        $('.landing-refund').css('paddingTop', '56px')
+        $('#quick-banner-m .section-top-ban').addClass('ban-fixed')
+      } else {
+        $('#quick-banner-m .section-top-ban').removeClass('ban-fixed')
+        $('.landing-refund').css('paddingTop', '0')
+      }
+
+    })
+    </script>
+  </div>
+</body>
+</html>
