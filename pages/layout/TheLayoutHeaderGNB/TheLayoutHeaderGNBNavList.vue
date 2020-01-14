@@ -43,20 +43,24 @@
 <script>
 export default {
   name: 'TheLayoutHeaderGNBNavList',
-  data: [
-    {
-      label: '일간대치동',
-      url: '/elementary'
-    },
-    {
-      label: '키즈스콜레',
-      url: 'https://www.kidsschole.com/'
-    },
-    {
-      label: '튜터닷컴 초등',
-      url: '/edu'
+  data () {
+    return {
+      data:[
+        {
+          label: '일간대치동',
+          url: '/elementary'
+        },
+        {
+          label: '키즈스콜레',
+          url: 'https://www.kidsschole.com/'
+        },
+        {
+          label: '튜터닷컴 초등',
+          url: '/edu'
+        }
+      ]
     }
-  ]
+  }
 }
 </script>
 

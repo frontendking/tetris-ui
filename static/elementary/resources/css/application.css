@@ -1,5 +1,12 @@
 @import url("https://fonts.googleapis.com/earlyaccess/notosanskr.css");
 
+@font-face {
+  font-family: 'got-svg';
+  src: url('../assets/font/got-site.eot') format('embedded-opentype'), url('../assets/font/got-site.woff2') format('woff2'), url('../assets/font/got-site.woff') format('woff'), url('../assets/font/got-site.ttf') format('truetype'), url('../assets/font/got-site.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
 .note-editor { /*! normalize.css v2.1.3 | MIT License | git.io/normalize */
 }
 
@@ -8167,7 +8174,7 @@ th.hidden-lg, td.hidden-lg {
   margin: 1px 0;
   padding: 4px 20px 4px 4px;
   width: 100%;
-  background-image:none !important;
+  background-position:-9999px;
 }
 
 .chosen-container-single .chosen-drop {
@@ -22431,7 +22438,14 @@ h3, h4, h5 {
   font-weight: bold;
   color: #333
 }
-
+.program-wrapper .pop-kakao-help .modal-footer .btn-kakao-help {
+  display: block;
+  max-width: 100%;
+  width: 380px;
+  height: 64px;
+  margin: 0 auto;
+  background: url("../assets/common/btn-kakao-help.jpg") no-repeat 0 0
+}
 #btn-help-tel {
   background-color: #fbe300;
   padding: 0.5rem 0.6rem;
@@ -24385,7 +24399,8 @@ div.dt-button-info {
 }
 
 .ui-widget-content {
-  box-sizing: content-box
+  box-sizing: content-box;
+  z-index:3000 !important;
 }
 
 .ui-icon-triangle-1-n {
@@ -31641,7 +31656,6 @@ body.rtls .top-navigation .footer.fixed, body.rtls.top-navigation .footer.fixed 
   margin-left: auto
 }
 
-}
 @media (max-width: 768px) {
   #page-wrapper {
     position: inherit;
@@ -38252,14 +38266,14 @@ a.btn-more-view {
 }
 
 .elementary-wrapper {
-  
+
 }
 @media (max-width: 641px) {
   .elementary-wrapper {
-    
+
   }
 }
-@media (min-width: 641px) {
+@media (min-width: 768px) {
   .elementary-wrapper {
     min-width: 1080px;
   }
@@ -49067,7 +49081,6 @@ a.btn-more-view {
   width: 380px;
   height: 64px;
   margin: 0 auto;
-  padding: 350px 0 200px 0;
   font-size: 20px;
   text-align: center
 }

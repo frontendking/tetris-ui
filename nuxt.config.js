@@ -56,9 +56,6 @@ export default {
       '~assets/style/color.scss',
     ],
   },
-  globals: {
-    id: 'wrap',
-  },
   loading: { color: '#fff' },
   head: {
     title: process.env.npm_package_name || '',
