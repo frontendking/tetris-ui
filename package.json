@@ -4,9 +4,6 @@
   "description": "My sensational Nuxt.js project",
   "author": "ryuilhwan",
   "private": true,
-  "browserslist": [
-    "defaults"
-  ],
   "scripts": {
     "test:unit": "jest",
     "test:e2e": "NODE_ENV=test cucumber-js --require-module @babel/register --require features/step_definitions",

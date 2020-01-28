@@ -1,195 +1,71 @@
 <template>
-  <nav id="theTutorGnb">
-    <ul id="b2c-navi-list">
-      <li>
-        <a href="#">과목 안내 V</a>
-        <ul>
-          <li><a>궁금해요! 일간대치동</a></li>
-          <li><a>일간대치동수학</a></li>
-          <li><a>일간대치동국어</a></li>
-          <li><a>일간대치동사회</a></li>
-          <li><a>일간대치동과학</a></li>
-        </ul>
-      </li>
-      <li><a href="#">멤버십 구매</a></li>
-      <li><a href="#">수업권 구매</a></li>
-      <li><a href="#">수업신청</a></li>
-      <li><a href="#">배우기</a></li>
-      <li><a href="#">가르치기</a></li>
-      <li><a href="#">공지사항</a></li>
-    </ul>
-  </nav>
+  <div class="gnb-wrap-box">
+    <h1 class="gnb-title"><a href="/elementary/main/">일간 대치동</a></h1>
+    <nav id="theTutorGnb">
+      <ul id="b2c-navi-list">
+        <li><a href="#">일간대치동 안내</a>
+          <div class="sub_menu guidance">
+            <i class="ic"></i>
+            <ul>
+              <li><a href="/elementary/intro/daechi">소개</a></li>
+              <li><a href="/elementary/ip/daechi_math_release">수학</a></li>
+              <li><a href="/elementary/ip/daechi_korean_release">국어</a></li>
+              <li><a href="/elementary/ip/daechi_society_release">사회</a></li>
+              <li><a href="/elementary/ip/daechi_science_release">과학</a></li>
+            </ul>
+          </div>
+        </li>
+        <li><a href="javascript:free_course();">무료수업 신청</a></li>
+        <li><a href="/elementary/ticket/buy">수업권 구매</a></li>
+
+        <li><a href="/elementary/ip/daechi_promotion">튜터소개</a></li>
+        <li class="gnb_pc">
+          <a href="/elementary/learning/class/this/month">배우기<span class="balloon"><img src="/elementary/resources/img/common/icon_balloon_02.png" alt="신청한 수업 듣기"></span> <span class="ic_sub"></span></a>
+
+        </li>
+
+        <li class="gnb_pc">
+          <a href="#">가르치기</a>
+          <div class="sub_menu teaching">
+            <i class="ic"></i>
+            <ul>
+              <li><a href="/elementary/teaching/class/this/month">일간대치동 수업 하러가기</a></li>
+              <li><a href="#" onclick="window.open('/tutor/courses', '_blank');return false;">튜터닷컴 수업 하러가기</a></li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <a href="#">이벤트</a>
+          <div class="sub_menu event">
+            <i class="ic"></i>
+            <ul>
+              <li><a href="/elementary/dyn/evt/january_event">월별&nbsp;이벤트</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="gnb_pc"><a href="/elementary/main/frame?url=/help/notices">공지사항</a></li>
+        <li class="gnb_pc" id="chatlist-form" data-user-num="321">
+          <i class="icon-messege"></i>
+        </li>
+        <li class="gnb_m menu_customer"><a href="tel:1670-1485"><span>고객센터</span>1670-1485</a></li>
+      </ul>
+    </nav>
+    <div class="btn_gnb_menu">gnb버튼</div>
+  </div>
 </template>
 
 <script>
 export default {
   name: 'the-tutor-gnb',
-  mounted () {
-    this.$nextTick(function () {
-      const menu = document.querySelector('#theTutorGnb')
-      const ul = document.querySelector('#theTutorGnb>ul')
-      const topLists = document.querySelectorAll('#theTutorGnb> ul > li')
-      const lists = document.querySelectorAll('#theTutorGnb li')
-      let nestUl
-
-      function toggleMenu () {
-        ul.classList.toggle('active')
-        menu.classList.toggle('active')
-      }
-
-      function closeMenu () {
-        ul.classList.remove('active')
-        menu.classList.remove('active')
-      }
-
-      function openMenu () {
-        ul.classList.toggle('active')
-        menu.classList.toggle('active')
-      }
-
-      menu.addEventListener('click', function (e) {
-        e.stopPropagation()
-        if (e.target === menu) {
-          toggleMenu()
-        }
-      })
-      Array.prototype.map.call(lists, function (li) {
-        li.addEventListener('click', function (e) {
-          const clieckedList = e.target
-          const curList = e.currentTarget
-          e.stopPropagation()
-
-          nestUl = curList.querySelector('ul')
-          if (nestUl) {
-            nestUl.classList.toggle('active')
-          } else {
-            Array.prototype.forEach.call(topLists, function (li) {
-              const nestUl = li.querySelector('ul')
-              if (nestUl) {
-                nestUl.classList.remove('active')
-              }
-            })
-            closeMenu()
-          }
-        })
-      })
-    })
-  }
 }
 </script>
 
 <style lang="scss">
-#theTutorGnb {
-  background: url('assets/menu-button.svg') no-repeat;
-  background-size: 3rem 3rem;
-  background-position-y: 3rem;
-  background-position-x: 3rem;
-  height: 9rem;
-  width: 39em;
-  cursor: pointer;
-  position: absolute;
-
-  &.active {
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.3);
+.gnb-wrap-box {
+  .gnb-title {
+    font-size: 36px;
+    font-weight: 700;
   }
 
-  > ul {
-    display: none;
-    margin-top: 9rem;
-
-    &.active {
-      line-height: 1;
-      display: grid;
-      grid-auto-rows: minmax(5rem, auto);
-      align-content: flex-start;
-      align-items: stretch;
-      width: 80%;
-      height: 100%;
-      background-color: #ffffff;
-      box-shadow: 0px 8px 10px -5px rgba(0, 0, 0, 0.2), 0px 16px 24px 2px rgba(0, 0, 0, 0.14), 0px 6px 30px 5px rgba(0, 0, 0, 0.12);
-
-      li {
-        display: flex;
-        flex-flow: column;
-
-        a {
-          flex: 1 5rem;
-          display: flex;
-          align-items: center;
-          text-indent: 3rem;
-
-          &:hover {
-            background: #e0e0e0;
-          }
-        }
-      }
-    }
-  }
-
-  li > ul {
-    display: none;
-
-    &.active {
-      display: grid;
-      grid-auto-rows: minmax(5rem, auto);
-      align-content: flex-start;
-      align-items: stretch;
-      background-color: #ffffff;
-
-      li {
-        display: flex;
-        flex-flow: column;
-
-        a {
-          flex: 1;
-          display: flex;
-          align-items: center;
-          text-indent: 6rem;
-
-          &:hover {
-            background: #e0e0e0;
-          }
-        }
-      }
-    }
-  }
-}
-
-@media(min-width: 641px) {
-  #theTutorGnb {
-    background: none;
-    width: 100%;
-    height: initial;
-
-    > ul > li >  a {
-      display: flex;
-      width: 100%;
-      height: 5rem;
-      align-items: center;
-      justify-content: flex-end;
-    }
-
-    > ul {
-      display: grid;
-      grid-template-columns: repeat(7, minmax(5rem, 20rem));
-      justify-items: flex-end;
-      margin: initial;
-      color: #000;
-    }
-
-    li > ul {
-
-      &.active {
-
-        li {
-          a {
-            text-indent: initial;
-          }
-        }
-      }
-    }
-  }
 }
 </style>

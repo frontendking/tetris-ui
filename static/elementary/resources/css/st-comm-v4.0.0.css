@@ -1608,7 +1608,6 @@ video::-webkit-media-controls-panel {
 #st-wrap, #wrap {
   zoom: 1;
   position: relative;
-  min-width: 1190px;
   padding-left: 150px
 }
 
@@ -3226,7 +3225,6 @@ li.active > .nav-2depth {
 }
 
 .st-conects-footer-v3 {
-  min-width: 1100px;
   padding: 50px 0;
   background-color: #555;
   font-family: 'Noto Sans KR', 'Malgun Gothic', '맑은고딕', '돋움', Dotum, Helvetica, 'Apple SD Gothic Neo', Sans-serif;
@@ -3735,7 +3733,6 @@ li.active > .nav-2depth {
 }
 
 .st-conects-footer-v3-2 {
-  min-width: 1100px;
   padding: 30px 0;
   border-top: 1px solid #e5e5e5;
   background-color: #fff;
