@@ -8,7 +8,11 @@ export default {
 }
 </script>
 
-<style scoped lang=scss>
+<style lang=scss>
 .BaseButton {
+  background: #eee;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  text-align: center;
 }
 </style>

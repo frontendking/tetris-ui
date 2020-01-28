@@ -1,6 +1,6 @@
 <template>
-  <select class="BaseSelect">
-    <option v-for="v of options" v-html="`${v}년`"/>
+  <select class="BaseSelect chosen-select">
+    <option v-for="v of options" v-html="`${v}`"/>
   </select>
 </template>
 

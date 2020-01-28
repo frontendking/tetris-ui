@@ -28,13 +28,6 @@ export default {
   },
   build: {
     extractCSS: true,
-    postcss: {
-      preset: {
-        autoprefixer: {
-          grid: 'autoplace',
-        },
-      },
-    },
     extend (config, { isClient }) {
       // Extend only webpack config for client-bundle
       if (process.env.NODE_ENV === 'development') {
