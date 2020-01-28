@@ -2,9 +2,18 @@
   <div id="wrap">
     <link rel="stylesheet" href="/elementary/resources/css/st-comm-v4.0.0.css">
     <link rel="stylesheet" href="/elementary/resources/css/st_conects.css">
+    <link rel="stylesheet" href="/elementary/resources/css/common.css">
+    <link rel="stylesheet" href="/elementary/resources/css/modal.css">
+    <link rel="stylesheet" href="/elementary/resources/css/chosen.css">
+<!--    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>-->
+<!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.jquery.min.js"></script>-->
+<!--    <script src="/elementary/resources/js/user/teaching/register-schedule.js"></script>-->
+    <script src="/elementary/resources/js/application.js"></script>
     <TheLayoutHeader/>
     <TheLayoutMain>
-      <slot/>
+      <div id="b2c-wrapper">
+        <slot/>
+      </div>
     </TheLayoutMain>
     <TheLayoutFooter/>
   </div>
@@ -14,8 +23,9 @@
 import TheLayoutHeader from '@/pages/layout/TheLayoutHeader'
 import TheLayoutFooter from '@/pages/layout/TheLayoutFooter'
 import TheLayoutMain from '@/pages/layout/TheLayoutMain'
+
 export default {
-  name: 'index',
+  name: 'TheLayoutConects',
   components: { TheLayoutMain, TheLayoutFooter, TheLayoutHeader }
 }
 </script>
@@ -57,7 +67,7 @@ body {
 }
 </style>
 
-<style scoped lang=scss>
+<style lang=scss>
 .index {
 }
 </style>

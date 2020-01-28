@@ -28,7 +28,7 @@ export default {
   clip: rect(1px, 1px, 1px, 1px);
 }
 </style>
-<style scoped lang=scss>
+<style lang=scss>
 img {
   width: 100%;
 }
