@@ -1,12 +1,10 @@
 {
-  "name": "vue-template",
+  "name": "b2c-nuxt",
   "version": "1.0.0",
   "description": "My sensational Nuxt.js project",
   "author": "ryuilhwan",
   "private": true,
   "scripts": {
-    "test:unit": "jest",
-    "test:e2e": "NODE_ENV=test cucumber-js --require-module @babel/register --require features/step_definitions",
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
@@ -15,25 +13,16 @@
     "build-storybook": "build-storybook"
   },
   "dependencies": {
-    "bxslider": "^4.2.14",
     "destyle.css": "^1.0.10",
     "fxjs": "^0.14.0",
-    "jquery": "^3.4.1",
     "nuxt": "^2.0.0"
   },
   "devDependencies": {
-    "cypress": "^3.6.1",
-    "@nuxtjs/style-resources": "^1.0.0",
-    "@vue/test-utils": "^1.0.0-beta.27",
     "babel-core": "7.0.0-bridge.0",
-    "babel-jest": "^24.1.0",
     "babel-loader": "^8.0.6",
     "babel-preset-vue": "^2.0.2",
-    "jest": "^24.1.0",
     "node-sass": "^4.12.0",
     "nodemon": "^1.18.9",
-    "nuxt-purgecss": "^0.2.1",
-    "sass-loader": "^8.0.0",
-    "vue-jest": "^3.0.3"
+    "sass-loader": "^8.0.0"
   }
 }
