@@ -1,0 +1,31 @@
+
+.search {
+  display: display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto auto;
+  grid-row-gap: 4.4rem;
+}
+
+#b2c-wrapper {
+  > article {
+    > article {
+      > form {
+        > fieldset.select-grades {
+          .select-box {
+            position: relative;
+            display: flex;
+            width: 100%;
+            align-items: center;
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+#att_search_grade {
+  height: 100%;
+  width: 100%;
+}
+
