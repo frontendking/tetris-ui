@@ -1,5 +1,5 @@
 <template>
-  <main class="index">
+  <main class="main-modal">
     b2c page
   </main>
 </template>
@@ -11,6 +11,7 @@ export default {
 </script>
 
 <style  lang=scss>
-.index {
+.main-modal {
+  background: #0c79c5;
 }
 </style>

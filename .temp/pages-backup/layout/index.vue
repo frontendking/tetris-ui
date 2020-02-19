@@ -68,6 +68,6 @@ body {
 </style>
 
 <style lang=scss>
-.index {
+.main-modal {
 }
 </style>

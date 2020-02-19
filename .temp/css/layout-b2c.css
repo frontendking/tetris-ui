@@ -1,0 +1,304 @@
+@charset "utf-8";
+body {
+  line-height: normal
+}
+.st-conects-footer-v3-2 {
+  min-width: unset;
+  width: 100%;
+  text-align: center;
+}
+
+.chosen-container-single .chosen-single div b {
+  background: url(/assets/common/chosen-sprite.png) no-repeat 0 7px;
+  display: block;
+  height: 100%;
+  width: 100%
+}
+
+.chosen-container-single .chosen-single {
+  background-color: #fff;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  border: 1px solid #e5e6e7;
+  border-top-right-radius: 4px;
+  border-top-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  color: #555;
+  display: block;
+  height: 34px;
+  overflow: hidden;
+  line-height: 24px;
+  padding: 0 0 0 8px;
+  position: relative;
+  text-decoration: none;
+  white-space: nowrap
+}
+
+legend {
+  border: none
+}
+
+label {
+  margin: 0;
+  line-height: normal
+}
+
+#page-wrapper > div {
+  min-width: 0
+}
+
+#page-wrapper {
+  padding: 0
+}
+
+#b2c-wrapper caption {
+  display: table-caption;
+  padding-top: 0;
+  padding-bottom: 0;
+  color: #000;
+  color: initial;
+  text-align: left;
+  text-align: initial
+}
+
+.class-timetable-search-section.pc-view {
+  padding: 0
+}
+
+#b2c-navi-title {
+  word-break: keep-all;
+  padding-right: 1rem
+}
+
+#the-class-footer > div.modal-dimm.active > form {
+  max-width: 70rem
+}
+
+#the-class-footer > div.modal-dimm.active > form .choose-permit {
+  max-height: 80rem
+}
+
+#the-class-footer > div.modal-dimm.active > form > fieldset input {
+  -ms-grid-column-align: center;
+  justify-self: center
+}
+
+#the-class-footer > div.modal-dimm.active > form > fieldset > div {
+  overflow: scroll
+}
+
+#b2c-wrapper legend {
+  width: auto
+}
+
+#tutor-header {
+  width: 122rem;
+  margin: 0 auto
+}
+
+.the-tutor-gnb #b2c-navi-list {
+  width: 77rem
+}
+
+#tutor-gnb {
+  padding: 2rem 0
+}
+
+#the-class-footer > div.modal-dimm.active > form > fieldset > div > div {
+  -ms-grid-rows: auto;
+  grid-template-rows: auto;
+  -ms-grid-columns: 1fr 7fr;
+  grid-template-columns: 1fr 7fr
+}
+
+#the-class-footer > div.modal-dimm.active > form > fieldset > div > div > :first-child {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1
+}
+
+#the-class-footer > div.modal-dimm.active > form > fieldset > div > div > :nth-child(2) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2
+}
+
+#ticketCardList .permit-card input {
+  -ms-grid-column-align: center;
+  justify-self: center
+}
+
+
+.content-box {
+  width: 100%
+}
+
+#b2c-wrapper {
+  position: relative;
+  margin: 0;
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+  align-items: stretch;
+}
+
+@media (min-width: 960px) {
+
+  #wrap {
+    padding-left: 167px
+  }
+
+  #mobile-header {
+    display: none
+  }
+}
+
+#page-wrapper {
+  margin: 0;
+  min-height: 0
+}
+
+.content-box {
+  position: relative;
+  margin: 0
+}
+
+.st_business-nav {
+  min-height: 1121px
+}
+
+#wrap {
+  min-width: 0;
+  padding: 0
+}
+
+.st_business-nav {
+  padding-bottom: 0
+}
+
+.hidden {
+  visibility: hidden;
+  position: absolute
+}
+
+#hgroup button, #hgroup input {
+  border: none
+}
+
+#mobile-header {
+  text-align: center;
+  background: #fff;
+  width: 100%
+}
+
+#mobile-header img {
+  width: 300px;
+}
+
+#conects-lnb, #hgroup {
+  display: none
+}
+
+.the-tutor-gnb {
+  display: none;
+  line-height: 1
+}
+
+@media (min-width: 960px) {
+  #wrap {
+    min-width: 1120px;
+    padding-left: 167px
+  }
+
+  #mobile-header {
+    display: none;
+  }
+  #conects-lnb, #hgroup {
+    display: block;
+  }
+  .the-tutor-gnb {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 0
+  }
+
+  .the-tutor-gnb #b2c-navi-title {
+    font-size: 3.2rem;
+    font-weight: 700;
+    letter-spacing: 1px
+  }
+
+  .the-tutor-gnb #b2c-navi-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 64vw;
+    min-width: 69rem;
+    font-size: 1.6rem
+  }
+
+  .the-tutor-gnb #b2c-navi-list li {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start
+  }
+
+  .the-tutor-gnb #b2c-navi-list li a {
+    letter-spacing: 1px;
+    font-weight: 700;
+    color: #000
+  }
+
+  .the-tutor-gnb #b2c-navi-list li span {
+    display: inline-block;
+    font-size: .8rem;
+    margin-left: .4rem;
+    transform: scaleX(2)
+  }
+}
+
+html {
+  font-size: 10px
+}
+
+body {
+  font-family: Noto Sans KR, Malgun Gothic, 맑은고딕, 돋움, Dotum, Helvetica, Apple SD Gothic Neo, Sans-serif, serif;
+  font-size: 2.2rem;
+  letter-spacing: .079rem;
+  font-weight: 400;
+  color: #8d8d8d;
+  word-break: keep-all;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased
+}
+
+#b2c-wrapper > article > h1 {
+  display: none
+}
+
+
+@media (min-width: 960px) {
+
+  #b2c-wrapper > article {
+    padding: 0 5rem
+  }
+
+  #b2c-wrapper > article > h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center
+  }
+
+  #tutor-header {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    width: 100%
+  }
+
+
+}

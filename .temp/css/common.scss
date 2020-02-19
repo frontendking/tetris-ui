@@ -1,0 +1,250 @@
+@charset "utf-8";
+/*
+  공통COMMON.css
+*/
+/* [.in_1080]1080px 가운데 정렬 div */
+/* 글짜 가운데 정렬용 */
+/* 공통으로 들어간거 제거용 */
+/* GNB */
+/* 모바일용 */
+/* 데탑용 */
+.in_1080 {
+  position: relative;
+  margin: 0 auto;
+  width: 1080px;
+}
+.daechi-math {
+  .in_1080 {
+    position: initial;
+  }
+}
+.tc {
+  text-align: center;
+}
+.class-timetable-search-section.pc-view {
+  padding: 0 !important;
+}
+.gnb-wrap-box {
+  #theTutorGnb {
+    #b2c-navi-list {
+      .sub_menu {
+        display: none;
+        .ic_sub {
+          position: absolute;
+          top: 9px;
+          right: 5px;
+          display: block;
+          width: 7px;
+          height: 5px;
+          background: url(../../img/common/gnb_sub_off.png) no-repeat 0 0;
+          background-size: 100% 100%;
+        }
+      }
+      >li {
+        >a {
+          color: #737373 !important;
+          &:hover {
+            color: #29b6f6 !important;
+          }
+        }
+        position: relative;
+        .balloon {
+          position: absolute;
+          top: -25px;
+          left: 50%;
+          margin-left: -62px;
+        }
+      }
+      .active {
+        display: block;
+      }
+    }
+  }
+  .btn_gnb_menu {
+    display: none;
+    position: absolute;
+    top: -40px;
+    left: 16px;
+    width: 20px;
+    height: 22px;
+    background: url('../../img/common/btn_gnb_menu_open.png') no-repeat 0 0;
+    background-size: 100% 100%;
+    font-size: 0;
+    z-index: 100;
+    text-indent: -9999em;
+  }
+}
+.form-chat {
+  margin-top: 2rem;
+}
+.small-chat-box {
+  .form-chat {
+    .chat-input {
+      border: solid #eee 1px;
+    }
+  }
+}
+#chatlist-form {
+  text-align: center;
+}
+#sendTutorMessage {
+  text-align: center;
+}
+.alarm-icon {
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 3px;
+    right: -5px;
+    width: 5px;
+    height: 5px;
+    background: #2ab6f7;
+    border-radius: 50%;
+  }
+}
+.icon-messege {
+  cursor: pointer;
+}
+#quick-banner-m {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+.in_1080 {
+  width: 100%;
+}
+.gnb-wrap-box {
+  h1.gnb-title {
+    display: none;
+  }
+  .btn_gnb_menu {
+    display: block;
+  }
+  .btn_gnb_menu.on {
+    background: url('../../img/common/btn_gnb_menu_close.png') no-repeat 0 0;
+    background-size: 100% 100%;
+  }
+  #theTutorGnb {
+    position: fixed;
+    top: 54px;
+    left: 0;
+    overflow: auto;
+    z-index: 1000;
+    #b2c-navi-list {
+      display: none;
+      padding-bottom: 60px;
+      width: 100%;
+      border-top: 1px solid #37b2e6;
+      border-left: 0;
+      background: #fff;
+      overflow: auto;
+      >li {
+        padding-left: 15px;
+        border-bottom: 1px solid #ebebeb;
+        background: url('../img/common/gnb_list_ic.png') no-repeat 90% 17px;
+        background-size: 20px;
+      }
+      .gnb_pc {
+        display: none;
+      }
+      .balloon_m {
+        position: absolute;
+        top: 0;
+        left: 85px;
+        margin-left: 0;
+      }
+      .menu_customer {
+        position: relative;
+        height: 70px;
+        &:before {
+          content: '';
+          position: absolute;
+          z-index: 1;
+          display: block;
+          top: 17px;
+          left: 43px;
+          width: 36px;
+          height: 35px;
+          background: url('../../img/common/icon_customer.png') no-repeat 0 0;
+        }
+        &:after {
+          content: '';
+          position: absolute;
+          z-index: 1;
+          display: block;
+          top: 26px;
+          right: 30px;
+          width: 9px;
+          height: 16px;
+          background: url('../../img/common/bg_arrow.png') no-repeat 0 0;
+        }
+        a {
+          position: absolute;
+          top: 10px;
+          left: 15px;
+          right: 15px;
+          background: #29a4e1;
+          padding-left: 95px;
+          border-radius: 5px;
+          color: #fff !important;
+          font-weight: bold;
+          span {
+            position: relative;
+            display: inline-block;
+            padding-right: 19px;
+            margin-right: 19px;
+            &:before {
+              content: '';
+              position: absolute;
+              top: 13px;
+              right: 0;
+              width: 1px;
+              height: 25px;
+              background: #6abfea;
+            }
+          }
+        }
+      }
+      li {
+        a {
+          display: block;
+          font-size: 14px;
+          height: 50px;
+          line-height: 50px;
+        }
+      }
+      .active {
+        li {
+          a {
+            padding: 0 15px;
+            display: block;
+            border-top: 1px dashed #ebebeb;
+            font-size: 12px;
+          }
+        }
+      }
+      .sub_menu {
+        .ic {
+          display: none;
+        }
+      }
+    }
+    #b2c-navi-list.active {
+      display: block;
+    }
+  }
+  #theTutorGnb.active {
+    width: 100%;
+    height: 100%;
+    background: #fff;
+  }
+}
+#quick-banner {
+  display: none;
+}
+@media (min-width: 960px) {
+  #quick-banner-m {
+    display: none;
+  }
+}
