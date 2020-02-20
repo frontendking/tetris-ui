@@ -1,22 +1,11 @@
 <template>
   <form class="FormSearchClass" onsubmit="return false;">
     <FieldsetSelectGrade :options="optionsGrades"/>
-    <fieldset class="sellect-subjects1">
-      <legend>과목 선택</legend>
-      <div>
-        <div class="tutor-checkbox"><input type="checkbox" name="att_search_subject" id="subject1" value="SJ1001">
-          <label for="subject1">국어</label></div>
-        <div class="tutor-checkbox"><input type="checkbox" name="att_search_subject" id="subject2" value="SJ1003">
-          <label for="subject2">수학</label></div>
-        <div class="tutor-checkbox"><input type="checkbox" name="att_search_subject" id="subject3" value="SJ1004">
-          <label for="subject3">사회/과학</label></div>
-      </div>
-    </fieldset>
+    <FieldsetSelectSubject/>
     <fieldset class="sellect-subjects2">
       <div>
         <div class="tutor-checkbox">
-          <input type="checkbox" name="att_search_subject" id="subject4" value="SJ1005">
-          <label for="subject4">수학 문제 풀이</label>
+
         </div>
       </div>
     </fieldset>
@@ -30,10 +19,11 @@ import BaseButton from '@/components/Base/BaseButton'
 import BaseLegend from '@/components/Base/BaseLegend'
 import BaseFieldset from '@/components/Base/BaseFieldset'
 import FieldsetSelectGrade from '@/pages/apply/FieldsetSelectGrade'
+import FieldsetSelectSubject from '@/pages/apply/FieldsetSelectSubject'
 
 export default {
   name: 'FormSearchClass',
-  components: { FieldsetSelectGrade, BaseFieldset, BaseLegend, BaseButton, BaseSelect },
+  components: { FieldsetSelectSubject, FieldsetSelectGrade, BaseFieldset, BaseLegend, BaseButton, BaseSelect },
   data () {
     return {
       optionsGrades: [
