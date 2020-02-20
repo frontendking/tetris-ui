@@ -76,7 +76,6 @@ body {
 
 <style lang="scss" scoped>
 #root {
-  font-size: 1.5rem;
   display: grid;
   min-height: 100%;
   /*@formatter:off*/

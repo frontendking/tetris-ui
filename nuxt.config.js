@@ -12,10 +12,17 @@ export default {
           ? 'eval-source-map'
           : 'inline-source-map'
       }
-      config.externals = {
-        jquery2: 'jQuery'
-      }
-      config.optimization.minimize = false
+      const svgRule = config.module.rules.find(rule => rule.test.test('.svg'));
+
+      svgRule.test = /\.(png|jpe?g|gif|webp)$/;
+
+      config.module.rules.push({
+        test: /\.svg$/,
+        use: [
+          'babel-loader',
+          'vue-svg-loader',
+        ],
+      });
     }
   },
   loading: { color: '#fff' },

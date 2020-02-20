@@ -10,16 +10,15 @@ export default {
 
 <style scoped lang=scss>
 button {
+  display: flex;
   border: none;
-  padding: 0.5em 2em;
-  background-color: #000;
-  color: #fff;
+  padding: 0 1em;
+  height: 2em;
   font-weight: 400;
-
+  justify-content: center;
   &[type=button] {
-    text-align: center;
-    align-self: flex-end;
-    margin-left: 1rem;
+    background-color: #000;
+    color: #fff;
   }
 
 }
