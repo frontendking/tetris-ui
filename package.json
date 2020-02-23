@@ -4,6 +4,9 @@
   "description": "My groundbreaking Nuxt.js project",
   "author": "ryuilhwan",
   "private": true,
+  "browserslist": [
+    "last 2 Chrome versions"
+  ],
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
