@@ -1,9 +1,9 @@
 <template>
   <div>
     <select>
-      <option v-for="option in options" :value="option.value" v-html="option.label"></option>
+      <option v-for="option in options" :key="option.value" :value="option.value" v-html="option.label" />
     </select>
-    <IArrowDown/>
+    <IArrowDown />
   </div>
 </template>
 

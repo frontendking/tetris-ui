@@ -1,6 +1,6 @@
 <template>
   <div class="sub_menu teaching">
-    <i class="ic"></i>
+    <i class="ic" />
     <ul>
       <li><a href="/elementary/teaching/class/this/month">일간대치동 수업 하러가기</a></li>
       <li><a href="#" onclick="window.open('/tutor/courses', '_blank');return false;">튜터닷컴 수업 하러가기</a></li>

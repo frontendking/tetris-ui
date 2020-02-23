@@ -2,8 +2,8 @@
   <form>
     <div>
       <h1>튜터 검색</h1>
-      <BaseInputText id="tutor-name" placeholder="튜터 이름을 입력해 주세요."/>
-      <BaseButton id="btnSearchTutor" type="button"/>
+      <BaseInputText id="tutor-name" placeholder="튜터 이름을 입력해 주세요." />
+      <BaseButton id="btnSearchTutor" type="button" />
     </div>
   </form>
 </template>

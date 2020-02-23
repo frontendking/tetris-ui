@@ -1,7 +1,7 @@
 <template>
   <fieldset>
     <div v-bind="$attrs" v-on="$listeners">
-      <slot/>
+      <slot />
     </div>
   </fieldset>
 </template>

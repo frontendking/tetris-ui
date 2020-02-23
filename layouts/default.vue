@@ -2,15 +2,15 @@
   <div id="root">
     <div id="hgroup">
       <div class="st_conects-nav personal">
-        <TheLayoutHeaderGNB class="TheLayoutHeaderGNB"/>
-        <TheLayoutHeaderLNB class="TheLayoutHeaderLNB"/>
+        <TheLayoutHeaderGNB class="TheLayoutHeaderGNB" />
+        <TheLayoutHeaderLNB class="TheLayoutHeaderLNB" />
       </div>
     </div>
     <TheLayoutWrapper>
-      <TheLayoutHeaderTutor/>
-      <nuxt/>
+      <TheLayoutHeaderTutor />
+      <nuxt />
     </TheLayoutWrapper>
-    <TheLayoutFooter class="TheLayoutFooter"/>
+    <TheLayoutFooter class="TheLayoutFooter" />
   </div>
 </template>
 
@@ -26,7 +26,6 @@ export default {
 }
 </script>
 <style lang="scss">
-@import '~destyle.css';
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap&subset=korean');
 
 html, body, #__nuxt, #__layout {

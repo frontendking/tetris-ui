@@ -1,7 +1,7 @@
 <template>
   <BaseFieldset>
     <BaseLegend>학년 선택</BaseLegend>
-    <BaseSelect id="att_search_grade" :options="options"/>
+    <BaseSelect id="att_search_grade" :options="options" />
   </BaseFieldset>
 </template>
 

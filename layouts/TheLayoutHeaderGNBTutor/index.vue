@@ -1,8 +1,12 @@
 <template>
   <div class="gnb-wrap-box">
-    <h1 class="gnb-title"><a href="/elementary/main/">일간 대치동</a></h1>
-    <TheLayoutHeaderGNBTutorNav/>
-    <div class="btn_gnb_menu">gnb버튼</div>
+    <h1 class="gnb-title">
+      <a href="/elementary/main/">일간 대치동</a>
+    </h1>
+    <TheLayoutHeaderGNBTutorNav />
+    <div class="btn_gnb_menu">
+      gnb버튼
+    </div>
   </div>
 </template>
 

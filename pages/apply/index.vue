@@ -1,156 +1,207 @@
 <template>
   <div id="b2c-wrapper" class="class-purchase flex-center">
-    <article class="class-info"><h1 id="page-heading">수업신청</h1>
+    <article class="class-info">
+      <h1 id="page-heading">
+        수업신청
+      </h1>
       <article class="search">
-        <FormSearchTutor class="FormSearchTutor"/>
-        <FormSearchClass/>
-        <table class="TheClassTimeTable hidden" id="applyClassTimeTable"
-               style="overflow-y:auto; width:100%;height:800px;">
-          <caption><p class="main-caption">과목 시간표</p>
-            <p class="sub-caption" id="sub-caption-subjects"></p></caption>
+        <FormSearchTutor class="FormSearchTutor" />
+        <FormSearchClass />
+        <table
+          id="applyClassTimeTable"
+          class="TheClassTimeTable hidden"
+          style="overflow-y:auto; width:100%;height:800px;"
+        >
+          <caption>
+            <p class="main-caption">
+              과목 시간표
+            </p>
+            <p id="sub-caption-subjects" class="sub-caption" />
+          </caption>
           <thead>
-          <tr>
-            <th scope="col">수업시간</th>
-            <th scope="col">월</th>
-            <th scope="col">화</th>
-            <th scope="col">수</th>
-            <th scope="col">목</th>
-            <th scope="col">금</th>
-            <th scope="col">토</th>
-          </tr>
+            <tr>
+              <th scope="col">
+                수업시간
+              </th>
+              <th scope="col">
+                월
+              </th>
+              <th scope="col">
+                화
+              </th>
+              <th scope="col">
+                수
+              </th>
+              <th scope="col">
+                목
+              </th>
+              <th scope="col">
+                금
+              </th>
+              <th scope="col">
+                토
+              </th>
+            </tr>
           </thead>
           <tbody>
-          <tr class="time-row">
-            <th scope="row">08:00 - 09:00</th>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr class="time-row">
-            <th scope="row">09:00 - 10:00</th>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr class="time-row">
-            <th scope="row">10:00 - 11:00</th>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr class="time-row">
-            <th scope="row">11:00 - 12:00</th>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr class="time-row">
-            <th scope="row">12:00 - 13:00</th>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr class="time-row">
-            <th scope="row">13:00 - 14:00</th>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr class="time-row">
-            <th scope="row">14:00 - 15:00</th>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr class="time-row">
-            <th scope="row">15:00 - 16:00</th>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr class="time-row">
-            <th scope="row">16:00 - 17:00</th>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr class="time-row">
-            <th scope="row">17:00 - 18:00</th>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr class="time-row">
-            <th scope="row">18:00 - 19:00</th>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr class="time-row">
-            <th scope="row">19:00 - 20:00</th>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr class="time-row">
-            <th scope="row">20:00 - 21:00</th>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr class="time-row">
-            <th scope="row">21:00 - 22:00</th>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
+            <tr class="time-row">
+              <th scope="row">
+                08:00 - 09:00
+              </th>
+              <td />
+              <td />
+              <td />
+              <td />
+              <td />
+              <td />
+            </tr>
+            <tr class="time-row">
+              <th scope="row">
+                09:00 - 10:00
+              </th>
+              <td />
+              <td />
+              <td />
+              <td />
+              <td />
+              <td />
+            </tr>
+            <tr class="time-row">
+              <th scope="row">
+                10:00 - 11:00
+              </th>
+              <td />
+              <td />
+              <td />
+              <td />
+              <td />
+              <td />
+            </tr>
+            <tr class="time-row">
+              <th scope="row">
+                11:00 - 12:00
+              </th>
+              <td />
+              <td />
+              <td />
+              <td />
+              <td />
+              <td />
+            </tr>
+            <tr class="time-row">
+              <th scope="row">
+                12:00 - 13:00
+              </th>
+              <td />
+              <td />
+              <td />
+              <td />
+              <td />
+              <td />
+            </tr>
+            <tr class="time-row">
+              <th scope="row">
+                13:00 - 14:00
+              </th>
+              <td />
+              <td />
+              <td />
+              <td />
+              <td />
+              <td />
+            </tr>
+            <tr class="time-row">
+              <th scope="row">
+                14:00 - 15:00
+              </th>
+              <td />
+              <td />
+              <td />
+              <td />
+              <td />
+              <td />
+            </tr>
+            <tr class="time-row">
+              <th scope="row">
+                15:00 - 16:00
+              </th>
+              <td />
+              <td />
+              <td />
+              <td />
+              <td />
+              <td />
+            </tr>
+            <tr class="time-row">
+              <th scope="row">
+                16:00 - 17:00
+              </th>
+              <td />
+              <td />
+              <td />
+              <td />
+              <td />
+              <td />
+            </tr>
+            <tr class="time-row">
+              <th scope="row">
+                17:00 - 18:00
+              </th>
+              <td />
+              <td />
+              <td />
+              <td />
+              <td />
+              <td />
+            </tr>
+            <tr class="time-row">
+              <th scope="row">
+                18:00 - 19:00
+              </th>
+              <td />
+              <td />
+              <td />
+              <td />
+              <td />
+              <td />
+            </tr>
+            <tr class="time-row">
+              <th scope="row">
+                19:00 - 20:00
+              </th>
+              <td />
+              <td />
+              <td />
+              <td />
+              <td />
+              <td />
+            </tr>
+            <tr class="time-row">
+              <th scope="row">
+                20:00 - 21:00
+              </th>
+              <td />
+              <td />
+              <td />
+              <td />
+              <td />
+              <td />
+            </tr>
+            <tr class="time-row">
+              <th scope="row">
+                21:00 - 22:00
+              </th>
+              <td />
+              <td />
+              <td />
+              <td />
+              <td />
+              <td />
+            </tr>
           </tbody>
         </table>
       </article>
     </article>
-
   </div>
 </template>
 

@@ -1,33 +1,30 @@
 {
-  "name": "b2c-nuxt",
+  "name": "nuxt",
   "version": "1.0.0",
-  "description": "My sensational Nuxt.js project",
+  "description": "My groundbreaking Nuxt.js project",
   "author": "ryuilhwan",
   "private": true,
-  "browserslist": [
-    "last 2 Chrome versions"
-  ],
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore ."
   },
   "dependencies": {
     "destyle.css": "^1.0.10",
     "fxjs": "^0.14.0",
+    "@nuxtjs/dotenv": "^1.4.0",
     "nuxt": "^2.0.0"
   },
   "devDependencies": {
-    "babel-core": "7.0.0-bridge.0",
-    "babel-loader": "^8.0.6",
-    "babel-preset-vue": "^2.0.2",
-    "node-sass": "^4.12.0",
-    "nodemon": "^1.18.9",
-    "sass-loader": "^8.0.0",
-    "vue-svg-loader": "^0.16.0",
-    "vue-template-compiler": "^2.6.11"
+    "@nuxtjs/eslint-config": "^2.0.0",
+    "@nuxtjs/eslint-module": "^1.0.0",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^6.1.0",
+    "eslint-plugin-nuxt": ">=0.4.2",
+    "node-sass": "^4.13.1",
+    "sass-loader": "^8.0.2",
+    "vue-svg-loader": "^0.16.0"
   }
 }

@@ -1,29 +1,29 @@
 <template>
   <form class="FormSearchClass" onsubmit="return false;">
-    <FieldsetSelectGrade :options="optionsGrades"/>
-    <FieldsetSelectSubject/>
+    <FieldsetSelectGrade :options="optionsGrades" />
+    <FieldsetSelectSubject />
     <fieldset class="sellect-subjects2">
       <div>
-        <div class="tutor-checkbox">
-
-        </div>
+        <div class="tutor-checkbox" />
       </div>
     </fieldset>
-    <BaseButton type="button" class="find-buttons" id="btnSearchTimeList">검색</BaseButton>
+    <BaseButton id="btnSearchTimeList" type="button" class="find-buttons">
+      검색
+    </BaseButton>
   </form>
 </template>
 
 <script>
-import BaseSelect from '@/components/Base/BaseSelect'
+// import BaseSelect from '@/components/Base/BaseSelect'
 import BaseButton from '@/components/Base/BaseButton'
-import BaseLegend from '@/components/Base/BaseLegend'
-import BaseFieldset from '@/components/Base/BaseFieldset'
+// import BaseLegend from '@/components/Base/BaseLegend'
+// import BaseFieldset from '@/components/Base/BaseFieldset'
 import FieldsetSelectGrade from '@/pages/apply/FieldsetSelectGrade'
 import FieldsetSelectSubject from '@/pages/apply/FieldsetSelectSubject'
 
 export default {
   name: 'FormSearchClass',
-  components: { FieldsetSelectSubject, FieldsetSelectGrade, BaseFieldset, BaseLegend, BaseButton, BaseSelect },
+  components: { FieldsetSelectSubject, FieldsetSelectGrade, BaseButton },
   data () {
     return {
       optionsGrades: [

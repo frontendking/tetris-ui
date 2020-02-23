@@ -1,8 +1,8 @@
 <template>
   <div class="st_conects-gnb">
-    <TheLayoutHeaderGNBSearchBar/>
-    <TheLayoutHeaderGNBNavList/>
-    <TheLayoutHeaderGNBUserInfo/>
+    <TheLayoutHeaderGNBSearchBar />
+    <TheLayoutHeaderGNBNavList />
+    <TheLayoutHeaderGNBUserInfo />
   </div>
 </template>
 
@@ -12,7 +12,7 @@ import TheLayoutHeaderGNBNavList from './TheLayoutHeaderGNBNavList'
 import TheLayoutHeaderGNBUserInfo from './TheLayoutHeaderGNBUserInfo'
 export default {
   name: 'TheLayoutHeaderGNB',
-  components: { TheLayoutHeaderGNBUserInfo, TheLayoutHeaderGNBNavList, TheLayoutHeaderGNBSearchBar },
+  components: { TheLayoutHeaderGNBUserInfo, TheLayoutHeaderGNBNavList, TheLayoutHeaderGNBSearchBar }
 }
 </script>
 
@@ -30,8 +30,5 @@ export default {
     clear: both;
   }
 
-
-
 }
 </style>
-

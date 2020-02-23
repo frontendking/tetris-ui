@@ -3,7 +3,7 @@
     <a href="//www.conects.com" class="bi">Conects</a>
     <dl class="this-service">
       <dt class="depth-01">
-        <a href="/elementary" class="link-service active" id="current-interest" data-interest="167">유·초등</a>
+        <a id="current-interest" href="/elementary" class="link-service active" data-interest="167">유·초등</a>
       </dt>
       <dd class="depth-02">
         <a href="/elementary" class="selected">일간대치동</a>
@@ -45,7 +45,7 @@ export default {
   name: 'TheLayoutHeaderGNBNavList',
   data () {
     return {
-      data:[
+      data: [
         {
           label: '일간대치동',
           url: '/elementary'

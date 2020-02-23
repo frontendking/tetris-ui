@@ -1,9 +1,6 @@
 export default {
   mode: 'universal',
   build: {
-    filenames: {
-      chunk: '[name].js'
-    },
     extractCSS: true,
     extend (config, { isClient }) {
       // Extend only webpack config for client-bundle

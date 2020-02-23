@@ -3,7 +3,7 @@
     <div id="page-wrapper">
       <div class="elementary-wrapper">
         <div class="class-timetable-search-section pc-view">
-          <slot/>
+          <slot />
         </div>
       </div>
     </div>
@@ -12,7 +12,7 @@
 
 <script>
 export default {
-  name:"TheLayoutWrapper"
+  name: 'TheLayoutWrapper'
 }
 </script>
 

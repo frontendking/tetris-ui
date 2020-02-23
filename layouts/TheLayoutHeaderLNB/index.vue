@@ -5,8 +5,8 @@
         <div id="mCSB_1" class="mCustomScrollBox mCS-st_lnb-scrollbar mCSB_vertical mCSB_outside" style="max-height: none;" tabindex="0">
           <div id="mCSB_1_container" class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y" style="position:relative; top:0; left:0;" dir="ltr">
             <a href="/elementary/main/" class="link-home">일간대치동<br>메인가기</a>
-            <TheLayoutHeaderLNBList/>
-            <TheLayoutHeaderLNBListSite/>
+            <TheLayoutHeaderLNBList />
+            <TheLayoutHeaderLNBListSite />
             <div class="ban">
               <a href="//www.conects.com/support/toceo" target="_blank">
                 <img src="//s3.ap-northeast-2.amazonaws.com/st.dangidata/static_conects/public/img/banner/ban_ceo.gif" alt="회원님의 목소리를 들려주세요." class="mCS_img_loaded">
@@ -86,8 +86,6 @@ export default {
       }
     }
   }
-
-
 
   .ban {
     padding: 0 24px;

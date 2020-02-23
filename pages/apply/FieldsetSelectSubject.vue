@@ -1,7 +1,7 @@
 <template>
   <BaseFieldset>
     <BaseLegend>과목 선택</BaseLegend>
-    <BaseInputBox type="checkbox" name="att_search_subject" v-for="inputbox in inputBoxes" :input-box="inputbox"/>
+    <BaseInputBox v-for="inputbox in inputBoxes" :key="inputbox.key" type="checkbox" name="att_search_subject" :input-box="inputbox" />
   </BaseFieldset>
 </template>
 
@@ -38,7 +38,6 @@ export default {
         }
       ]
     }
-
   }
 }
 </script>
