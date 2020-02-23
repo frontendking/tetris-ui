@@ -1,5 +1,5 @@
 <template>
-  <form>
+  <form class="FormSearchTutor">
     <div>
       <h1>튜터 검색</h1>
       <BaseInputText id="tutor-name" placeholder="튜터 이름을 입력해 주세요." />
@@ -18,8 +18,8 @@ export default {
 }
 </script>
 
-<style scoped lang=scss>
-form div {
+<style lang=scss>
+.FormSearchTutor div {
   display: flex;
   justify-content: space-evenly;
   align-items: center;

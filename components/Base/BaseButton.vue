@@ -1,5 +1,5 @@
 <template>
-  <button>검색</button>
+  <button class="BaseButton">검색</button>
 </template>
 
 <script>
@@ -8,14 +8,15 @@ export default {
 }
 </script>
 
-<style scoped lang=scss>
-button {
+<style lang=scss>
+.BaseButton {
   display: flex;
   border: none;
   padding: 0 1em;
   height: 2em;
   font-weight: 400;
   justify-content: center;
+
   &[type=button] {
     background-color: #000;
     color: #fff;

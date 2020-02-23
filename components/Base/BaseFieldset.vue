@@ -1,6 +1,6 @@
 <template>
-  <fieldset>
-    <div v-bind="$attrs" v-on="$listeners">
+  <fieldset class="BaseFieldset">
+    <div>
       <slot />
     </div>
   </fieldset>
@@ -8,17 +8,14 @@
 
 <script>
 export default {
-  name: 'BaseFieldset',
-  inheritAttrs: false
+  name: 'BaseFieldset'
 }
 </script>
 
-<style scoped lang=scss>
-fieldset {
-  width: 100%;
-  > div {
+<style lang="scss">
+.BaseFieldset {
+  div {
     display: inherit;
-    justify-content: inherit;
   }
 }
 </style>

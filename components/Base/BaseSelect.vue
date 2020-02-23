@@ -1,7 +1,10 @@
 <template>
   <div>
+    dddss
     <select>
-      <option v-for="option in options" :key="option.value" :value="option.value" v-html="option.label" />
+      <option v-for="option in options" :key="option.value" :value="option.value">
+        {{ option.label }}
+      </option>
     </select>
     <IArrowDown />
   </div>
@@ -9,16 +12,19 @@
 
 <script>
 import IArrowDown from './arrow-down.svg'
+
 export default {
   name: 'BaseSelect',
   components: {
     IArrowDown
   },
-  props: ['options']
+  props: {
+    options: { type: Array, required: true }
+  }
 }
 </script>
 
-<style scoped lang=scss>
+<style lang=scss scoped>
 div {
   position: relative;
   border-bottom: 1px solid;
@@ -39,7 +45,7 @@ div {
     position: absolute;
     right: 0.4em;
     width: 0.8em;
-    pointer-events:none;
+    pointer-events: none;
   }
 }
 

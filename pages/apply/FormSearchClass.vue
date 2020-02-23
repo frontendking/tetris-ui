@@ -1,13 +1,8 @@
 <template>
   <form class="FormSearchClass" onsubmit="return false;">
-    <FieldsetSelectGrade :options="optionsGrades" />
-    <FieldsetSelectSubject />
-    <fieldset class="sellect-subjects2">
-      <div>
-        <div class="tutor-checkbox" />
-      </div>
-    </fieldset>
-    <BaseButton id="btnSearchTimeList" type="button" class="find-buttons">
+    <FieldsetSelectGrade :options="grades" />
+    <FieldsetSelectSubject :input-boxes="subjects" />
+    <BaseButton id="btnSearchTimeList" type="button">
       검색
     </BaseButton>
   </form>
@@ -26,7 +21,7 @@ export default {
   components: { FieldsetSelectSubject, FieldsetSelectGrade, BaseButton },
   data () {
     return {
-      optionsGrades: [
+      grades: [
         {
           value: 'GD1001',
           label: '1학년'
@@ -51,22 +46,46 @@ export default {
           value: 'GD6001',
           label: '6학년'
         }
+      ],
+      subjects: [
+        {
+          key: 'subject1',
+          value: 'SJ1001',
+          label: '국어'
+        },
+        {
+          key: 'subject2',
+          value: 'SJ1002',
+          label: '수학'
+        },
+        {
+          key: 'subject3',
+          value: 'SJ1003',
+          label: '사회/과학'
+        },
+        {
+          key: 'subject4',
+          value: 'SJ1004',
+          label: '수학 문제 풀이'
+        }
       ]
     }
   }
 }
 </script>
 
-<style scoped lang=scss>
-form {
+<style lang=scss>
+.FormSearchClass {
   fieldset {
     legend {
 
     }
+
     select {
 
     }
   }
+
   button {
     grid-area: d;
     height: 5rem;
@@ -75,6 +94,7 @@ form {
     margin: 0 -5rem;
   }
 }
+/*
 
 form {
   display: grid;
@@ -121,44 +141,7 @@ form {
       }
     }
 
-    input[type=checkbox] {
-      -webkit-appearance: none;
-      -moz-appearance: none;
-      appearance: none;
-      width: 2.4rem;
-      height: 2.4rem;
-      border: 1px solid #cdcdcd;
-      cursor: pointer;
-      outline: none;
-      background-color: #fff;
-      font-weight: 500;
-      color: #e1e1e1;
 
-      &:checked {
-        &:before {
-          color: #fff;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          content: "⅃";
-          transform: rotate(40deg);
-          position: relative;
-          top: -2px;
-        }
-
-        background-color: #00b9fd;
-      }
-
-      &:before {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        content: "⅃";
-        transform: rotate(40deg);
-        position: relative;
-        top: -2px;
-      }
-    }
   }
 
   .select-grades {
@@ -292,5 +275,6 @@ form {
     }
   }
 }
+*/
 
 </style>

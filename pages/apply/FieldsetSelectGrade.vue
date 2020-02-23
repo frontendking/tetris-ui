@@ -1,23 +1,27 @@
 <template>
-  <BaseFieldset>
-    <BaseLegend>학년 선택</BaseLegend>
-    <BaseSelect id="att_search_grade" :options="options" />
-  </BaseFieldset>
+  <fieldset>
+    <div>
+      <BaseLegend>학년 선택</BaseLegend>
+      <BaseSelect id="att_search_grade" :options="options" />
+    </div>
+  </fieldset>
 </template>
 
 <script>
-import BaseFieldset from '@/components/Base/BaseFieldset'
 import BaseLegend from '@/components/Base/BaseLegend'
 import BaseSelect from '@/components/Base/BaseSelect'
+
 export default {
   name: 'FieldsetSelectGrade',
-  components: { BaseSelect, BaseLegend, BaseFieldset },
-  props: ['options']
+  components: { BaseSelect, BaseLegend },
+  props: {
+    options: { type: Array, required: true }
+  }
 }
 </script>
-
-<style lang=scss scoped>
-  fieldset {
-
-  }
+<style lang="scss" scoped>
+div {
+  display: flex;
+  justify-content: space-evenly;
+}
 </style>

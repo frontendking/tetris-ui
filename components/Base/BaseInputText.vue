@@ -1,5 +1,5 @@
 <template>
-  <input type="text">
+  <input class="BaseInputText" type="text">
 </template>
 
 <script>
@@ -8,8 +8,8 @@ export default {
 }
 </script>
 
-<style scoped lang=scss>
-input {
+<style lang=scss>
+.BaseInputText {
   display: flex;
   border: 1px solid #e0e0e0;
   padding: 0 0.5em;
