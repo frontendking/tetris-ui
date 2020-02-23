@@ -26,6 +26,7 @@ export default {
 }
 </script>
 <style lang="scss">
+@import '~destyle.css';
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap&subset=korean');
 
 html, body, #__nuxt, #__layout {
