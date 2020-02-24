@@ -1,7 +1,6 @@
 export default {
   mode: 'universal',
   build: {
-    extractCSS: true,
     extend (config, { isClient }) {
       // Extend only webpack config for client-bundle
       if (process.env.NODE_ENV === 'development') {
