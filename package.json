@@ -16,7 +16,6 @@
   },
   "dependencies": {
     "destyle.css": "^1.0.10",
-    "fxjs": "^0.14.0",
     "@nuxtjs/dotenv": "^1.4.0",
     "nuxt": "^2.0.0"
   },
