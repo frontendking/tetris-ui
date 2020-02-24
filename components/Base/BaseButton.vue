@@ -8,8 +8,8 @@ export default {
 }
 </script>
 
-<style lang=scss>
-.BaseButton {
+<style lang=scss scoped>
+button {
   display: flex;
   border: none;
   padding: 0 1em;

@@ -1,6 +1,5 @@
 <template>
   <div>
-    dddss
     <select>
       <option v-for="option in options" :key="option.value" :value="option.value">
         {{ option.label }}
