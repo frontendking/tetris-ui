@@ -1,6 +1,7 @@
 export default {
   mode: 'universal',
   build: {
+    extractCSS: true,
     extend (config, { isClient }) {
       // Extend only webpack config for client-bundle
       if (process.env.NODE_ENV === 'development') {
@@ -8,17 +9,17 @@ export default {
           ? 'eval-source-map'
           : 'inline-source-map'
       }
-      const svgRule = config.module.rules.find(rule => rule.test.test('.svg'));
+      const svgRule = config.module.rules.find(rule => rule.test.test('.svg'))
 
-      svgRule.test = /\.(png|jpe?g|gif|webp)$/;
+      svgRule.test = /\.(png|jpe?g|gif|webp)$/
 
       config.module.rules.push({
         test: /\.svg$/,
         use: [
           'babel-loader',
-          'vue-svg-loader',
-        ],
-      });
+          'vue-svg-loader'
+        ]
+      })
     }
   },
   loading: { color: '#fff' },

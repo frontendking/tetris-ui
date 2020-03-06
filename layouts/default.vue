@@ -1,16 +1,16 @@
 <template>
   <div id="root">
-    <div id="hgroup">
+    <div id="hgroup" class="TheLayoutHeader">
       <div class="st_conects-nav personal">
         <TheLayoutHeaderGNB class="TheLayoutHeaderGNB" />
         <TheLayoutHeaderLNB class="TheLayoutHeaderLNB" />
       </div>
     </div>
     <TheLayoutWrapper>
-      <TheLayoutHeaderTutor />
+      <TheLayoutHeaderTutor id="TheLayoutHeaderTutor" />
       <nuxt />
     </TheLayoutWrapper>
-    <TheLayoutFooter class="TheLayoutFooter" />
+    <TheLayoutFooter id="TheLayoutFooter" />
   </div>
 </template>
 
@@ -74,35 +74,60 @@ body {
 }
 </style>
 
-<style lang="scss">
+<style lang="scss" scoped>
 #root {
-  display: grid;
-  min-height: 100%;
   /*@formatter:off*/
   grid-template:
-    "a a" auto
-    "b c" 1fr
-    "b d" auto /
-    1fr 7fr;
+    "c" auto
+    "d" auto /
+    auto;
   /*@formatter:on*/
-
-  .TheLayoutHeaderGNB {
-    grid-area: a;
+  .TheLayoutHeader {
+    display: none;
   }
-
-  .TheLayoutHeaderLNB {
-    grid-area: b;
+  #TheLayoutHeaderTutor {
+    display: none;
   }
+}
 
-  .TheLayoutFooter {
-    grid-area: d;
-  }
+@media(min-width: 960px) {
+  #root {
+    #hgroup {
+      display: contents;
+    }
 
-  #main {
-    grid-area: c;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    #TheLayoutHeaderTutor {
+      display: block;
+    }
+
+    display: grid;
+    min-height: 100%;
+    /*@formatter:off*/
+    grid-template:
+      "a a" auto
+      "b c" 1fr
+      "b d" auto /
+    1fr 7fr;
+    /*@formatter:on*/
+
+    .TheLayoutHeaderGNB {
+      grid-area: a;
+    }
+
+    .TheLayoutHeaderLNB {
+      grid-area: b;
+    }
+
+    .TheLayoutFooter {
+      grid-area: d;
+    }
+
+    #main {
+      grid-area: c;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
   }
 }
 </style>
