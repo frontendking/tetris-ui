@@ -1,6 +1,6 @@
 # tetris-ui
 
-![tetris image](https://codepen.io/loktar00/pen/hGJBg/image/large.png "Logo Title Text 1")
+![tetris image](https://cdn.dribbble.com/users/1792975/screenshots/5655046/tetris_2.gif "Logo Title Text 1")
 
 ## Build Setup
 
