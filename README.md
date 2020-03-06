@@ -1,6 +1,6 @@
-# vue-template
+# tetris-ui
 
-> My sensational Nuxt.js project
+![tetris image](https://codepen.io/loktar00/pen/hGJBg/image/large.png "Logo Title Text 1")
 
 ## Build Setup
 
