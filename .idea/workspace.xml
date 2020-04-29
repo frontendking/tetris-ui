@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="15a99d13-74ec-4679-bd6d-8b733f0ee68f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +93,7 @@
       <workItem from="1586929246714" duration="460000" />
       <workItem from="1586929795518" duration="280000" />
       <workItem from="1586930088241" duration="12516000" />
-      <workItem from="1587997655075" duration="3506000" />
+      <workItem from="1587997655075" duration="4234000" />
     </task>
     <servers />
   </component>
@@ -123,6 +123,10 @@
       <screen x="1280" y="-59" width="2560" height="1417" />
     </state>
     <state x="2701" y="288" key="SettingsEditor/0.23.1280.777/1280.-59.2560.1417@1280.-59.2560.1417" timestamp="1586929707511" />
+    <state x="1380" y="41" width="1080" height="1148" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1588154138454">
+      <screen x="1280" y="-59" width="2560" height="1417" />
+    </state>
+    <state x="1380" y="41" width="1080" height="1148" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.23.1280.728/1280.-59.2560.1417@1280.-59.2560.1417" timestamp="1588154138454" />
     <state x="2860" y="395" width="680" height="508" key="find.popup" timestamp="1586930229024">
       <screen x="1280" y="-59" width="2560" height="1417" />
     </state>
