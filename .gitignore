@@ -1,26 +1,6 @@
-# Logs
-logs
-*.log
-yarn-debug.log*
-yarn-error.log*
-
-# Dependency directories
-node_modules/
-
-# Yarn Integrity file
-.yarn-integrity
-
-# dotenv environment variables file
-.env
-
-# nuxt.js build output
-.nuxt
-
-# Nuxt generate
-dist
-
-# IDE / Editor
-.idea
-
-# Mac OSX
 .DS_Store
+/node_modules/
+/src/node_modules/@sapper/
+yarn-error.log
+/cypress/screenshots/
+/__sapper__/
